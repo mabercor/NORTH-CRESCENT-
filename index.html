@@ -1,268 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Cleaning Services in Moncton | North Crescent Facility Solutions</title>
+<title>Professional Cleaning Services | North Crescent Facility Solutions Inc</title>
+<meta name="description" content="Professional residential and commercial cleaning services in Moncton, NB. Reliable, detailed, and trusted cleaning solutions.">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
-  <style>
-    :root {
-      --primary: #1E3A5F;
-      --secondary: #4A9B8C;
-      --accent: #2EC4B6;
-      --light: #F5F7FA;
-      --dark: #0F172A;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--light);
-      color: var(--dark);
-    }
-
-    header {
-      background: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    header img { height: 60px; }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 500;
-      position: relative;
-      transition: 0.3s;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      left: 0;
-      bottom: -5px;
-      background: var(--accent);
-      transition: width 0.3s;
-    }
-
-    nav a:hover::after { width: 100%; }
-    nav a:hover { color: var(--accent); }
-
-    nav .cta {
-      background: var(--accent);
-      color: white;
-      padding: 10px 18px;
-      border-radius: 25px;
-      margin-left: 25px;
-    }
-
-    nav .cta:hover { background: var(--primary); }
-
-    .hero {
-      height: 90vh;
-      background: linear-gradient(rgba(30,58,95,0.7), rgba(30,58,95,0.7)),
-      url('images/hero.jpg') center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-
-    .hero-sub {
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-
-    .hero-highlight {
-      max-width: 700px;
-      margin: 0 auto;
-      margin-top: 15px;
-      font-size: 1.2rem;
-      line-height: 1.6;
-      background: rgba(0,0,0,0.4);
-      padding: 20px;
-      border-radius: 12px;
-      backdrop-filter: blur(6px);
-    }
-
-    section { padding: 60px 40px; }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--primary);
-      font-size: 2rem;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-align: center;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card h3 {
-      padding: 15px;
-      color: var(--primary);
-    }
-
-    .card p {
-      padding: 0 15px 20px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      padding: 15px;
-      border-radius: 50px;
-      text-decoration: none;
-      z-index: 1000;
-    }
-
-    .quote-float {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      background: var(--accent);
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      transition: all 0.3s;
-      z-index: 1000;
-    }
-
-    .quote-float:hover {
-      background: var(--primary);
-      transform: scale(1.05);
-    }
-
-    footer {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 30px;
-    }
-  </style>
 </head>
 
-<body>
+<body data-page="index">
 
 <header>
-  <img src="images/logo.png" alt="North Crescent Facility Solutions Logo">
+  <div class="container header-inner">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="why.html">Why Us</a>
-    <a href="process.html">Process</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="work.html">Our Work</a>
-    <a href="contact.html" class="cta">Contact Us</a>
-  </nav>
+    <div class="logo-container">
+      <img src="images/logo.png" alt="North Crescent Logo">
+      <div class="brand-title">
+        North Crescent <span>Facility Solutions</span>
+      </div>
+    </div>
+
+    <div class="nav-wrapper">
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="process.html">Process</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="work.html">Our Work</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+
+      <div class="lang-switch">
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('fr')">FR</button>
+      </div>
+    </div>
+
+  </div>
 </header>
 
+<main>
+
+<!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Professional Cleaning Services in Moncton</h1>
-    <p class="hero-sub">Reliable • Detailed • Trusted</p>
-    <p class="hero-highlight">
-      Reliable service with attention to detail and consistently spotless results,
-      keeping homes and businesses clean, fresh, and welcoming every day.
-    </p>
-  </div>
-</section>
+  <div class="container hero-grid">
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
+    <div class="hero-text">
+      <h1 id="hero-title">Professional Cleaning Services You Can Trust</h1>
 
-    <div class="card">
-      <img src="images/residential.jpg">
-      <h3>Residential Cleaning</h3>
-      <p>Professional home cleaning that removes dust, grime, and buildup, leaving your living space fresh and comfortable.</p>
+      <p class="hero-sub" id="hero-sub">
+        Professional residential and commercial cleaning services in Moncton.
+      </p>
+
+      <a href="contact.html" class="btn" id="hero-btn">Request a Quote</a>
+
+      <a href="services.html" class="btn" style="margin-left:10px; background:#1E3A5F;" id="hero-btn2">
+        View Our Services
+      </a>
     </div>
 
-    <div class="card">
-      <img src="images/deep-cleaning.jpg">
-      <h3>Deep Cleaning - Restaurants</h3>
-      <p>We remove grease from ovens, hoods, and surfaces, leaving your kitchen spotless and inspection-ready.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/move.jpg">
-      <h3>Move-In / Move-Out</h3>
-      <p>Complete cleaning so your space is spotless and ready for the next chapter.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/commercial.jpg">
-      <h3>Commercial Cleaning</h3>
-      <p>Cleaning for offices and commercial spaces to keep your workplace spotless.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/airbnb.jpg">
-      <h3>Airbnb Cleaning</h3>
-      <p>Keep your rental guest-ready and ensure great reviews.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/postconstruction.jpg">
-      <h3>Post-Construction</h3>
-      <p>We remove dust and debris, leaving your property move-in ready.</p>
+    <div class="hero-image">
+      <img src="images/hero.jpg" alt="Cleaning Service">
     </div>
 
   </div>
 </section>
 
+<!-- ABOUT -->
+<section>
+  <div class="container">
+    <div class="section-box">
+
+      <h2 class="section-title" id="about-title">About Our Company</h2>
+      <div class="divider"></div>
+
+      <p class="text-box" id="about-text">
+        North Crescent Facility Solutions Inc is a professional cleaning company based in Moncton, New Brunswick.
+        We provide high-quality residential and commercial cleaning services with attention to detail and customer satisfaction.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section>
+  <div class="container">
+
+    <h2 class="section-title" id="services-mini-title">Our Services</h2>
+    <div class="divider"></div>
+
+    <div class="grid grid-3">
+      <div class="card"><h3 id="s1">Residential Cleaning</h3></div>
+      <div class="card"><h3 id="s2">Commercial Cleaning</h3></div>
+      <div class="card"><h3 id="s3">Move-In / Move-Out</h3></div>
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+      <a href="services.html" class="btn" id="services-btn">View All Services</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="container">
+    <div class="section-box">
+
+      <h2 class="section-title" id="why-title">Why Choose Us</h2>
+      <div class="divider"></div>
+
+      <div class="grid grid-3">
+        <div class="card"><h3 id="w1">Reliable Service</h3></div>
+        <div class="card"><h3 id="w2">Attention to Detail</h3></div>
+        <div class="card"><h3 id="w3">Professional Team</h3></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="section-box" style="text-align:center;">
+
+      <h2 id="cta-title">Ready to Work With Us?</h2>
+      <div class="divider"></div>
+
+      <p class="text-box" id="cta-text">
+        Contact us today or explore our services to find the best solution for your needs.
+      </p>
+
+      <a href="contact.html" class="btn" id="cta-btn">Get a Free Quote</a>
+
+      <a href="services.html" class="btn" style="margin-left:10px; background:#1E3A5F;" id="cta-btn2">
+        Explore Our Services
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FLOAT BUTTONS -->
 <a class="quote-float" href="contact.html">Get a Free Quote</a>
-<a class="whatsapp" href="https://wa.me/14288880542">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/14288880542" target="_blank">💬</a>
 
 <footer>
   <p>© 2026 North Crescent Facility Solutions Inc</p>
 </footer>
+
+<!-- TRANSLATOR GLOBAL -->
+<script src="js/translator.js"></script>
 
 </body>
 </html>
