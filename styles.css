@@ -39,7 +39,7 @@ h1, h2, h3 {
   font-weight: 700;
   color: var(--primary);
   line-height: 1.25;
-  margin-bottom: 8px; /* 🔥 reducido */
+  margin-bottom: 8px;
 }
 
 p {
@@ -177,19 +177,19 @@ nav a.active {
 
 /* ===== SECTIONS ===== */
 section {
-  padding: 55px 0; /* 🔥 reducido */
+  padding: 55px 0;
 }
 
 /* ===== SECTION TITLE ===== */
 .section-title {
   text-align: center;
-  margin-bottom: 30px; /* 🔥 reducido */
+  margin-bottom: 30px;
 }
 
 .section-title h2 {
   display: inline-block;
   position: relative;
-  padding-bottom: 6px; /* 🔥 reducido */
+  padding-bottom: 6px;
   margin-bottom: 6px;
 }
 
@@ -311,6 +311,45 @@ img {
   background: #25D366;
 }
 
+/* ===== SLIDER ARROWS (FIXED SAFE POSITION) ===== */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  background: var(--secondary);
+  color: white;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: var(--shadow-medium);
+}
+
+.slider-btn i {
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.slider-prev {
+  left: 10px; /* ✅ FIX seguro */
+}
+
+.slider-next {
+  right: 10px; /* ✅ FIX seguro */
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: #0d1f33;
@@ -347,11 +386,11 @@ footer {
   }
 
   section {
-    padding: 40px 0; /* 🔥 reducido mobile */
+    padding: 40px 0;
   }
 
   .section-title {
-    margin-bottom: 25px; /* 🔥 nuevo */
+    margin-bottom: 25px;
   }
 
   .hero {
@@ -360,6 +399,19 @@ footer {
 
   .hero-content {
     margin-top: -5px;
+  }
+
+  .slider-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .slider-prev {
+    left: 5px;
+  }
+
+  .slider-next {
+    right: 5px;
   }
 
   p {
