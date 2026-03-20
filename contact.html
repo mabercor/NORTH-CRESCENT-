@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,6 +13,9 @@
 </head>
 
 <body data-page="contact">
+
+<!-- 🔥 PROGRESS BAR -->
+<div class="progress-bar"></div>
 
 <header>
   <div class="container header-inner">
@@ -32,7 +35,7 @@
         <a href="reviews.html">Reviews</a>
         <a href="work.html">Our Work</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html" class="cta active">Contact</a>
+        <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
 
       <div class="lang-switch">
@@ -95,7 +98,7 @@
 
           <textarea name="message" rows="5" placeholder="Tell us about your project..."></textarea>
 
-          <button type="submit" class="btn">Get Instant Quote</button>
+          <button type="submit" class="btn btn-primary">Get Instant Quote</button>
 
         </form>
 
@@ -119,9 +122,9 @@
           </p>
         </div>
 
-        <!-- 🔥 EXTRA CTA -->
+        <!-- CTA -->
         <div style="margin-top:20px; text-align:center;">
-          <a href="tel:+14288880542" class="btn">Call Now</a>
+          <a href="tel:+14288880542" class="btn btn-dark">Call Now</a>
         </div>
 
       </div>
@@ -144,36 +147,50 @@
         Same-day appointments available. Contact us now before spots fill up.
       </p>
 
-      <a href="tel:+14288880542" class="btn">Call Now</a>
+      <a href="tel:+14288880542" class="btn btn-primary">Call Now</a>
 
     </div>
 
   </div>
 </section>
 
-<!-- 🔥 NAV FLOW -->
-<div class="page-navigation container">
-  <a href="gallery.html" class="nav-btn prev">⬅ Previous</a>
+<!-- 🔥 NAV FLOW (APP STYLE) -->
+<div class="container">
+  <div class="nav-buttons">
+
+    <a href="gallery.html" class="btn btn-secondary nav-btn btn-prev">
+      <span>←</span> Previous
+    </a>
+
+  </div>
 </div>
 
 </main>
 
-<!-- 🔥 FLOAT BUTTONS PRO -->
-<div style="position:fixed; bottom:20px; right:15px; display:flex; flex-direction:column; gap:10px; z-index:999;">
+<!-- 🔥 FLOAT BUTTONS UNIFICADOS -->
+<div class="float-container">
 
-  <a href="tel:+14288880542" class="float-call">📞</a>
+  <a href="tel:+14288880542" class="float-btn float-dark">📞</a>
 
-  <a href="https://wa.me/14288880542" target="_blank" class="float-wa">💬</a>
+  <a href="https://wa.me/14288880542" target="_blank" class="float-btn float-whatsapp">💬</a>
 
-  <a href="contact.html" class="float-main">
-     Book Now
-  </a>
+  <a href="contact.html" class="float-btn float-primary">+</a>
 
 </div>
 
 <footer>
   <p>© 2026 North Crescent Facility Solutions Inc</p>
 </footer>
+
+<!-- PROGRESS SCRIPT -->
+<script>
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = (scrollTop / height) * 100;
+  document.querySelector(".progress-bar").style.width = progress + "%";
+});
+</script>
 
 <script src="js/translator.js"></script>
 
