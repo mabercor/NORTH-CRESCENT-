@@ -49,12 +49,23 @@
 <section class="hero">
   <div class="container hero-content">
 
-    <div class="badge" id="badge-services">Our Services</div>
+    <div class="badge">Our Services</div>
 
-    <h1 id="hero-title">Professional Cleaning Solutions</h1>
+    <h1>Professional Cleaning Solutions</h1>
 
-    <p class="hero-sub" id="hero-sub">
+    <p class="hero-sub">
       Reliable, detailed, and tailored to your needs
+    </p>
+
+    <!-- 🔥 BOTONES DE CONVERSIÓN -->
+    <a href="contact.html" class="btn">Get Instant Quote</a>
+    <a href="contact.html" class="btn" style="margin-left:10px; background:#1E3A5F;">
+      Book Now
+    </a>
+
+    <!-- 🔥 URGENCY -->
+    <p style="margin-top:10px; font-size:13px; color:#4A9B8C; font-weight:600;">
+      Same-day availability • Limited slots this week
     </p>
 
     <div class="divider"></div>
@@ -68,10 +79,10 @@
 
     <div class="section-box">
 
-      <h2 class="section-title" id="section-title">What We Offer</h2>
+      <h2 class="section-title">What We Offer</h2>
       <div class="divider"></div>
 
-      <p class="text-box" id="section-text">
+      <p class="text-box">
         We provide high-quality cleaning services designed to keep your space spotless, healthy, and welcoming.
       </p>
 
@@ -82,8 +93,8 @@
           <div class="image-frame">
             <img src="images/residential.jpg" alt="">
           </div>
-          <h3 id="s1">Residential Cleaning</h3>
-          <p id="p1">Professional home cleaning that removes dust, grime, and buildup.</p>
+          <h3>Residential Cleaning</h3>
+          <p>Professional home cleaning that removes dust, grime, and buildup.</p>
         </div>
 
         <div class="card">
@@ -91,8 +102,8 @@
           <div class="image-frame">
             <img src="images/deep-cleaning.jpg" alt="">
           </div>
-          <h3 id="s2">Deep Cleaning - Restaurants</h3>
-          <p id="p2">We remove grease and dirt, leaving your kitchen spotless and inspection-ready.</p>
+          <h3>Deep Cleaning - Restaurants</h3>
+          <p>We remove grease and dirt, leaving your kitchen spotless and inspection-ready.</p>
         </div>
 
         <div class="card">
@@ -100,8 +111,8 @@
           <div class="image-frame">
             <img src="images/move.jpg" alt="">
           </div>
-          <h3 id="s3">Move-In / Move-Out</h3>
-          <p id="p3">Complete cleaning so your space is ready for the next chapter.</p>
+          <h3>Move-In / Move-Out</h3>
+          <p>Complete cleaning so your space is ready for the next chapter.</p>
         </div>
 
         <div class="card">
@@ -109,8 +120,8 @@
           <div class="image-frame">
             <img src="images/commercial.jpg" alt="">
           </div>
-          <h3 id="s4">Commercial Cleaning</h3>
-          <p id="p4">Maintain a professional and clean environment for your business.</p>
+          <h3>Commercial Cleaning</h3>
+          <p>Maintain a professional and clean environment for your business.</p>
         </div>
 
         <div class="card">
@@ -118,8 +129,8 @@
           <div class="image-frame">
             <img src="images/airbnb.jpg" alt="">
           </div>
-          <h3 id="s5">Airbnb Cleaning</h3>
-          <p id="p5">Keep your rental guest-ready and maintain 5-star standards.</p>
+          <h3>Airbnb Cleaning</h3>
+          <p>Keep your rental guest-ready and maintain 5-star standards.</p>
         </div>
 
         <div class="card">
@@ -127,8 +138,8 @@
           <div class="image-frame">
             <img src="images/postconstruction.jpg" alt="">
           </div>
-          <h3 id="s6">Post-Construction</h3>
-          <p id="p6">Remove dust and debris after construction or renovation.</p>
+          <h3>Post-Construction</h3>
+          <p>Remove dust and debris after construction or renovation.</p>
         </div>
 
       </div>
@@ -144,14 +155,18 @@
 
     <div class="section-box" style="text-align:center;">
 
-      <h2 id="cta-title">Need Professional Cleaning?</h2>
+      <h2>Need Professional Cleaning?</h2>
       <div class="divider"></div>
 
-      <p class="text-box" id="cta-text">
-        Get reliable service and a team you can trust.
+      <p class="text-box">
+        Same-day availability. Limited slots this week.
       </p>
 
-      <a href="contact.html" class="btn" id="cta-btn">Request a Free Quote</a>
+      <a href="contact.html" class="btn">Get Instant Quote</a>
+
+      <a href="contact.html" class="btn" style="margin-left:10px; background:#1E3A5F;">
+        Book Now
+      </a>
 
     </div>
 
@@ -160,16 +175,56 @@
 
 </main>
 
-<!-- FLOAT -->
-<a class="quote-float" href="contact.html" id="float-btn">Get a Free Quote</a>
-<a class="whatsapp" href="https://wa.me/14288880542">💬</a>
+<!-- 🔥 FLOAT NAVIGATION PRO -->
+<div class="float-nav">
+
+  <a id="prevPage" class="float-btn">⬅</a>
+  <a id="nextPage" class="float-btn">➡</a>
+
+  <a href="tel:+14288880542" class="float-btn call">📞</a>
+
+  <a href="https://wa.me/14288880542" target="_blank" class="float-btn whatsapp">💬</a>
+
+  <a href="contact.html" class="float-cta">Book Now</a>
+
+</div>
 
 <footer>
   <p>© 2026 North Crescent Facility Solutions Inc</p>
 </footer>
 
-<!-- TRANSLATOR GLOBAL -->
 <script src="js/translator.js"></script>
+
+<!-- 🔥 NAVIGATION SCRIPT -->
+<script>
+const pages = [
+  "index.html",
+  "services.html",
+  "process.html",
+  "reviews.html",
+  "work.html",
+  "gallery.html",
+  "contact.html"
+];
+
+const current = window.location.pathname.split("/").pop();
+const index = pages.indexOf(current);
+
+const prevBtn = document.getElementById("prevPage");
+const nextBtn = document.getElementById("nextPage");
+
+if (index > 0) {
+  prevBtn.href = pages[index - 1];
+} else {
+  prevBtn.style.display = "none";
+}
+
+if (index < pages.length - 1) {
+  nextBtn.href = pages[index + 1];
+} else {
+  nextBtn.style.display = "none";
+}
+</script>
 
 </body>
 </html>
