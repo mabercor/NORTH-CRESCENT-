@@ -14,6 +14,9 @@
 
 <body data-page="contact">
 
+<!-- OVERLAY -->
+<div class="menu-overlay"></div>
+
 <div class="progress-bar"></div>
 
 <header>
@@ -28,7 +31,14 @@
 
     <div class="nav-wrapper">
 
-      <nav>
+      <!-- HAMBURGER CORRECTO -->
+      <div class="hamburger" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="process.html">Process</a>
@@ -37,12 +47,6 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html" class="btn btn-primary active">Contact</a>
       </nav>
-
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
 
       <div class="lang-switch">
         <button onclick="setLanguage('en')">EN</button>
@@ -53,8 +57,6 @@
 
   </div>
 </header>
-
-<div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
 
@@ -75,7 +77,7 @@
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 <section>
   <div class="container">
 
@@ -86,18 +88,14 @@
 
         <h2 class="section-title">Request Your Free Quote</h2>
 
-        <p>
-          Tell us about your space and get a personalized quote within 1 hour.
-        </p>
+        <p>Tell us about your space and get a personalized quote within 1 hour.</p>
 
         <div class="divider"></div>
 
         <form id="contactForm" class="contact-form" action="https://formspree.io/f/xvzwvbed" method="POST">
 
           <input type="text" name="name" placeholder="Full Name *" required>
-
           <input type="email" name="email" placeholder="Email Address *" required>
-
           <input type="tel" name="phone" placeholder="Phone Number (optional)">
 
           <select name="service" required>
@@ -110,7 +108,7 @@
             <option>Post-Construction Cleaning</option>
           </select>
 
-          <textarea name="message" rows="5" placeholder="Describe your space (size, condition, timeline, special requests)..."></textarea>
+          <textarea name="message" rows="5" placeholder="Describe your space..."></textarea>
 
           <button type="submit" class="btn btn-primary">
             Get My Free Quote
@@ -131,55 +129,35 @@
         <div class="divider"></div>
 
         <div class="text-box">
-
           <p><strong>📍 Location:</strong> Moncton, New Brunswick</p>
 
-          <p>
-            <strong>📞 Phone:</strong> 
+          <p><strong>📞 Phone:</strong> 
             <a href="tel:+14288880542">+1 (428) 888-0542</a>
           </p>
 
-          <p>
-            <strong>✉ Email:</strong> 
+          <p><strong>✉ Email:</strong> 
             <a href="mailto:info@northcrescentcleaning.com">
               info@northcrescentcleaning.com
             </a>
           </p>
-
         </div>
 
         <!-- SOCIAL -->
         <div style="margin-top:25px;">
+          <p style="font-weight:600; margin-bottom:10px;">Follow Us</p>
 
-          <p style="font-weight:600; margin-bottom:10px;">
-            Follow Us
-          </p>
-
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-
-            <a href="https://www.facebook.com/profile.php?id=61580557412140" target="_blank" class="btn btn-secondary">
-              Facebook
-            </a>
-
-            <a href="https://www.instagram.com/northcrescentcleaningsolutions/" target="_blank" class="btn btn-secondary">
-              Instagram
-            </a>
-
+          <div class="btn-group">
+            <a href="https://www.facebook.com/profile.php?id=61580557412140" target="_blank" class="btn btn-secondary">Facebook</a>
+            <a href="https://www.instagram.com/northcrescentcleaningsolutions/" target="_blank" class="btn btn-secondary">Instagram</a>
           </div>
-
         </div>
 
         <!-- CTA -->
         <div style="margin-top:25px; text-align:center;">
-
-          <a href="tel:+14288880542" class="btn btn-dark">
-            📞 Call Now
-          </a>
-
-          <a href="https://wa.me/14288880542" target="_blank" class="btn btn-primary" style="margin-top:10px;">
-            💬 WhatsApp
-          </a>
-
+          <div class="btn-group">
+            <a href="tel:+14288880542" class="btn btn-dark">📞 Call Now</a>
+            <a href="https://wa.me/14288880542" target="_blank" class="btn btn-primary">💬 WhatsApp</a>
+          </div>
         </div>
 
       </div>
@@ -192,7 +170,6 @@
 <!-- CTA FINAL -->
 <section>
   <div class="container">
-
     <div class="section-box" style="text-align:center;">
 
       <h2>Need Cleaning Today?</h2>
@@ -205,38 +182,23 @@
       <a href="tel:+14288880542" class="btn btn-primary">Call Now</a>
 
     </div>
-
   </div>
 </section>
 
-<!-- NAV FLOW -->
-<div class="container">
-  <div class="nav-buttons">
-
-    <a href="gallery.html" class="btn btn-secondary nav-btn btn-prev">
-      <span>←</span> Previous
-    </a>
-
-  </div>
-</div>
-
 </main>
 
-<!-- FLOAT BUTTONS -->
+<!-- FLOAT -->
 <div class="float-container">
-
   <a href="tel:+14288880542" class="float-btn float-dark">📞</a>
-
   <a href="https://wa.me/14288880542" target="_blank" class="float-btn float-whatsapp">💬</a>
-
   <a href="contact.html" class="float-btn float-primary">+</a>
-
 </div>
 
 <footer>
   <p>© 2026 North Crescent Facility Solutions Inc</p>
 </footer>
 
+<!-- PROGRESS -->
 <script>
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
@@ -246,30 +208,43 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-<script src="js/translator.js"></script>
-
+<!-- MENU SCRIPT UNIFICADO -->
 <script>
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
-const overlay = document.getElementById("menuOverlay");
+document.addEventListener("DOMContentLoaded", () => {
 
-function toggleMenu() {
-  hamburger.classList.toggle("active");
-  nav.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-menu");
+  const overlay = document.querySelector(".menu-overlay");
 
-hamburger.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu);
+  if (!toggle || !nav || !overlay) return;
 
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+
+  overlay.addEventListener("click", () => {
+    toggle.classList.remove("active");
     nav.classList.remove("active");
     overlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
   });
+
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      toggle.classList.remove("active");
+      nav.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    });
+  });
+
 });
 </script>
+
+<script src="js/translator.js"></script>
 
 </body>
 </html>
