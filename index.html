@@ -14,7 +14,6 @@
 
 <body data-page="index">
 
-<!-- 🔥 PROGRESS BAR -->
 <div class="progress-bar"></div>
 
 <header>
@@ -28,6 +27,7 @@
     </div>
 
     <div class="nav-wrapper">
+
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="services.html">Services</a>
@@ -38,14 +38,25 @@
         <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
 
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <div class="lang-switch">
         <button onclick="setLanguage('en')">EN</button>
         <button onclick="setLanguage('fr')">FR</button>
       </div>
+
     </div>
 
   </div>
 </header>
+
+<!-- OVERLAY -->
+<div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
 
@@ -60,7 +71,6 @@
         Professional residential and commercial cleaning services in Moncton.
       </p>
 
-      <!-- BOTONES UNIFICADOS -->
       <div style="margin-top:15px;">
         <a href="contact.html" class="btn btn-primary">Get Instant Quote</a>
         <a href="contact.html" class="btn btn-dark" style="margin-left:10px;">Book Now</a>
@@ -157,7 +167,7 @@
   </div>
 </section>
 
-<!-- 🔥 NAV FLOW (APP STYLE) -->
+<!-- NAV FLOW -->
 <div class="container">
   <div class="nav-buttons">
 
@@ -170,7 +180,7 @@
 
 </main>
 
-<!-- 🔥 FLOAT BUTTONS UNIFICADOS -->
+<!-- FLOAT BUTTONS -->
 <div class="float-container">
 
   <a href="tel:+14288880542" class="float-btn float-dark">📞</a>
@@ -185,7 +195,7 @@
   <p>© 2026 North Crescent Facility Solutions Inc</p>
 </footer>
 
-<!-- PROGRESS SCRIPT -->
+<!-- PROGRESS -->
 <script>
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
@@ -196,6 +206,30 @@ window.addEventListener("scroll", () => {
 </script>
 
 <script src="js/translator.js"></script>
+
+<!-- MENU SCRIPT -->
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav");
+const overlay = document.getElementById("menuOverlay");
+
+function toggleMenu() {
+  hamburger.classList.toggle("active");
+  nav.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+hamburger.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
+
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    nav.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
+</script>
 
 </body>
 </html>
