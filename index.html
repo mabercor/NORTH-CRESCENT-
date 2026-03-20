@@ -14,7 +14,7 @@
 
 <body data-page="index">
 
-<!-- OVERLAY (NUEVO) -->
+<!-- OVERLAY -->
 <div class="menu-overlay"></div>
 
 <!-- PROGRESS BAR -->
@@ -25,7 +25,7 @@
 
     <!-- LOGO -->
     <div class="logo-container">
-      <img src="images/logo.png" alt="North Crescent Logo">
+      <img src="images/logo.png" alt="North Crescent Logo" loading="lazy">
       <div class="brand-title">
         North Crescent <span>Facility Solutions</span>
       </div>
@@ -34,7 +34,6 @@
     <!-- NAV -->
     <div class="nav-wrapper">
 
-      <!-- HAMBURGER (CORREGIDO) -->
       <div class="hamburger" id="menu-toggle">
         <span></span>
         <span></span>
@@ -51,7 +50,6 @@
         <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
 
-      <!-- LANG -->
       <div class="lang-switch">
         <button onclick="setLanguage('en')">EN</button>
         <button onclick="setLanguage('fr')">FR</button>
@@ -65,20 +63,24 @@
 <main>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" style="position:relative;">
   <div class="container hero-grid">
 
     <div class="hero-text">
-      <h1>Professional Cleaning Services You Can Trust</h1>
+      <h1>Professional Cleaning Services in Moncton, NB You Can Trust</h1>
 
       <p class="hero-sub">
         Residential and commercial cleaning services in Moncton, New Brunswick.
       </p>
 
-      <!-- BOTONES CORREGIDOS -->
+      <!-- confianza -->
+      <p style="margin-top:10px; font-size:14px; color:#64748B;">
+        ✔ Fully insured • ✔ Professional equipment • ✔ Satisfaction guaranteed
+      </p>
+
       <div class="btn-group" style="margin-top:15px;">
-        <a href="contact.html" class="btn btn-primary">Get Instant Quote</a>
-        <a href="contact.html" class="btn btn-dark">Book Now</a>
+        <a href="contact.html" class="btn btn-primary">🚀 Get Instant Quote</a>
+        <a href="contact.html" class="btn btn-dark">📅 Book Now</a>
       </div>
 
       <p style="margin-top:12px; font-size:13px; color:#4A9B8C; font-weight:600;">
@@ -86,8 +88,20 @@
       </p>
     </div>
 
-    <div class="hero-image">
-      <img src="images/hero.jpg" alt="Cleaning Service">
+    <div class="hero-image" style="position:relative;">
+      <img 
+        src="images/hero-company-cleaning.jpg" 
+        alt="Professional commercial cleaning team at work"
+        style="width:100%; height:100%; max-height:420px; object-fit:cover; border-radius:12px;"
+      >
+
+      <!-- overlay -->
+      <div style="
+        position:absolute;
+        inset:0;
+        background:linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0));
+        border-radius:12px;
+      "></div>
     </div>
 
   </div>
@@ -118,9 +132,26 @@
     <div class="divider"></div>
 
     <div class="grid grid-3">
-      <div class="card"><h3>Residential Cleaning</h3></div>
-      <div class="card"><h3>Commercial Cleaning</h3></div>
-      <div class="card"><h3>Move-In / Move-Out</h3></div>
+      <div class="card">
+        <h3>Residential Cleaning</h3>
+        <p style="font-size:14px; margin-top:8px;">
+          Detailed home cleaning tailored to your needs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Commercial Cleaning</h3>
+        <p style="font-size:14px; margin-top:8px;">
+          Reliable cleaning solutions for businesses and offices.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Move-In / Move-Out</h3>
+        <p style="font-size:14px; margin-top:8px;">
+          Stress-free cleaning for your next move.
+        </p>
+      </div>
     </div>
 
     <div style="text-align:center; margin-top:30px;">
@@ -153,16 +184,15 @@
   <div class="container">
     <div class="section-box" style="text-align:center;">
 
-      <h2>Ready to Work With Us?</h2>
+      <h2>Get Your Home or Business Professionally Cleaned Today</h2>
       <div class="divider"></div>
 
       <p class="text-box">
         Same-day availability. Limited slots this week.
       </p>
 
-      <!-- BOTONES CORREGIDOS -->
       <div class="btn-group" style="margin-top:15px;">
-        <a href="contact.html" class="btn btn-primary">Get Instant Quote</a>
+        <a href="contact.html" class="btn btn-primary">🚀 Get Instant Quote</a>
         <a href="services.html" class="btn btn-dark">
           Explore Our Services
         </a>
@@ -191,10 +221,9 @@
 </div>
 
 <footer>
-  <p>© 2026 North Crescent Facility Solutions Inc</p>
+  <p>© 2026 North Crescent Facility Solutions Inc • Moncton, New Brunswick</p>
 </footer>
 
-<!-- PROGRESS BAR -->
 <script>
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
@@ -204,7 +233,6 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-<!-- MENU SCRIPT (CORREGIDO Y PROFESIONAL) -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
