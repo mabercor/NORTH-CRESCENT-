@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -27,6 +27,7 @@
     </div>
 
     <div class="nav-wrapper">
+
       <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -34,17 +35,28 @@
         <a href="reviews.html">Reviews</a>
         <a href="work.html">Our Work</a>
         <a href="gallery.html">Gallery</a>
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="contact.html" class="btn btn-primary active">Contact</a>
       </nav>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
       <div class="lang-switch">
         <button onclick="setLanguage('en')">EN</button>
         <button onclick="setLanguage('fr')">FR</button>
       </div>
+
     </div>
 
   </div>
 </header>
+
+<!-- OVERLAY -->
+<div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
 
@@ -227,6 +239,7 @@
   <p>© 2026 North Crescent Facility Solutions Inc</p>
 </footer>
 
+<!-- PROGRESS -->
 <script>
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
@@ -237,6 +250,30 @@ window.addEventListener("scroll", () => {
 </script>
 
 <script src="js/translator.js"></script>
+
+<!-- MENU SCRIPT -->
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav");
+const overlay = document.getElementById("menuOverlay");
+
+function toggleMenu() {
+  hamburger.classList.toggle("active");
+  nav.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+hamburger.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
+
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    nav.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
+</script>
 
 </body>
 </html>
