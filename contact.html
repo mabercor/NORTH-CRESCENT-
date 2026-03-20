@@ -31,7 +31,6 @@
 
     <div class="nav-wrapper">
 
-      <!-- HAMBURGER CORRECTO -->
       <div class="hamburger" id="menu-toggle">
         <span></span>
         <span></span>
@@ -81,21 +80,23 @@
 <section>
   <div class="container">
 
-    <div class="grid grid-2">
+    <div class="grid-2">
 
       <!-- FORM -->
-      <div class="section-box form-box" id="contact-form">
+      <div class="section-box form-box contact-highlight" id="contact-form">
 
-        <h2 class="section-title">Request Your Free Quote</h2>
-
+        <h2>Request Your Free Quote</h2>
         <p>Tell us about your space and get a personalized quote within 1 hour.</p>
 
         <div class="divider"></div>
 
         <form id="contactForm" class="contact-form" action="https://formspree.io/f/xvzwvbed" method="POST">
 
-          <input type="text" name="name" placeholder="Full Name *" required>
-          <input type="email" name="email" placeholder="Email Address *" required>
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Full Name *" required>
+            <input type="email" name="email" placeholder="Email Address *" required>
+          </div>
+
           <input type="tel" name="phone" placeholder="Phone Number (optional)">
 
           <select name="service" required>
@@ -108,7 +109,7 @@
             <option>Post-Construction Cleaning</option>
           </select>
 
-          <textarea name="message" rows="5" placeholder="Describe your space..."></textarea>
+          <textarea name="message" placeholder="Describe your space..."></textarea>
 
           <button type="submit" class="btn btn-primary">
             Get My Free Quote
@@ -208,7 +209,7 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-<!-- MENU SCRIPT UNIFICADO -->
+<!-- MENU SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
