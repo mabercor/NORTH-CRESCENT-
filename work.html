@@ -14,6 +14,7 @@
 
 <body data-page="work">
 
+<div class="menu-overlay"></div>
 <div class="progress-bar"></div>
 
 <header>
@@ -28,7 +29,13 @@
 
     <div class="nav-wrapper">
 
-      <nav>
+      <div class="hamburger" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="process.html">Process</a>
@@ -37,13 +44,6 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
-
-      <!-- ✅ HAMBURGER CORRECTO -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
 
       <div class="lang-switch">
         <button onclick="setLanguage('en')">EN</button>
@@ -54,9 +54,6 @@
 
   </div>
 </header>
-
-<!-- ✅ OVERLAY -->
-<div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
 
@@ -74,11 +71,9 @@
 
     <div class="divider"></div>
 
-    <div style="margin-top:15px;">
+    <div class="btn-group" style="margin-top:15px;">
       <a href="contact.html" class="btn btn-primary">Get Instant Quote</a>
-      <a href="contact.html" class="btn btn-dark" style="margin-left:10px;">
-        Book Now
-      </a>
+      <a href="contact.html" class="btn btn-dark">Book Now</a>
     </div>
 
     <p style="margin-top:12px; font-size:13px; color:#4A9B8C; font-weight:600;">
@@ -94,7 +89,10 @@
 
     <div class="section-box">
 
-      <h2 class="section-title">Real Cleaning Transformations</h2>
+      <div class="section-title">
+        <h2>Real Cleaning Transformations</h2>
+      </div>
+
       <div class="divider"></div>
 
       <p class="text-box">
@@ -103,14 +101,13 @@
 
       <div class="grid grid-3">
 
+        <!-- CARD -->
         <div class="card">
           <div class="badge">Kitchen Transformation</div>
           <div class="image-frame">
             <img src="images/gallery1.jpg" alt="Kitchen Before After">
           </div>
-          <p style="margin-top:10px;">
-            Heavy grease buildup removed and surfaces restored to like-new condition.
-          </p>
+          <p>Heavy grease buildup removed and surfaces restored to like-new condition.</p>
         </div>
 
         <div class="card">
@@ -118,9 +115,7 @@
           <div class="image-frame">
             <img src="images/gallery2.jpg" alt="Bathroom Cleaning Result">
           </div>
-          <p style="margin-top:10px;">
-            Full sanitization, polishing, and deep detail work for a spotless finish.
-          </p>
+          <p>Full sanitization, polishing, and deep detail work for a spotless finish.</p>
         </div>
 
         <div class="card">
@@ -128,9 +123,7 @@
           <div class="image-frame">
             <img src="images/gallery3.jpg" alt="Deep Cleaning Result">
           </div>
-          <p style="margin-top:10px;">
-            Built-up dirt and hidden debris completely removed for a fresh environment.
-          </p>
+          <p>Built-up dirt and hidden debris completely removed for a fresh environment.</p>
         </div>
 
         <div class="card">
@@ -138,9 +131,7 @@
           <div class="image-frame">
             <img src="images/gallery4.jpg" alt="Commercial Cleaning">
           </div>
-          <p style="margin-top:10px;">
-            Professional cleaning that enhances workplace presentation and hygiene.
-          </p>
+          <p>Professional cleaning that enhances workplace presentation and hygiene.</p>
         </div>
 
         <div class="card">
@@ -148,9 +139,7 @@
           <div class="image-frame">
             <img src="images/gallery5.jpg" alt="Move Out Cleaning">
           </div>
-          <p style="margin-top:10px;">
-            Property fully cleaned and prepared for the next tenant or inspection.
-          </p>
+          <p>Property fully cleaned and prepared for the next tenant or inspection.</p>
         </div>
 
         <div class="card">
@@ -158,9 +147,7 @@
           <div class="image-frame">
             <img src="images/gallery6.jpg" alt="Detailed Cleaning Finish">
           </div>
-          <p style="margin-top:10px;">
-            Precision cleaning with attention to every corner and surface.
-          </p>
+          <p>Precision cleaning with attention to every corner and surface.</p>
         </div>
 
       </div>
@@ -177,17 +164,16 @@
     <div class="section-box" style="text-align:center;">
 
       <h2>Ready to Get These Results in Your Space?</h2>
+
       <div class="divider"></div>
 
       <p class="text-box">
         Book your cleaning today and experience the difference of a professional, detail-driven service.
       </p>
 
-      <div style="margin-top:15px;">
+      <div class="btn-group" style="margin-top:15px;">
         <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
-        <a href="contact.html" class="btn btn-dark" style="margin-left:10px;">
-          Book Now
-        </a>
+        <a href="contact.html" class="btn btn-dark">Book Now</a>
       </div>
 
     </div>
@@ -200,11 +186,11 @@
   <div class="nav-buttons">
 
     <a href="reviews.html" class="btn btn-secondary nav-btn btn-prev">
-      <span>←</span> Previous
+      ← Previous
     </a>
 
     <a href="gallery.html" class="btn btn-primary nav-btn btn-next">
-      Next <span>→</span>
+      Next →
     </a>
 
   </div>
@@ -212,7 +198,7 @@
 
 </main>
 
-<!-- FLOAT BUTTONS -->
+<!-- FLOAT -->
 <div class="float-container">
   <a href="tel:+14288880542" class="float-btn float-dark">📞</a>
   <a href="https://wa.me/14288880542" target="_blank" class="float-btn float-whatsapp">💬</a>
@@ -233,31 +219,30 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-<script src="js/translator.js"></script>
-
-<!-- ✅ MENU SCRIPT UNIFICADO -->
+<!-- MENU SCRIPT (UNIFICADO) -->
 <script>
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
-const overlay = document.getElementById("menuOverlay");
+document.addEventListener("DOMContentLoaded", () => {
 
-function toggleMenu() {
-  hamburger.classList.toggle("active");
-  nav.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-menu");
+  const overlay = document.querySelector(".menu-overlay");
 
-hamburger.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu);
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
 
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
+  overlay.addEventListener("click", () => {
+    toggle.classList.remove("active");
     nav.classList.remove("active");
     overlay.classList.remove("active");
   });
+
 });
 </script>
+
+<script src="js/translator.js"></script>
 
 </body>
 </html>
