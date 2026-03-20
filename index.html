@@ -14,11 +14,13 @@
 
 <body data-page="index">
 
+<!-- PROGRESS BAR -->
 <div class="progress-bar"></div>
 
 <header>
   <div class="container header-inner">
 
+    <!-- LOGO -->
     <div class="logo-container">
       <img src="images/logo.png" alt="North Crescent Logo">
       <div class="brand-title">
@@ -26,9 +28,17 @@
       </div>
     </div>
 
+    <!-- NAV -->
     <div class="nav-wrapper">
 
-      <nav>
+      <!-- HAMBURGER -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav-menu">
         <a href="index.html" class="active">Home</a>
         <a href="services.html">Services</a>
         <a href="process.html">Process</a>
@@ -38,13 +48,7 @@
         <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
 
-      <!-- HAMBURGER -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
+      <!-- LANG -->
       <div class="lang-switch">
         <button onclick="setLanguage('en')">EN</button>
         <button onclick="setLanguage('fr')">FR</button>
@@ -54,9 +58,6 @@
 
   </div>
 </header>
-
-<!-- OVERLAY -->
-<div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
 
@@ -68,7 +69,7 @@
       <h1>Professional Cleaning Services You Can Trust</h1>
 
       <p class="hero-sub">
-        Professional residential and commercial cleaning services in Moncton.
+        Residential and commercial cleaning services in Moncton, New Brunswick.
       </p>
 
       <div style="margin-top:15px;">
@@ -79,7 +80,6 @@
       <p style="margin-top:12px; font-size:13px; color:#4A9B8C; font-weight:600;">
         Same-day availability • Limited slots this week
       </p>
-
     </div>
 
     <div class="hero-image">
@@ -99,7 +99,7 @@
 
       <p class="text-box">
         North Crescent Facility Solutions Inc is a professional cleaning company based in Moncton, New Brunswick.
-        We provide high-quality residential and commercial cleaning services with attention to detail and customer satisfaction.
+        We specialize in residential, commercial, deep cleaning, and post-construction services, delivering consistent quality and attention to detail.
       </p>
 
     </div>
@@ -170,11 +170,9 @@
 <!-- NAV FLOW -->
 <div class="container">
   <div class="nav-buttons">
-
     <a href="services.html" class="btn btn-primary nav-btn btn-next">
       Next <span>→</span>
     </a>
-
   </div>
 </div>
 
@@ -182,20 +180,16 @@
 
 <!-- FLOAT BUTTONS -->
 <div class="float-container">
-
   <a href="tel:+14288880542" class="float-btn float-dark">📞</a>
-
   <a href="https://wa.me/14288880542" target="_blank" class="float-btn float-whatsapp">💬</a>
-
   <a href="contact.html" class="float-btn float-primary">+</a>
-
 </div>
 
 <footer>
   <p>© 2026 North Crescent Facility Solutions Inc</p>
 </footer>
 
-<!-- PROGRESS -->
+<!-- PROGRESS BAR -->
 <script>
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
@@ -205,31 +199,25 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-<script src="js/translator.js"></script>
-
 <!-- MENU SCRIPT -->
 <script>
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
-const overlay = document.getElementById("menuOverlay");
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-menu");
 
-function toggleMenu() {
-  hamburger.classList.toggle("active");
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
   nav.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+});
 
-hamburger.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu);
-
-document.querySelectorAll("nav a").forEach(link => {
+document.querySelectorAll("#nav-menu a").forEach(link => {
   link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
+    toggle.classList.remove("active");
     nav.classList.remove("active");
-    overlay.classList.remove("active");
   });
 });
 </script>
+
+<script src="js/translator.js"></script>
 
 </body>
 </html>
