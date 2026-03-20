@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Client Reviews | North Crescent Facility Solutions</title>
-<meta name="description" content="Read real client reviews of our professional cleaning services in Moncton, NB. Trusted by homeowners and businesses.">
+<meta name="description" content="See why clients trust North Crescent Facility Solutions for professional cleaning services. Real reviews and consistent quality.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -14,7 +14,6 @@
 
 <body data-page="reviews">
 
-<!-- 🔥 PROGRESS BAR -->
 <div class="progress-bar"></div>
 
 <header>
@@ -28,6 +27,7 @@
     </div>
 
     <div class="nav-wrapper">
+
       <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -38,14 +38,24 @@
         <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
 
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <div class="lang-switch">
         <button onclick="setLanguage('en')">EN</button>
         <button onclick="setLanguage('fr')">FR</button>
       </div>
+
     </div>
 
   </div>
 </header>
+
+<div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
 
@@ -55,10 +65,10 @@
 
     <div class="badge">Client Reviews</div>
 
-    <h1>What Our Clients Say</h1>
+    <h1>Trusted by Clients Across Moncton</h1>
 
     <p class="hero-sub">
-      Trusted by homeowners and businesses across Moncton
+      Real experiences from homeowners and businesses who trust our cleaning services
     </p>
 
     <div class="divider"></div>
@@ -71,7 +81,7 @@
     </div>
 
     <p style="margin-top:12px; font-size:13px; color:#4A9B8C; font-weight:600;">
-      Same-day availability • Limited slots this week
+      ⭐ 5-Star Service • Same-day availability • Limited spots this week
     </p>
 
   </div>
@@ -83,50 +93,60 @@
 
     <div class="section-box">
 
-      <h2 class="section-title">Real Client Feedback</h2>
+      <h2 class="section-title">What Our Clients Are Saying</h2>
       <div class="divider"></div>
 
       <p class="text-box">
-        We take pride in delivering consistent, high-quality cleaning services. Here’s what our clients say.
+        We focus on quality, reliability, and attention to detail. Here's what our clients think about our work.
       </p>
 
       <div class="grid grid-3">
 
         <div class="card">
           <div class="badge">★★★★★</div>
-          <p>"Excellent service! My house has never been this clean."</p>
+          <p>
+            "Absolutely amazing service. My home looks brand new every time. Highly recommend!"
+          </p>
           <strong>- Sarah M.</strong>
         </div>
 
         <div class="card">
           <div class="badge">★★★★★</div>
-          <p>"Very professional and reliable. Highly recommended."</p>
+          <p>
+            "Professional, on time, and very detailed. Best cleaning service I've used."
+          </p>
           <strong>- John D.</strong>
         </div>
 
         <div class="card">
           <div class="badge">★★★★★</div>
-          <p>"Amazing attention to detail. Everything looks spotless every time."</p>
+          <p>
+            "They pay attention to every detail. You can tell they care about quality."
+          </p>
           <strong>- Emily R.</strong>
         </div>
 
         <div class="card">
           <div class="badge">★★★★★</div>
-          <p>"Great communication and outstanding results."</p>
+          <p>
+            "Super reliable and easy to work with. Communication was excellent."
+          </p>
           <strong>- Michael T.</strong>
         </div>
 
         <div class="card">
           <div class="badge">★★★★★</div>
-          <p>"Reliable and efficient service. Highly satisfied."</p>
+          <p>
+            "Fast, efficient, and spotless results. Will definitely book again."
+          </p>
           <strong>- Laura K.</strong>
         </div>
 
         <div class="card">
-          <div class="badge">Trusted</div>
+          <div class="badge">Why Clients Choose Us</div>
           <h3>Consistent Quality</h3>
           <p>
-            We deliver reliable, detailed, and professional cleaning services every time.
+            We deliver reliable, detailed, and professional cleaning services — every single time.
           </p>
         </div>
 
@@ -143,15 +163,15 @@
 
     <div class="section-box" style="text-align:center;">
 
-      <h2>Ready to Experience Our Service?</h2>
+      <h2>Join Our Satisfied Clients</h2>
       <div class="divider"></div>
 
       <p class="text-box">
-        Same-day availability. Limited slots this week.
+        Experience the difference of a professional cleaning service.
       </p>
 
       <div style="margin-top:15px;">
-        <a href="contact.html" class="btn btn-primary">Get Instant Quote</a>
+        <a href="contact.html" class="btn btn-primary">Get Your Free Quote</a>
         <a href="contact.html" class="btn btn-dark" style="margin-left:10px;">
           Book Now
         </a>
@@ -162,7 +182,7 @@
   </div>
 </section>
 
-<!-- 🔥 NAV FLOW -->
+<!-- NAV FLOW -->
 <div class="container">
   <div class="nav-buttons">
 
@@ -179,7 +199,7 @@
 
 </main>
 
-<!-- 🔥 FLOAT BUTTONS UNIFICADOS -->
+<!-- FLOAT BUTTONS -->
 <div class="float-container">
 
   <a href="tel:+14288880542" class="float-btn float-dark">📞</a>
@@ -194,7 +214,7 @@
   <p>© 2026 North Crescent Facility Solutions Inc</p>
 </footer>
 
-<!-- PROGRESS SCRIPT -->
+<!-- PROGRESS -->
 <script>
 window.addEventListener("scroll", () => {
   const scrollTop = document.documentElement.scrollTop;
@@ -205,6 +225,30 @@ window.addEventListener("scroll", () => {
 </script>
 
 <script src="js/translator.js"></script>
+
+<!-- MENU SCRIPT -->
+<script>
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav");
+const overlay = document.getElementById("menuOverlay");
+
+function toggleMenu() {
+  hamburger.classList.toggle("active");
+  nav.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+hamburger.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", toggleMenu);
+
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    nav.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
+</script>
 
 </body>
 </html>
