@@ -1,4 +1,4 @@
-/* ===== VARIABLES ===== */
+/* ===== VARIABLES ===== */ 
 :root {
   --primary: #1E3A5F;
   --secondary: #4A9B8C;
@@ -139,7 +139,6 @@ nav a.active {
   transition: 0.3s;
 }
 
-/* ANIMATION */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
@@ -167,9 +166,14 @@ nav a.active {
   pointer-events: all;
 }
 
-/* ===== HERO ===== */
+/* ===== HERO (OPTIMIZADO 🔥) ===== */
 .hero {
-  padding: 90px 0 70px;
+  padding: 60px 0 60px;
+}
+
+/* ajuste fino para subir contenido */
+.hero-content {
+  margin-top: -10px;
 }
 
 /* ===== SECTIONS ===== */
@@ -275,63 +279,6 @@ img {
   border: 1px solid #e2e8f0;
 }
 
-.contact-box h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.contact-box p {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.contact-box input,
-.contact-box textarea,
-.contact-box select {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border-radius: var(--radius);
-  border: 1px solid #cbd5e1;
-  font-size: 14px;
-  transition: 0.2s ease;
-  background: #f9fbfd;
-}
-
-.contact-box input:focus,
-.contact-box textarea:focus,
-.contact-box select:focus {
-  outline: none;
-  border-color: var(--secondary);
-  background: #ffffff;
-  box-shadow: 0 0 0 2px rgba(74,155,140,0.15);
-}
-
-.contact-box textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.contact-box .btn {
-  width: 100%;
-  margin-top: 10px;
-  padding: 14px;
-  font-size: 14px;
-}
-
-.contact-box .btn:hover {
-  box-shadow: var(--shadow-medium);
-}
-
-.form-row {
-  display: flex;
-  gap: 12px;
-}
-
-.form-row input {
-  flex: 1;
-}
-
 /* ===== FLOAT BUTTONS ===== */
 .float-container {
   position: fixed;
@@ -401,6 +348,14 @@ footer {
 
   section {
     padding: 50px 0;
+  }
+
+  .hero {
+    padding: 50px 0 50px;
+  }
+
+  .hero-content {
+    margin-top: -5px;
   }
 
   p {
