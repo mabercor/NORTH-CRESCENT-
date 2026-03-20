@@ -39,7 +39,7 @@ h1, h2, h3 {
   font-weight: 700;
   color: var(--primary);
   line-height: 1.25;
-  margin-bottom: 12px;
+  margin-bottom: 10px; /* 🔧 reducido */
 }
 
 p {
@@ -168,23 +168,22 @@ nav a.active {
 
 /* ===== HERO (OPTIMIZADO 🔥) ===== */
 .hero {
-  padding: 60px 0 60px;
+  padding: 50px 0 50px;
 }
 
-/* ajuste fino para subir contenido */
 .hero-content {
   margin-top: -10px;
 }
 
-/* ===== SECTIONS ===== */
+/* ===== SECTIONS (MENOS ESPACIO GLOBAL) ===== */
 section {
-  padding: 70px 0;
+  padding: 55px 0;
 }
 
-/* ===== SECTION TITLE ===== */
+/* ===== SECTION TITLE (CLAVE 🔥) ===== */
 .section-title {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 25px; /* 🔧 reducido */
 }
 
 .section-title h2 {
@@ -268,49 +267,6 @@ img {
   flex-wrap: wrap;
 }
 
-/* ===== CONTACT FORM ===== */
-.contact-box {
-  max-width: 750px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 35px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-medium);
-  border: 1px solid #e2e8f0;
-}
-
-/* ===== FLOAT BUTTONS ===== */
-.float-container {
-  position: fixed;
-  bottom: 20px;
-  right: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.float-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.float-dark {
-  background: var(--primary);
-}
-
-.float-primary {
-  background: linear-gradient(135deg, var(--secondary), var(--accent));
-}
-
-.float-whatsapp {
-  background: #25D366;
-}
-
 /* ===== FOOTER ===== */
 footer {
   background: #0d1f33;
@@ -323,43 +279,16 @@ footer {
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
-  nav {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    width: 75%;
-    max-width: 320px;
-    height: calc(100vh - 70px);
-    background: white;
-    flex-direction: column;
-    padding: 30px;
-    gap: 20px;
-    transition: 0.3s;
-    overflow-y: auto;
-  }
-
-  nav.active {
-    right: 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
   section {
-    padding: 50px 0;
+    padding: 45px 0;
   }
 
   .hero {
-    padding: 50px 0 50px;
+    padding: 45px 0;
   }
 
   .hero-content {
     margin-top: -5px;
-  }
-
-  p {
-    max-width: 100%;
   }
 
   .btn {
@@ -369,14 +298,6 @@ footer {
   .btn-group {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .contact-box {
-    padding: 25px 18px;
-  }
-
-  .form-row {
-    flex-direction: column;
   }
 
 }
