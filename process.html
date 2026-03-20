@@ -14,6 +14,9 @@
 
 <body data-page="process">
 
+<!-- OVERLAY -->
+<div class="menu-overlay"></div>
+
 <div class="progress-bar"></div>
 
 <header>
@@ -28,7 +31,14 @@
 
     <div class="nav-wrapper">
 
-      <nav>
+      <!-- HAMBURGER CORRECTO -->
+      <div class="hamburger" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav-menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="process.html" class="active">Process</a>
@@ -37,13 +47,6 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
-
-      <!-- HAMBURGER -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
 
       <div class="lang-switch">
         <button onclick="setLanguage('en')">EN</button>
@@ -54,9 +57,6 @@
 
   </div>
 </header>
-
-<!-- OVERLAY -->
-<div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
 
@@ -74,11 +74,10 @@
 
     <div class="divider"></div>
 
-    <div style="margin-top:15px;">
+    <!-- BOTONES CORREGIDOS -->
+    <div class="btn-group" style="margin-top:15px;">
       <a href="contact.html" class="btn btn-primary">Get Instant Quote</a>
-      <a href="contact.html" class="btn btn-dark" style="margin-left:10px;">
-        Book Now
-      </a>
+      <a href="contact.html" class="btn btn-dark">Book Now</a>
     </div>
 
     <p style="margin-top:12px; font-size:13px; color:#4A9B8C; font-weight:600;">
@@ -106,49 +105,37 @@
         <div class="card">
           <div class="badge">Step 1</div>
           <h3>Request & Assessment</h3>
-          <p>
-            You contact us with your needs. We quickly evaluate your space and identify the best cleaning approach.
-          </p>
+          <p>You contact us with your needs. We quickly evaluate your space.</p>
         </div>
 
         <div class="card">
           <div class="badge">Step 2</div>
           <h3>Customized Plan</h3>
-          <p>
-            We create a tailored cleaning plan based on your property, schedule, and service requirements.
-          </p>
+          <p>We create a tailored cleaning plan based on your property and schedule.</p>
         </div>
 
         <div class="card">
           <div class="badge">Step 3</div>
           <h3>Professional Cleaning</h3>
-          <p>
-            Our trained team executes a detailed, high-quality cleaning using professional techniques and products.
-          </p>
+          <p>Our trained team delivers a high-quality, detailed cleaning.</p>
         </div>
 
         <div class="card">
           <div class="badge">Step 4</div>
           <h3>Quality Control</h3>
-          <p>
-            We carefully inspect every area to ensure it meets our strict quality standards.
-          </p>
+          <p>We inspect every area to ensure it meets our standards.</p>
         </div>
 
         <div class="card">
           <div class="badge">Step 5</div>
           <h3>Client Approval</h3>
-          <p>
-            We confirm your satisfaction and ensure everything is completed exactly as expected.
-          </p>
+          <p>We confirm your satisfaction before finalizing the service.</p>
         </div>
 
         <div class="card">
           <div class="badge">Our Promise</div>
           <h3>Consistent Excellence</h3>
-          <p>
-            Every service is delivered with reliability, attention to detail, and a commitment to exceeding expectations.
-          </p>
+          <p>Reliable service, attention to detail, and outstanding results every time.</p>
         </div>
 
       </div>
@@ -171,11 +158,10 @@
         Book today and secure your spot. Same-day appointments available.
       </p>
 
-      <div style="margin-top:15px;">
+      <!-- BOTONES CORREGIDOS -->
+      <div class="btn-group" style="margin-top:15px;">
         <a href="contact.html" class="btn btn-primary">Get Instant Quote</a>
-        <a href="contact.html" class="btn btn-dark" style="margin-left:10px;">
-          Book Now
-        </a>
+        <a href="contact.html" class="btn btn-dark">Book Now</a>
       </div>
 
     </div>
@@ -200,15 +186,11 @@
 
 </main>
 
-<!-- FLOAT BUTTONS -->
+<!-- FLOAT -->
 <div class="float-container">
-
   <a href="tel:+14288880542" class="float-btn float-dark">📞</a>
-
   <a href="https://wa.me/14288880542" target="_blank" class="float-btn float-whatsapp">💬</a>
-
   <a href="contact.html" class="float-btn float-primary">+</a>
-
 </div>
 
 <footer>
@@ -225,31 +207,43 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-<script src="js/translator.js"></script>
-
-<!-- MENU SCRIPT -->
+<!-- MENU SCRIPT UNIFICADO -->
 <script>
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
-const overlay = document.getElementById("menuOverlay");
+document.addEventListener("DOMContentLoaded", () => {
 
-function toggleMenu() {
-  hamburger.classList.toggle("active");
-  nav.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+  const toggle = document.getElementById("menu-toggle");
+  const nav = document.getElementById("nav-menu");
+  const overlay = document.querySelector(".menu-overlay");
 
-hamburger.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu);
+  if (!toggle || !nav || !overlay) return;
 
-document.querySelectorAll("nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+
+  overlay.addEventListener("click", () => {
+    toggle.classList.remove("active");
     nav.classList.remove("active");
     overlay.classList.remove("active");
+    document.body.classList.remove("menu-open");
   });
+
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      toggle.classList.remove("active");
+      nav.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    });
+  });
+
 });
 </script>
+
+<script src="js/translator.js"></script>
 
 </body>
 </html>
