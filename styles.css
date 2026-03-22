@@ -292,7 +292,7 @@ img {
   box-shadow: var(--shadow-medium);
 }
 
-/* ===== CONTACT FORM PRO (MEJORADO) ===== */
+/* ===== CONTACT FORM PRO ===== */
 .contact-box {
   max-width: 750px;
   margin: 0 auto;
@@ -418,13 +418,17 @@ img {
 
   .btn-group {
     flex-direction: column;
+    display: flex;
+    gap: 12px;
   }
 
   .nav-buttons {
     flex-direction: column;
+    gap: 12px;
   }
 
   .nav-buttons .nav-btn {
-    flex: 1 1 100%;
+    flex: none;
+    width: 100%;
   }
 }
