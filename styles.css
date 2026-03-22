@@ -264,7 +264,7 @@ img {
   transform: scale(0.97);
 }
 
-/* ===== NAV BUTTONS (SAFE FINAL FIX) ===== */
+/* ===== NAV BUTTONS ===== */
 .nav-buttons {
   display: flex;
   justify-content: space-between;
@@ -292,15 +292,72 @@ img {
   box-shadow: var(--shadow-medium);
 }
 
-.nav-buttons .nav-btn span {
-  margin: 0 4px;
+/* ===== CONTACT FORM PRO (MEJORADO) ===== */
+.contact-box {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
-/* ===== BUTTON GROUP ===== */
-.btn-group {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+.contact-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+.contact-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 15px 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d9e6;
+  font-size: 14px;
+  background: #f9fbfd;
+  transition: all 0.25s ease;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74,155,140,0.2);
+}
+
+.contact-box textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-box .btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  box-shadow: 0 15px 35px rgba(46,196,182,0.35);
+}
+
+.contact-box .btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(46,196,182,0.45);
 }
 
 /* ===== FLOAT BUTTONS ===== */
@@ -363,7 +420,6 @@ img {
     flex-direction: column;
   }
 
-  /* NAV BUTTONS MOBILE PERFECT */
   .nav-buttons {
     flex-direction: column;
   }
