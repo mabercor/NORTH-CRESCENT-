@@ -23,42 +23,15 @@
 <meta name="twitter:description" content="Professional cleaning services in Moncton, Dieppe, and Riverview.">
 <meta name="twitter:image" content="https://www.northcrescentcleaning.com/images/hero-company-cleaning.jpg">
 
-<!-- Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CleaningService",
-  "name": "North Crescent Facility Solutions Inc",
-  "image": "https://www.northcrescentcleaning.com/images/logo.jpg",
-  "url": "https://www.northcrescentcleaning.com",
-  "telephone": "+1-428-888-0542",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Moncton",
-    "addressRegion": "NB",
-    "addressCountry": "CA"
-  },
-  "areaServed": ["Moncton","Dieppe","Riverview","Shediac"],
-  "description": "Professional residential and commercial cleaning services with guaranteed satisfaction."
-}
-</script>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-48W5J5N037"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-48W5J5N037');
-</script>
-
+<!-- Fonts & CSS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
 <!-- Favicon -->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
 </head>
 
@@ -148,7 +121,25 @@ gtag('config', 'G-48W5J5N037');
   </div>
 </section>
 
+<!-- NAV FLOW RESTORED -->
+<div class="container">
+  <div class="nav-buttons">
+
+    <a href="services.html" class="btn btn-primary nav-btn btn-next">
+      Next <span>→</span>
+    </a>
+
+  </div>
+</div>
+
 </main>
+
+<!-- FLOAT BUTTONS RESTORED -->
+<div class="float-container">
+  <a href="tel:+14288880542" class="float-btn float-dark">📞</a>
+  <a href="https://wa.me/14288880542" target="_blank" class="float-btn float-whatsapp">💬</a>
+  <a href="contact.html" class="float-btn float-primary">+</a>
+</div>
 
 <footer>
   <p>© 2026 North Crescent Facility Solutions Inc • Moncton, New Brunswick</p>
@@ -168,7 +159,17 @@ window.onload = function() {
 };
 </script>
 
-<!-- MENU SCRIPT (FIXED) -->
+<!-- SCROLL BAR -->
+<script>
+window.addEventListener("scroll", () => {
+  const scrollTop = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = (scrollTop / height) * 100;
+  document.querySelector(".progress-bar").style.width = progress + "%";
+});
+</script>
+
+<!-- MENU SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
