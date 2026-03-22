@@ -1,4 +1,4 @@
-<!DOCTYPE html>       
+<!DOCTYPE html>        
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -60,9 +60,10 @@ gtag('config', 'G-48W5J5N037');
 <link rel="stylesheet" href="styles.css">
 
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon-32x32.png">
-<link rel="icon" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="/favicon-16x16.png" sizes="16x16">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
 </head>
 
 <body data-page="contact">
@@ -84,7 +85,7 @@ gtag('config', 'G-48W5J5N037');
 
     <div class="logo-container">
       <a href="index.html">
-        <img src="images/logo.jpg" alt="North Crescent Facility Solutions professional cleaning services Moncton NB">
+        <img src="images/logo.jpg" alt="North Crescent Facility Solutions professional cleaning services Moncton NB" loading="lazy">
       </a>
       <div class="brand-title">
         NORTH CRESCENT <span>FACILITY SOLUTIONS</span>
@@ -191,10 +192,26 @@ gtag('config', 'G-48W5J5N037');
       </div>
 
       <div class="section-box">
-        <h2>Contact Information</h2>
-        <p><strong>📍 Location:</strong> Moncton, NB</p>
-        <p><strong>📞 Phone:</strong> +1 (428) 888-0542</p>
-        <p><strong>✉ Email:</strong> info@northcrescentcleaning.com</p>
+
+        <h2 class="section-title">Contact Information</h2>
+        <div class="divider"></div>
+
+        <div class="text-box">
+          <p><strong>📍 Location:</strong> Moncton, New Brunswick</p>
+
+          <p><strong>📞 Phone:</strong> 
+            <a href="tel:+14288880542">+1 (428) 888-0542</a>
+          </p>
+
+          <p><strong>✉ Email:</strong> 
+            <a href="mailto:info@northcrescentcleaning.com">
+              info@northcrescentcleaning.com
+            </a>
+          </p>
+
+          <p><strong>Service Areas:</strong> Moncton • Dieppe • Riverview • Shediac</p>
+        </div>
+
       </div>
 
     </div>
@@ -204,15 +221,31 @@ gtag('config', 'G-48W5J5N037');
 
 </main>
 
-<footer style="background:#1E3A5F; color:#ffffff; padding:25px 0; text-align:center;">
+<!-- ✅ FOOTER -->
+<footer style="background:#0F172A; color:#ffffff; padding:30px 0; text-align:center;">
   <div class="container">
     <p>© 2026 North Crescent Facility Solutions Inc. All rights reserved.</p>
-    <a href="privacy.html" style="color:#2EC4B6;">Privacy Policy</a> |
-    <a href="terms.html" style="color:#2EC4B6;">Terms & Conditions</a>
+    <div style="margin-top:10px;">
+      <a href="privacy.html" style="color:#4A9B8C; margin:0 10px;">Privacy Policy</a>
+      <a href="terms.html" style="color:#4A9B8C; margin:0 10px;">Terms & Conditions</a>
+    </div>
   </div>
 </footer>
 
-<!-- ✅ SCRIPT CORRECTO DEL MENÚ -->
+<!-- COOKIE SCRIPT -->
+<script>
+function acceptCookies() {
+  document.getElementById("cookie-banner").style.display = "none";
+  localStorage.setItem("cookiesAccepted", "true");
+}
+window.onload = function() {
+  if(localStorage.getItem("cookiesAccepted")) {
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+};
+</script>
+
+<!-- ✅ MENU FIX -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -226,13 +259,21 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.classList.toggle("active");
     nav.classList.toggle("active");
     overlay.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
   });
 
-  overlay.addEventListener("click", () => {
+  overlay.addEventListener("click", closeMenu);
+
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  function closeMenu() {
     toggle.classList.remove("active");
     nav.classList.remove("active");
     overlay.classList.remove("active");
-  });
+    document.body.classList.remove("menu-open");
+  }
 
 });
 </script>
