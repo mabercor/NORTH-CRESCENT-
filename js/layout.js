@@ -1,28 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // HEADER
+  // =========================
+  // HEADER LOAD
+  // =========================
   fetch("/components/header.html")
-    .then(res => res.text())
+    .then(res => {
+      if (!res.ok) throw new Error("Header failed to load");
+      return res.text();
+    })
     .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
-      initMenu(); // importante
-    });
+      const header = document.getElementById("header-placeholder");
+      if (header) header.innerHTML = data;
 
-  // FOOTER
+      initMenu(); // 🔥 CRÍTICO
+    })
+    .catch(err => console.error("Header error:", err));
+
+  // =========================
+  // FOOTER LOAD
+  // =========================
   fetch("/components/footer.html")
-    .then(res => res.text())
+    .then(res => {
+      if (!res.ok) throw new Error("Footer failed to load");
+      return res.text();
+    })
     .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
+      const footer = document.getElementById("footer-placeholder");
+      if (footer) footer.innerHTML = data;
+    })
+    .catch(err => console.error("Footer error:", err));
 
-  // MENU FUNCTION
+  // =========================
+  // MENU SYSTEM (ROBUSTO)
+  // =========================
   function initMenu() {
+
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav-menu");
     const overlay = document.querySelector(".menu-overlay");
 
-    if (!toggle || !nav || !overlay) return;
+    if (!toggle || !nav || !overlay) {
+      console.warn("Menu elements not found");
+      return;
+    }
 
+    // Toggle menu
     toggle.addEventListener("click", () => {
       toggle.classList.toggle("active");
       nav.classList.toggle("active");
@@ -30,7 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle("menu-open");
     });
 
+    // Close on overlay click
     overlay.addEventListener("click", closeMenu);
+
+    // 🔥 CLOSE MENU ON LINK CLICK (IMPORTANTE)
+    document.querySelectorAll("#nav-menu a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
 
     function closeMenu() {
       toggle.classList.remove("active");
