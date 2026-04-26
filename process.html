@@ -247,74 +247,22 @@ gtag('config', 'G-48W5J5N037');
   <a href="contact.html" class="float-btn float-primary">+</a>
 </div>
 
-<footer>
-  <p>© 2026 North Crescent Facility Solutions Inc • Moncton, NB</p>
+<body>
 
-  <div style="margin-top:10px; font-size:13px;">
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms of Service</a>
-  </div>
-</footer>
+<div class="menu-overlay"></div>
+<div class="progress-bar"></div>
 
-<!-- COOKIE SCRIPT -->
-<script>
-function acceptCookies() {
-  document.getElementById("cookie-banner").style.display = "none";
-  localStorage.setItem("cookiesAccepted", "true");
-}
+<!-- HEADER GLOBAL -->
+<div id="header-placeholder"></div>
 
-window.onload = function() {
-  if(localStorage.getItem("cookiesAccepted")) {
-    document.getElementById("cookie-banner").style.display = "none";
-  }
-};
-</script>
+<main>
+  <!-- TU CONTENIDO -->
+</main>
 
-<script>
-window.addEventListener("scroll", () => {
-  const scrollTop = document.documentElement.scrollTop;
-  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const progress = (scrollTop / height) * 100;
-  document.querySelector(".progress-bar").style.width = progress + "%";
-});
-</script>
+<!-- FOOTER GLOBAL -->
+<div id="footer-placeholder"></div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-menu");
-  const overlay = document.querySelector(".menu-overlay");
-
-  if (!toggle || !nav || !overlay) return;
-
-  toggle.addEventListener("click", () => {
-    toggle.classList.toggle("active");
-    nav.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
-  });
-
-  overlay.addEventListener("click", () => {
-    toggle.classList.remove("active");
-    nav.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.classList.remove("menu-open");
-  });
-
-  document.querySelectorAll("#nav-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      toggle.classList.remove("active");
-      nav.classList.remove("active");
-      overlay.classList.remove("active");
-      document.body.classList.remove("menu-open");
-    });
-  });
-
-});
-</script>
-
-<script src="js/translator.js"></script>
+<script src="/js/layout.js"></script>
 
 </body>
 </html>
