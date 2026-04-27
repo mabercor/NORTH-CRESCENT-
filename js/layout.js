@@ -1,37 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // =========================
-  // HEADER LOAD
+  // LOAD COMPONENT (GENÉRICO)
   // =========================
-  fetch("/components/header.html")
-    .then(res => {
-      if (!res.ok) throw new Error("Header failed to load");
-      return res.text();
-    })
-    .then(data => {
-      const header = document.getElementById("header-placeholder");
-      if (header) header.innerHTML = data;
+  function loadComponent(path, placeholderId, callback) {
+    fetch(path)
+      .then(res => {
+        if (!res.ok) throw new Error(`${path} failed`);
+        return res.text();
+      })
+      .then(data => {
+        const el = document.getElementById(placeholderId);
+        if (el) el.innerHTML = data;
 
-      initMenu(); // 🔥 CRÍTICO
-    })
-    .catch(err => console.error("Header error:", err));
-
-  // =========================
-  // FOOTER LOAD
-  // =========================
-  fetch("/components/footer.html")
-    .then(res => {
-      if (!res.ok) throw new Error("Footer failed to load");
-      return res.text();
-    })
-    .then(data => {
-      const footer = document.getElementById("footer-placeholder");
-      if (footer) footer.innerHTML = data;
-    })
-    .catch(err => console.error("Footer error:", err));
+        if (callback) callback(); // 🔥 importante para menú
+      })
+      .catch(err => console.error(`${path} error:`, err));
+  }
 
   // =========================
-  // MENU SYSTEM (ROBUSTO)
+  // LOAD HEADER + FOOTER
+  // =========================
+  loadComponent("/components/header.html", "header-placeholder", () => {
+    initMenu();
+    setActiveNav(); // 🔥 NUEVO
+  });
+
+  loadComponent("/components/footer.html", "footer-placeholder");
+
+  // =========================
+  // MENU SYSTEM
   // =========================
   function initMenu() {
 
@@ -44,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Toggle menu
     toggle.addEventListener("click", () => {
       toggle.classList.toggle("active");
       nav.classList.toggle("active");
@@ -52,10 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle("menu-open");
     });
 
-    // Close on overlay click
     overlay.addEventListener("click", closeMenu);
 
-    // 🔥 CLOSE MENU ON LINK CLICK (IMPORTANTE)
     document.querySelectorAll("#nav-menu a").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
@@ -66,6 +61,23 @@ document.addEventListener("DOMContentLoaded", () => {
       overlay.classList.remove("active");
       document.body.classList.remove("menu-open");
     }
+  }
+
+  // =========================
+  // ACTIVE NAV (PRO UX)
+  // =========================
+  function setActiveNav() {
+    const current = window.location.pathname;
+
+    document.querySelectorAll("#nav-menu a, .nav-desktop a").forEach(link => {
+      const href = link.getAttribute("href");
+
+      if (!href) return;
+
+      if (current === href || current.includes(href.replace(".html",""))) {
+        link.classList.add("active");
+      }
+    });
   }
 
 });
