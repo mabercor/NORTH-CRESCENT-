@@ -641,40 +641,43 @@ nav {
 .lang-switch {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  background: rgba(255,255,255,0.05);
-  padding: 5px 10px;
-  border-radius: 20px;
-  backdrop-filter: blur(6px);
+  gap: 8px;
+  font-size: 14px;
+  background: rgba(255,255,255,0.08);
+  padding: 8px 14px;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 /* LINKS */
 .lang-switch a {
   position: relative;
   text-decoration: none;
-  color: #cbd5e1;
-  padding: 4px 8px;
-  border-radius: 12px;
+  color: #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .lang-switch a:hover {
   color: #ffffff;
-  background: rgba(74,155,140,0.15);
+  background: rgba(74,155,140,0.25);
+  transform: translateY(-1px);
 }
 
-/* ACTIVE STATE */
+/* ACTIVE */
 .lang-switch a.active {
   color: #ffffff;
-  background: #4A9B8C;
+  background: linear-gradient(135deg, #4A9B8C, #2f7c70);
   font-weight: 600;
-  box-shadow: 0 0 8px rgba(74,155,140,0.6);
+  box-shadow: 0 0 10px rgba(74,155,140,0.6);
 }
 
 /* DIVIDER */
 .lang-switch span {
-  color: #64748b;
-  font-size: 12px;
+  color: #94a3b8;
+  font-size: 13px;
 }
