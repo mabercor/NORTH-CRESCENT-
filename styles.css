@@ -644,8 +644,8 @@ nav {
   align-items: center;
   background: #e2e8f0;
   padding: 4px;
-  border-radius: 30px;
-  margin-left: 12px;
+  border-radius: 25px;
+  margin-left: 10px;
   overflow: hidden;
 }
 
@@ -656,7 +656,7 @@ nav {
   text-decoration: none;
   color: #64748b;
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
   z-index: 2;
   transition: color 0.3s ease;
@@ -676,7 +676,8 @@ nav {
   width: 50%;
   height: calc(100% - 8px);
   background: linear-gradient(135deg, #4A9B8C, #2f7c70);
-  border-radius: 20px;
+  border-radius: 2
+    15px;
   transition: transform 0.3s ease;
   z-index: 1;
 }
