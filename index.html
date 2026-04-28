@@ -52,6 +52,51 @@
 </script>
 
 </head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+  const overlay = document.querySelector(".menu-overlay");
+
+  const arrows = document.querySelectorAll(".menu-arrow");
+
+  // 🔥 HAMBURGER
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+
+  // 🔥 DROPDOWN
+  arrows.forEach(btn => {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      const dropdown = this.closest(".dropdown");
+
+      // cerrar otros
+      document.querySelectorAll(".dropdown").forEach(d => {
+        if (d !== dropdown) d.classList.remove("open");
+      });
+
+      dropdown.classList.toggle("open");
+    });
+  });
+
+  // 🔥 CERRAR CON OVERLAY
+  overlay.addEventListener("click", function () {
+    navMenu.classList.remove("active");
+    overlay.classList.remove("active");
+
+    document.querySelectorAll(".dropdown").forEach(d => {
+      d.classList.remove("open");
+    });
+  });
+
+});
+</script>
+
   
 <body data-page="index">
 
