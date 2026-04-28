@@ -5,27 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Services de nettoyage professionnels à Moncton, Dieppe et Riverview | North Crescent Facility Solutions Inc</title>
-
 <meta name="description" content="Services de nettoyage résidentiel, commercial, nettoyage en profondeur, Airbnb et après construction à Moncton, Dieppe et Riverview. Solutions fiables, détaillées et professionnelles.">
 
 <!-- SEO -->
 <link rel="canonical" href="https://www.northcrescentcleaning.com/fr/services.html">
 <meta name="robots" content="index, follow">
 
-<!-- HREFLANG -->
-<link rel="alternate" hreflang="en" href="https://www.northcrescentcleaning.com/services.html">
-<link rel="alternate" hreflang="fr" href="https://www.northcrescentcleaning.com/fr/services.html">
+<!-- GEO (SEO LOCAL) -->
+<meta name="geo.region" content="CA-NB">
+<meta name="geo.placename" content="Moncton">
 
 <!-- OPEN GRAPH -->
-<meta property="og:title" content="Services de nettoyage professionnels | North Crescent">
-<meta property="og:description" content="Services de nettoyage résidentiel, commercial et plus à Moncton, NB. Solutions fiables et professionnelles.">
+<meta property="og:title" content="Services de nettoyage professionnels | North Crescent Facility Solutions Inc">
+<meta property="og:description" content="Services résidentiels, commerciaux et nettoyage en profondeur à Moncton, NB. Solutions fiables et professionnelles.">
 <meta property="og:image" content="https://www.northcrescentcleaning.com/images/logo.jpg">
 <meta property="og:url" content="https://www.northcrescentcleaning.com/fr/services.html">
 <meta property="og:type" content="website">
 
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Services de nettoyage professionnels | North Crescent">
+<meta name="twitter:title" content="North Crescent Facility Solutions Inc">
 <meta name="twitter:description" content="Services de nettoyage de haute qualité pour maisons et entreprises à Moncton.">
 <meta name="twitter:image" content="https://www.northcrescentcleaning.com/images/logo.jpg">
 
@@ -56,17 +55,45 @@ gtag('config', 'G-48W5J5N037');
  "areaServed": ["Moncton","Dieppe","Riverview","Shediac"],
  "serviceType": [
    "Nettoyage résidentiel",
+   "Nettoyage de bureaux",
    "Nettoyage commercial",
    "Nettoyage en profondeur",
-   "Nettoyage déménagement (entrée/sortie)",
+   "Nettoyage avant et après déménagement",
    "Nettoyage Airbnb",
-   "Nettoyage après construction"
+   "Nettoyage après construction",
+   "Services d’entretien"
  ]
 }
 </script>
 
+<!-- FONTS + CSS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+
+<style>
+@media (max-width: 768px) {
+
+  .dropdown .dropdown-menu {
+    display: block !important;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .dropdown {
+    pointer-events: none;
+  }
+
+  .dropdown-menu a {
+    pointer-events: auto;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+</style>
 
 <!-- FAVICON -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -75,22 +102,6 @@ gtag('config', 'G-48W5J5N037');
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 </head>
-
- <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const arrows = document.querySelectorAll(".menu-arrow");
-
-  arrows.forEach(arrow => {
-    arrow.addEventListener("click", function (e) {
-      e.stopPropagation(); // 🔥 evita conflictos
-      const dropdown = this.closest(".dropdown");
-      dropdown.classList.toggle("open");
-    });
-  });
-
-});
-</script>
  
 <body data-page="services"> 
 
