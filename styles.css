@@ -849,11 +849,6 @@ nav {
     font-size: 15px !important;
   }
 
-}
-/* DESKTOP */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
