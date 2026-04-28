@@ -194,11 +194,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ✅ CERRAR AL TOCAR OVERLAY
-  overlay.addEventListener("click", function () {
+ document.addEventListener("click", function (e) {
+
+  // Si el click NO fue dentro del menú
+  if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+
     navMenu.classList.remove("active");
     overlay.classList.remove("active");
     servicesMenu.classList.remove("open");
-  });
+
+  }
+
+});
 
 });
 </script>
