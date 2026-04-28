@@ -1512,88 +1512,12 @@ nav {
 
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    gap: 12px;
-
-    transition: right 0.3s ease;
-    overflow-y: auto;
-    z-index: 1000;
-  }
-
-  nav.active {
-    right: 0;
-  }
-
-  nav a {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 15px;
-    color: #1E3A5F;
-    text-decoration: none;
-  }
-
-  /* ✅ HAMBURGER SOLO EN MOBILE */
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-}
-
-/* ===== DROPDOWN FINAL (SIMPLE & STABLE) ===== */
-
-.dropdown {
-  position: relative;
-}
-
-/* BASE */
-.dropdown-menu {
-  display: none;
-  flex-direction: column;
-}
-
-/* DESKTOP */
-@media (min-width: 769px) {
-
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-    padding: 10px 0;
-    min-width: 220px;
-    z-index: 1000;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  /* NAV CONTENEDOR */
-  nav {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    width: 85%;
-    max-width: 320px;
-    height: calc(100vh - 70px);
-    background: white;
-
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
 
     padding: 25px;
     gap: 18px;
-    transition: 0.3s ease;
+
+    transition: right 0.3s ease;
     overflow-y: auto;
 
     z-index: 1000;
@@ -1603,24 +1527,26 @@ nav {
     right: 0;
   }
 
-  /* LINKS */
   nav a {
     width: 100%;
     text-align: left;
     font-size: 15px;
   }
 
-  /* DROPDOWN MOBILE SIN JS */
+  /* ===== DROPDOWN FIX ===== */
+
   .dropdown {
     width: 100%;
   }
 
   .dropdown-menu {
+    display: none;              /* 🔥 IMPORTANTE */
     position: static;
     width: 100%;
     padding-left: 10px;
     background: transparent;
     box-shadow: none;
+    flex-direction: column;
   }
 
   .dropdown-menu a {
@@ -1630,9 +1556,8 @@ nav {
     padding: 8px 0;
   }
 
-  /* 🔥 CLAVE: apertura en mobile */
-  .dropdown:active .dropdown-menu,
-  .dropdown:focus-within .dropdown-menu {
+  /* 🔥 SOLO ESTE MÉTODO (JS) */
+  .dropdown.open .dropdown-menu {
     display: flex;
   }
 
@@ -1646,7 +1571,7 @@ nav {
 
 }
 
-/* HAMBURGER ICON */
+/* ===== HAMBURGER ICON ===== */
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -1655,7 +1580,7 @@ nav {
   border-radius: 2px;
 }
 
-/* OVERLAY */
+/* ===== OVERLAY ===== */
 .menu-overlay {
   position: fixed;
   inset: 0;
@@ -1670,6 +1595,7 @@ nav {
   opacity: 1;
   pointer-events: all;
 }
+
 /* ===== SCROLL FIX ===== */
 html, body {
   height: auto;
