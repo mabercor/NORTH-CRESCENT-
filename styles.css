@@ -1643,3 +1643,65 @@ nav {
   opacity: 1;
   pointer-events: all;
 }
+/* ===== DROPDOWN FIX DEFINITIVO ===== */
+
+.dropdown {
+  width: 100%;
+}
+
+.dropdown-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TEXTO */
+.menu-label {
+  flex: 1;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #1E3A5F;
+}
+
+/* BOTÓN */
+.menu-arrow {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  border: none;
+  background: rgba(74, 155, 140, 0.1);
+  color: #4A9B8C;
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* 🔥 SUBMENU */
+.dropdown-menu {
+  display: none !important;   /* 🔥 fuerza estado base */
+  flex-direction: column;
+  width: 100%;
+  padding-left: 12px;
+}
+
+/* 🔥 APERTURA (FORZADA) */
+.dropdown.open > .dropdown-menu {
+  display: flex !important;
+}
+
+/* LINKS */
+.dropdown-menu a {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+}
+
+/* ROTACIÓN */
+.dropdown.open .menu-arrow {
+  transform: rotate(180deg);
+}
