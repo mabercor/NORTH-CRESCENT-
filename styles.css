@@ -1541,6 +1541,53 @@ nav {
 
 }
 
+/* ===== MOBILE MENU (CRÍTICO) ===== */
+@media (max-width: 768px) {
+
+  nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 85%;
+    max-width: 320px;
+    height: calc(100vh - 70px);
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 20px;
+    gap: 12px;
+
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+    font-size: 15px;
+    color: #1E3A5F;
+    text-decoration: none;
+  }
+
+  /* ✅ HAMBURGER SOLO EN MOBILE */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1101;
+  }
+
+}
+
 /* ===== DESKTOP FIX ===== */
 @media (min-width: 769px) {
 
@@ -1549,7 +1596,7 @@ nav {
     display: none;
   }
 
-  /* ✅ MENU NORMAL HORIZONTAL */
+  /* ✅ NAV NORMAL */
   nav {
     position: static;
     display: flex !important;
@@ -1562,67 +1609,100 @@ nav {
 
 }
 
-/* ===== DROPDOWN NUEVO ===== */
+/* ===== DROPDOWN ===== */
 
 .dropdown {
   width: 100%;
 }
 
-.menu-link {
+/* CONTENEDOR SUPERIOR */
+.dropdown-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  color: #1E3A5F;
-  text-decoration: none;
+}
+
+/* TEXTO */
+.menu-label {
+  flex: 1;
   padding: 10px 0;
+  text-decoration: none;
+  color: #1E3A5F;
 }
 
-/* FLECHA */
-.menu-link .arrow {
-  font-size: 14px;
+/* BOTÓN FLECHA */
+.menu-arrow {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  border: none;
+  background: rgba(74, 155, 140, 0.1);
   color: #4A9B8C;
-  transition: transform 0.3s ease;
+
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-/* SUBMENU */
+.menu-arrow:hover {
+  background: #4A9B8C;
+  color: #fff;
+}
+
+.menu-arrow:active {
+  transform: scale(0.9);
+}
+
+/* ===== SUBMENU ===== */
+
 .dropdown-menu {
   display: none;
   flex-direction: column;
   padding-left: 12px;
+  width: 100%;
 }
 
 .dropdown-menu a {
   display: block;
+  width: 100%;
   padding: 8px 0;
 }
 
-/* ABRIR */
-.dropdown.open .dropdown-menu {
+/* 🔥 ABRIR SUBMENU */
+.dropdown.open > .dropdown-menu {
   display: flex;
 }
 
 /* ROTACIÓN */
-.dropdown.open .arrow {
+.dropdown.open .menu-arrow {
   transform: rotate(180deg);
 }
 
 /* ===== HAMBURGER ICON ===== */
+
 .hamburger span {
   width: 25px;
   height: 3px;
   background: #1E3A5F;
   margin: 4px 0;
+  border-radius: 2px;
 }
 
 /* ===== OVERLAY ===== */
+
 .menu-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
+  z-index: 900;
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .menu-overlay.active {
