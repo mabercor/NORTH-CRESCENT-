@@ -163,7 +163,26 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
   </div>
-</header>
+ <script>
+  </header>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll(".menu-link").forEach(link => {
+    link.addEventListener("click", function (e) {
+      
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+
+        const dropdown = this.closest(".dropdown");
+        dropdown.classList.toggle("open");
+      }
+
+    });
+  });
+
+});
+</script>
  
 <main>
 
