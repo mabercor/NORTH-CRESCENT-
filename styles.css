@@ -1600,3 +1600,41 @@ nav {
   opacity: 1;
   pointer-events: all;
 }
+/* CONTENEDOR */
+.dropdown-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TEXTO */
+.menu-label {
+  flex: 1;
+}
+
+/* FLECHA */
+.menu-arrow {
+  font-size: 20px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(74, 155, 140, 0.1);
+  color: #4A9B8C;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* HOVER (DESKTOP) */
+.menu-arrow:hover {
+  background: #4A9B8C;
+  color: #fff;
+}
+
+/* ACTIVE (TOUCH FEEDBACK) */
+.menu-arrow:active {
+  transform: scale(0.9);
+}
+
+/* 🔥 ROTACIÓN CUANDO ABRE (SI USAS JS) */
+.dropdown.open .menu-arrow {
+  transform: rotate(180deg);
+}
