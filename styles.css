@@ -1498,7 +1498,6 @@ nav {
   }
 
 }
-
 /* ===== MOBILE MENU (CRÍTICO) ===== */
 
 @media (max-width: 768px) {
@@ -1524,7 +1523,6 @@ nav {
     z-index: 1000;
   }
 
-  /* 🔥 ESTO ES LO QUE TE FALTABA */
   nav.active {
     right: 0;
   }
@@ -1587,13 +1585,22 @@ nav {
   transform: scale(0.9);
 }
 
-/* SUBMENU */
+/* 🔥 SUBMENU FIX REAL */
 .dropdown-menu {
   display: none;
   flex-direction: column;
   padding-left: 12px;
+
+  width: 100%;            /* 🔥 ESTE ERA EL ERROR */
 }
 
+.dropdown-menu a {
+  display: block;         /* 🔥 asegura que se vean */
+  width: 100%;
+  padding: 8px 0;
+}
+
+/* 🔥 ABRIR */
 .dropdown.open .dropdown-menu {
   display: flex;
 }
