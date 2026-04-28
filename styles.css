@@ -788,3 +788,800 @@ nav {
   }
 
 }
+/* ===== VARIABLES ===== */ 
+:root {
+  --primary: #1E3A5F;
+  --secondary: #4A9B8C;
+  --accent: #2EC4B6;
+  --light: #F5F7FA;
+  --dark: #0F172A;
+  --radius: 12px;
+
+  --shadow-soft: 0 10px 25px rgba(0,0,0,0.05);
+  --shadow-medium: 0 15px 35px rgba(0,0,0,0.08);
+  --shadow-strong: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  font-size: 15px;
+  padding-top: 80px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #475569;
+  font-size: 14.5px;
+  max-width: 650px;
+}
+
+/* ===== LINKS ===== */
+a {
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+/* ===== LOGO ===== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-container img {
+  height: 70px;
+}
+
+.brand-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ===== NAV ===== */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+nav a.active {
+  color: var(--secondary);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--primary);
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ===== OVERLAY ===== */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 900;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding: 60px 0 60px;
+}
+
+.hero-content {
+  margin-top: -10px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding-top: 35px;
+  padding-bottom: 55px;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background: var(--secondary);
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  border-radius: 2px;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* ===== IMAGES ===== */
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  color: white;
+}
+
+.btn-dark {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover,
+.btn-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== NAV BUTTONS ===== */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.nav-buttons .nav-btn {
+  flex: 1 1 48%;
+  text-align: center;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.25s ease;
+  min-width: 140px;
+}
+
+.nav-buttons .nav-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  box-shadow: var(--shadow-medium);
+}
+
+/* ===== CONTACT FORM PRO ===== */
+.contact-box {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.contact-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+.contact-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 15px 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d9e6;
+  font-size: 14px;
+  background: #f9fbfd;
+  transition: all 0.25s ease;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(74,155,140,0.2);
+}
+
+.contact-box textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-box .btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  box-shadow: 0 15px 35px rgba(46,196,182,0.35);
+}
+
+.contact-box .btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(46,196,182,0.45);
+}
+
+/* ===== FLOAT BUTTONS ===== */
+.float-container {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.float-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.float-dark { background: var(--primary); }
+.float-primary { background: linear-gradient(135deg, var(--secondary), var(--accent)); }
+.float-whatsapp { background: #25D366; }
+
+}
+
+
+/* ===== TEXT CENTER FIX (ADDED) ===== */
+body {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  justify-content: center;
+}
+
+/* ===== 🔥 INTERACTIVITY UPGRADE (SAFE PATCH) ===== */
+
+/* Cards más dinámicas */
+.card {
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* Botones más visibles */
+.btn-primary {
+  box-shadow: 0 10px 25px rgba(74,155,140,0.3);
+}
+
+.btn-primary:hover,
+.btn-dark:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(74,155,140,0.4);
+}
+
+/* Botones flotantes */
+.float-btn {
+  transition: transform 0.2s ease;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Links dentro de cards no cambian color */
+.card a {
+  color: inherit;
+}
+/* ===== SECTION BOX (CAJAS PRO) ===== */
+.section-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #e2e8f0;
+  transition: all 0.25s ease;
+}
+
+.section-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Para imágenes dentro de caja */
+.section-box img {
+  border-radius: 12px;
+}
+
+/* CONTENEDOR */
+.lang-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #e2e8f0;
+  padding: 2px;
+  border-radius: 20px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+/* LINKS */
+.lang-switch a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  color: #64748b;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+/* ACTIVO */
+.lang-switch a.active {
+  color: #ffffff;
+}
+
+/* SLIDER */
+.lang-switch::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 50%;
+  height: calc(100% - 4px);
+  background: linear-gradient(135deg, #4A9B8C, #2f7c70);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* CUANDO ES FR */
+.lang-switch.fr-active::before {
+  transform: translateX(100%);
+}
+
+/* HOVER */
+.lang-switch a:hover {
+  color: #1E3A5F;
+}
+
+/* OCULTAR DIVIDER */
+.lang-switch span {
+  display: none;
+}
+/* ============================= */
+/* 🔷 HERO PREMIUM CORPORATIVO */
+/* ============================= */
+
+.hero {
+  position: relative;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  padding: 100px 0 70px;
+  overflow: hidden;
+}
+
+/* EFECTO DE PROFUNDIDAD */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(74,155,140,0.18), transparent 70%);
+  z-index: 0;
+}
+
+/* CONTENIDO ENCIMA */
+.hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  animation: fadeUp 0.7s ease;
+}
+
+/* ============================= */
+/* 🟢 HEADLINE (FORZADO) */
+/* ============================= */
+
+.hero .hero-content h1 {
+  font-size: 46px !important;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1E3A5F;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+
+/* SUBTEXTO (FORZADO) */
+.hero .hero-content .hero-sub {
+  font-size: 18px !important;
+  color: #475569;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+/* TEXTO DE CONFIANZA */
+.hero .hero-content p {
+  font-size: 15px !important;
+  color: #334155;
+  margin-top: 12px;
+  letter-spacing: 0.3px;
+}
+
+/* ============================= */
+/* 🔘 BOTONES PREMIUM */
+/* ============================= */
+
+.btn {
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+/* BOTÓN PRINCIPAL */
+.btn-primary {
+  background: linear-gradient(135deg, #4A9B8C, #2f7c70);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(74,155,140,0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(74,155,140,0.45);
+}
+
+/* BOTÓN SECUNDARIO */
+.btn-dark {
+  background: #1E3A5F;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(30,58,95,0.3);
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
+  background: #162c49;
+}
+
+/* ============================= */
+/* ✨ DIVIDER */
+/* ============================= */
+
+.divider {
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #4A9B8C, transparent);
+  margin: 22px auto;
+  border-radius: 2px;
+}
+
+/* ============================= */
+/* 📦 IMAGEN HERO (FORZADA) */
+/* ============================= */
+
+.hero img,
+.hero-image img {
+  border-radius: 20px !important;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.2) !important;
+  margin-top: 40px;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* ============================= */
+/* 🚀 FLOAT BUTTONS PREMIUM */
+/* ============================= */
+
+.float-container {
+  right: 20px;
+  bottom: 20px;
+  gap: 12px;
+}
+
+.float-btn {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: all 0.25s ease;
+}
+
+.float-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ============================= */
+/* 🎯 ANIMACIÓN */
+/* ============================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== DROPDOWN FINAL ===== */
+
+.dropdown {
+  position: relative;
+}
+
+/* BASE */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    padding: 10px 0;
+    min-width: 220px;
+    z-index: 1000;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .dropdown-menu {
+    display: none;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding-left: 10px;
+  }
+
+  .dropdown-menu.open {
+    display: flex !important;
+  }
+
+}
+@media (max-width: 768px) {
+
+  /* NAV CONTENEDOR */
+  nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 85%;
+    max-width: 320px;
+    height: calc(100vh - 70px);
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    gap: 18px;
+    transition: 0.3s ease;
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  /* LINKS */
+  nav a {
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+  }
+
+  /* DROPDOWN */
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: static;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .dropdown-menu a {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  .dropdown-menu.open {
+    display: flex;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1E3A5F;
+  margin: 4px 0;
+  border-radius: 2px;
+}
