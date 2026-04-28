@@ -889,4 +889,31 @@ nav {
     display: block;
   }
 
+} 
+
+
+/* BASE */
+.dropdown-menu {
+  display: none;
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .dropdown-menu.open {
+    display: flex !important;
+  }
+
 }
