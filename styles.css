@@ -1670,3 +1670,14 @@ nav {
   opacity: 1;
   pointer-events: all;
 }
+/* ===== SCROLL FIX ===== */
+html, body {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ===== MAIN FIX ===== */
+main {
+  min-height: 100vh;
+}
