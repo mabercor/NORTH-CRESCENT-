@@ -1466,7 +1466,7 @@ nav {
     transform: translateY(0);
   }
 }
-/* ===== DROPDOWN FINAL (SIMPLE & STABLE) ===== */
+/* ===== DROPDOWN FINAL (STABLE + CLEAN UX) ===== */
 
 .dropdown {
   position: relative;
@@ -1516,8 +1516,9 @@ nav {
     flex-direction: column;
     align-items: flex-start;
 
-    padding: 25px;
-    gap: 18px;
+    padding: 20px;
+    gap: 12px; /* 🔥 espaciado limpio */
+
     transition: 0.3s ease;
     overflow-y: auto;
 
@@ -1533,30 +1534,34 @@ nav {
     width: 100%;
     text-align: left;
     font-size: 15px;
+    padding: 10px 0; /* 🔥 mejor separación */
   }
 
-  /* DROPDOWN MOBILE SIN JS */
+  /* DROPDOWN */
   .dropdown {
     width: 100%;
   }
 
+  .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .dropdown-menu {
-    position: static;
-    width: 100%;
-    padding-left: 10px;
-    background: transparent;
-    box-shadow: none;
+    display: none;
+    flex-direction: column;
+    padding-left: 12px;
   }
 
   .dropdown-menu a {
     display: block;
     width: 100%;
     font-size: 14px;
-    padding: 8px 0;
+    padding: 6px 0;
   }
 
-  /* 🔥 CLAVE: apertura en mobile */
-  .dropdown:active .dropdown-menu,
+  /* 🔥 FIX REAL DEL SUBMENU EN MOBILE */
   .dropdown:focus-within .dropdown-menu {
     display: flex;
   }
