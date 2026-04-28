@@ -119,32 +119,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <div class="nav-wrapper">
 
+      <!-- HAMBURGER -->
       <div class="hamburger" id="menu-toggle">
         <span></span>
         <span></span>
         <span></span>
       </div>
 
+      <!-- NAV -->
       <nav id="nav-menu">
         
         <a href="/index.html">Home</a>
 
-        <!-- 🔥 DROPDOWN -->
+        <!-- ✅ DROPDOWN LIMPIO -->
         <div class="dropdown">
+          <a href="/services.html" class="menu-link active">
+            Services <span class="arrow">▾</span>
+          </a>
 
-          <!-- TOP ROW -->
-          <div class="dropdown-top">
-            <a href="/services.html" class="menu-label active">
-              Services
-            </a>
-
-            <!-- ARROW BUTTON -->
-            <span class="menu-arrow" onclick="this.closest('.dropdown').classList.toggle('open')">
-              ▾
-            </span>
-          </div>
-
-          <!-- SUBMENU -->
           <div class="dropdown-menu">
             <a href="/commercial-cleaning-moncton.html">Commercial Cleaning</a>
             <a href="/office-cleaning-moncton.html">Office Cleaning</a>
@@ -152,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="/janitorial-cleaning-moncton.html">Janitorial Services</a>
             <a href="/post-construction-cleaning-moncton.html">Post-Construction Cleaning</a>
           </div>
-
         </div>
 
         <a href="/process.html">Process</a>
@@ -163,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       </nav>
 
+      <!-- LANGUAGE -->
       <div class="lang-switch">
         <a href="/services.html">EN</a>
         <a href="/fr/services.html">FR</a>
