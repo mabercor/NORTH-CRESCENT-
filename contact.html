@@ -69,67 +69,21 @@ gtag('config', 'G-48W5J5N037');
 
 <!-- FONTS & CSS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="/styles.css">
 
 <!-- FAVICON -->
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" href="/favicon-16x16.png" sizes="16x16">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" href="/favicon-32x32.png">
+<link rel="icon" href="/favicon-16x16.png">
 
-<script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  function closeModal() {
-    document.getElementById("successModal").style.display = "none";
-  }
-
-  window.closeModal = closeModal;
-
-  const form = document.getElementById("contactForm");
-
-  if (!form) return;
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const data = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-
-        form.reset();
-
-        const message = "Hi, I just submitted a cleaning request with North Crescent Facility Solutions. I will send photos or videos for a faster quote.";
-        const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
-
-        document.getElementById("waLink").href = waUrl;
-        document.getElementById("successModal").style.display = "flex";
-
-      } else {
-        alert("Something went wrong.");
-      }
-    })
-    .catch(() => {
-      alert("Error sending form.");
-    });
-  });
-
-});
-</script>
+</head>
   
 <body data-page="contact">
 
 <div class="menu-overlay"></div>
 <div class="progress-bar"></div>
 
+<!-- COOKIE -->
 <div id="cookie-banner" style="position:fixed; bottom:0; width:100%; background:#0F172A; color:#fff; padding:12px; text-align:center; font-size:13px; z-index:9999;">
   We use cookies to improve your experience. By using our site, you agree to our 
   <a href="/privacy.html" style="color:#4A9B8C;">Privacy Policy</a>.
@@ -196,13 +150,12 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </section>
 
-
-  
 <section>
   <div class="container">
 
     <div class="grid-2">
 
+      <!-- FORM -->
       <div id="contact-form">
         <div class="contact-box">
 
@@ -248,7 +201,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
           </form>
 
-<!-- 🔥 MODAL -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- 🔥 MODAL (FUERA DEL FORM Y AL FINAL) -->
 <div id="successModal" class="modal">
   <div class="modal-box">
 
@@ -267,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   </div>
 </div>
-        
+  
 <div class="section-box">
 
         <h2 class="section-title">Informations de contact</h2>
