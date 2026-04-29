@@ -78,70 +78,52 @@ gtag('config', 'G-48W5J5N037');
 <link rel="icon" href="/favicon-16x16.png" sizes="16x16">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-</head>
-  <div id="successModal" class="modal">
-  <div class="modal-box">
-    
-    <h2>Request Sent Successfully ✅</h2>
-
-    <p>We’ve received your request.</p>
-    <p class="highlight">Send photos or a video for a faster quote.</p>
-
-    <a id="waLink" href="#" target="_blank" class="wa-btn">
-      📲 Send Photos via WhatsApp
-    </a>
-
-    <button onclick="closeModal()" class="close-btn">
-      Continue browsing
-    </button>
-
-  </div>
-</div>
 <script>
-
-
 <script>
-function closeModal() {
-  document.getElementById("successModal").style.display = "none";
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-const form = document.getElementById("contactForm");
+  function closeModal() {
+    document.getElementById("successModal").style.display = "none";
+  }
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault(); // 🔥 evita que Formspree redirija
+  window.closeModal = closeModal;
 
-  const data = new FormData(form);
+  const form = document.getElementById("contactForm");
 
-  fetch(form.action, {
-    method: "POST",
-    body: data,
-    headers: {
-      'Accept': 'application/json'
-    }
-  })
-  .then(response => {
-    if (response.ok) {
+  if (!form) return;
 
-      form.reset();
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-      const message = "Hi, I just submitted a cleaning request with North Crescent Facility Solutions. I will send photos or videos for a faster quote.";
-      const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
+    const data = new FormData(form);
 
-      document.getElementById("waLink").href = waUrl;
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
 
-      document.getElementById("successModal").style.display = "flex";
+        form.reset();
 
-    } else {
-      alert("Something went wrong.");
-    }
-  })
-  .catch(() => {
-    alert("Error sending form.");
+        const message = "Hi, I just submitted a cleaning request with North Crescent Facility Solutions. I will send photos or videos for a faster quote.";
+        const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
+
+        document.getElementById("waLink").href = waUrl;
+        document.getElementById("successModal").style.display = "flex";
+
+      } else {
+        alert("Something went wrong.");
+      }
+    })
+    .catch(() => {
+      alert("Error sending form.");
+    });
   });
+
 });
 </script>
-
-
   
 <body data-page="contact">
 
