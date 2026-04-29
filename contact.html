@@ -135,6 +135,49 @@ form.addEventListener("submit", function(e) {
   });
 });
 </script>
+
+<script>
+function closeModal() {
+  document.getElementById("successModal").style.display = "none";
+}
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // 🔥 evita que Formspree redirija
+
+  const data = new FormData(form);
+
+  fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+
+      form.reset();
+
+      const message = "Hi, I just submitted a cleaning request with North Crescent Facility Solutions. I will send photos or videos for a faster quote.";
+      const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
+
+      document.getElementById("waLink").href = waUrl;
+
+      document.getElementById("successModal").style.display = "flex";
+
+    } else {
+      alert("Something went wrong.");
+    }
+  })
+  .catch(() => {
+    alert("Error sending form.");
+  });
+});
+</script>
+
+
   
 <body data-page="contact">
 
