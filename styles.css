@@ -1889,12 +1889,16 @@ section,
 }
 
 
+/* WRAPPER */
 .custom-select {
   position: relative;
   width: 100%;
+  margin-top: 12px;
 }
 
-.custom-select select {
+/* SELECT BASE */
+.custom-select select,
+.form-group select {
   width: 100%;
   padding: 14px 16px;
   border-radius: 10px;
@@ -1905,23 +1909,25 @@ section,
   background-color: #f9fafb;
   appearance: none;
   outline: none;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   cursor: pointer;
 }
 
-/* Hover */
-.custom-select select:hover {
+/* HOVER */
+.custom-select select:hover,
+.form-group select:hover {
   border-color: #4A9B8C;
 }
 
-/* Focus */
-.custom-select select:focus {
+/* FOCUS (MUY IMPORTANTE UX) */
+.custom-select select:focus,
+.form-group select:focus {
   border-color: #4A9B8C;
   background-color: #ffffff;
-  box-shadow: 0 0 0 2px rgba(74,155,140,0.2);
+  box-shadow: 0 0 0 3px rgba(74,155,140,0.15);
 }
 
-/* Flecha personalizada */
+/* FLECHA */
 .custom-select::after {
   content: "▾";
   position: absolute;
@@ -1931,4 +1937,49 @@ section,
   font-size: 14px;
   color: #64748b;
   pointer-events: none;
+}
+
+/* FORM GROUP */
+.form-group {
+  margin-top: 12px;
+}
+
+/* DAYS GRID (MEJORADO) */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* DAYS BUTTON STYLE */
+.days-grid label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+/* HOVER DAYS */
+.days-grid label:hover {
+  background: #e2e8f0;
+}
+
+/* CHECKBOX */
+.days-grid input {
+  margin-right: 5px;
+}
+
+/* SELECTED STATE (🔥 IMPORTANTE) */
+.days-grid input:checked + span,
+.days-grid label:has(input:checked) {
+  background: #4A9B8C;
+  color: #ffffff;
+  border-color: #4A9B8C;
 }
