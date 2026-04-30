@@ -1887,3 +1887,48 @@ section,
   border: none;
   cursor: pointer;
 }
+
+
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: #1e293b;
+  background-color: #f9fafb;
+  appearance: none;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+.custom-select select:hover {
+  border-color: #4A9B8C;
+}
+
+/* Focus */
+.custom-select select:focus {
+  border-color: #4A9B8C;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 2px rgba(74,155,140,0.2);
+}
+
+/* Flecha personalizada */
+.custom-select::after {
+  content: "▾";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #64748b;
+  pointer-events: none;
+}
