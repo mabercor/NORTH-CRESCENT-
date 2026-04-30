@@ -184,15 +184,23 @@ gtag('config', 'G-48W5J5N037');
     <option>Post-Construction Cleaning</option>
   </select>
 </div>
- <select name="frequency" id="frequencySelect" required>
-  <option value="">Cleaning Frequency *</option>
-  <option value="daily">Every Day</option>
-  <option value="2week">2 Times per Week</option>
-  <option value="4month">4 Times per Month</option>
-  <option value="2month">2 Times per Month</option>
-  <option value="custom">Custom</option>
 
-    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;">
+<div class="form-group">
+  <select name="frequency" id="frequencySelect" required>
+    <option value="">Cleaning Frequency *</option>
+    <option value="daily">Every Day</option>
+    <option value="2week">2 Times per Week</option>
+    <option value="4month">4 Times per Month</option>
+    <option value="2month">2 Times per Month</option>
+    <option value="custom">Custom</option>
+  </select>
+</div>
+
+<!-- DAYS -->
+<div id="daysContainer" class="form-group" style="display:none;">
+  <label style="font-size:13px;">Select Preferred Days *</label>
+
+  <div class="days-grid">
     <label><input type="checkbox" name="days[]" value="Monday"> Mon</label>
     <label><input type="checkbox" name="days[]" value="Tuesday"> Tue</label>
     <label><input type="checkbox" name="days[]" value="Wednesday"> Wed</label>
@@ -201,22 +209,25 @@ gtag('config', 'G-48W5J5N037');
     <label><input type="checkbox" name="days[]" value="Saturday"> Sat</label>
     <label><input type="checkbox" name="days[]" value="Sunday"> Sun</label>
   </div>
-</select>
-    <div class="form-group">
-    <label style="font-size:13px;">Preferred Time *</label>
-   <select name="time_slot" required>
-  <option value="">Preferred Time Slot *</option>
-  <option>12AM – 4AM</option>
-  <option>4AM – 8AM</option>
-  <option>8AM – 12PM</option>
-  <option>12PM – 4PM</option>
-  <option>4PM – 8PM</option>
-  <option>8PM – 12AM</option>
-    </select>
-   
-  <div id="daysContainer" style="display:none; margin-top:10px;">
-  <label style="font-size:13px;">Select Preferred Days *</label>
+</div>
 
+<!-- TIME -->
+<div class="form-group">
+  <select name="time_slot" required>
+    <option value="">Preferred Time Slot *</option>
+    <option>12AM – 4AM</option>
+    <option>4AM – 8AM</option>
+    <option>8AM – 12PM</option>
+    <option>12PM – 4PM</option>
+    <option>4PM – 8PM</option>
+    <option>8PM – 12AM</option>
+  </select>
+</div>
+
+<p style="font-size:12px; color:#64748b;">
+Schedule is subject to availability. We will confirm your service plan after review.
+</p>
+ 
  </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
