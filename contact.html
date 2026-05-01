@@ -553,8 +553,34 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // 🔁 GUARDAR DATOS
-  fields.forEach(field => {
-    field.addEventListener("change", () => {
+ fields.forEach(field => {
+  field.addEventListener("change", () => {
+
+    // ❌ CAMPOS QUE NO SE GUARDAN
+    if (
+      field.name === "service" ||
+      field.name === "frequency" ||
+      field.name === "time_slot" ||
+      field.name === "message"
+    ) {
+      return;
+    }
+
+    // ✅ GUARDAR SOLO LO NECESARIO
+    if (field.type === "checkbox") {
+      let values = [];
+
+      document.querySelectorAll(`input[name="${field.name}"]:checked`).forEach(cb => {
+        values.push(cb.value);
+      });
+
+      localStorage.setItem(field.name, values.join(","));
+    } else {
+      localStorage.setItem(field.name, field.value);
+    }
+
+  });
+});
 
       if (field.type === "checkbox") {
         let values = [];
