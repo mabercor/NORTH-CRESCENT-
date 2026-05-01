@@ -128,13 +128,14 @@ gtag('config', 'G-48W5J5N037');
 
   </div>
 </header>
+<main>
 
 <section class="hero">
   <div class="container hero-content">
 
-    <div class="badge">Devis gratuit</div>
+    <div class="badge">Soumission gratuite</div>
 
-    <h1>Obtenez votre devis de nettoyage à Moncton, Dieppe et Riverview</h1>
+    <h1>Obtenez votre soumission de nettoyage à Moncton, Dieppe et Riverview</h1>
 
     <p class="hero-sub">
       ⚡ Réponse rapide • Service professionnel • Satisfaction garantie à 100 %
@@ -150,11 +151,12 @@ gtag('config', 'G-48W5J5N037');
 
     <div class="grid-2">
 
+      <!-- FORM -->
       <div id="contact-form">
         <div class="contact-box">
 
-          <h2>Demandez votre devis gratuit</h2>
-          <p>Parlez-nous de votre espace et recevez une estimation personnalisée en moins d’une heure.</p>
+          <h2>Obtenez votre soumission et réservez l’horaire qui vous convient</h2>
+          <p>Parlez-nous de votre espace et recevez une soumission personnalisée en moins d’une heure.</p>
 
           <div class="divider"></div>
 
@@ -162,34 +164,85 @@ gtag('config', 'G-48W5J5N037');
 
             <div class="form-row">
               <input type="text" name="name" placeholder="Nom complet *" required>
-              <input type="email" name="email" placeholder="Adresse e-mail *" required>
+              <input type="email" name="email" placeholder="Adresse courriel *" required>
             </div>
 
-            <input type="tel" name="phone" placeholder="Numéro de téléphone (optionnel)">
+            <input type="tel" name="phone" placeholder="Numéro de téléphone">
 
-            <select name="service" required>
-              <option value="">Sélectionnez un service *</option>
-              <option>Nettoyage résidentiel</option>
-              <option>Nettoyage commercial</option>
-              <option>Nettoyage en profondeur</option>
-              <option>Déménagement (entrée / sortie)</option>
-              <option>Nettoyage Airbnb</option>
-              <option>Nettoyage après construction</option>
-            </select>
+            <!-- SERVICE -->
+            <div class="custom-select">
+              <select name="service" required>
+                <option value="">Sélectionnez un service *</option>
+                <option>Nettoyage résidentiel</option>
+                <option>Nettoyage commercial</option>
+                <option>Nettoyage en profondeur</option>
+                <option>Emménagement / Déménagement</option>
+                <option>Nettoyage Airbnb</option>
+                <option>Entretien ménager</option>
+                <option>Nettoyage après construction</option>
+              </select>
+            </div>
 
+            <!-- FREQUENCY -->
+            <div class="form-group">
+              <select name="frequency" id="frequencySelect" required>
+                <option value="">Fréquence de nettoyage *</option>
+                <option value="daily">Tous les jours</option>
+                <option value="2week">2 fois par semaine</option>
+                <option value="4month">4 fois par mois</option>
+                <option value="2month">2 fois par mois</option>
+                <option value="custom">Personnalisé</option>
+              </select>
+            </div>
+
+            <!-- DAYS -->
+            <div id="daysContainer" class="form-group" style="display:none;">
+              <label style="font-size:13px;">Sélectionnez les jours préférés *</label>
+
+              <div class="days-grid">
+  <label><input type="checkbox" name="days[]" value="Monday"><span>Lun</span></label>
+  <label><input type="checkbox" name="days[]" value="Tuesday"><span>Mar</span></label>
+  <label><input type="checkbox" name="days[]" value="Wednesday"><span>Mer</span></label>
+  <label><input type="checkbox" name="days[]" value="Thursday"><span>Jeu</span></label>
+  <label><input type="checkbox" name="days[]" value="Friday"><span>Ven</span></label>
+  <label><input type="checkbox" name="days[]" value="Saturday"><span>Sam</span></label>
+  <label><input type="checkbox" name="days[]" value="Sunday"><span>Dim</span></label>
+</div>
+            </div>
+
+            <!-- TIME -->
+            <div class="form-group">
+              <select name="time_slot" required>
+                <option value="">Plage horaire préférée *</option>
+                <option>00h – 04h</option>
+                <option>04h – 08h</option>
+                <option>08h – 12h</option>
+                <option>12h – 16h</option>
+                <option>16h – 20h</option>
+                <option>20h – 00h</option>
+              </select>
+            </div>
+
+            <!-- NOTE -->
+            <p style="font-size:12px; color:#64748b;">
+              L’horaire est sujet à disponibilité. Nous confirmerons votre plan de service après évaluation.
+            </p>
+
+            <!-- MESSAGE -->
             <textarea name="message" placeholder="Décrivez votre espace..."></textarea>
 
+            <!-- BUTTON -->
             <button type="submit" class="btn btn-primary">
-              Obtenir mon devis gratuit
+              Obtenir ma soumission gratuite
             </button>
 
             <p style="font-size:12px; color:#64748b;">
               🔒 Formulaire sécurisé • Aucun spam • Réponse rapide garantie
             </p>
 
-            <p style="font-size:9px; color:#64748b;">
+            <p style="font-size:11px; color:#64748b;">
               En soumettant ce formulaire, vous acceptez notre 
-              <a href="/fr/privacy.html">Politique de confidentialité</a> et 
+              <a href="/privacy.html">Politique de confidentialité</a> et 
               <a href="/terms-and-conditions.pdf" target="_blank">Conditions générales</a>.
             </p>
 
@@ -198,172 +251,9 @@ gtag('config', 'G-48W5J5N037');
         </div>
       </div>
 
-      <div class="section-box">
-
-        <h2 class="section-title">Informations de contact</h2>
-        <div class="divider"></div>
-
-        <div class="text-box">
-          <p><strong>📍 Localisation :</strong> Moncton, Nouveau-Brunswick</p>
-
-          <div style="text-align:center; margin-top:20px;">
-
-            <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
-
-              <!-- LINKEDIN -->
-              <a href="https://www.linkedin.com/company/north-crescent-facility-solutions-inc/"
-                 target="_blank"
-                 style="width:45px; height:45px; background:#1E3A5F; border-radius:50%;
-                        display:flex; align-items:center; justify-content:center; transition:0.3s;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-1.337-.027-3.058-1.864-3.058-1.865 0-2.149 1.454-2.149 2.957v5.705h-3v-11h2.881v1.367h.041c.401-.761 1.381-1.564 2.845-1.564 3.043 0 3.604 2.004 3.604 4.609v5.588z"/>
-                </svg>
-              </a>
-
-              <!-- FACEBOOK -->
-              <a href="https://www.facebook.com/profile.php?id=61580557412140"
-                 target="_blank"
-                 style="width:45px; height:45px; background:#1E3A5F; border-radius:50%;
-                        display:flex; align-items:center; justify-content:center; transition:0.3s;">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
-                  <path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.3 0-1.7.8-1.7 1.6V12H17l-.5 3h-2.1v7A10 10 0 0022 12z"/>
-                </svg>
-              </a>
-
-              <!-- INSTAGRAM -->
-              <a href="https://www.instagram.com/northcrescentcleaning/"
-                 target="_blank"
-                 style="width:45px; height:45px; background:#1E3A5F; border-radius:50%;
-                        display:flex; align-items:center; justify-content:center; transition:0.3s;">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
-                  <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.8a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zM12 9a3 3 0 100 6 3 3 0 000-6z"/>
-                </svg>
-              </a>
-
-            </div>
-
-            <p style="margin-top:10px; font-size:14px; color:#4A9B8C; font-weight:600;">
-              Suivez North Crescent Facility Solutions Inc
-            </p>
-
-          </div>
-
-          <p><strong>📞 Téléphone :</strong> 
-            <a href="tel:+14288880542">+1 (428) 888-0542</a>
-          </p>
-
-          <p><strong>✉ Courriel :</strong> 
-            <a href="mailto:info@northcrescentcleaning.com">
-              info@northcrescentcleaning.com
-            </a>
-          </p>
-
-          <p><strong>Zones desservies :</strong> Moncton • Dieppe • Riverview • Shediac</p>
-        </div>
-
-      </div>
-
     </div>
 
   </div>
 </section>
 
 </main>
-
-<footer style="background:#0F172A; color:#CBD5F5; padding:20px 0 12px; font-family:sans-serif;">
-
-  <div style="max-width:1100px; margin:auto; padding:0 20px;">
-
-    <!-- TOP ROW -->
-    <div class="top-row" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:10px;">
-
-      <!-- BRAND -->
-      <div style="font-size:13px; color:#ffffff;">
-        North Crescent Facility Solutions Inc
-      </div>
-
-      <!-- NAV -->
-      <div class="nav" style="display:flex; gap:18px; font-size:12px;">
-        <a href="services.html" style="color:#CBD5F5; text-decoration:none;">Services</a>
-        <a href="process.html" style="color:#CBD5F5; text-decoration:none;">Processus</a>
-        <a href="reviews.html" style="color:#CBD5F5; text-decoration:none;">Avis</a>
-        <a href="contact.html" style="color:#CBD5F5; text-decoration:none;">Contact</a>
-      </div>
-
-      <!-- CONTACT -->
-      <div class="contact" style="font-size:12px; text-align:right;">
-        <a href="tel:+14288880542" style="color:#CBD5F5; text-decoration:none;">+1 (428) 888-0542</a><br>
-        <a href="mailto:info@northcrescentcleaning.com" style="color:#CBD5F5; text-decoration:none;">info@northcrescentcleaning.com</a>
-      </div>
-
-    </div>
-
-    <!-- DIVIDER -->
-    <div style="border-top:1px solid #1E293B; margin:15px 0;"></div>
-
-    <!-- BOTTOM ROW -->
-    <div class="bottom-row" style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; font-size:11px; color:#94A3B8; gap:10px;">
-
-      <div>
-        © 2026 North Crescent Facility Solutions Inc • Moncton, NB
-      </div>
-
-      <div class="bottom-links" style="display:flex; gap:12px;">
-        <a href="privacy.html" style="color:#94A3B8; text-decoration:none;">Confidentialité</a>
-        <a href="terms.html" style="color:#94A3B8; text-decoration:none;">Conditions</a>
-      </div>
-
-    </div>
-
-  </div>
-
-</footer>
-
-<script>
-function acceptCookies() {
-  document.getElementById("cookie-banner").style.display = "none";
-  localStorage.setItem("cookiesAccepted", "true");
-}
-
-window.onload = function() {
-  if(localStorage.getItem("cookiesAccepted")) {
-    document.getElementById("cookie-banner").style.display = "none";
-  }
-};
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const toggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav-menu");
-  const overlay = document.querySelector(".menu-overlay");
-
-  if (!toggle || !nav || !overlay) return;
-
-  toggle.addEventListener("click", () => {
-    toggle.classList.toggle("active");
-    nav.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("menu-open");
-  });
-
-  overlay.addEventListener("click", closeMenu);
-
-  document.querySelectorAll("#nav-menu a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  function closeMenu() {
-    toggle.classList.remove("active");
-    nav.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.classList.remove("menu-open");
-  }
-
-});
-</script>
-
-
-</body>
-</html>
