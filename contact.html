@@ -261,7 +261,6 @@ gtag('config', 'G-48W5J5N037');
 </section>
 
 </main>
-
 <!-- 🔥 MODAL -->
 <div id="successModal" class="modal">
   <div class="modal-box">
@@ -286,13 +285,15 @@ gtag('config', 'G-48W5J5N037');
 document.addEventListener("DOMContentLoaded", function () {
 
   function closeModal() {
-    document.getElementById("successModal").style.display = "none";
+    const modal = document.getElementById("successModal");
+    if (modal) {
+      modal.style.display = "none";
+    }
   }
 
   window.closeModal = closeModal;
 
   const form = document.getElementById("contactForm");
-
   if (!form) return;
 
   form.addEventListener("submit", function(e) {
@@ -306,53 +307,13 @@ document.addEventListener("DOMContentLoaded", function () {
       headers: { 'Accept': 'application/json' }
     })
     .then(response => {
-  if (response.ok) {
 
-    // 🔥 PRIMERO capturas los datos
-    const name = form.querySelector('input[name="name"]').value;
-    const service = form.querySelector('select[name="service"]').value;
-    const frequency = form.querySelector('select[name="frequency"]').value;
+      if (response.ok) {
 
-    const days = Array.from(document.querySelectorAll('input[name="days[]"]:checked'))
-      .map(cb => cb.value)
-      .join(", ");
-
-    let message = `Hi, my name is ${name}.\n\n`;
-
-    if (service) {
-      message += `I just submitted a request for ${service}.\n`;
-    }
-
-    if (frequency) {
-      message += `Preferred frequency: ${frequency}.\n`;
-    }
-
-    if (days) {
-      message += `Preferred days: ${days}.\n`;
-    }
-
-    message += `\nI will send photos or videos for a faster quote.`;
-
-    // 🔥 DESPUÉS limpias el form
-    form.reset();
-
-    const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
-
-          document.getElementById("waLink").href = waUrl;
-        document.getElementById("successModal").style.display = "flex";
-
-      } else {
-        alert("Something went wrong.");
-      }
-    })
-    .catch(() => {
-      alert("Error sending form.");
-    });
-  });
-
-});
-</script>
-
+        // 🔥 CAPTURA DATOS
+        const name = form.querySelector('input[name="name"]')?.value || "";
+        const service = form.querySelector('select[name="service"]')?.value || "";
+        const frequency = form.querySelector('select[name
 <section>
   <div class="container">
 
