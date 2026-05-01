@@ -305,11 +305,40 @@ document.addEventListener("DOMContentLoaded", function () {
       headers: { 'Accept': 'application/json' }
     })
     .then(response => {
-      if (response.ok) {
+  if (response.ok) {
 
-        form.reset();
+    // 🔥 PRIMERO capturas los datos
+    const name = form.querySelector('input[name="name"]').value;
+    const service = form.querySelector('select[name="service"]').value;
+    const frequency = form.querySelector('select[name="frequency"]').value;
 
-       const name = form.querySelector('input[name="name"]').value;
+    const days = Array.from(document.querySelectorAll('input[name="days[]"]:checked'))
+      .map(cb => cb.value)
+      .join(", ");
+
+    let message = `Hi, my name is ${name}.\n\n`;
+
+    if (service) {
+      message += `I just submitted a request for ${service}.\n`;
+    }
+
+    if (frequency) {
+      message += `Preferred frequency: ${frequency}.\n`;
+    }
+
+    if (days) {
+      message += `Preferred days: ${days}.\n`;
+    }
+
+    message += `\nI will send photos or videos for a faster quote.`;
+
+    // 🔥 DESPUÉS limpias el form
+    form.reset();
+
+    const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
+
+    document.getElementById("waLink").href = waUrl;
+    document.getElementById("successModal").style.display = "flex";
 const service = form.querySelector('select[name="service"]').value;
 const frequency = form.querySelector('select[name="frequency"]').value;
 
