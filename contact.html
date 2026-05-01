@@ -342,6 +342,13 @@ const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
 
 document.getElementById("waLink").href = waUrl;
 document.getElementById("successModal").style.display = "flex";
+  });
+})
+.catch(() => {
+  alert("Error sending form.");
+});
+});
+</script>      
 <section>
   <div class="container">
 
