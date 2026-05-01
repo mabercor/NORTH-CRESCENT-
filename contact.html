@@ -467,12 +467,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
 function acceptCookies() {
-  document.getElementById("cookie-banner").style.display = "none";
+  const banner = document.getElementById("cookie-banner");
+  if (banner) {
+    banner.style.display = "none";
+  }
   localStorage.setItem("cookiesAccepted", "true");
 }
+
 window.onload = function() {
-  if(localStorage.getItem("cookiesAccepted")) {
-    document.getElementById("cookie-banner").style.display = "none";
+  const banner = document.getElementById("cookie-banner");
+
+  if (localStorage.getItem("cookiesAccepted") && banner) {
+    banner.style.display = "none";
   }
 };
 </script>
@@ -484,6 +490,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const nav = document.getElementById("nav-menu");
   const overlay = document.querySelector(".menu-overlay");
 
+  // 🔒 VALIDACIÓN SEGURA
   if (!toggle || !nav || !overlay) return;
 
   toggle.addEventListener("click", () => {
