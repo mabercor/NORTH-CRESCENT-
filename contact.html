@@ -314,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const name = form.querySelector('input[name="name"]')?.value || "";
         const service = form.querySelector('select[name="service"]')?.value || "";
        const frequency = form.querySelector('select[name="frequency"]').value;
+        const description = form.querySelector('textarea[name="message"]')?.value || "";
 
 const days = Array.from(document.querySelectorAll('input[name="days[]"]:checked'))
   .map(cb => cb.value)
@@ -332,8 +333,11 @@ if (frequency) {
 if (days) {
   message += `Preferred days: ${days}.\n`;
 }
+if (description) {
+  message += `Project details: ${description}\n`;
+}
 
-message += `\nI will send photos or videos for a faster quote.`;
+        message += `\nBefore we finalize your quote, I will send photos or a short video.\n\nView our services: https://www.northcrescentcleaning.com`;
 
 // 🔥 DESPUÉS limpias el form
 form.reset();
