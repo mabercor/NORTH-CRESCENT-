@@ -1983,3 +1983,54 @@ section,
   color: #ffffff;
   border-color: #4A9B8C;
 }
+
+
+/* ===== DAYS SELECT (MOBILE FIX PRO) ===== */
+
+@media (max-width: 768px) {
+
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .day-option {
+    position: relative;
+    width: 100%;
+  }
+
+  .day-option input {
+    display: none;
+  }
+
+  .day-option label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    width: 100%;
+
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+
+    font-size: 14px;
+    color: #1E3A5F;
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  /* ESTADO ACTIVO */
+  .day-option input:checked + label {
+    background: #4A9B8C;
+    color: white;
+    border-color: #4A9B8C;
+  }
+
+}
+
+
