@@ -164,8 +164,8 @@ gtag('config', 'G-48W5J5N037');
 
           <div class="divider"></div>
 
-          <form id="contactForm" class="contact-form" action="https://formspree.io/f/xvzwvbed" method="POST">
-
+            <form id="contactForm" class="contact-form" action="https://hook.us2.make.com/cf7i3uriazknrs1asqb8997l8yd8wlrj" method="POST">
+              
             <div class="form-row">
               <input type="text" name="name" placeholder="Full Name *" required>
               <input type="email" name="email" placeholder="Email Address *" required>
@@ -305,7 +305,10 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch(form.action, {
       method: "POST",
       body: data,
-      headers: { 'Accept': 'application/json' }
+      fetch(form.action, {
+  method: "POST",
+  body: data
+})
     })
     .then(response => {
 
