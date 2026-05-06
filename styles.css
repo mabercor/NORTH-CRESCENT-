@@ -2284,3 +2284,32 @@ section,
   font-size: 14px;
   margin-right: 6px;
 }
+
+.promo-banner {
+  background: linear-gradient(90deg, #1E3A5F, #4A9B8C);
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: slideDown 0.8s ease;
+}
+
+.promo-banner span {
+  color: #FFD700;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
