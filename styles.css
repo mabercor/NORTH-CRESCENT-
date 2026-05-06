@@ -2456,3 +2456,34 @@ section,
   color: #4A9B8C;
   margin-right: 8px;
 }
+/* ===== FORCE VALUE SECTION FIX ===== */
+
+.value-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 25px !important;
+  margin-top: 20px;
+}
+
+.value-card {
+  background: #f9fafb !important;
+  padding: 20px !important;
+  border-radius: 12px !important;
+  border: 1px solid #ddd !important;
+}
+
+.value-card ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.value-card li {
+  margin-bottom: 8px;
+}
+
+.value-card li::before {
+  content: "✔ ";
+  color: #4A9B8C;
+  font-weight: bold;
+}
