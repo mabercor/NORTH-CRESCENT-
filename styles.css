@@ -2487,3 +2487,47 @@ section,
   color: #4A9B8C;
   font-weight: bold;
 }
+/* ===== VALUE SECTION FIX ===== */
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.value-card {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.value-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.value-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.value-card li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+}
+
+.value-card li::before {
+  content: "✔";
+  color: #4A9B8C;
+  margin-right: 8px;
+}
