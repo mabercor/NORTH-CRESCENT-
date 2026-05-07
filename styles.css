@@ -2531,7 +2531,3 @@ section,
   color: #4A9B8C;
   margin-right: 8px;
 }
-/* SOLO en maintenance-system */
-.maintenance-page .highlight::before {
-  content: "RECOMMENDED";
-}
