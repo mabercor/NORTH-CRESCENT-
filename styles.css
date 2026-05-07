@@ -2580,97 +2580,117 @@ section,
   color: #777;
 }
 
-/* SELECTED EFFECT */
-.plan-card input:checked + .plan-box {
-  border: 2px solid #4A9B8C;
-  background: rgba(74,155,140,0.1);
-  transform: scale(1.05);
+
+
+
+/* ===== PLAN SELECTOR ===== */
+.plan-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-/* RECOMMENDED BADGE */
-.badge {
+.plan-option input {
+  display: none;
+}
+
+.plan-box {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.plan-box:hover {
+  transform: translateY(-5px);
+  border-color: #4A9B8C;
+}
+
+/* seleccionado */
+.plan-option input:checked + .plan-box {
+  border: 2px solid #4A9B8C;
+  background: #eef7f5;
+}
+
+/* recomendado */
+.plan-box.recommended {
+  position: relative;
+  border: 2px solid #4A9B8C;
+}
+
+.plan-box .tag {
   position: absolute;
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
   background: #4A9B8C;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   padding: 4px 10px;
   border-radius: 20px;
 }
 
-/* INPUT */
-.input-pro {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
+/* precio */
+.plan-box span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-/* CONTACT OPTIONS */
-.contact-grid {
+/* ===== CHECKOUT ===== */
+.checkout-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.checkout-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.checkout-box input[type="tel"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+/* contacto */
+.contact-options {
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.contact-option {
-  border: 2px solid #ddd;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.contact-option input {
-  display: none;
-}
-
-.contact-option input:checked + span {
-  color: #4A9B8C;
-  font-weight: bold;
-}
-
-/* BUTTON */
-.btn-pro {
+/* botón */
+.checkout-btn {
   width: 100%;
   padding: 14px;
   background: linear-gradient(135deg, #1E3A5F, #4A9B8C);
   color: white;
   border: none;
   border-radius: 10px;
-  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.btn-pro:hover {
+.checkout-btn:hover {
   transform: scale(1.03);
 }
-.form-box {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  max-width: 500px;
-}
 
-.form-box input[type="tel"] {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin: 10px 0 20px 0;
-}
-
-.form-box label {
-  display: inline-block;
-  margin-right: 12px;
-  margin-bottom: 10px;
-}
-
-.form-box button {
+/* texto pequeño */
+.small-text {
+  font-size: 12px;
+  color: #64748b;
   margin-top: 10px;
+  text-align: center;
 }
