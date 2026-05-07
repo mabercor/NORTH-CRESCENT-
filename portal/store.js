@@ -52,8 +52,20 @@ buttons.forEach(button => {
     const frequency = button.dataset.frequency;
 
     selectedPlan.innerText = plan;
+    
     selectedFrequency.innerText = frequency;
     selectedPrice.innerText = price;
+  selectedFeatures.innerHTML = "";
+
+features[plan].forEach(feature => {
+
+  const li = document.createElement("li");
+
+  li.innerText = feature;
+
+  selectedFeatures.appendChild(li);
+
+});
 
   });
 
