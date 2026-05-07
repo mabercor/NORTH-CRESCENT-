@@ -316,3 +316,8 @@ body {
   height: 2px;
   background: #dbe2ea;
 }
+.ncs-store-advisor-assigned {
+  font-size: 15px;
+  color: #64748B;
+  margin-bottom: 25px;
+}
