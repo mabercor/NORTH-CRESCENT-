@@ -1,1 +1,45 @@
+/* =========================================
+   NORTH CRESCENT CLIENT PORTAL
+========================================= */
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+}
+
+.ncs-store {
+  padding: 100px 20px;
+}
+
+.ncs-store-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ncs-store-header {
+  text-align: center;
+}
+
+.ncs-store-eyebrow {
+  color: #4A9B8C;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.ncs-store-title {
+  font-size: 58px;
+  line-height: 1.1;
+  color: #1E3A5F;
+  margin-bottom: 25px;
+}
+
+.ncs-store-subtitle {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #64748B;
+}
