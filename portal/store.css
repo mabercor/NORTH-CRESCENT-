@@ -148,3 +148,11 @@ body {
 .ncs-store-button:hover {
   background: #4A9B8C;
 }
+
+
+.ncs-store-client {
+  font-size: 20px;
+  color: #1E3A5F;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
