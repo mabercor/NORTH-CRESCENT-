@@ -646,3 +646,62 @@ linear-gradient(
   min-height: 140px;
 
 }
+/* =========================================
+   CONSULTATION FORM CARD
+========================================= */
+
+.ncs-store-form-card {
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 45px;
+
+  margin-top: 50px;
+
+  max-width: 900px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  box-shadow:
+    0 25px 60px rgba(15,23,42,0.12);
+
+}
+
+.ncs-store-form-card
+.ncs-store-callback-label {
+
+  color: #1E3A5F;
+
+}
+
+.ncs-store-form-card
+.ncs-store-contact-option {
+
+  color: #1E3A5F;
+
+}
+
+.ncs-store-form-card
+.ncs-store-contact-methods {
+
+  justify-content: center;
+
+}
+
+.ncs-store-form-card
+.ncs-store-advisor-button {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: 40px auto 0;
+
+  max-width: 320px;
+
+}
