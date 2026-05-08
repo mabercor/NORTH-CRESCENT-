@@ -194,6 +194,8 @@ function selectPlan(button) {
 
     selectedFeatures.appendChild(li);
      
+      });
+     
      /* BENEFITS */
 
 selectedBenefits.innerHTML = "";
@@ -211,7 +213,7 @@ operationalBenefits[plan]
 
 });
 
-  });
+ 
    document
   .querySelector(".ncs-store-summary")
   .scrollIntoView({
