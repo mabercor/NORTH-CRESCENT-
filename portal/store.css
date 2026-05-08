@@ -440,3 +440,17 @@ body {
   transform: translateY(-6px);
 
 }
+.ncs-store-summary {
+
+  background: white;
+
+  border-radius: 28px;
+
+  padding: 40px;
+
+  box-shadow:
+    0 20px 50px rgba(15,23,42,0.06);
+
+  margin-top: 50px;
+
+}
