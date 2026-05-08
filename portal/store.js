@@ -38,11 +38,11 @@ fetch(
 .then(response => response.json())
 
 .then(data => {
-
-  document.querySelector(
-    ".ncs-store-hero-name"
-  ).innerText =
-  "Welcome " + data.name;
+  
+document.getElementById(
+  "clientWelcome"
+).innerText =
+"Welcome " + data.name;
 
 });
 
