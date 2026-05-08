@@ -330,8 +330,13 @@ fetch("https://hook.us2.make.com/w3j4di3f3cfnwi1dfpcbhmw07thsvfrc", {
     "ncs-store-step-active"
   );
 
-  const clientName =
-  client || "Client";
+const clientName =
+document.getElementById(
+  "clientWelcome"
+).innerText.replace(
+  "Welcome ",
+  ""
+);
 
   const method =
   document.querySelector(
