@@ -281,8 +281,13 @@ body {
 
 .ncs-store-advisor {
   margin-top: 60px;
-  background: linear-gradient(135deg, #1E3A5F, #2c4f78);
-  padding: 70px 50px;
+  background:
+linear-gradient(
+  135deg,
+  #1E3A5F,
+  #28486D
+);
+  padding: 50px 45px;
   border-radius: 30px;
   text-align: center;
   color: white;
@@ -589,5 +594,24 @@ body {
 
   box-shadow:
     0 12px 30px rgba(30,58,95,0.22);
+
+}
+
+/* =========================================
+   ADVISOR GRID
+========================================= */
+
+.ncs-store-advisor-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 24px;
+
+  margin-top: 40px;
+
+  margin-bottom: 40px;
 
 }
