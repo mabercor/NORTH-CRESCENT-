@@ -774,3 +774,61 @@ align-items: center;
     0 0 0 4px rgba(74,155,140,0.12);
 
 }
+/* =========================================
+   OPERATIONAL BENEFITS
+========================================= */
+
+.ncs-store-benefits-section {
+
+  margin-top: 45px;
+
+}
+
+.ncs-store-benefits-title {
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #1E3A5F;
+
+  margin-bottom: 24px;
+
+}
+
+.ncs-store-benefits {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+}
+
+.ncs-store-benefits li {
+
+  padding: 16px 0;
+
+  border-bottom:
+    1px solid #e5e7eb;
+
+  color: #1E3A5F;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+}
+
+.ncs-store-benefits li::before {
+
+  content: "•";
+
+  color: #4A9B8C;
+
+  font-weight: bold;
+
+  margin-right: 12px;
+
+}
