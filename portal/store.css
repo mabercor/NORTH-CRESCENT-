@@ -17,33 +17,60 @@ body {
   margin: 0 auto;
 }
 
+/* =========================================
+   PREMIUM HEADER
+========================================= */
+
 .ncs-store-header {
+
+  position: relative;
+
+  max-width: 980px;
+
+  margin: 0 auto 90px;
+
+  padding: 80px 60px;
+
+  border-radius: 36px;
+
   text-align: center;
-}
 
-.ncs-store-eyebrow {
-  color: #4A9B8C;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.72),
+      rgba(255,255,255,0.42)
+    );
 
-.ncs-store-title {
-  font-size: 58px;
-  line-height: 1.1;
-  color: #1E3A5F;
-  margin-bottom: 25px;
-}
+  border:
+    1px solid rgba(255,255,255,0.5);
 
-.ncs-store-subtitle {
-  max-width: 750px;
-  margin: 0 auto;
-  font-size: 19px;
-  line-height: 1.8;
-  color: #64748B;
-}
+  backdrop-filter: blur(18px);
 
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 80px rgba(15,23,42,0.08);
+
+}
+.ncs-store-header::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: -120px;
+  right: -120px;
+
+  width: 320px;
+  height: 320px;
+
+  background:
+    rgba(74,155,140,0.10);
+
+  border-radius: 50%;
+
+}
 
 
 /* =========================================
