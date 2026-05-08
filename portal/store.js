@@ -27,8 +27,24 @@ document.getElementById("advisorButton");
 const params =
 new URLSearchParams(window.location.search);
 
-const client =
-params.get("client");
+const recordId =
+params.get("recordId");
+
+fetch(
+  "https://hook.us2.make.com/9icq4nevaaot2s9eamw36at8zaud6anl?recordId=" +
+  recordId
+)
+
+.then(response => response.json())
+
+.then(data => {
+
+  document.querySelector(
+    ".ncs-store-hero-name"
+  ).innerText =
+  "Welcome " + data.name;
+
+});
 
 const advisor =
 params.get("advisor");
