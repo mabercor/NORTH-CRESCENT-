@@ -58,14 +58,6 @@ document.getElementById("advisorAssigned");
 /* =========================================
    CLIENT INFO
 ========================================= */
-
-if (client && welcome) {
-
-  welcome.innerText =
-  `Welcome ${client}`;
-
-}
-
 if (advisor && advisorAssigned) {
 
   advisorAssigned.innerText =
