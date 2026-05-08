@@ -303,7 +303,7 @@ fetch("https://hook.us2.make.com/i9fb6nrgs9inmht6b2udm5r6bz7h3uep", {
     recordId,
     selectedMethod,
     callback,
-    selectedPlan
+    selectedPlan: selectedPlanText
 
   })
 
