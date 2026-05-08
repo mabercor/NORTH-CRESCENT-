@@ -182,7 +182,7 @@ function selectPlan(button) {
   selectedPrice.innerText =
   price;
 
-  // FEATURES
+   // FEATURES
   selectedFeatures.innerHTML = "";
 
   features[plan].forEach(feature => {
