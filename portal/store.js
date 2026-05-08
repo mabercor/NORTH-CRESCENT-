@@ -42,7 +42,7 @@ fetch(
 document.getElementById(
   "clientWelcome"
 ).innerText =
-"Welcome " + data.name;
+JSON.stringify(data)
 
 });
 
