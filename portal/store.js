@@ -1,6 +1,6 @@
 const buttons = document.querySelectorAll(".ncs-store-button");
 
-const selectedPlan =
+const selectedPlanElement =
 document.getElementById("selectedPlan");
 
 const selectedFrequency =
