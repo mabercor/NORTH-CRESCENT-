@@ -205,7 +205,22 @@ function selectPlan(button) {
   });
 
 }
+/* BENEFITS */
 
+selectedBenefits.innerHTML = "";
+
+operationalBenefits[plan]
+.forEach(benefit => {
+
+  const li =
+  document.createElement("li");
+
+  li.innerText = benefit;
+
+  selectedBenefits
+    .appendChild(li);
+
+});
 /* =========================================
    BUTTON EVENTS
 ========================================= */
