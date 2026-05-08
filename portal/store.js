@@ -174,7 +174,7 @@ function selectPlan(button) {
   currentFrequency = frequency;
 
   // SUMMARY
-  selectedPlan.innerText = plan;
+ selectedPlanElement.innerText = plan;
 
   selectedFrequency.innerText =
   frequency;
