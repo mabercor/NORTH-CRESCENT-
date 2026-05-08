@@ -204,7 +204,6 @@ function selectPlan(button) {
 
   });
 
-}
 /* BENEFITS */
 
 selectedBenefits.innerHTML = "";
@@ -221,6 +220,7 @@ operationalBenefits[plan]
     .appendChild(li);
 
 });
+   }
 /* =========================================
    BUTTON EVENTS
 ========================================= */
