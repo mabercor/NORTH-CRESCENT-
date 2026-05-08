@@ -832,3 +832,35 @@ align-items: center;
   margin-right: 12px;
 
 }
+/* =========================================
+   DETAILS GRID
+========================================= */
+
+.ncs-store-details-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 60px;
+
+  margin-top: 50px;
+
+  align-items: start;
+
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .ncs-store-details-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+  }
+
+}
