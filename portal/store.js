@@ -160,6 +160,14 @@ function selectPlan(button) {
     selectedFeatures.appendChild(li);
 
   });
+   document
+  .querySelector(".ncs-store-summary")
+  .scrollIntoView({
+
+    behavior: "smooth",
+    block: "start"
+
+  });
 
 }
 
