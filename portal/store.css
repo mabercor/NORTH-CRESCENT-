@@ -390,3 +390,53 @@ body {
   line-height: 1.8;
   text-align: center;
 }
+
+/* =========================================
+   PREMIUM HOVER EFFECTS
+========================================= */
+
+.ncs-store-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.ncs-store-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 25px 60px rgba(15,23,42,0.08);
+
+  border-color: #4A9B8C;
+
+}
+
+.ncs-store-button {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.ncs-store-button:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(30,58,95,0.22);
+
+}
+
+
+.ncs-store-card-active {
+
+  border: 2px solid #4A9B8C;
+
+  box-shadow:
+    0 20px 50px rgba(74,155,140,0.18);
+
+  transform: translateY(-6px);
+
+}
