@@ -84,6 +84,38 @@ const features = {
   ]
 
 };
+const operationalBenefits = {
+
+  "Basic Plan": [
+
+    "Initial environment stabilization",
+    "Basic operational consistency",
+    "Functional organization of common areas",
+    "Cleaner and healthier environments"
+
+  ],
+
+  "Standard Plan": [
+
+    "Real consistency across all areas",
+    "Functional organization of common areas",
+    "Service adapted to building flow",
+    "Reduction of operational issues",
+    "Improved property image"
+
+  ],
+
+  "Intensive Plan": [
+
+    "Advanced operational environment control",
+    "Priority response system",
+    "Full high-traffic maintenance structure",
+    "Enhanced property value",
+    "Maximum operational consistency"
+
+  ]
+
+};
 
 /* =========================================
    CURRENT SELECTION
