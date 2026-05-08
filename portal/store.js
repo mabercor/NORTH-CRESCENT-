@@ -322,10 +322,10 @@ fetch("https://hook.us2.make.com/i9fb6nrgs9inmht6b2udm5r6bz7h3uep", {
     'input[name="contactMethod"]:checked'
   ).value;
 
-  const callback =
-  document.getElementById(
-    "callbackTime"
-  ).value;
+ const callbackTime =
+document.getElementById(
+  "callbackTime"
+).value;
 
   const message =
 `North Crescent Facility Solutions
