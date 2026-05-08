@@ -615,3 +615,34 @@ linear-gradient(
   margin-bottom: 40px;
 
 }
+.ncs-store-advisor-grid {
+
+  align-items: start;
+
+}
+
+.ncs-store-contact-methods {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  justify-content: center;
+
+  margin-top: 18px;
+
+}
+
+.ncs-store-advisor-box {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 140px;
+
+}
