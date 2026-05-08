@@ -345,7 +345,7 @@ Estimated Investment:
 ${currentPrice}
 
 Preferred Callback Window:
-${callback}
+${callbackTime}
 
 Assigned Advisor:
 ${advisor || "North Crescent Team"}
