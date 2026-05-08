@@ -290,7 +290,7 @@ const selectedPlanText =
 document.getElementById("selectedPlan")
 ?.innerText;
 
-fetch(https://hook.us2.make.com/w3j4di3f3cfnwi1dfpcbhmw07thsvfrc", {
+fetch("https://hook.us2.make.com/w3j4di3f3cfnwi1dfpcbhmw07thsvfrc", {
 
   method: "POST",
 
