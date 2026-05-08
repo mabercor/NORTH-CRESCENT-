@@ -12,6 +12,9 @@ document.getElementById("selectedPrice");
 const selectedFeatures =
 document.getElementById("selectedFeatures");
 
+const selectedBenefits =
+document.getElementById("selectedBenefits");
+
 const stepSelect =
 document.getElementById("stepSelect");
 
