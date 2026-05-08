@@ -275,6 +275,39 @@ advisorButton.addEventListener(
 (e) => {
 
   e.preventDefault();
+   const recordId =
+params.get("recordId");
+
+const selectedMethod =
+document.querySelector(
+'input[name="contactMethod"]:checked'
+)?.value;
+
+const callback =
+document.getElementById("callbackTime").value;
+
+const selectedPlan =
+document.getElementById("selectedPlan")
+?.innerText;
+
+fetch("https://hook.us2.make.com/i9fb6nrgs9inmht6b2udm5r6bz7h3uep", {
+
+  method: "POST",
+
+  headers: {
+    "Content-Type": "application/json"
+  },
+
+  body: JSON.stringify({
+
+    recordId,
+    selectedMethod,
+    callback,
+    selectedPlan
+
+  })
+
+});
 
   // STEP 3
   stepAdvisor.classList.add(
