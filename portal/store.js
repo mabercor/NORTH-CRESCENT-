@@ -286,7 +286,7 @@ document.querySelector(
 const callback =
 document.getElementById("callbackTime").value;
 
-const selectedPlan =
+const selectedPlanText =
 document.getElementById("selectedPlan")
 ?.innerText;
 
