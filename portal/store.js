@@ -193,18 +193,8 @@ function selectPlan(button) {
     li.innerText = feature;
 
     selectedFeatures.appendChild(li);
-
-  });
-   document
-  .querySelector(".ncs-store-summary")
-  .scrollIntoView({
-
-    behavior: "smooth",
-    block: "start"
-
-  });
-
-/* BENEFITS */
+     
+     /* BENEFITS */
 
 selectedBenefits.innerHTML = "";
 
@@ -220,6 +210,17 @@ operationalBenefits[plan]
     .appendChild(li);
 
 });
+
+  });
+   document
+  .querySelector(".ncs-store-summary")
+  .scrollIntoView({
+
+    behavior: "smooth",
+    block: "start"
+
+  });
+
    }
 /* =========================================
    BUTTON EVENTS
