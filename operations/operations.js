@@ -48,7 +48,6 @@ throw new Error("Unauthorized Access");
 
 }
 
-
 /* ========= SYSTEM INITIALIZATION ========= */
 
 console.log(
@@ -131,4 +130,3 @@ Planned Systems:
 console.log(
 "Structured Thinking. Visible Results. Absolute Discipline."
 );
-
