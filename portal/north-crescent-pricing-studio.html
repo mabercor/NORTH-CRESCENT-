@@ -238,6 +238,62 @@
 
     }
 
+    .ncs-live-panel {
+
+margin-top: 35px;
+background: #f8fafc;
+border: 1px solid #e2e8f0;
+border-radius: 22px;
+padding: 30px;
+
+}
+
+.ncs-live-label {
+
+color: #4A9B8C;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-bottom: 25px;
+
+}
+
+.ncs-live-item {
+
+display: flex;
+justify-content: space-between;
+margin-bottom: 18px;
+color: #475569;
+
+}
+
+.ncs-live-item strong {
+
+color: #1E3A5F;
+
+}
+
+.ncs-profitability-bar {
+
+width: 100%;
+height: 16px;
+background: #dbe4ea;
+border-radius: 20px;
+overflow: hidden;
+margin-top: 25px;
+
+}
+
+.ncs-profitability-fill {
+
+height: 100%;
+width: 0%;
+background: linear-gradient(90deg, #4A9B8C, #1E3A5F);
+transition: 0.4s;
+
+}
+
   </style>
 </head>
 <body>
@@ -357,6 +413,55 @@
         </div>
 
       </div>
+      <div class="ncs-live-panel">
+
+  <p class="ncs-live-label">
+    LIVE OPERATIONAL INTELLIGENCE
+  </p>
+
+  <div class="ncs-live-item">
+    <span>Operational Cost</span>
+    <strong id="liveCost">$0</strong>
+  </div>
+
+  <div class="ncs-live-item">
+    <span>Recommended Quote</span>
+    <strong id="liveQuote">$0</strong>
+  </div>
+
+  <div class="ncs-live-item">
+    <span>Estimated Profit</span>
+    <strong id="liveProfit">$0</strong>
+  </div>
+
+  <div class="ncs-live-item">
+    <span>Profit Margin</span>
+    <strong id="liveMargin">0%</strong>
+  </div>
+
+  <div class="ncs-live-item">
+    <span>Workload Pressure</span>
+    <strong id="livePressure">Low</strong>
+  </div>
+
+  <div class="ncs-live-item">
+    <span>Profitability Status</span>
+    <strong id="liveStatus">Standard</strong>
+  </div>
+
+  <div class="ncs-profitability-bar">
+
+```
+<div
+  class="ncs-profitability-fill"
+  id="profitabilityFill">
+</div>
+```
+
+  </div>
+
+</div>
+
 
       <button class="ncs-button" onclick="calculateQuote()">
         Generate Operational Pricing Analysis
@@ -403,6 +508,7 @@
               <span>Total Monthly Hours</span>
               <strong id="resultHours"></strong>
             </div>
+            
 
           </div>
 
@@ -501,12 +607,59 @@
       document.getElementById('resultPressure').innerText = pressure;
       document.getElementById('finalQuote').innerText = '$' + finalQuote.toFixed(2);
 
+      /* LIVE PROFITABILITY INTELLIGENCE */
+
+const estimatedProfit = finalQuote - operationalCost;
+
+const marginPercent =
+((estimatedProfit / finalQuote) * 100).toFixed(1);
+
+let profitabilityStatus = 'Low';
+
+if (marginPercent >= 20)
+profitabilityStatus = 'Healthy';
+
+if (marginPercent >= 35)
+profitabilityStatus = 'Strong';
+
+if (marginPercent >= 50)
+profitabilityStatus = 'Premium';
+
+document.getElementById('liveCost').innerText =
+'$' + operationalCost.toFixed(2);
+
+document.getElementById('liveQuote').innerText =
+'$' + finalQuote.toFixed(2);
+
+document.getElementById('liveProfit').innerText =
+'$' + estimatedProfit.toFixed(2);
+
+document.getElementById('liveMargin').innerText =
+marginPercent + '%';
+
+document.getElementById('livePressure').innerText =
+pressure;
+
+document.getElementById('liveStatus').innerText =
+profitabilityStatus;
+
+document.getElementById('profitabilityFill').style.width =
+marginPercent + '%';
+
+document.getElementById('resultsSection').style.display = 'block';
+
+window.scrollTo({
+top: document.getElementById('resultsSection').offsetTop - 40,
+behavior: 'smooth'
+});
+
       document.getElementById('resultsSection').style.display = 'block';
 
       window.scrollTo({
         top: document.getElementById('resultsSection').offsetTop - 40,
         behavior: 'smooth'
       });
+      
 
     }
 
