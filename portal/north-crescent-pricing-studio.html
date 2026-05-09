@@ -451,12 +451,8 @@ transition: 0.4s;
 
   <div class="ncs-profitability-bar">
 
-```
-<div
-  class="ncs-profitability-fill"
-  id="profitabilityFill">
-</div>
-```
+<div class="ncs-profitability-fill" id="profitabilityFill"></div>
+
 
   </div>
 
@@ -645,6 +641,25 @@ profitabilityStatus;
 
 document.getElementById('profitabilityFill').style.width =
 marginPercent + '%';
+      if (marginPercent < 20) {
+  document.getElementById('profitabilityFill').style.background =
+    '#dc2626';
+}
+
+if (marginPercent >= 20 && marginPercent < 35) {
+  document.getElementById('profitabilityFill').style.background =
+    '#f59e0b';
+}
+
+if (marginPercent >= 35 && marginPercent < 50) {
+  document.getElementById('profitabilityFill').style.background =
+    '#16a34a';
+}
+
+if (marginPercent >= 50) {
+  document.getElementById('profitabilityFill').style.background =
+    '#2563eb';
+}
 
 document.getElementById('resultsSection').style.display = 'block';
 
