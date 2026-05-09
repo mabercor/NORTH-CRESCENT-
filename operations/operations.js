@@ -4,14 +4,23 @@ Operational Intelligence Environment
 ========================================= */
 
 /* ========= PASSWORD PROTECTION ========= */
+/* ========= LOGIN ACCESS ========= */
 
-const password = "northcrescent2026";
+const allowedUsername = "northcrescent";
+const allowedPassword = "NC-OPS-2026";
 
-const userPassword = prompt(
+const username = prompt(
+"North Crescent Operations Center\n\nEnter Username:"
+);
+
+const password = prompt(
 "North Crescent Operations Center\n\nEnter Password:"
 );
 
-if (userPassword !== password) {
+if (
+username !== allowedUsername ||
+password !== allowedPassword
+) {
 
 document.body.innerHTML = `
 
@@ -23,13 +32,22 @@ document.body.innerHTML = `
     <h1>Access Restricted</h1>
 
     <p>
-      This operational environment is restricted
-      to authorized North Crescent personnel only.
+      Invalid operational credentials.
+      This environment is restricted to
+      authorized North Crescent personnel only.
     </p>
 
   </div>
 
 </div>
+```
+
+`;
+
+throw new Error("Unauthorized Access");
+
+}
+
 ```
 
 `;
