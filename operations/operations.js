@@ -56,6 +56,14 @@ throw new Error("Unauthorized Access");
 
 }
 
+```
+
+`;
+
+throw new Error("Unauthorized Access");
+
+}
+
 /* ========= SYSTEM INITIALIZATION ========= */
 
 console.log(
