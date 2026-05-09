@@ -639,8 +639,11 @@ pressure;
 document.getElementById('liveStatus').innerText =
 profitabilityStatus;
 
+const safeWidth = Math.min(marginPercent, 100);
+
 document.getElementById('profitabilityFill').style.width =
-marginPercent + '%';
+safeWidth + '%';
+      
       if (marginPercent < 20) {
   document.getElementById('profitabilityFill').style.background =
     '#dc2626';
