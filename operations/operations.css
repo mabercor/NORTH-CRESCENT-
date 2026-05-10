@@ -1057,4 +1057,126 @@ body {
 
 }
 
+/* =========================================
+   GLOBAL OPERATIONS NAVIGATION
+========================================= */
 
+.operations-nav {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px 40px;
+
+  background: rgba(7,15,32,0.92);
+
+  backdrop-filter: blur(14px);
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.06);
+
+}
+
+.operations-nav-left {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+}
+
+.operations-nav-logo {
+
+  width: 14px;
+
+  height: 14px;
+
+  border-radius: 50%;
+
+  background:
+  linear-gradient(
+    135deg,
+    #4A9B8C,
+    #1E3A5F
+  );
+
+  box-shadow:
+  0 0 18px rgba(74,155,140,0.6);
+
+}
+
+.operations-nav-title {
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+}
+
+.operations-nav-menu {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+
+}
+
+.operations-nav-menu a {
+
+  color: #CBD5E1;
+
+  text-decoration: none;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  transition: 0.3s ease;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+}
+
+.operations-nav-menu a:hover {
+
+  background:
+  rgba(74,155,140,0.14);
+
+  color: white;
+
+}
+
+.operations-nav-menu a.active {
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(74,155,140,0.24),
+    rgba(30,58,95,0.24)
+  );
+
+  color: white;
+
+  border:
+  1px solid rgba(74,155,140,0.3);
+
+}
