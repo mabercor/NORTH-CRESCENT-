@@ -428,6 +428,22 @@ clientCards.forEach((card) => {
     'click',
     () => {
 
+      /* REMOVE ACTIVE STATE */
+
+      clientCards.forEach((item) => {
+
+        item.classList.remove(
+          'active'
+        );
+
+      });
+
+      /* ADD ACTIVE STATE */
+
+      card.classList.add(
+        'active'
+      );
+
       const clientName =
       card.querySelector(
         'strong'
