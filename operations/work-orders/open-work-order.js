@@ -596,7 +596,26 @@ if (clientData) {
   addressInput.value =
     clientData.address;
 
-}
+       /* UPDATE INTELLIGENCE PANEL */
+
+clientMonthlyValue.innerText =
+  clientData.monthlyValue;
+
+clientVisits.innerText =
+  clientData.visits;
+
+clientTeam.innerText =
+  clientData.preferredTeam;
+
+clientContract.innerText =
+  clientData.contract;
+
+clientLastService.innerText =
+  clientData.lastService;
+
+clientProfitability.innerText =
+  clientData.profitability;
+   }
 /* =========================================
    LIVE SCHEDULING ENGINE
 ========================================= */
