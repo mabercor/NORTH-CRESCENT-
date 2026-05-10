@@ -390,3 +390,111 @@ Future Systems:
 console.log(
   'Structured Thinking. Visible Results. Absolute Discipline.'
 );
+
+
+
+/* =========================================
+   CLIENT SEARCH AUTOFILL
+========================================= */
+
+const clientCards =
+document.querySelectorAll(
+  '.client-result-card'
+);
+
+const clientNameInput =
+document.querySelectorAll(
+  '.form-group input'
+)[1];
+
+const companyInput =
+document.querySelectorAll(
+  '.form-group input'
+)[2];
+
+const phoneInput =
+document.querySelectorAll(
+  '.form-group input'
+)[4];
+
+const addressInput =
+document.querySelectorAll(
+  '.form-group input'
+)[6];
+
+clientCards.forEach((card) => {
+
+  card.addEventListener(
+    'click',
+    () => {
+
+      const clientName =
+      card.querySelector(
+        'strong'
+      ).innerText;
+
+      if (
+        clientName ===
+        'Elmwood Medical'
+      ) {
+
+        clientNameInput.value =
+          'Sarah Mitchell';
+
+        companyInput.value =
+          'Elmwood Medical';
+
+        phoneInput.value =
+          '(506) 555-2211';
+
+        addressInput.value =
+          '145 Elmwood Drive, Moncton NB';
+
+      }
+
+      if (
+        clientName ===
+        'Moncton Office Hub'
+      ) {
+
+        clientNameInput.value =
+          'David Clarke';
+
+        companyInput.value =
+          'Moncton Office Hub';
+
+        phoneInput.value =
+          '(506) 555-8765';
+
+        addressInput.value =
+          '22 Main Street, Moncton NB';
+
+      }
+
+      if (
+        clientName ===
+        'Riverview Suites'
+      ) {
+
+        clientNameInput.value =
+          'Amanda Lewis';
+
+        companyInput.value =
+          'Riverview Suites';
+
+        phoneInput.value =
+          '(506) 555-9821';
+
+        addressInput.value =
+          '88 River Road, Riverview NB';
+
+      }
+
+      console.log(
+        'Client Operational Memory Loaded'
+      );
+
+    }
+  );
+
+});
