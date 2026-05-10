@@ -2,7 +2,15 @@
    NORTH CRESCENT OPERATIONS CENTER
    Operational Intelligence Environment
 ========================================= */
+if (
+  localStorage.getItem('nc_access')
+  === 'granted'
+) {
 
+  console.log('Access Granted');
+
+} else {
+   
 
 /* ========= LOGIN SYSTEM ========= */
 
@@ -78,7 +86,12 @@ loginButton.addEventListener('click', () => {
     password === allowedPassword
   ) {
 
-    location.reload();
+  localStorage.setItem(
+  'nc_access',
+  'granted'
+);
+
+location.reload();
 
   } else {
 
@@ -89,3 +102,5 @@ loginButton.addEventListener('click', () => {
   }
 
 });
+
+   }
