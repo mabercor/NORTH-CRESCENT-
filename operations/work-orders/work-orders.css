@@ -1,1 +1,60 @@
+/* =========================================
+   CLIENT SEARCH RESULTS
+========================================= */
 
+.client-search-results {
+
+  margin-top: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+}
+
+.client-result-card {
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  border-radius: 18px;
+
+  padding: 18px 22px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+}
+
+.client-result-card:hover {
+
+  transform: translateY(-3px);
+
+  border-color: #4A9B8C;
+
+  background: rgba(74,155,140,0.12);
+
+}
+
+.client-result-card strong {
+
+  display: block;
+
+  color: white;
+
+  font-size: 15px;
+
+  margin-bottom: 4px;
+
+}
+
+.client-result-card span {
+
+  color: #8EA3B5;
+
+  font-size: 13px;
+
+}
