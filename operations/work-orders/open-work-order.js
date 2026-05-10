@@ -530,6 +530,39 @@ document.querySelectorAll(
   '.form-group input'
 )[6];
 
+/* =========================================
+   CLIENT INTELLIGENCE ELEMENTS
+========================================= */
+
+const clientMonthlyValue =
+document.getElementById(
+  'clientMonthlyValue'
+);
+
+const clientVisits =
+document.getElementById(
+  'clientVisits'
+);
+
+const clientTeam =
+document.getElementById(
+  'clientTeam'
+);
+
+const clientContract =
+document.getElementById(
+  'clientContract'
+);
+
+const clientLastService =
+document.getElementById(
+  'clientLastService'
+);
+
+const clientProfitability =
+document.getElementById(
+  'clientProfitability'
+);
 clientCards.forEach((card) => {
 
   card.addEventListener(
