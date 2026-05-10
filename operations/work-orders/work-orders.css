@@ -87,3 +87,64 @@
   color: #C7F5EB;
 
 }
+
+/* =========================================
+   OPERATIONAL STATUS PIPELINE
+========================================= */
+
+.status-pipeline {
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 20px;
+
+}
+
+.pipeline-step {
+
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  color: #CBD5E1;
+
+  padding: 14px 18px;
+
+  border-radius: 16px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+
+}
+
+.pipeline-step.active {
+
+  background: rgba(74,155,140,0.18);
+
+  border-color: #4A9B8C;
+
+  color: white;
+
+  box-shadow:
+    0 10px 30px rgba(74,155,140,0.15);
+
+}
+
+.pipeline-line {
+
+  width: 24px;
+
+  height: 2px;
+
+  background: rgba(255,255,255,0.12);
+
+}
