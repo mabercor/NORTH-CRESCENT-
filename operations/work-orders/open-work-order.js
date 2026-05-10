@@ -234,6 +234,24 @@ if (saveDraftButton) {
    OPERATIONAL ACTIVATION
 ========================================= */
 
+/* =========================================
+   NORTH CRESCENT
+   OPERATIONAL SECURITY LAYER
+========================================= */
+
+
+/* =========================================
+   SUPERVISOR AUTHORIZATION
+========================================= */
+
+const supervisorCode =
+'NC-SUPERVISOR-2026';
+
+
+/* =========================================
+   OPERATIONAL ACTIVATION
+========================================= */
+
 const operationalForm =
 document.querySelector(
   '.workorder-form'
@@ -246,6 +264,44 @@ if (operationalForm) {
     (event) => {
 
       event.preventDefault();
+
+      /* ========= CONFIRMATION ========= */
+
+      const confirmActivation =
+      confirm(
+        'Confirm Operational Contract Activation?'
+      );
+
+      if (!confirmActivation) {
+
+        return;
+
+      }
+
+      /* ========= SUPERVISOR CODE ========= */
+
+      const enteredCode =
+      prompt(
+        'Supervisor Authorization Required\n\nEnter Supervisor Code:'
+      );
+
+      if (
+        enteredCode !== supervisorCode
+      ) {
+
+        alert(
+          'Invalid Supervisor Authorization Code.'
+        );
+
+        console.error(
+          'Unauthorized Operational Activation Attempt'
+        );
+
+        return;
+
+      }
+
+      /* ========= SUCCESS ========= */
 
       alert(
         'Operational Contract Activated Successfully.'
@@ -277,6 +333,14 @@ if (operationalForm) {
 
 }
 
+
+/* =========================================
+   NORTH CRESCENT ADN
+========================================= */
+
+console.log(
+  'Structured Thinking. Visible Results. Absolute Discipline.'
+);
 
 /* =========================================
    FUTURE AIRTABLE SEARCH ENGINE
