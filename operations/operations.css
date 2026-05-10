@@ -1139,7 +1139,7 @@ border-bottom:
 
 .operations-nav-menu a {
 
-  color: #CBD5E1;
+  color: #334155;
 
   text-decoration: none;
 
@@ -1160,12 +1160,12 @@ border-bottom:
   background:
   rgba(74,155,140,0.14);
 
-  color: white;
+ color: #0F172A;
 
 }
 
 .operations-nav-menu a.active {
-
+font-weight: 700;
   background:
   linear-gradient(
     135deg,
