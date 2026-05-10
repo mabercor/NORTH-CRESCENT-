@@ -4,127 +4,88 @@
 ========================================= */
 
 
-/* ========= LOGIN ACCESS ========= */
+/* ========= LOGIN SYSTEM ========= */
+
+document.body.innerHTML = `
+
+<div class="login-overlay">
+
+  <div class="login-box">
+
+    <div class="login-logo"></div>
+
+    <h1>North Crescent Operations</h1>
+
+    <p>
+      Secure operational intelligence environment
+    </p>
+
+    <input
+      type="text"
+      id="username"
+      placeholder="Username"
+      class="login-input"
+    >
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+      class="login-input"
+    >
+
+    <button
+      id="loginButton"
+      class="login-button">
+
+      Access Operations
+
+    </button>
+
+    <div
+      id="loginError"
+      class="login-error">
+
+      Invalid operational credentials
+
+    </div>
+
+  </div>
+
+</div>
+
+`;
+
+
+/* ========= LOGIN VALIDATION ========= */
 
 const allowedUsername = "northcrescent";
 const allowedPassword = "NC-OPS-2026";
 
-const username = prompt(
-  "North Crescent Operations Center\n\nEnter Username:"
-);
+const loginButton =
+document.getElementById('loginButton');
 
-const password = prompt(
-  "North Crescent Operations Center\n\nEnter Password:"
-);
+loginButton.addEventListener('click', () => {
 
-if (
-  username !== allowedUsername ||
-  password !== allowedPassword
-) {
+  const username =
+  document.getElementById('username').value;
 
-  document.body.innerHTML = `
+  const password =
+  document.getElementById('password').value;
 
-    <div class="access-denied-container">
+  if (
+    username === allowedUsername &&
+    password === allowedPassword
+  ) {
 
-      <div class="access-denied-box">
+    location.reload();
 
-        <h1>Access Restricted</h1>
+  } else {
 
-        <p>
-          Invalid operational credentials.
-          This environment is restricted to
-          authorized North Crescent personnel only.
-        </p>
+    document
+      .getElementById('loginError')
+      .style.display = 'block';
 
-      </div>
-
-    </div>
-
-  `;
-
-  throw new Error("Unauthorized Access");
-
-}
-
-
-/* ========= SYSTEM INITIALIZATION ========= */
-
-console.log(
-  "North Crescent Operations Center Initialized"
-);
-
-
-/* ========= LIVE SYSTEM STATUS ========= */
-
-const statusDot = document.querySelector('.status-dot');
-
-if (statusDot) {
-
-  setInterval(() => {
-
-    statusDot.classList.toggle('pulse');
-
-  }, 1200);
-
-}
-
-
-/* ========= TOOL CARD HOVER EFFECT ========= */
-
-const toolCards = document.querySelectorAll('.tool-card');
-
-toolCards.forEach(card => {
-
-  card.addEventListener('mouseenter', () => {
-
-    card.style.transform = 'translateY(-10px)';
-
-  });
-
-  card.addEventListener('mouseleave', () => {
-
-    card.style.transform = 'translateY(0px)';
-
-  });
+  }
 
 });
-
-
-/* ========= FUTURE CRM CONNECTION ========= */
-
-/*
-
-Future Architecture:
-
-GitHub Frontend
-      ↓
-Make Webhook
-      ↓
-Airtable CRM
-      ↓
-OpenAI Analysis
-
-*/
-
-
-/* ========= FUTURE SYSTEM MODULES ========= */
-
-/*
-
-Planned Systems:
-
-- CRM Dashboard
-- Proposal Generator
-- Sales Intelligence
-- Revenue Dashboard
-- AI Operational Analysis
-- Client History System
-
-*/
-
-
-/* ========= NORTH CRESCENT ADN ========= */
-
-console.log(
-  "Structured Thinking. Visible Results. Absolute Discipline."
-);
