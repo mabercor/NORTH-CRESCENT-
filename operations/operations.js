@@ -1,58 +1,58 @@
 /* =========================================
-NORTH CRESCENT OPERATIONS CENTER
-Operational Intelligence Environment
+   NORTH CRESCENT OPERATIONS CENTER
+   Operational Intelligence Environment
 ========================================= */
 
-/* ========= PASSWORD PROTECTION ========= */
+
 /* ========= LOGIN ACCESS ========= */
 
 const allowedUsername = "northcrescent";
 const allowedPassword = "NC-OPS-2026";
 
 const username = prompt(
-"North Crescent Operations Center\n\nEnter Username:"
+  "North Crescent Operations Center\n\nEnter Username:"
 );
 
 const password = prompt(
-"North Crescent Operations Center\n\nEnter Password:"
+  "North Crescent Operations Center\n\nEnter Password:"
 );
 
 if (
-username !== allowedUsername ||
-password !== allowedPassword
+  username !== allowedUsername ||
+  password !== allowedPassword
 ) {
 
-document.body.innerHTML = `
+  document.body.innerHTML = `
 
-```
-<div class="access-denied-container">
+    <div class="access-denied-container">
 
-  <div class="access-denied-box">
+      <div class="access-denied-box">
 
-    <h1>Access Restricted</h1>
+        <h1>Access Restricted</h1>
 
-    <p>
-      Invalid operational credentials.
-      This environment is restricted to
-      authorized North Crescent personnel only.
-    </p>
+        <p>
+          Invalid operational credentials.
+          This environment is restricted to
+          authorized North Crescent personnel only.
+        </p>
 
-  </div>
+      </div>
 
-</div>
-```
+    </div>
 
-`;
+  `;
 
-throw new Error("Unauthorized Access");
+  throw new Error("Unauthorized Access");
 
 }
+
 
 /* ========= SYSTEM INITIALIZATION ========= */
 
 console.log(
-"North Crescent Operations Center Initialized"
+  "North Crescent Operations Center Initialized"
 );
+
 
 /* ========= LIVE SYSTEM STATUS ========= */
 
@@ -60,15 +60,14 @@ const statusDot = document.querySelector('.status-dot');
 
 if (statusDot) {
 
-setInterval(() => {
+  setInterval(() => {
 
-```
-statusDot.classList.toggle('pulse');
-```
+    statusDot.classList.toggle('pulse');
 
-}, 1200);
+  }, 1200);
 
 }
+
 
 /* ========= TOOL CARD HOVER EFFECT ========= */
 
@@ -76,23 +75,20 @@ const toolCards = document.querySelectorAll('.tool-card');
 
 toolCards.forEach(card => {
 
-card.addEventListener('mouseenter', () => {
+  card.addEventListener('mouseenter', () => {
 
-```
-card.style.transform = 'translateY(-10px)';
-```
+    card.style.transform = 'translateY(-10px)';
 
-});
+  });
 
-card.addEventListener('mouseleave', () => {
+  card.addEventListener('mouseleave', () => {
 
-```
-card.style.transform = 'translateY(0px)';
-```
+    card.style.transform = 'translateY(0px)';
+
+  });
 
 });
 
-});
 
 /* ========= FUTURE CRM CONNECTION ========= */
 
@@ -101,14 +97,15 @@ card.style.transform = 'translateY(0px)';
 Future Architecture:
 
 GitHub Frontend
-↓
+      ↓
 Make Webhook
-↓
+      ↓
 Airtable CRM
-↓
+      ↓
 OpenAI Analysis
 
 */
+
 
 /* ========= FUTURE SYSTEM MODULES ========= */
 
@@ -116,17 +113,18 @@ OpenAI Analysis
 
 Planned Systems:
 
-* CRM Dashboard
-* Proposal Generator
-* Sales Intelligence
-* Revenue Dashboard
-* AI Operational Analysis
-* Client History System
+- CRM Dashboard
+- Proposal Generator
+- Sales Intelligence
+- Revenue Dashboard
+- AI Operational Analysis
+- Client History System
 
 */
+
 
 /* ========= NORTH CRESCENT ADN ========= */
 
 console.log(
-"Structured Thinking. Visible Results. Absolute Discipline."
+  "Structured Thinking. Visible Results. Absolute Discipline."
 );
