@@ -843,21 +843,21 @@ behavior: 'smooth'
 
     }
 
-  </script>
+ 
+<script>
 
-</body>
+const password =
+  "northcrescent2026";
 
-  <script>
-
-const password = "northcrescent2026";
-
-const userPassword = prompt(
-  "North Crescent Internal Access\n\nEnter Password:"
-);
+const userPassword =
+  prompt(
+    "North Crescent Internal Access\n\nEnter Password:"
+  );
 
 if (userPassword !== password) {
 
   document.body.innerHTML = `
+
     <div style="
       height:100vh;
       display:flex;
@@ -871,7 +871,10 @@ if (userPassword !== password) {
       padding:40px;
     ">
 
-      <h1 style="font-size:42px;margin-bottom:20px;">
+      <h1 style="
+        font-size:42px;
+        margin-bottom:20px;
+      ">
         Access Denied
       </h1>
 
@@ -884,7 +887,12 @@ if (userPassword !== password) {
       </p>
 
     </div>
-  }
+
+  `;
+
+}
+
 </script>
+
  </body>
 </html>
