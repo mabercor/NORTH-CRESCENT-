@@ -168,43 +168,65 @@
  </div>        
 
 
-      <!-- ========================================= -->
-<!-- OPERATIONAL ALERT ENGINE -->
-<!-- ========================================= -->
+   /* UPDATE OPERATIONAL ALERTS */
 
-<div class="form-section">
+if (clientName === 'Elmwood Medical') {
 
-  <h3>
-    Operational Alerts
-  </h3>
+  operationalAlerts.innerHTML = `
 
-  <div class="operational-alerts">
+    <div class="alert-card danger">
+      🔴 Medical Protocol Required
+    </div>
 
     <div class="alert-card warning">
-
-      🟡
-      High Operational Complexity Detected
-
+      🟡 Supervisor Mandatory
     </div>
 
     <div class="alert-card success">
-
-      🟢
-      VIP Recurring Client
-
+      🟢 VIP Recurring Client
     </div>
 
-    <div class="alert-card danger">
+  `;
 
-      🔴
-      Supervisor Authorization Required
+}
 
+else if (
+  clientName ===
+  'Moncton Office Hub'
+) {
+
+  operationalAlerts.innerHTML = `
+
+    <div class="alert-card success">
+      🟢 Enterprise Commercial Account
     </div>
 
-  </div>
+    <div class="alert-card warning">
+      🟡 High Traffic Property
+    </div>
 
-</div>
+  `;
 
+}
+
+else if (
+  clientName ===
+  'Riverview Suites'
+) {
+
+  operationalAlerts.innerHTML = `
+
+    <div class="alert-card success">
+      🟢 Airbnb Recurring Property
+    </div>
+
+    <div class="alert-card warning">
+      🟡 Weekend Scheduling Priority
+    </div>
+
+  `;
+
+}
       <!-- ========================================= -->
 <!-- CLIENT PROFILE INTELLIGENCE -->
 <!-- ========================================= -->
