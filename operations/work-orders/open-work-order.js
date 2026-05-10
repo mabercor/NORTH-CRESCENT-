@@ -391,7 +391,115 @@ console.log(
   'Structured Thinking. Visible Results. Absolute Discipline.'
 );
 
+/* =========================================
+   CLIENT DATABASE
+========================================= */
 
+const clientDatabase = {
+
+  "Elmwood Medical": {
+
+    contact:
+    "Sarah Mitchell",
+
+    company:
+    "Elmwood Medical",
+
+    phone:
+    "(506) 555-2211",
+
+    address:
+    "145 Elmwood Drive, Moncton NB",
+
+    monthlyValue:
+    "$2,400",
+
+    visits:
+    "12",
+
+    preferredTeam:
+    "Team Delta",
+
+    contract:
+    "Recurring",
+
+    lastService:
+    "May 6",
+
+    profitability:
+    "82%"
+
+  },
+
+  "Moncton Office Hub": {
+
+    contact:
+    "David Clarke",
+
+    company:
+    "Moncton Office Hub",
+
+    phone:
+    "(506) 555-8765",
+
+    address:
+    "22 Main Street, Moncton NB",
+
+    monthlyValue:
+    "$4,200",
+
+    visits:
+    "20",
+
+    preferredTeam:
+    "Team Alpha",
+
+    contract:
+    "Indefinite",
+
+    lastService:
+    "May 8",
+
+    profitability:
+    "91%"
+
+  },
+
+  "Riverview Suites": {
+
+    contact:
+    "Amanda Lewis",
+
+    company:
+    "Riverview Suites",
+
+    phone:
+    "(506) 555-9821",
+
+    address:
+    "88 River Road, Riverview NB",
+
+    monthlyValue:
+    "$1,600",
+
+    visits:
+    "8",
+
+    preferredTeam:
+    "Team Nova",
+
+    contract:
+    "Recurring",
+
+    lastService:
+    "May 5",
+
+    profitability:
+    "74%"
+
+  }
+
+};
 
 /* =========================================
    CLIENT SEARCH AUTOFILL
