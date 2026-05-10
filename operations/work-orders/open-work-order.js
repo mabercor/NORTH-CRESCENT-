@@ -546,82 +546,24 @@ clientCards.forEach((card) => {
 
       });
 
-      /* ADD ACTIVE STATE */
+      const clientData =
+clientDatabase[clientName];
 
-      card.classList.add(
-        'active'
-      );
+if (clientData) {
 
-      const clientName =
-      card.querySelector(
-        'strong'
-      ).innerText;
+  clientNameInput.value =
+    clientData.contact;
 
-      if (
-        clientName ===
-        'Elmwood Medical'
-      ) {
+  companyInput.value =
+    clientData.company;
 
-        clientNameInput.value =
-          'Sarah Mitchell';
+  phoneInput.value =
+    clientData.phone;
 
-        companyInput.value =
-          'Elmwood Medical';
+  addressInput.value =
+    clientData.address;
 
-        phoneInput.value =
-          '(506) 555-2211';
-
-        addressInput.value =
-          '145 Elmwood Drive, Moncton NB';
-
-      }
-
-      if (
-        clientName ===
-        'Moncton Office Hub'
-      ) {
-
-        clientNameInput.value =
-          'David Clarke';
-
-        companyInput.value =
-          'Moncton Office Hub';
-
-        phoneInput.value =
-          '(506) 555-8765';
-
-        addressInput.value =
-          '22 Main Street, Moncton NB';
-
-      }
-
-      if (
-        clientName ===
-        'Riverview Suites'
-      ) {
-
-        clientNameInput.value =
-          'Amanda Lewis';
-
-        companyInput.value =
-          'Riverview Suites';
-
-        phoneInput.value =
-          '(506) 555-9821';
-
-        addressInput.value =
-          '88 River Road, Riverview NB';
-
-      }
-
-      console.log(
-        'Client Operational Memory Loaded'
-      );
-
-    }
-  );
-
-});
+}
 /* =========================================
    LIVE SCHEDULING ENGINE
 ========================================= */
