@@ -328,3 +328,33 @@
   font-size: 14px;
 
 }
+
+/* =========================================
+   OPERATIONAL SUMMARY PANEL
+========================================= */
+
+.operational-summary {
+
+  margin-top: 24px;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  border-radius: 22px;
+
+  padding: 28px;
+
+}
+
+.operational-summary p {
+
+  color: #CBD5E1;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  margin: 0;
+
+}
