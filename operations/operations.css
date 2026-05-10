@@ -1166,7 +1166,7 @@ border-bottom:
 
   font-weight: 700;
 
-  color: #1E293B;
+  color: #1E293B !important;
 
   background:
   linear-gradient(
