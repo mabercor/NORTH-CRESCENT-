@@ -514,3 +514,83 @@ clientCards.forEach((card) => {
   );
 
 });
+/* =========================================
+   LIVE SCHEDULING ENGINE
+========================================= */
+
+const schedulePreview =
+document.getElementById(
+  'schedulePreview'
+);
+
+if (
+  visitsInput &&
+  schedulePreview
+) {
+
+  visitsInput.addEventListener(
+    'input',
+    () => {
+
+      const visits =
+      parseInt(
+        visitsInput.value
+      ) || 0;
+
+      let scheduleHTML = '';
+
+      if (visits <= 4) {
+
+        scheduleHTML = `
+          <div class="schedule-card">
+            <strong>Monday</strong>
+            <span>7:00 PM</span>
+          </div>
+        `;
+
+      }
+
+      else if (visits <= 8) {
+
+        scheduleHTML = `
+          <div class="schedule-card">
+            <strong>Monday</strong>
+            <span>7:00 PM</span>
+          </div>
+
+          <div class="schedule-card">
+            <strong>Thursday</strong>
+            <span>7:00 PM</span>
+          </div>
+        `;
+
+      }
+
+      else {
+
+        scheduleHTML = `
+          <div class="schedule-card">
+            <strong>Monday</strong>
+            <span>7:00 PM</span>
+          </div>
+
+          <div class="schedule-card">
+            <strong>Wednesday</strong>
+            <span>7:00 PM</span>
+          </div>
+
+          <div class="schedule-card">
+            <strong>Friday</strong>
+            <span>7:00 PM</span>
+          </div>
+        `;
+
+      }
+
+      schedulePreview.innerHTML =
+      scheduleHTML;
+
+    }
+  );
+
+}
