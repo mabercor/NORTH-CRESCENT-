@@ -605,11 +605,81 @@ clientCards.forEach((card) => {
         );
 
       });
-
-      const clientData =
+const clientData =
 clientDatabase[clientName];
 
 if (clientData) {
+
+  /* UPDATE OPERATIONAL ALERTS */
+
+  if (clientName === 'Elmwood Medical') {
+
+    operationalAlerts.innerHTML = `
+
+      <div class="alert-card danger">
+        🔴 Medical Protocol Required
+      </div>
+
+      <div class="alert-card warning">
+        🟡 Supervisor Mandatory
+      </div>
+
+      <div class="alert-card success">
+        🟢 VIP Recurring Client
+      </div>
+
+    `;
+
+    operationalSummaryText.innerText =
+      'Elmwood Medical is a high-priority recurring medical facility requiring strict protocol compliance, operational consistency, and supervisor oversight.';
+
+  }
+
+  else if (
+    clientName ===
+    'Moncton Office Hub'
+  ) {
+
+    operationalAlerts.innerHTML = `
+
+      <div class="alert-card success">
+        🟢 Enterprise Commercial Account
+      </div>
+
+      <div class="alert-card warning">
+        🟡 High Traffic Property
+      </div>
+
+    `;
+
+    operationalSummaryText.innerText =
+      'Moncton Office Hub is a large recurring commercial account with high operational traffic, stable profitability, and long-term operational potential.';
+
+  }
+
+  else if (
+    clientName ===
+    'Riverview Suites'
+  ) {
+
+    operationalAlerts.innerHTML = `
+
+      <div class="alert-card success">
+        🟢 Airbnb Recurring Property
+      </div>
+
+      <div class="alert-card warning">
+        🟡 Weekend Scheduling Priority
+      </div>
+
+    `;
+
+    operationalSummaryText.innerText =
+      'Riverview Suites is a recurring Airbnb property requiring flexible scheduling, rapid turnover coordination, and weekend operational readiness.';
+
+  }
+
+  /* UPDATE CLIENT MEMORY */
 
   clientNameInput.value =
     clientData.contact;
@@ -623,26 +693,27 @@ if (clientData) {
   addressInput.value =
     clientData.address;
 
-       /* UPDATE INTELLIGENCE PANEL */
+  /* UPDATE INTELLIGENCE PANEL */
 
-clientMonthlyValue.innerText =
-  clientData.monthlyValue;
+  clientMonthlyValue.innerText =
+    clientData.monthlyValue;
 
-clientVisits.innerText =
-  clientData.visits;
+  clientVisits.innerText =
+    clientData.visits;
 
-clientTeam.innerText =
-  clientData.preferredTeam;
+  clientTeam.innerText =
+    clientData.preferredTeam;
 
-clientContract.innerText =
-  clientData.contract;
+  clientContract.innerText =
+    clientData.contract;
 
-clientLastService.innerText =
-  clientData.lastService;
+  clientLastService.innerText =
+    clientData.lastService;
 
-clientProfitability.innerText =
-  clientData.profitability;
-   }
+  clientProfitability.innerText =
+    clientData.profitability;
+
+}
 /* =========================================
    LIVE SCHEDULING ENGINE
 ========================================= */
