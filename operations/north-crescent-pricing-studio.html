@@ -6,6 +6,126 @@
   <title>North Crescent Operational Pricing Calculator</title>
 
   <style>
+    /* =========================================
+   GLOBAL OPERATIONS NAVIGATION
+========================================= */
+
+.operations-nav {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px 40px;
+
+  margin-bottom: 30px;
+
+  background: rgba(255,255,255,0.92);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  border-radius: 20px;
+
+}
+
+.operations-nav-left {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+}
+
+.operations-nav-logo {
+
+  width: 14px;
+
+  height: 14px;
+
+  border-radius: 50%;
+
+  background:
+  linear-gradient(
+    135deg,
+    #4A9B8C,
+    #1E3A5F
+  );
+
+}
+
+.operations-nav-title {
+
+  color: #1E3A5F;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+}
+
+.operations-nav-menu {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+
+}
+
+.operations-nav-menu a {
+
+  color: #475569;
+
+  text-decoration: none;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  transition: 0.3s ease;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+.operations-nav-menu a:hover {
+
+  background:
+  rgba(74,155,140,0.12);
+
+  color: #1E3A5F;
+
+}
+
+.operations-nav-menu a.active {
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(74,155,140,0.18),
+    rgba(30,58,95,0.12)
+  );
+
+  color: #1E3A5F;
+
+}
 
     * {
       margin: 0;
