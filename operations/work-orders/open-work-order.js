@@ -563,12 +563,39 @@ const clientProfitability =
 document.getElementById(
   'clientProfitability'
 );
+
+
+/* =========================================
+   OPERATIONAL ALERTS ELEMENT
+========================================= */
+
+const operationalAlerts =
+document.getElementById(
+  'operationalAlerts'
+);
+
+
+/* =========================================
+   OPERATIONAL SUMMARY ELEMENT
+========================================= */
+
+const operationalSummaryText =
+document.getElementById(
+  'operationalSummaryText'
+);
+
+
+/* =========================================
+   CLIENT CARD EVENTS
+========================================= */
+
 clientCards.forEach((card) => {
 
   card.addEventListener(
     'click',
     () => {
 
+       
       /* REMOVE ACTIVE STATE */
 
       clientCards.forEach((item) => {
