@@ -36,7 +36,9 @@ if (statusDot) {
 ========================================= */
 
 const contractStructure =
-document.querySelectorAll('select')[2];
+document.getElementById(
+  'contractStructure'
+);
 
 const contractEndDate =
 document.querySelectorAll('input[type="date"]')[1];
