@@ -535,7 +535,25 @@ const addressInput =
 document.getElementById(
   'serviceAddress'
 );
+const mainContactInput =
+document.getElementById(
+  'mainContact'
+);
 
+const emailInput =
+document.getElementById(
+  'emailAddress'
+);
+
+const serviceTypeInput =
+document.getElementById(
+  'serviceType'
+);
+
+const squareFootageInput =
+document.getElementById(
+  'squareFootage'
+);
 /* =========================================
    CLIENT INTELLIGENCE ELEMENTS
 ========================================= */
