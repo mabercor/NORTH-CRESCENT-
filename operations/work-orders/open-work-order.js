@@ -921,8 +921,8 @@ async function searchOperationalClient() {
 
     });
 
-    const clientData =
-    await response.text()
+   const clientData =
+await response.json();
      
     console.log(
       'LIVE CLIENT DATA:',
