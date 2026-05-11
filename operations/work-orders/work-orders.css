@@ -358,3 +358,29 @@
   margin: 0;
 
 }
+.phase-divider {
+
+  margin: 80px 0 35px;
+  padding: 0 10px;
+
+}
+
+.phase-divider span {
+
+  color: #4A9B8C;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+}
+
+.phase-divider h2 {
+
+  color: white;
+  font-size: 34px;
+  margin-top: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+
+}
