@@ -148,7 +148,9 @@ if (visitsInput) {
 ========================================= */
 
 const complexitySelect =
-document.querySelectorAll('select')[6];
+document.getElementById(
+  'complexityLevel'
+);
 
 const complexityScoreCard =
 document.querySelectorAll(
