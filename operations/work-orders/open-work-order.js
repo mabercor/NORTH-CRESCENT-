@@ -88,8 +88,8 @@ if (contractStructure) {
 ========================================= */
 
 const visitsInput =
-document.querySelector(
-  'input[type="number"]'
+document.getElementById(
+  'visitsPerMonth'
 );
 
 const estimatedRevenueCard =
