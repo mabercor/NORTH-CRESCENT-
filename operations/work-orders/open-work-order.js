@@ -801,7 +801,7 @@ if (
 
       }
 
-            schedulePreview.innerHTML =
+      schedulePreview.innerHTML =
       scheduleHTML;
 
     }
