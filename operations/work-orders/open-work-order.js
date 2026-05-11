@@ -511,24 +511,24 @@ document.querySelectorAll(
 );
 
 const clientNameInput =
-document.querySelectorAll(
-  '.form-group input'
-)[1];
+document.getElementById(
+  'clientName'
+);
 
 const companyInput =
-document.querySelectorAll(
-  '.form-group input'
-)[2];
+document.getElementById(
+  'companyName'
+);
 
 const phoneInput =
-document.querySelectorAll(
-  '.form-group input'
-)[4];
+document.getElementById(
+  'phoneNumber'
+);
 
 const addressInput =
-document.querySelectorAll(
-  '.form-group input'
-)[6];
+document.getElementById(
+  'serviceAddress'
+);
 
 /* =========================================
    CLIENT INTELLIGENCE ELEMENTS
