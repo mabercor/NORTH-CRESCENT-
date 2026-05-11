@@ -724,11 +724,13 @@ if (clientData) {
   clientLastService.innerText =
     clientData.lastService;
 
-  clientProfitability.innerText =
-    clientData.profitability;
+ clientProfitability.innerText =
+  clientData.profitability;
 
-   }
-  );
+    }
+
+  }
+);
 
 });
 
@@ -808,10 +810,11 @@ if (
       schedulePreview.innerHTML =
       scheduleHTML;
 
-    }
-  );
+        }
 
-}
+);
+
+});
 
      /* =========================================
    OPERATIONAL PAYLOAD ENGINE
