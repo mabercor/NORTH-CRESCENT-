@@ -727,7 +727,11 @@ if (clientData) {
   clientProfitability.innerText =
     clientData.profitability;
 
-}
+   }
+  );
+
+});
+
 /* =========================================
    LIVE SCHEDULING ENGINE
 ========================================= */
