@@ -801,11 +801,13 @@ if (
 
       }
 
-      schedulePreview.innerHTML =
+            schedulePreview.innerHTML =
       scheduleHTML;
-}
 
-});
+    }
+  );
+
+}
 
      /* =========================================
    OPERATIONAL PAYLOAD ENGINE
@@ -837,7 +839,5 @@ function generateOperationalPayload() {
 
 }
 
-});
-   
-   }
+
 
