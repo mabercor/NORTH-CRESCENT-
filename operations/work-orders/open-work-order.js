@@ -539,7 +539,10 @@ const mainContactInput =
 document.getElementById(
   'mainContact'
 );
-
+const mainContactInput =
+document.getElementById(
+  'mainContact'
+);
 const emailInput =
 document.getElementById(
   'emailAddress'
