@@ -969,7 +969,33 @@ if (clientData.squareFootage) {
   clientData.squareFootage;
 
 }
+if (clientData.frequency) {
 
+  frequencyInput.value =
+  clientData.frequency;
+
+}
+
+if (clientData.days) {
+
+  daysInput.value =
+  clientData.days;
+
+}
+
+if (clientData.timeSlot) {
+
+  timeSlotInput.value =
+  clientData.timeSlot;
+
+}
+
+if (clientData.operationalSummary) {
+
+  operationalSummaryInput.value =
+  clientData.operationalSummary;
+
+}
   }
 
   catch (error) {
