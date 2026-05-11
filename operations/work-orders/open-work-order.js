@@ -554,6 +554,25 @@ const squareFootageInput =
 document.getElementById(
   'squareFootage'
 );
+const frequencyInput =
+document.getElementById(
+  'frequency'
+);
+
+const daysInput =
+document.getElementById(
+  'days'
+);
+
+const timeSlotInput =
+document.getElementById(
+  'timeSlot'
+);
+
+const operationalSummaryInput =
+document.getElementById(
+  'operationalSummary'
+);
 /* =========================================
    CLIENT INTELLIGENCE ELEMENTS
 ========================================= */
