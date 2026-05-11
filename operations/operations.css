@@ -595,8 +595,9 @@ align-items: flex-start;
   justify-content: space-between;
   align-items: center;
   padding: 24px 40px;
-  background: #0F172A;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+ background: rgba(255,255,255,0.92);
+ border-bottom:
+1px solid rgba(15,23,42,0.08);
 }
 
 .crm-brand {
@@ -614,13 +615,13 @@ align-items: flex-start;
 }
 
 .crm-brand h1 {
-  color: white;
+  color: #1E293B;
   font-size: 24px;
   margin: 0;
 }
 
 .crm-brand p {
-  color: #94A3B8;
+  color: #64748B;
   margin: 4px 0 0;
   font-size: 13px;
 }
@@ -629,7 +630,7 @@ align-items: flex-start;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #CBD5E1;
+  color: #475569;
   font-size: 14px;
 }
 
