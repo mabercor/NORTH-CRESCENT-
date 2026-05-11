@@ -594,7 +594,10 @@ clientCards.forEach((card) => {
   card.addEventListener(
     'click',
     () => {
-
+       const clientName =
+card.querySelector('strong')
+.innerText
+.trim();
        
       /* REMOVE ACTIVE STATE */
 
