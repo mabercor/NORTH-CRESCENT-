@@ -891,6 +891,47 @@ async function searchOperationalClient() {
       'LIVE CLIENT DATA:',
       clientData
     );
+     if (clientData.clientName) {
+
+  clientNameInput.value =
+  clientData.clientName;
+
+}
+
+if (clientData.mainContact) {
+
+  mainContactInput.value =
+  clientData.mainContact;
+
+}
+
+if (clientData.phoneNumber) {
+
+  phoneInput.value =
+  clientData.phoneNumber;
+
+}
+
+if (clientData.emailAddress) {
+
+  emailInput.value =
+  clientData.emailAddress;
+
+}
+
+if (clientData.serviceType) {
+
+  serviceTypeInput.value =
+  clientData.serviceType;
+
+}
+
+if (clientData.squareFootage) {
+
+  squareFootageInput.value =
+  clientData.squareFootage;
+
+}
 
   }
 
