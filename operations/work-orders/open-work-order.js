@@ -809,12 +809,10 @@ if (
 
       schedulePreview.innerHTML =
       scheduleHTML;
+    }
+  );
 
-        }
-
-);
-
-});
+}
 
      /* =========================================
    OPERATIONAL PAYLOAD ENGINE
