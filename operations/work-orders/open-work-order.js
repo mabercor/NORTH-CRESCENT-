@@ -808,3 +808,33 @@ if (
   );
 
 }
+
+     /* =========================================
+   OPERATIONAL PAYLOAD ENGINE
+========================================= */
+
+const workOrderForm =
+document.getElementById(
+  'workOrderForm'
+);
+
+function generateOperationalPayload() {
+
+  if (!workOrderForm) return;
+
+  const formData =
+  new FormData(workOrderForm);
+
+  const payload =
+  Object.fromEntries(
+    formData.entries()
+  );
+
+  console.log(
+    'Operational Payload:',
+    payload
+  );
+
+  return payload;
+
+}
