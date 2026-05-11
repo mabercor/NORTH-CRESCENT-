@@ -6,9 +6,20 @@
   }
 
 body {
-background: #f4f7f9;
-color: #1E3A5F;
-overflow-x: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #F4F7F9 0%,
+      #EEF2F6 100%
+    );
+
+  color: #1E293B;
+
+  overflow-x: hidden;
+
+  font-family: 'Poppins', sans-serif;
+
 }
 
 a {
