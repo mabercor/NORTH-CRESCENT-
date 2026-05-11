@@ -534,10 +534,7 @@ document.getElementById(
 const addressInput =
 document.getElementById(
   'serviceAddress'
-);
-const mainContactInput =
-document.getElementById(
-  'mainContact'
+
 );
 const mainContactInput =
 document.getElementById(
