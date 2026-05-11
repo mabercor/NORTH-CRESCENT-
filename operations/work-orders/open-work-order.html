@@ -294,81 +294,159 @@
   
 </div>
 
-           <!-- ========================================= -->
-      <!-- SERVICE CONFIGURATION -->
-      <!-- ========================================= -->
+        <!-- ========================================= -->
+<!-- SERVICE CONFIGURATION -->
+<!-- ========================================= -->
 
-      <div class="form-section">
+<div class="form-section">
 
-        <h3>
-          Service Configuration
-        </h3>
+  <h3>
+    Service Configuration
+  </h3>
 
-        <div class="form-grid">
+  <div class="form-grid">
 
-          <div class="form-group">
+    <div class="form-group">
 
-            <label>
-              Service Type
-            </label>
+      <label>
+        Service Type
+      </label>
 
-            <select>
+      <select
+        id="serviceType"
+        name="serviceType">
 
-              <option>Commercial Cleaning</option>
-              <option>Office Cleaning</option>
-              <option>Deep Cleaning</option>
-              <option>Disinfection</option>
-              <option>Post-Construction</option>
-              <option>Floor Maintenance</option>
+        <option>Commercial Cleaning</option>
+        <option>Office Cleaning</option>
+        <option>Deep Cleaning</option>
+        <option>Disinfection</option>
+        <option>Post-Construction</option>
+        <option>Floor Maintenance</option>
 
-            </select>
+      </select>
 
-          </div>
+    </div>
 
-          <div class="form-group">
-            <label>Square Footage</label>
-            <input type="text" placeholder="Property size">
-          </div>
+    <div class="form-group">
 
-          <div class="form-group">
+      <label>
+        Square Footage
+      </label>
 
-            <label>
-              Complexity Level
-            </label>
+      <input
+        type="text"
+        id="squareFootage"
+        name="squareFootage"
+        placeholder="Property size">
 
-           <select
-  id="complexityLevel"
-  name="complexityLevel">
+    </div>
 
-              <option>Low</option>
-              <option>Moderate</option>
-              <option>High</option>
-              <option>Extreme</option>
+    <div class="form-group">
 
-            </select>
+      <label>
+        Complexity Level
+      </label>
 
-          </div>
+      <select
+        id="complexityLevel"
+        name="complexityLevel">
 
-          <div class="form-group">
+        <option>Low</option>
+        <option>Moderate</option>
+        <option>High</option>
+        <option>Extreme</option>
 
-            <label>
-              Priority Level
-            </label>
+      </select>
 
-            <select>
+    </div>
 
-              <option>Low</option>
-              <option>Medium</option>
-              <option>High</option>
-              <option>Emergency</option>
+    <div class="form-group">
 
-            </select>
+      <label>
+        Priority Level
+      </label>
 
-          </div>
+      <select>
 
-        </div>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+        <option>Emergency</option>
 
-      </div>
+      </select>
+
+    </div>
+
+  </div>
+
+  <!-- ========================================= -->
+  <!-- RECURRING SCHEDULING -->
+  <!-- ========================================= -->
+
+  <h3 style="margin-top: 50px;">
+    Recurring Scheduling
+  </h3>
+
+  <div class="form-grid">
+
+    <div class="form-group">
+
+      <label>
+        Visits Per Month
+      </label>
+
+      <input
+        type="number"
+        id="visitsPerMonth"
+        name="visitsPerMonth"
+        placeholder="Example: 12">
+
+    </div>
+
+    <div class="form-group">
+
+      <label>
+        Preferred Time
+      </label>
+
+      <input
+        type="text"
+        placeholder="Example: 7:00 PM">
+
+    </div>
+
+    <div class="form-group">
+
+      <label>
+        Preferred Days
+      </label>
+
+      <select>
+
+        <option>Monday / Wednesday / Friday</option>
+        <option>Monday to Friday</option>
+        <option>Weekends</option>
+        <option>Custom Schedule</option>
+
+      </select>
+
+    </div>
+
+    <div class="form-group">
+
+      <label>
+        Estimated Duration Per Visit
+      </label>
+
+      <input
+        type="text"
+        placeholder="Estimated hours">
+
+    </div>
+
+  </div>
+
+</div>
 
       <!-- ========================================= -->
 <!-- CLIENT PROFILE INTELLIGENCE -->
@@ -545,55 +623,7 @@
 
       </div>
 
-      <!-- ========================================= -->
-      <!-- RECURRING ENGINE -->
-      <!-- ========================================= -->
-
-      <div class="form-section">
-
-        <h3>
-          Recurring Scheduling Engine
-        </h3>
-
-        <div class="form-grid">
-
-          <div class="form-group">
-            <label>Visits Per Month</label>
-
-<input
-  type="number"
-  id="visitsPerMonth"
-  name="visitsPerMonth"
-  placeholder="Example: 12">
-          </div>
-
-          <div class="form-group">
-            <label>Preferred Time</label>
-            <input type="text" placeholder="Example: 7:00 PM">
-          </div>
-
-          <div class="form-group">
-            <label>Preferred Days</label>
-
-            <select>
-
-              <option>Monday / Wednesday / Friday</option>
-              <option>Monday to Friday</option>
-              <option>Weekends</option>
-              <option>Custom Schedule</option>
-
-            </select>
-
-          </div>
-
-          <div class="form-group">
-            <label>Estimated Duration Per Visit</label>
-            <input type="text" placeholder="Estimated hours">
-          </div>
-
-        </div>
-
-      </div>
+     
 
            <!-- ========================================= -->
       <!-- FINANCIAL INTELLIGENCE -->
