@@ -608,6 +608,11 @@ card.querySelector('strong')
         );
 
       });
+       card.classList.add(
+  'active'
+);
+
+       
 const clientData =
 clientDatabase[clientName];
 
