@@ -41,7 +41,9 @@ document.getElementById(
 );
 
 const contractEndDate =
-document.querySelectorAll('input[type="date"]')[1];
+document.getElementById(
+  'contractEndDate'
+);
 
 function handleContractLogic() {
 
