@@ -991,7 +991,7 @@ box-shadow:
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 28px;
 }
 
 .form-group {
