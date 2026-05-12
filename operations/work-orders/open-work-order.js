@@ -123,31 +123,6 @@ document.getElementById(
 
 /* CLIENT INTELLIGENCE */
 
-const clientEstimatedProfit =
-document.getElementById(
-  'clientEstimatedProfit'
-);
-
-const clientProfitabilityMargin =
-document.getElementById(
-  'clientProfitabilityMargin'
-);
-
-const clientLaborHours =
-document.getElementById(
-  'clientLaborHours'
-);
-
-const clientOperationalRisk =
-document.getElementById(
-  'clientOperationalRisk'
-);
-
-const clientServiceFrequency =
-document.getElementById(
-  'clientServiceFrequency'
-);
-
 function calculateOperationalMetrics() {
 
   if (!visitsInput) return;
@@ -806,6 +781,30 @@ document.getElementById(
 /* =========================================
    CLIENT INTELLIGENCE ELEMENTS
 ========================================= */
+const clientEstimatedProfit =
+document.getElementById(
+  'clientEstimatedProfit'
+);
+
+const clientProfitabilityMargin =
+document.getElementById(
+  'clientProfitabilityMargin'
+);
+
+const clientLaborHours =
+document.getElementById(
+  'clientLaborHours'
+);
+
+const clientOperationalRisk =
+document.getElementById(
+  'clientOperationalRisk'
+);
+
+const clientServiceFrequency =
+document.getElementById(
+  'clientServiceFrequency'
+);
 
 const clientMonthlyValue =
 document.getElementById(
