@@ -1008,6 +1008,9 @@ if (clientData.operationalSummary) {
   }
 
 }
+console.log(
+  'SEARCH ENGINE READY'
+);
 
 if (clientSearchInput) {
 
