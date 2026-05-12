@@ -732,10 +732,17 @@
   0 0 12px rgba(74,155,140,0.25);
 
 }
-
 .form-group label {
 
-  color: #475569 !important;
+  color: #1E3A5F !important;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+
+  margin-bottom: 12px;
 
 }
 
