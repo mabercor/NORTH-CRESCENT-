@@ -893,7 +893,9 @@ const searchWebhookURL =
 'https://hook.us2.make.com/92wi6ng77ab71m3cs37svx35ds4nnaog';
 
 async function searchOperationalClient() {
-
+console.log(
+  'SEARCH FUNCTION RUNNING'
+);
   if (!clientSearchInput) return;
 
   const searchValue =
