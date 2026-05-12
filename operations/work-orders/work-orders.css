@@ -490,5 +490,133 @@
 
 }
 
+/* =========================================
+   LIGHT ENTERPRISE MODE
+========================================= */
 
+.form-section {
+
+  background: #FFFFFF !important;
+
+  border: 1px solid #E2E8F0 !important;
+
+  box-shadow:
+    0 10px 30px rgba(15,23,42,0.04);
+
+}
+
+.form-section h3 {
+
+  color: #1E293B !important;
+
+}
+
+.form-group label {
+
+  color: #475569 !important;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+  background: #F8FAFC !important;
+
+  border: 1px solid #CBD5E1 !important;
+
+  color: #1E293B !important;
+
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+  color: #94A3B8 !important;
+
+}
+
+.client-result-card,
+.intelligence-card,
+.schedule-card,
+.metric-card {
+
+  background: #FFFFFF !important;
+
+  border: 1px solid #E2E8F0 !important;
+
+  box-shadow:
+    0 8px 24px rgba(15,23,42,0.04);
+
+}
+
+.client-result-card strong,
+.intelligence-card strong,
+.metric-card strong,
+.schedule-card strong {
+
+  color: #1E293B !important;
+
+}
+
+.client-result-card span,
+.intelligence-card span,
+.metric-card span,
+.schedule-card span {
+
+  color: #64748B !important;
+
+}
+
+.operational-summary p {
+
+  color: #475569 !important;
+
+}
+
+.pipeline-step {
+
+  background: #FFFFFF !important;
+
+  border: 1px solid #CBD5E1 !important;
+
+  color: #334155 !important;
+
+}
+
+.pipeline-line {
+
+  background: #CBD5E1 !important;
+
+}
+
+.alert-card.success {
+
+  background: rgba(34,197,94,0.08) !important;
+
+  border: 1px solid rgba(34,197,94,0.2) !important;
+
+  color: #15803D !important;
+
+}
+
+.alert-card.warning {
+
+  background: rgba(245,158,11,0.08) !important;
+
+  border: 1px solid rgba(245,158,11,0.2) !important;
+
+  color: #B45309 !important;
+
+}
+
+.alert-card.danger {
+
+  background: rgba(239,68,68,0.08) !important;
+
+  border: 1px solid rgba(239,68,68,0.2) !important;
+
+  color: #B91C1C !important;
+
+}
 
