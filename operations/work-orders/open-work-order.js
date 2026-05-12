@@ -289,6 +289,8 @@ if (margin >= 50) {
   'Low';
    let operationalAlert =
 'Operationally Stable';
+   let operationalRecommendation =
+'Standard operational structure.';
 
   if (laborHours >= 12) {
     operationalRisk = 'Moderate';
@@ -316,6 +318,40 @@ if (squareFootage >= 10000) {
 }
 
 if (laborHours >= 60) {
+   if (
+  serviceType ===
+  'Post-Construction Cleaning'
+  &&
+  squareFootage >= 5000
+) {
+
+  operationalRecommendation =
+  'Heavy stabilization workload detected. Supervisor oversight recommended.';
+
+}
+
+if (
+  serviceType ===
+  'Airbnb Cleaning'
+  &&
+  visits >= 20
+)
+{
+
+  operationalRecommendation =
+  'High-turnover operational flow detected requiring rapid scheduling structure.';
+
+}
+
+if (
+  margin < 20
+)
+{
+
+  operationalRecommendation =
+  'Low profitability structure detected. Pricing review recommended.';
+
+}
 
   operationalAlert =
   'High Operational Pressure';
@@ -504,7 +540,7 @@ else {
     serviceFrequency;
 
   }
-   if (operationalSummaryInput) {
+if (operationalSummaryInput) {
 
   operationalSummaryInput.value =
 
@@ -530,7 +566,9 @@ else {
 
   complexitySelect.value.toLowerCase() +
 
-  '.';
+  '. ' +
+
+  operationalRecommendation;
 
 }
 
