@@ -411,313 +411,558 @@
     Service Configuration
   </h3>
 
-  <div class="form-grid">
+  <div class="service-config-layout">
 
-    <!-- SERVICE TYPE -->
+    <!-- ========================================= -->
+    <!-- LEFT SIDE -->
+    <!-- ========================================= -->
 
-    <div class="form-group">
+    <div class="service-config-main">
 
-      <label>
-        Service Type
-      </label>
+      <div class="form-grid">
 
-      <select
-        id="serviceType"
-        name="serviceType">
+        <!-- SERVICE TYPE -->
 
-        <option>Commercial Cleaning</option>
-        <option>Office Cleaning</option>
-        <option>Deep Cleaning</option>
-        <option>Disinfection</option>
-        <option>Post-Construction</option>
-        <option>Floor Maintenance</option>
+        <div class="form-group">
 
-      </select>
+          <label>
+            Service Type
+          </label>
+
+          <select
+            id="serviceType"
+            name="serviceType">
+
+            <option>
+              Residential Cleaning
+            </option>
+
+            <option>
+              Commercial Cleaning
+            </option>
+
+            <option>
+              Deep Cleaning
+            </option>
+
+            <option>
+              Move-In / Move-Out
+            </option>
+
+            <option>
+              Airbnb Cleaning
+            </option>
+
+            <option>
+              Janitorial Cleaning
+            </option>
+
+            <option>
+              Post-Construction Cleaning
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- SQUARE FOOTAGE -->
+
+        <div class="form-group">
+
+          <label>
+            Square Footage
+          </label>
+
+          <input
+            type="text"
+            id="squareFootage"
+            name="squareFootage"
+            placeholder="Property size">
+
+        </div>
+
+        <!-- VISITS PER MONTH -->
+
+        <div class="form-group">
+
+          <label>
+            Visits Per Month
+          </label>
+
+          <input
+            type="number"
+            id="visitsPerMonth"
+            name="visitsPerMonth"
+            placeholder="Example: 12">
+
+        </div>
+
+        <!-- ESTIMATED DURATION -->
+
+        <div class="form-group">
+
+          <label>
+            Estimated Duration Per Visit
+          </label>
+
+          <input
+            type="text"
+            id="estimatedDuration"
+            name="estimatedDuration"
+            placeholder="Estimated hours">
+
+        </div>
+
+        <!-- PREFERRED TIME -->
+
+        <div class="form-group">
+
+          <label>
+            Preferred Time
+          </label>
+
+          <input
+            type="text"
+            id="timeSlot"
+            name="timeSlot"
+            placeholder="Example: 7:00 PM">
+
+        </div>
+
+        <!-- PREFERRED DAYS -->
+
+        <div class="form-group">
+
+          <label>
+            Preferred Days
+          </label>
+
+          <select
+            id="days"
+            name="days">
+
+            <option>
+              Monday / Wednesday / Friday
+            </option>
+
+            <option>
+              Monday to Friday
+            </option>
+
+            <option>
+              Weekends
+            </option>
+
+            <option>
+              Custom Schedule
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- COMPLEXITY LEVEL -->
+
+        <div class="form-group">
+
+          <label>
+            Complexity Level
+          </label>
+
+          <select
+            id="complexityLevel"
+            name="complexityLevel">
+
+            <option>
+              Low
+            </option>
+
+            <option>
+              Moderate
+            </option>
+
+            <option>
+              High
+            </option>
+
+            <option>
+              Extreme
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- PRIORITY LEVEL -->
+
+        <div class="form-group">
+
+          <label>
+            Priority Level
+          </label>
+
+          <select
+            id="priorityLevel"
+            name="priorityLevel">
+
+            <option>
+              Low
+            </option>
+
+            <option>
+              Medium
+            </option>
+
+            <option>
+              High
+            </option>
+
+            <option>
+              Emergency
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <!-- SQUARE FOOTAGE -->
+    <!-- ========================================= -->
+    <!-- RIGHT SIDE -->
+    <!-- ========================================= -->
 
-    <div class="form-group">
+    <div class="service-config-sidebar">
 
-      <label>
-        Square Footage
-      </label>
+      <!-- DISCOUNT ENGINE -->
 
-      <input
-        type="text"
-        id="squareFootage"
-        name="squareFootage"
-        placeholder="Property size">
+      <div class="discount-panel">
+
+        <div class="discount-header">
+
+          <span>
+            Recurring Contract Discount
+          </span>
+
+          <small>
+            Applied to recurring contracts
+          </small>
+
+        </div>
+
+        <div class="discount-grid">
+
+          <button
+            type="button"
+            class="discount-card"
+            data-discount="5">
+
+            5%
+
+          </button>
+
+          <button
+            type="button"
+            class="discount-card"
+            data-discount="10">
+
+            10%
+
+          </button>
+
+          <button
+            type="button"
+            class="discount-card"
+            data-discount="15">
+
+            15%
+
+          </button>
+
+          <button
+            type="button"
+            class="discount-card"
+            data-discount="20">
+
+            20%
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- LIVE ANALYTICS -->
+
+      <div class="live-analytics-panel">
+
+        <h4>
+          Live Operational Analytics
+        </h4>
+
+        <div class="analytics-item">
+
+          <span>
+            Monthly Revenue
+          </span>
+
+          <strong id="liveRevenue">
+            $2,400
+          </strong>
+
+        </div>
+
+        <div class="analytics-item">
+
+          <span>
+            Estimated Profit
+          </span>
+
+          <strong id="estimatedProfit">
+            $1,240
+          </strong>
+
+        </div>
+
+        <div class="analytics-item">
+
+          <span>
+            Profitability Margin
+          </span>
+
+          <strong id="profitabilityMargin">
+            42%
+          </strong>
+
+        </div>
+
+        <div class="analytics-item">
+
+          <span>
+            Labor Hours / Month
+          </span>
+
+          <strong id="laborHours">
+            48h
+          </strong>
+
+        </div>
+
+        <div class="analytics-item">
+
+          <span>
+            Operational Risk
+          </span>
+
+          <strong id="operationalRisk">
+            Moderate
+          </strong>
+
+        </div>
+
+        <div class="analytics-item">
+
+          <span>
+            Service Frequency
+          </span>
+
+          <strong id="serviceFrequency">
+            Weekly
+          </strong>
+
+        </div>
+
+      </div>
 
     </div>
-
-    <!-- VISITS PER MONTH -->
-
-    <div class="form-group">
-
-      <label>
-        Visits Per Month
-      </label>
-
-      <input
-        type="number"
-        id="visitsPerMonth"
-        name="visitsPerMonth"
-        placeholder="Example: 12">
-
-    </div>
-
-    <!-- PREFERRED TIME -->
-
-    <div class="form-group">
-
-      <label>
-        Preferred Time
-      </label>
-
-      <input
-        type="text"
-        id="timeSlot"
-        name="timeSlot"
-        placeholder="Example: 7:00 PM">
-
-    </div>
-    
-<!-- DISCOUNT ENGINE -->
-
-<div class="form-group full-width">
-
-  <label>
-    Recurring Contract Discount
-  </label>
-
-  <div class="discount-grid">
-
-    <button
-      type="button"
-      class="discount-card"
-      data-discount="5">
-
-      5%
-
-    </button>
-
-    <button
-      type="button"
-      class="discount-card"
-      data-discount="10">
-
-      10%
-
-    </button>
-
-    <button
-      type="button"
-      class="discount-card"
-      data-discount="15">
-
-      15%
-
-    </button>
-
-    <button
-      type="button"
-      class="discount-card"
-      data-discount="20">
-
-      20%
-
-    </button>
 
   </div>
 
 </div>
-    <!-- PREFERRED DAYS -->
+ <!-- ========================================= -->
+<!-- CLIENT OPERATIONAL INTELLIGENCE -->
+<!-- ========================================= -->
 
-    <div class="form-group">
+<div class="form-section">
 
-      <label>
-        Preferred Days
-      </label>
+  <div class="intelligence-header">
 
-      <select
-        id="days"
-        name="days">
+    <div>
 
-        <option>Monday / Wednesday / Friday</option>
-        <option>Monday to Friday</option>
-        <option>Weekends</option>
-        <option>Custom Schedule</option>
+      <h3>
+        Client Operational Intelligence
+      </h3>
 
-      </select>
-
-    </div>
-
-    <!-- ESTIMATED DURATION -->
-
-    <div class="form-group">
-
-      <label>
-        Estimated Duration Per Visit
-      </label>
-
-      <input
-        type="text"
-        id="estimatedDuration"
-        name="estimatedDuration"
-        placeholder="Estimated hours">
+      <p>
+        Live operational analytics generated dynamically from service configuration, recurring structure, operational complexity, and pricing behavior.
+      </p>
 
     </div>
 
-    <!-- COMPLEXITY LEVEL -->
+    <div class="intelligence-status">
 
-    <div class="form-group">
+      <div class="status-dot pulse"></div>
 
-      <label>
-        Complexity Level
-      </label>
-
-      <select
-        id="complexityLevel"
-        name="complexityLevel">
-
-        <option>Low</option>
-        <option>Moderate</option>
-        <option>High</option>
-        <option>Extreme</option>
-
-      </select>
-
-    </div>
-
-    <!-- PRIORITY LEVEL -->
-
-    <div class="form-group">
-
-      <label>
-        Priority Level
-      </label>
-
-      <select
-        id="priorityLevel"
-        name="priorityLevel">
-
-        <option>Low</option>
-        <option>Medium</option>
-        <option>High</option>
-        <option>Emergency</option>
-
-      </select>
+      Live Operational Analytics Active
 
     </div>
 
   </div>
-
-</div>
-  <!-- ========================================= -->
-  <!-- CLIENT OPERATIONAL INTELLIGENCE -->
-  <!-- ========================================= -->
- 
-  <h3 class="section-spacing">
-    Client Operational Intelligence
-  </h3>
 
   <div class="client-intelligence-grid">
 
-    <div class="intelligence-card">
+    <!-- MONTHLY REVENUE -->
+
+    <div class="intelligence-card primary">
 
       <span>
-        Monthly Value
+        Monthly Revenue
       </span>
 
       <strong id="clientMonthlyValue">
         $2,400
       </strong>
 
+      <small>
+        Recurring Monthly Projection
+      </small>
+
     </div>
 
-   <div class="intelligence-card">
+    <!-- ESTIMATED PROFIT -->
 
-  <span>
-    Service Frequency
-  </span>
+    <div class="intelligence-card success">
 
-  <strong id="serviceFrequency">
-    Weekly
-  </strong>
+      <span>
+        Estimated Profit
+      </span>
 
-  <small>
-    Recurring Structure
-  </small>
+      <strong id="estimatedProfit">
+        $1,240
+      </strong>
 
-</div>
+      <small>
+        After Operational Costs
+      </small>
 
-    <div class="intelligence-card">
+    </div>
 
-  <span>
-    Profitability Margin
-  </span>
-
-  <strong id="profitabilityMargin">
-    42%
-  </strong>
-
-  <small>
-    Operational Efficiency
-  </small>
-
-</div>
+    <!-- PROFITABILITY -->
 
     <div class="intelligence-card">
 
-  <span>
-    Operational Risk
-  </span>
+      <span>
+        Profitability Margin
+      </span>
 
-  <strong id="operationalRisk">
-    Moderate
-  </strong>
+      <strong id="profitabilityMargin">
+        42%
+      </strong>
 
-  <small>
-    Service Complexity Level
-  </small>
+      <small>
+        Operational Efficiency
+      </small>
 
-</div>
+    </div>
 
-   <div class="intelligence-card">
-
-  <span>
-    Labor Hours / Month
-  </span>
-
-  <strong id="laborHours">
-    48h
-  </strong>
-
-  <small>
-    Estimated Operational Load
-  </small>
-
-</div>
+    <!-- LABOR HOURS -->
 
     <div class="intelligence-card">
 
-  <span>
-    Estimated Profit
-  </span>
+      <span>
+        Labor Hours / Month
+      </span>
 
-  <strong id="estimatedProfit">
-    $1,240
-  </strong>
+      <strong id="laborHours">
+        48h
+      </strong>
 
-  <small>
-    After Operational Costs
-  </small>
+      <small>
+        Estimated Operational Load
+      </small>
 
-</div>
+    </div>
+
+    <!-- SERVICE FREQUENCY -->
+
+    <div class="intelligence-card">
+
+      <span>
+        Service Frequency
+      </span>
+
+      <strong id="serviceFrequency">
+        Weekly
+      </strong>
+
+      <small>
+        Recurring Structure
+      </small>
+
+    </div>
+
+    <!-- OPERATIONAL RISK -->
+
+    <div class="intelligence-card warning">
+
+      <span>
+        Operational Risk
+      </span>
+
+      <strong id="operationalRisk">
+        Moderate
+      </strong>
+
+      <small>
+        Service Complexity Level
+      </small>
+
+    </div>
 
   </div>
+
+  <!-- ========================================= -->
+  <!-- OPERATIONAL SUMMARY -->
+  <!-- ========================================= -->
+
+  <div class="operational-summary">
+
+    <div class="summary-header">
+
+      <h4>
+        Operational Intelligence Summary
+      </h4>
+
+      <span>
+        AI Operational Context
+      </span>
+
+    </div>
+
+    <textarea
+      id="operationalSummary"
+      name="operationalSummary"
+      rows="7"
+      placeholder="Operational intelligence, client expectations, execution context, service considerations, staffing observations, recurring requirements, escalation notes, or AI operational analysis..."></textarea>
+
+  </div>
+
+  <!-- ========================================= -->
+  <!-- OPERATIONAL ALERTS -->
+  <!-- ========================================= -->
+
+  <div
+    class="operational-alerts"
+    id="operationalAlerts">
+
+    <div class="alert-card success">
+      🟢 Operational System Ready
+    </div>
+
+  </div>
+
+</div>
 
   <!-- ========================================= -->
   <!-- OPERATIONAL SUMMARY -->
