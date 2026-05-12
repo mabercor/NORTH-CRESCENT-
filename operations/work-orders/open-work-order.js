@@ -86,21 +86,62 @@ if (contractStructure) {
 /* =========================================
    LIVE OPERATIONAL METRICS
 ========================================= */
-
-const visitsInput =
+const liveRevenue =
 document.getElementById(
-  'visitsPerMonth'
+  'liveRevenue'
 );
 
-const estimatedRevenueCard =
-document.querySelectorAll(
-  '.metric-card strong'
-)[0];
+const liveEstimatedProfit =
+document.getElementById(
+  'liveEstimatedProfit'
+);
 
-const recurringRevenueCard =
-document.querySelectorAll(
-  '.metric-card strong'
-)[2];
+const liveProfitabilityMargin =
+document.getElementById(
+  'liveProfitabilityMargin'
+);
+
+const liveLaborHours =
+document.getElementById(
+  'liveLaborHours'
+);
+
+const liveOperationalRisk =
+document.getElementById(
+  'liveOperationalRisk'
+);
+
+const liveServiceFrequency =
+document.getElementById(
+  'liveServiceFrequency'
+);
+
+/* CLIENT INTELLIGENCE */
+
+const clientEstimatedProfit =
+document.getElementById(
+  'clientEstimatedProfit'
+);
+
+const clientProfitabilityMargin =
+document.getElementById(
+  'clientProfitabilityMargin'
+);
+
+const clientLaborHours =
+document.getElementById(
+  'clientLaborHours'
+);
+
+const clientOperationalRisk =
+document.getElementById(
+  'clientOperationalRisk'
+);
+
+const clientServiceFrequency =
+document.getElementById(
+  'clientServiceFrequency'
+);
 
 function calculateOperationalMetrics() {
 
@@ -141,7 +182,6 @@ if (visitsInput) {
   );
 
 }
-
 
 /* =========================================
    OPERATIONAL COMPLEXITY SCORE
