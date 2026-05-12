@@ -321,28 +321,50 @@ if (laborHours >= 60) {
   'High Operational Pressure';
 
 }
-  let serviceFrequency =
-  'Custom';
+let serviceFrequency =
+'Custom Schedule';
 
-  if (visits <= 1) {
-    serviceFrequency = 'One-Time';
-  }
+if (visits === 1) {
 
-  else if (visits <= 4) {
-    serviceFrequency = 'Weekly';
-  }
+  serviceFrequency =
+  'One-Time Service';
 
-  else if (visits <= 12) {
-    serviceFrequency =
-    'Recurring';
-  }
+}
 
-  else {
-    serviceFrequency =
-    'High Frequency';
-  }
+else if (visits <= 4) {
 
-  if (liveRevenue) {
+  serviceFrequency =
+  'Weekly Service';
+
+}
+
+else if (visits <= 8) {
+
+  serviceFrequency =
+  'Bi-Weekly Recurring';
+
+}
+
+else if (visits <= 12) {
+
+  serviceFrequency =
+  'Recurring Maintenance';
+
+}
+
+else if (visits <= 20) {
+
+  serviceFrequency =
+  'High Frequency Operations';
+
+}
+
+else {
+
+  serviceFrequency =
+  'Enterprise Operational Structure';
+
+}  if (liveRevenue) {
 
     liveRevenue.innerText =
     '$' +
@@ -415,6 +437,29 @@ if (laborHours >= 60) {
     serviceFrequency;
 
   }
+   if (liveServiceFrequency) {
+
+  liveServiceFrequency.innerText =
+  serviceFrequency;
+
+  liveServiceFrequency.style.color =
+  '#1E3A5F';
+
+  if (visits >= 12) {
+
+    liveServiceFrequency.style.color =
+    '#16a34a';
+
+  }
+
+  if (visits >= 20) {
+
+    liveServiceFrequency.style.color =
+    '#2563eb';
+
+  }
+
+}
 
   if (clientMonthlyValue) {
 
