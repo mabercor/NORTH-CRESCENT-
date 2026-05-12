@@ -155,25 +155,187 @@ function calculateOperationalMetrics() {
   const visits =
   parseInt(visitsInput.value) || 0;
 
-  const estimatedMonthlyRevenue =
-  visits * 240;
+  const estimatedDurationInput =
+  document.getElementById(
+    'estimatedDuration'
+  );
 
-  const annualRecurringRevenue =
-  estimatedMonthlyRevenue * 12;
+  const complexitySelect =
+  document.getElementById(
+    'complexityLevel'
+  );
 
-  if (estimatedRevenueCard) {
+  const duration =
+  parseFloat(
+    estimatedDurationInput.value
+  ) || 0;
 
-    estimatedRevenueCard.innerText =
-      '$' +
-      estimatedMonthlyRevenue.toLocaleString();
+  let complexityMultiplier = 1;
+
+  if (
+    complexitySelect.value ===
+    'Moderate'
+  ) {
+    complexityMultiplier = 1.15;
+  }
+
+  if (
+    complexitySelect.value ===
+    'High'
+  ) {
+    complexityMultiplier = 1.3;
+  }
+
+  if (
+    complexitySelect.value ===
+    'Extreme'
+  ) {
+    complexityMultiplier = 1.5;
+  }
+
+  const laborHours =
+  visits * duration;
+
+  const operationalCost =
+  laborHours * 45 *
+  complexityMultiplier;
+
+  const monthlyRevenue =
+  operationalCost * 1.25;
+
+  const estimatedProfit =
+  monthlyRevenue -
+  operationalCost;
+
+  const margin =
+  monthlyRevenue > 0
+    ? Math.round(
+        (estimatedProfit /
+        monthlyRevenue) * 100
+      )
+    : 0;
+
+  let operationalRisk =
+  'Low';
+
+  if (laborHours >= 12) {
+    operationalRisk = 'Moderate';
+  }
+
+  if (laborHours >= 24) {
+    operationalRisk = 'High';
+  }
+
+  if (laborHours >= 40) {
+    operationalRisk = 'Extreme';
+  }
+
+  let serviceFrequency =
+  'Custom';
+
+  if (visits <= 1) {
+    serviceFrequency = 'One-Time';
+  }
+
+  else if (visits <= 4) {
+    serviceFrequency = 'Weekly';
+  }
+
+  else if (visits <= 12) {
+    serviceFrequency =
+    'Recurring';
+  }
+
+  else {
+    serviceFrequency =
+    'High Frequency';
+  }
+
+  if (liveRevenue) {
+
+    liveRevenue.innerText =
+    '$' +
+    monthlyRevenue.toLocaleString();
 
   }
 
-  if (recurringRevenueCard) {
+  if (liveEstimatedProfit) {
 
-    recurringRevenueCard.innerText =
-      '$' +
-      annualRecurringRevenue.toLocaleString();
+    liveEstimatedProfit.innerText =
+    '$' +
+    estimatedProfit.toLocaleString();
+
+  }
+
+  if (liveProfitabilityMargin) {
+
+    liveProfitabilityMargin.innerText =
+    margin + '%';
+
+  }
+
+  if (liveLaborHours) {
+
+    liveLaborHours.innerText =
+    laborHours + 'h';
+
+  }
+
+  if (liveOperationalRisk) {
+
+    liveOperationalRisk.innerText =
+    operationalRisk;
+
+  }
+
+  if (liveServiceFrequency) {
+
+    liveServiceFrequency.innerText =
+    serviceFrequency;
+
+  }
+
+  if (clientMonthlyValue) {
+
+    clientMonthlyValue.innerText =
+    '$' +
+    monthlyRevenue.toLocaleString();
+
+  }
+
+  if (clientEstimatedProfit) {
+
+    clientEstimatedProfit.innerText =
+    '$' +
+    estimatedProfit.toLocaleString();
+
+  }
+
+  if (clientProfitabilityMargin) {
+
+    clientProfitabilityMargin.innerText =
+    margin + '%';
+
+  }
+
+  if (clientLaborHours) {
+
+    clientLaborHours.innerText =
+    laborHours + 'h';
+
+  }
+
+  if (clientOperationalRisk) {
+
+    clientOperationalRisk.innerText =
+    operationalRisk;
+
+  }
+
+  if (clientServiceFrequency) {
+
+    clientServiceFrequency.innerText =
+    serviceFrequency;
 
   }
 
