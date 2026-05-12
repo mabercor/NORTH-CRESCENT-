@@ -349,7 +349,11 @@
   border-radius: 50%;
 
   background:
-    rgba(74,155,140,0.06);
+  linear-gradient(
+    180deg,
+    rgba(74,155,140,0.14),
+    rgba(30,58,95,0.10)
+  );
 
   top: -60px;
   right: -60px;
@@ -667,6 +671,27 @@
   isolation: isolate;
 
 }
+.form-section::before {
+
+  content: '';
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(74,155,140,0.05);
+
+  top: -120px;
+  right: -120px;
+
+  pointer-events: none;
+
+}
+
 
 .form-section h3 {
 
@@ -687,7 +712,7 @@
 
   content: '';
 
-  width: 60px;
+  width: 90px;
 
   height: 4px;
 
@@ -703,6 +728,8 @@
   display: block;
 
   margin-top: 12px;
+   box-shadow:
+  0 0 12px rgba(74,155,140,0.25);
 
 }
 
