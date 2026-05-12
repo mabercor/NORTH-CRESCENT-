@@ -86,6 +86,11 @@ if (contractStructure) {
 /* =========================================
    LIVE OPERATIONAL METRICS
 ========================================= */
+const visitsInput =
+document.getElementById(
+  'visitsPerMonth'
+);
+
 const liveRevenue =
 document.getElementById(
   'liveRevenue'
