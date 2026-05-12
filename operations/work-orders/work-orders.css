@@ -618,4 +618,67 @@ background: #F8FAFC !important;
   color: #B91C1C !important;
 
 }
+/* =========================================
+   DISCOUNT ENGINE
+========================================= */
 
+.full-width {
+
+  grid-column: 1 / -1;
+
+}
+
+.discount-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-top: 12px;
+
+}
+
+.discount-card {
+
+  background: #F8FAFC;
+
+  border: 1px solid #CBD5E1;
+
+  border-radius: 18px;
+
+  padding: 18px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  color: #1E293B;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+}
+
+.discount-card:hover {
+
+  border-color: #4A9B8C;
+
+  transform: translateY(-3px);
+
+}
+
+.discount-card.active {
+
+  background: rgba(74,155,140,0.12);
+
+  border-color: #4A9B8C;
+
+  color: #1E293B;
+
+  box-shadow:
+    0 10px 25px rgba(74,155,140,0.12);
+
+}
