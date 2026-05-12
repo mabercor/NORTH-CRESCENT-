@@ -261,6 +261,29 @@ estimatedProfit;
         monthlyRevenue) * 100
       )
     : 0;
+   let profitabilityStatus =
+'Risky';
+
+if (margin >= 20) {
+
+  profitabilityStatus =
+  'Stable';
+
+}
+
+if (margin >= 35) {
+
+  profitabilityStatus =
+  'Strong';
+
+}
+
+if (margin >= 50) {
+
+  profitabilityStatus =
+  'Premium';
+
+}
 
   let operationalRisk =
   'Low';
