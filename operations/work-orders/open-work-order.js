@@ -937,6 +937,75 @@ await response.json();
 
 }
 
+if (clientData.companyName) {
+
+  companyInput.value =
+  clientData.companyName;
+
+}
+
+if (clientData.mainContact) {
+
+  mainContactInput.value =
+  clientData.mainContact;
+
+}
+
+if (clientData.phoneNumber) {
+
+  phoneInput.value =
+  clientData.phoneNumber;
+
+}
+
+if (clientData.emailAddress) {
+
+  emailInput.value =
+  clientData.emailAddress;
+
+}
+
+if (clientData.serviceType) {
+
+  serviceTypeInput.value =
+  clientData.serviceType;
+
+}
+
+if (clientData.squareFootage) {
+
+  squareFootageInput.value =
+  clientData.squareFootage;
+
+}
+
+if (clientData.frequency) {
+
+  frequencyInput.value =
+  clientData.frequency;
+
+}
+
+if (clientData.days) {
+
+  daysInput.value =
+  clientData.days;
+
+}
+
+if (clientData.timeSlot) {
+
+  timeSlotInput.value =
+  clientData.timeSlot;
+
+}
+     if (clientData.clientName) {
+
+  clientNameInput.value =
+  clientData.clientName;
+
+}
+
 if (clientData.mainContact) {
 
   mainContactInput.value =
