@@ -183,6 +183,33 @@ if (visitsInput) {
 
 }
 
+const estimatedDurationInput =
+document.getElementById(
+  'estimatedDuration'
+);
+
+if (estimatedDurationInput) {
+
+  estimatedDurationInput.addEventListener(
+    'input',
+    calculateOperationalMetrics
+  );
+
+}
+
+if (complexitySelect) {
+
+  complexitySelect.addEventListener(
+    'change',
+    calculateOperationalMetrics
+  );
+
+}
+
+/* INITIAL LOAD */
+
+calculateOperationalMetrics();
+
 /* =========================================
    OPERATIONAL COMPLEXITY SCORE
 ========================================= */
