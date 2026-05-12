@@ -1144,21 +1144,21 @@
   right: -120px;
   }
 
-.live-analytics-panel h4 {
-
-  font-size: 22px;
-
-  margin-bottom: 30px;
-
+.live-analytics-panel {
+  background: linear-gradient(180deg, #4A9B8C 0%, #1E3A5F 100%);
+  border-radius: 30px;
+  padding: 30px;
   color: white;
-
-  font-weight: 700;
-
-  letter-spacing: -0.3px;
-
+  box-shadow: 0 25px 60px rgba(15,23,42,0.22);
 }
 
-
+.live-analytics-panel h4 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
 
 /* =========================================
    ANALYTICS ITEMS
