@@ -504,6 +504,35 @@ else {
     serviceFrequency;
 
   }
+   if (operationalSummaryInput) {
+
+  operationalSummaryInput.value =
+
+  serviceFrequency +
+
+  ' ' +
+
+  serviceType +
+
+  ' operation covering ' +
+
+  squareFootage +
+
+  ' sq ft with ' +
+
+  operationalAlert.toLowerCase() +
+
+  ', estimated profitability of ' +
+
+  margin +
+
+  '% and operational complexity classified as ' +
+
+  complexitySelect.value.toLowerCase() +
+
+  '.';
+
+}
 
 }
 
