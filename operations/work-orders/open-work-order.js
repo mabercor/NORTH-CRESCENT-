@@ -395,6 +395,33 @@ if (estimatedDurationInput) {
   );
 
 }
+const serviceTypeSelect =
+document.getElementById(
+  'serviceType'
+);
+
+if (serviceTypeSelect) {
+
+  serviceTypeSelect.addEventListener(
+    'change',
+    calculateOperationalMetrics
+  );
+
+}
+
+const squareFootageInput =
+document.getElementById(
+  'squareFootage'
+);
+
+if (squareFootageInput) {
+
+  squareFootageInput.addEventListener(
+    'input',
+    calculateOperationalMetrics
+  );
+
+}
 
 if (complexitySelect) {
 
