@@ -122,6 +122,23 @@ document.getElementById(
 );
 
 /* CLIENT INTELLIGENCE */
+const serviceRates = {
+
+  'Residential Cleaning': 0.12,
+
+  'Commercial Cleaning': 0.10,
+
+  'Deep Cleaning': 0.18,
+
+  'Move-In / Move-Out': 0.20,
+
+  'Airbnb Cleaning': 0.15,
+
+  'Janitorial Cleaning': 0.09,
+
+  'Post-Construction Cleaning': 0.25
+
+};
 
 function calculateOperationalMetrics() {
 
@@ -176,20 +193,52 @@ function calculateOperationalMetrics() {
     complexityMultiplier = 1.5;
   }
 
-  const laborHours =
-  visits * duration;
+const serviceTypeSelect =
+document.getElementById(
+  'serviceType'
+);
 
-  const operationalCost =
-  laborHours * 45 *
-  complexityMultiplier;
+const squareFootageInput =
+document.getElementById(
+  'squareFootage'
+);
 
-  const monthlyRevenue =
-  operationalCost * 1.25;
+const serviceType =
+serviceTypeSelect.value;
 
-  const estimatedProfit =
-  monthlyRevenue -
-  operationalCost;
+const squareFootage =
+parseFloat(
+  squareFootageInput.value
+) || 0;
 
+const serviceRate =
+serviceRates[serviceType] || 0;
+
+const baseRevenue =
+serviceRate *
+squareFootage *
+visits;
+
+const monthlyRevenue =
+baseRevenue *
+complexityMultiplier;
+
+/* LABOR ESTIMATION */
+
+const laborHours =
+Math.round(
+  squareFootage / 500
+) * visits;
+
+/* PROFIT ESTIMATION */
+
+const estimatedProfit =
+monthlyRevenue * 0.42;
+
+const operationalCost =
+monthlyRevenue -
+estimatedProfit;
+   
   const margin =
   monthlyRevenue > 0
     ? Math.round(
