@@ -120,6 +120,13 @@ const liveServiceFrequency =
 document.getElementById(
   'liveServiceFrequency'
 );
+const discountCards =
+document.querySelectorAll(
+  '.discount-card'
+);
+
+let selectedDiscount = 0;
+
 
 /* CLIENT INTELLIGENCE */
 const serviceRates = {
@@ -219,9 +226,17 @@ serviceRate *
 squareFootage *
 visits;
 
-const monthlyRevenue =
+const grossRevenue =
 baseRevenue *
 complexityMultiplier;
+
+const discountAmount =
+grossRevenue *
+(selectedDiscount / 100);
+
+const monthlyRevenue =
+grossRevenue -
+discountAmount;
 
 /* LABOR ESTIMATION */
 
@@ -427,6 +442,35 @@ if (squareFootageInput) {
 /* INITIAL LOAD */
 
 calculateOperationalMetrics();
+discountCards.forEach((card) => {
+
+  card.addEventListener(
+    'click',
+    () => {
+
+      discountCards.forEach((item) => {
+
+        item.classList.remove(
+          'active'
+        );
+
+      });
+
+      card.classList.add(
+        'active'
+      );
+
+      selectedDiscount =
+      parseFloat(
+        card.dataset.discount
+      ) || 0;
+
+      calculateOperationalMetrics();
+
+    }
+  );
+
+});
 
 /* =========================================
    OPERATIONAL COMPLEXITY SCORE
