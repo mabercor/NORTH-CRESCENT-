@@ -208,15 +208,43 @@
 
 .alert-card {
 
-  border-radius: 18px;
+  border-radius: 22px;
 
-  padding: 18px 22px;
+  padding: 20px 24px;
 
   font-size: 14px;
 
   font-weight: 600;
 
   border: 1px solid transparent;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  box-shadow:
+    0 8px 24px rgba(15,23,42,0.04);
+
+}
+.alert-card::before {
+
+  content: '';
+
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  top: -60px;
+  right: -60px;
+
+  opacity: 0.25;
 
 }
 
@@ -232,11 +260,23 @@
 
 .alert-card.success {
 
-  background: rgba(34,197,94,0.12);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(34,197,94,0.10),
+      rgba(255,255,255,1)
+    ) !important;
 
-  border-color: rgba(34,197,94,0.25);
+  border:
+    1px solid rgba(34,197,94,0.18) !important;
 
-  color: #86EFAC;
+  color: #15803D !important;
+
+}
+.alert-card.success::before {
+
+  background:
+    rgba(34,197,94,0.18);
 
 }
 
@@ -796,21 +836,45 @@
 
 .alert-card.warning {
 
-  background: rgba(245,158,11,0.08) !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(245,158,11,0.10),
+      rgba(255,255,255,1)
+    ) !important;
 
-  border: 1px solid rgba(245,158,11,0.2) !important;
+  border:
+    1px solid rgba(245,158,11,0.18) !important;
 
   color: #B45309 !important;
+
+}
+   .alert-card.warning::before {
+
+  background:
+    rgba(245,158,11,0.18);
 
 }
 
 .alert-card.danger {
 
-  background: rgba(239,68,68,0.08) !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(239,68,68,0.10),
+      rgba(255,255,255,1)
+    ) !important;
 
-  border: 1px solid rgba(239,68,68,0.2) !important;
+  border:
+    1px solid rgba(239,68,68,0.18) !important;
 
   color: #B91C1C !important;
+
+}
+   .alert-card.danger::before {
+
+  background:
+    rgba(239,68,68,0.18);
 
 }
 /* =========================================
