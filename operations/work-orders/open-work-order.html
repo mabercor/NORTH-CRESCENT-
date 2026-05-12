@@ -400,7 +400,7 @@
 
 </div>
 
-        <!-- ========================================= -->
+<!-- ========================================= -->
 <!-- SERVICE CONFIGURATION -->
 <!-- ========================================= -->
 
@@ -411,6 +411,8 @@
   </h3>
 
   <div class="form-grid">
+
+    <!-- SERVICE TYPE -->
 
     <div class="form-group">
 
@@ -433,6 +435,8 @@
 
     </div>
 
+    <!-- SQUARE FOOTAGE -->
+
     <div class="form-group">
 
       <label>
@@ -447,13 +451,7 @@
 
     </div>
 
-    </div>
-
-  <!-- ========================================= -->
-  <!-- RECURRING SCHEDULING -->
-  <!-- ========================================= -->
-
-    <div class="form-grid">
+    <!-- VISITS PER MONTH -->
 
     <div class="form-group">
 
@@ -469,6 +467,8 @@
 
     </div>
 
+    <!-- PREFERRED TIME -->
+
     <div class="form-group">
 
       <label>
@@ -477,9 +477,13 @@
 
       <input
         type="text"
+        id="timeSlot"
+        name="timeSlot"
         placeholder="Example: 7:00 PM">
 
     </div>
+
+    <!-- PREFERRED DAYS -->
 
     <div class="form-group">
 
@@ -487,7 +491,9 @@
         Preferred Days
       </label>
 
-      <select>
+      <select
+        id="days"
+        name="days">
 
         <option>Monday / Wednesday / Friday</option>
         <option>Monday to Friday</option>
@@ -498,6 +504,8 @@
 
     </div>
 
+    <!-- ESTIMATED DURATION -->
+
     <div class="form-group">
 
       <label>
@@ -506,10 +514,15 @@
 
       <input
         type="text"
+        id="estimatedDuration"
+        name="estimatedDuration"
         placeholder="Estimated hours">
 
     </div>
-  <div class="form-group">
+
+    <!-- COMPLEXITY LEVEL -->
+
+    <div class="form-group">
 
       <label>
         Complexity Level
@@ -528,13 +541,17 @@
 
     </div>
 
+    <!-- PRIORITY LEVEL -->
+
     <div class="form-group">
 
       <label>
         Priority Level
       </label>
 
-      <select>
+      <select
+        id="priorityLevel"
+        name="priorityLevel">
 
         <option>Low</option>
         <option>Medium</option>
@@ -548,88 +565,6 @@
   </div>
 
 </div>
-<!-- ========================================= -->
-<!-- FINANCIAL + CLIENT OPERATIONAL INTELLIGENCE -->
-<!-- ========================================= -->
-
-<div class="form-section">
-
-  <!-- ========================================= -->
-  <!-- FINANCIAL INTELLIGENCE -->
-  <!-- ========================================= -->
-
-  <h3 class="section-spacing">
-    Financial Intelligence
-  </h3>
-
-  <div class="crm-metrics">
-
-    <div class="metric-card">
-
-      <span>
-        Estimated Revenue
-      </span>
-
-      <strong>
-        $2,400
-      </strong>
-
-      <small>
-        Projected Monthly
-      </small>
-
-    </div>
-
-    <div class="metric-card">
-
-      <span>
-        Estimated Margin
-      </span>
-
-      <strong>
-        42%
-      </strong>
-
-      <small>
-        Healthy Margin
-      </small>
-
-    </div>
-
-    <div class="metric-card">
-
-      <span>
-        Recurring Revenue
-      </span>
-
-      <strong>
-        $28K
-      </strong>
-
-      <small>
-        Annual Projection
-      </small>
-
-    </div>
-
-    <div class="metric-card">
-
-      <span>
-        Complexity Score
-      </span>
-
-      <strong>
-        78
-      </strong>
-
-      <small>
-        Moderate Operational Load
-      </small>
-
-    </div>
-
-  </div>
-
   <!-- ========================================= -->
   <!-- CLIENT OPERATIONAL INTELLIGENCE -->
   <!-- ========================================= -->
