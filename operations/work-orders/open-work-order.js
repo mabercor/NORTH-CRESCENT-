@@ -287,6 +287,8 @@ if (margin >= 50) {
 
   let operationalRisk =
   'Low';
+   let operationalAlert =
+'Operationally Stable';
 
   if (laborHours >= 12) {
     operationalRisk = 'Moderate';
@@ -299,7 +301,26 @@ if (margin >= 50) {
   if (laborHours >= 40) {
     operationalRisk = 'Extreme';
   }
+if (margin < 20) {
 
+  operationalAlert =
+  'Low Profitability';
+
+}
+
+if (squareFootage >= 10000) {
+
+  operationalAlert =
+  'Large Property Load';
+
+}
+
+if (laborHours >= 60) {
+
+  operationalAlert =
+  'High Operational Pressure';
+
+}
   let serviceFrequency =
   'Custom';
 
@@ -383,10 +404,10 @@ if (margin >= 50) {
 
   if (liveOperationalRisk) {
 
-    liveOperationalRisk.innerText =
-    operationalRisk;
+  liveOperationalRisk.innerText =
+  operationalAlert;
 
-  }
+}
 
   if (liveServiceFrequency) {
 
@@ -425,12 +446,12 @@ if (margin >= 50) {
 
   }
 
-  if (clientOperationalRisk) {
+ if (clientOperationalRisk) {
 
-    clientOperationalRisk.innerText =
-    operationalRisk;
+  clientOperationalRisk.innerText =
+  operationalAlert;
 
-  }
+}
 
   if (clientServiceFrequency) {
 
