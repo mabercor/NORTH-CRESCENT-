@@ -1169,3 +1169,43 @@ border-bottom:
   1px solid rgba(74,155,140,0.25);
 
 }
+/* =========================================
+   LIGHT TEXT FIX
+========================================= */
+
+.hero h2,
+.crm-hero h2,
+.metric-card strong,
+.crm-panel h3,
+.panel-header h3,
+.crm-table td,
+.system-item,
+.action-card,
+.tool-card h3,
+.tool-card p,
+.alert-item,
+.schedule-card strong,
+.intelligence-card strong {
+
+  color: #1E293B !important;
+
+}
+
+.metric-card span,
+.crm-table th,
+.system-item span,
+.schedule-card span,
+.intelligence-card span,
+.panel-header span {
+
+  color: #64748B !important;
+
+}
+
+.hero p,
+.crm-brand p,
+.section-subtitle {
+
+  color: #475569 !important;
+
+}
