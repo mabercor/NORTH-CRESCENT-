@@ -593,6 +593,21 @@
   color: #94A3B8 !important;
 
 }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+  border-color: #4A9B8C !important;
+
+  box-shadow:
+    0 0 0 4px rgba(74,155,140,0.12),
+    0 10px 25px rgba(74,155,140,0.08);
+
+  transform: translateY(-1px);
+
+  outline: none;
+
+}
 
 .client-result-card,
 .intelligence-card,
