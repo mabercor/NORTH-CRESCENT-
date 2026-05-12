@@ -637,11 +637,13 @@ align-items: flex-start;
 /* HERO */
 
 .crm-hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
   padding: 60px 40px 30px;
-  gap: 30px;
+
+  max-width: 1400px;
+
+  margin: auto;
+
 }
 
 .crm-label {
