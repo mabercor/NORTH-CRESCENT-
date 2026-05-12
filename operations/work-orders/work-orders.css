@@ -524,6 +524,38 @@
 
   color: #1E293B !important;
 
+  font-size: 26px;
+
+  font-weight: 700;
+
+  margin-bottom: 32px;
+
+  position: relative;
+
+  letter-spacing: -0.5px;
+
+}
+.form-section h3::after {
+
+  content: '';
+
+  width: 60px;
+
+  height: 4px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4A9B8C,
+      #1E3A5F
+    );
+
+  display: block;
+
+  margin-top: 12px;
+
 }
 
 .form-group label {
