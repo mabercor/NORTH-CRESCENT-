@@ -943,14 +943,17 @@ background: #F8FAFC !important;
   top: -120px;
   right: -120px;
 
-}
 .live-analytics-panel h4 {
 
-  font-size: 18px;
+  font-size: 22px;
 
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 
   color: white;
+
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
 
 }
 
