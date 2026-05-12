@@ -1051,8 +1051,11 @@ box-shadow:
 /* SELECT OPTION FIX */
 
 .form-group select option {
-  background: #0F172A;
-  color: white;
+
+  background: #1E3A5F;
+
+  color: #F8FAFC;
+
 }
 
 /* RESPONSIVE */
