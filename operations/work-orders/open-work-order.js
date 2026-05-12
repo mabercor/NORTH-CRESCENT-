@@ -460,10 +460,43 @@ else {
 
   }
 
-  if (liveOperationalRisk) {
+ if (liveOperationalRisk) {
 
   liveOperationalRisk.innerText =
   operationalAlert;
+
+  liveOperationalRisk.style.color =
+  '#16a34a';
+
+  if (
+    operationalAlert ===
+    'Low Profitability'
+  ) {
+
+    liveOperationalRisk.style.color =
+    '#dc2626';
+
+  }
+
+  if (
+    operationalAlert ===
+    'Large Property Load'
+  ) {
+
+    liveOperationalRisk.style.color =
+    '#f59e0b';
+
+  }
+
+  if (
+    operationalAlert ===
+    'High Operational Pressure'
+  ) {
+
+    liveOperationalRisk.style.color =
+    '#dc2626';
+
+  }
 
 }
 
@@ -531,6 +564,39 @@ else {
 
   clientOperationalRisk.innerText =
   operationalAlert;
+
+  clientOperationalRisk.style.color =
+  '#16a34a';
+
+  if (
+    operationalAlert ===
+    'Low Profitability'
+  ) {
+
+    clientOperationalRisk.style.color =
+    '#dc2626';
+
+  }
+
+  if (
+    operationalAlert ===
+    'Large Property Load'
+  ) {
+
+    clientOperationalRisk.style.color =
+    '#f59e0b';
+
+  }
+
+  if (
+    operationalAlert ===
+    'High Operational Pressure'
+  ) {
+
+    clientOperationalRisk.style.color =
+    '#dc2626';
+
+  }
 
 }
 
