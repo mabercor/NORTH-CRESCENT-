@@ -339,10 +339,40 @@ if (margin >= 50) {
 
   if (liveProfitabilityMargin) {
 
-    liveProfitabilityMargin.innerText =
-    margin + '%';
+  liveProfitabilityMargin.innerText =
+  margin + '%';
+
+  liveProfitabilityMargin.style.color =
+  '#dc2626';
+
+  if (margin >= 20) {
+
+    liveProfitabilityMargin.style.color =
+    '#f59e0b';
 
   }
+
+  if (margin >= 35) {
+
+    liveProfitabilityMargin.style.color =
+    '#16a34a';
+
+  }
+
+  if (margin >= 50) {
+
+    liveProfitabilityMargin.style.color =
+    '#2563eb';
+
+  }
+
+}
+   if (liveOperationalRisk) {
+
+  liveOperationalRisk.innerText =
+  profitabilityStatus;
+
+}
 
   if (liveLaborHours) {
 
