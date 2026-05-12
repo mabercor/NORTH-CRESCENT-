@@ -992,12 +992,6 @@ if (clientData.timeSlot) {
 
 }
 
-if (clientData.operationalSummary) {
-
-  operationalSummaryInput.value =
-  clientData.operationalSummary;
-
-}
   }
 
   catch (error) {
