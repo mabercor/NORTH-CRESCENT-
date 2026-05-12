@@ -164,6 +164,14 @@ function calculateOperationalMetrics() {
   document.getElementById(
     'complexityLevel'
   );
+   if (complexitySelect) {
+
+  complexitySelect.addEventListener(
+    'change',
+    calculateOperationalMetrics
+  );
+
+}
 
   const duration =
   parseFloat(
@@ -386,10 +394,7 @@ document.getElementById(
   'complexityLevel'
 );
 
-const complexityScoreCard =
-document.querySelectorAll(
-  '.metric-card strong'
-)[3];
+const complexityScoreCard = null;
 
 function updateComplexityScore() {
 
@@ -418,15 +423,6 @@ function updateComplexityScore() {
       score;
 
   }
-
-}
-
-if (complexitySelect) {
-
-  complexitySelect.addEventListener(
-    'change',
-    updateComplexityScore
-  );
 
 }
 
