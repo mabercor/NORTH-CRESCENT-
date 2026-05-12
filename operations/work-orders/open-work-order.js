@@ -163,14 +163,7 @@ function calculateOperationalMetrics() {
   document.getElementById(
     'complexityLevel'
   );
-   if (complexitySelect) {
 
-  complexitySelect.addEventListener(
-    'change',
-    calculateOperationalMetrics
-  );
-
-}
 
   const duration =
   parseFloat(
@@ -446,12 +439,7 @@ else {
   }
 
 }
-   if (liveOperationalRisk) {
-
-  liveOperationalRisk.innerText =
-  profitabilityStatus;
-
-}
+   
 
   if (liveLaborHours) {
 
@@ -500,12 +488,7 @@ else {
 
 }
 
-  if (liveServiceFrequency) {
 
-    liveServiceFrequency.innerText =
-    serviceFrequency;
-
-  }
    if (liveServiceFrequency) {
 
   liveServiceFrequency.innerText =
