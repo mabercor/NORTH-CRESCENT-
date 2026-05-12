@@ -930,28 +930,6 @@ align-items: flex-start;
 }
 
 /* =========================================
-   CRM BODY BACKGROUND FIX
-========================================= */
-
-body {
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(74,155,140,0.12),
-      transparent 25%
-    ),
-    linear-gradient(
-      180deg,
-      #0F172A 0%,
-      #162235 100%
-    );
-
-  min-height: 100vh;
-
-  font-family: 'Poppins', sans-serif;
-}
-
-/* =========================================
    WORK ORDER FORM
 ========================================= */
 
