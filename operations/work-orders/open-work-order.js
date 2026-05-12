@@ -423,14 +423,6 @@ if (squareFootageInput) {
 
 }
 
-if (complexitySelect) {
-
-  complexitySelect.addEventListener(
-    'change',
-    calculateOperationalMetrics
-  );
-
-}
 
 /* INITIAL LOAD */
 
