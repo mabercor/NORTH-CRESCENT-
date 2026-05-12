@@ -698,11 +698,31 @@ align-items: flex-start;
 }
 
 .metric-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.05);
+
+  background: #FFFFFF;
+
+  border: 1px solid #E2E8F0;
+
   border-radius: 24px;
-  padding: 28px;
-  backdrop-filter: blur(10px);
+
+  padding: 30px;
+
+  box-shadow:
+    0 10px 25px rgba(15,23,42,0.04);
+
+  transition: 0.3s ease;
+
+}
+
+.metric-card:hover {
+
+  transform: translateY(-4px);
+
+  border-color: rgba(74,155,140,0.35);
+
+  box-shadow:
+    0 18px 40px rgba(15,23,42,0.06);
+
 }
 
 .metric-card span {
