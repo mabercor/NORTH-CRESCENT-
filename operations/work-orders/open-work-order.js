@@ -513,7 +513,13 @@ else {
 
 }
 
-  if (clientMonthlyValue) {
+ if (
+  typeof clientMonthlyValue !==
+  'undefined'
+  &&
+  clientMonthlyValue
+)
+ {
 
     clientMonthlyValue.innerText =
     '$' +
@@ -521,7 +527,12 @@ else {
 
   }
 
-  if (clientEstimatedProfit) {
+ if (
+  typeof clientEstimatedProfit !==
+  'undefined'
+  &&
+  clientEstimatedProfit
+) {
 
     clientEstimatedProfit.innerText =
     '$' +
@@ -529,21 +540,36 @@ else {
 
   }
 
-  if (clientProfitabilityMargin) {
+ if (
+  typeof clientProfitabilityMargin !==
+  'undefined'
+  &&
+  clientProfitabilityMargin
+) {
 
     clientProfitabilityMargin.innerText =
     margin + '%';
 
   }
 
-  if (clientLaborHours) {
+  if (
+  typeof clientLaborHours !==
+  'undefined'
+  &&
+  clientLaborHours
+) {
 
     clientLaborHours.innerText =
     laborHours + 'h';
 
   }
 
- if (clientOperationalRisk) {
+ if (
+  typeof clientOperationalRisk !==
+  'undefined'
+  &&
+  clientOperationalRisk
+) {
 
   clientOperationalRisk.innerText =
   operationalAlert;
@@ -583,13 +609,23 @@ else {
 
 }
 
-  if (clientServiceFrequency) {
+  if (
+  typeof clientServiceFrequency !==
+  'undefined'
+  &&
+  clientServiceFrequency
+) {
 
     clientServiceFrequency.innerText =
     serviceFrequency;
 
   }
-if (operationalSummaryInput) {
+if (
+  typeof operationalSummaryInput !==
+  'undefined'
+  &&
+  operationalSummaryInput
+) {
 
   operationalSummaryInput.value =
 
