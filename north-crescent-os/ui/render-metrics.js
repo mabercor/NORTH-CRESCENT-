@@ -11,7 +11,7 @@
 export function renderMetrics(metrics) {
 
   /* =========================================
-     METRIC ELEMENTS
+     LIVE ANALYTICS
   ========================================= */
 
   const liveRevenue =
@@ -46,7 +46,47 @@ export function renderMetrics(metrics) {
 
 
   /* =========================================
-     MONTHLY REVENUE
+     CLIENT OPERATIONAL INTELLIGENCE
+  ========================================= */
+
+  const clientOperationalCost =
+  document.getElementById(
+    'clientOperationalCost'
+  );
+
+  const clientLaborCost =
+  document.getElementById(
+    'clientLaborCost'
+  );
+
+  const clientDiscountImpact =
+  document.getElementById(
+    'clientDiscountImpact'
+  );
+
+  const clientMarginHealth =
+  document.getElementById(
+    'clientMarginHealth'
+  );
+
+  const clientProfitability =
+  document.getElementById(
+    'clientProfitability'
+  );
+
+  const clientBreakEven =
+  document.getElementById(
+    'clientBreakEven'
+  );
+
+  const clientAnnualValue =
+  document.getElementById(
+    'clientAnnualValue'
+  );
+
+
+  /* =========================================
+     LIVE REVENUE
   ========================================= */
 
   if (liveRevenue) {
@@ -62,7 +102,7 @@ export function renderMetrics(metrics) {
 
 
   /* =========================================
-     ESTIMATED PROFIT
+     LIVE PROFIT
   ========================================= */
 
   if (liveEstimatedProfit) {
@@ -78,7 +118,7 @@ export function renderMetrics(metrics) {
 
 
   /* =========================================
-     PROFITABILITY MARGIN
+     LIVE MARGIN
   ========================================= */
 
   if (liveProfitabilityMargin) {
@@ -91,7 +131,7 @@ export function renderMetrics(metrics) {
 
 
   /* =========================================
-     LABOR HOURS
+     LIVE LABOR HOURS
   ========================================= */
 
   if (liveLaborHours) {
@@ -104,7 +144,7 @@ export function renderMetrics(metrics) {
 
 
   /* =========================================
-     OPERATIONAL RISK
+     LIVE OPERATIONAL RISK
   ========================================= */
 
   if (liveOperationalRisk) {
@@ -117,7 +157,7 @@ export function renderMetrics(metrics) {
 
 
   /* =========================================
-     SERVICE FREQUENCY
+     LIVE SERVICE FREQUENCY
   ========================================= */
 
   if (liveServiceFrequency) {
@@ -125,6 +165,112 @@ export function renderMetrics(metrics) {
     liveServiceFrequency.innerText =
 
       metrics.serviceFrequency;
+
+  }
+
+
+  /* =========================================
+     OPERATIONAL COST
+  ========================================= */
+
+  if (clientOperationalCost) {
+
+    clientOperationalCost.innerText =
+
+      '$' +
+
+      metrics.operationalCost
+        .toLocaleString();
+
+  }
+
+
+  /* =========================================
+     LABOR COST
+  ========================================= */
+
+  if (clientLaborCost) {
+
+    clientLaborCost.innerText =
+
+      '$' +
+
+      metrics.laborCost
+        .toLocaleString();
+
+  }
+
+
+  /* =========================================
+     DISCOUNT IMPACT
+  ========================================= */
+
+  if (clientDiscountImpact) {
+
+    clientDiscountImpact.innerText =
+
+      '$' +
+
+      metrics.discountImpact
+        .toLocaleString();
+
+  }
+
+
+  /* =========================================
+     MARGIN HEALTH
+  ========================================= */
+
+  if (clientMarginHealth) {
+
+    clientMarginHealth.innerText =
+
+      metrics.marginHealth;
+
+  }
+
+
+  /* =========================================
+     PROFITABILITY
+  ========================================= */
+
+  if (clientProfitability) {
+
+    clientProfitability.innerText =
+
+      metrics.margin + '%';
+
+  }
+
+
+  /* =========================================
+     BREAK-EVEN POINT
+  ========================================= */
+
+  if (clientBreakEven) {
+
+    clientBreakEven.innerText =
+
+      '$' +
+
+      metrics.breakEvenPoint
+        .toLocaleString();
+
+  }
+
+
+  /* =========================================
+     ANNUAL CONTRACT VALUE
+  ========================================= */
+
+  if (clientAnnualValue) {
+
+    clientAnnualValue.innerText =
+
+      '$' +
+
+      metrics.annualContractValue
+        .toLocaleString();
 
   }
 
