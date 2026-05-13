@@ -151,10 +151,13 @@ function updateOperationalFlow() {
         visitsInput?.value
       ) || 0,
 
-    duration:
-      parseFloat(
-        durationInput?.value
-      ) || 0,
+    estimatedDuration:
+
+  parseFloat(
+
+    durationInput?.value
+
+  ) || 0,
 
     complexityLevel:
       complexityInput?.value || 'Low',
