@@ -1,28 +1,31 @@
 export function calculateMetrics(state) {
 
-const serviceRates = {
+  const serviceRates = {
 
-  "Residential Cleaning": 0.15,
+    "Residential Cleaning": 0.15,
 
-  "Commercial Cleaning": 0.16,
+    "Commercial Cleaning": 0.16,
 
-  "Deep Cleaning": 0.22,
+    "Deep Cleaning": 0.22,
 
-  "Move-In / Move-Out": 0.24,
+    "Move-In / Move-Out": 0.24,
 
-  "Airbnb Cleaning": 0.18,
+    "Airbnb Cleaning": 0.18,
 
-  "Janitorial Cleaning": 0.14,
+    "Janitorial Cleaning": 0.14,
 
-  "Post-Construction Cleaning": 0.30
+    "Post-Construction Cleaning": 0.30
 
-};
+  };
 
   const complexityMultipliers = {
 
     Low: 1,
+
     Moderate: 1.15,
+
     High: 1.30,
+
     Extreme: 1.50
 
   };
@@ -33,7 +36,9 @@ const serviceRates = {
   const complexityMultiplier =
     complexityMultipliers[state.complexityLevel] || 1;
 
-  /* BASE REVENUE */
+  /* =========================================
+     BASE REVENUE
+  ========================================= */
 
   const baseRevenue =
 
@@ -41,41 +46,62 @@ const serviceRates = {
     state.squareFootage *
     state.visitsPerMonth;
 
-  /* COMPLEXITY */
+  /* =========================================
+     COMPLEXITY ADJUSTMENT
+  ========================================= */
 
   const adjustedRevenue =
 
     baseRevenue *
     complexityMultiplier;
 
-  /* DISCOUNT */
+  /* =========================================
+     DISCOUNT
+  ========================================= */
 
   const discountAmount =
 
     adjustedRevenue *
-    (state.discount / 100);
+    ((state.discount || 0) / 100);
 
-  /* FINAL MONTHLY REVENUE */
+  /* =========================================
+     FINAL MONTHLY REVENUE
+  ========================================= */
 
   const monthlyRevenue =
 
     adjustedRevenue -
     discountAmount;
 
-  /* LABOR HOURS */
+  /* =========================================
+     LABOR HOURS
+  ========================================= */
 
   const laborHours =
 
     state.duration *
     state.visitsPerMonth;
 
-  /* ESTIMATED PROFIT */
+  /* =========================================
+     ESTIMATED OPERATIONAL COST
+  ========================================= */
+
+  const operationalCost =
+
+    monthlyRevenue * 0.65;
+
+  /* =========================================
+     ESTIMATED PROFIT
+  ========================================= */
 
   const estimatedProfit =
 
-    monthlyRevenue * 0.42;
+    monthlyRevenue -
+    operationalCost;
 
-  /* PROFIT MARGIN */
+  /* =========================================
+     PROFIT MARGIN
+  ========================================= */
 
   const margin =
 
@@ -87,12 +113,81 @@ const serviceRates = {
 
       : 0;
 
+  /* =========================================
+     OPERATIONAL PRESSURE
+  ========================================= */
+
+  let operationalRisk = "Low";
+
+  if (laborHours >= 12) {
+
+    operationalRisk = "Moderate";
+
+  }
+
+  if (laborHours >= 24) {
+
+    operationalRisk = "High";
+
+  }
+
+  if (laborHours >= 40) {
+
+    operationalRisk = "Extreme";
+
+  }
+
+  /* =========================================
+     SERVICE FREQUENCY
+  ========================================= */
+
+  let serviceFrequency =
+    "Custom Schedule";
+
+  if (state.visitsPerMonth === 1) {
+
+    serviceFrequency =
+      "One-Time Service";
+
+  }
+
+  else if (state.visitsPerMonth <= 4) {
+
+    serviceFrequency =
+      "Weekly Service";
+
+  }
+
+  else if (state.visitsPerMonth <= 8) {
+
+    serviceFrequency =
+      "Bi-Weekly Recurring";
+
+  }
+
+  else if (state.visitsPerMonth <= 12) {
+
+    serviceFrequency =
+      "Recurring Maintenance";
+
+  }
+
+  else {
+
+    serviceFrequency =
+      "High Frequency Operations";
+
+  }
+
   return {
 
     monthlyRevenue,
+    operationalCost,
     estimatedProfit,
     laborHours,
-    margin
+    margin,
+    operationalRisk,
+    serviceFrequency
 
   };
 
