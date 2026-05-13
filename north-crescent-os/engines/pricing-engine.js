@@ -60,11 +60,11 @@ export function calculateMetrics(state) {
 
 let durationCharge = 0;
 
-if ((state.duration || 0) > 4) {
+if ((state.estimatedDuration || 0) > 4)
 
 const extraHours =
 
-  (state.duration || 0) - 4;
+  (state.estimatedDuration || 0)
 
   durationCharge =
 
@@ -97,8 +97,8 @@ const monthlyRevenue =
 
   const laborHours =
 
-    state.duration *
-    state.visitsPerMonth;
+  state.estimatedDuration *
+  state.visitsPerMonth;
 
   /* =========================================
      ESTIMATED OPERATIONAL COST
