@@ -62,9 +62,9 @@ let durationCharge = 0;
 
 if ((state.duration || 0) > 4) {
 
-  const extraHours =
+const extraHours =
 
-  state.duration - 4;
+  (state.duration || 0) - 4;
 
   durationCharge =
 
