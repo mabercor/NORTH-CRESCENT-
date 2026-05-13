@@ -16,7 +16,7 @@ import {
 
 import {
 
-  calculatePricing
+  calculateMetrics
 
 } from '../engines/pricing-engine.js';
 
@@ -47,10 +47,57 @@ document.getElementById(
   'visitsPerMonth'
 );
 
+const durationInput =
+document.getElementById(
+  'estimatedDuration'
+);
+
 const complexityInput =
 document.getElementById(
   'complexityLevel'
 );
+
+
+/* =========================================
+   DISCOUNT ENGINE
+========================================= */
+
+const discountCards =
+document.querySelectorAll(
+  '.discount-card'
+);
+
+let selectedDiscount = 0;
+
+discountCards.forEach((card) => {
+
+  card.addEventListener(
+    'click',
+    () => {
+
+      discountCards.forEach((item) => {
+
+        item.classList.remove(
+          'active'
+        );
+
+      });
+
+      card.classList.add(
+        'active'
+      );
+
+      selectedDiscount =
+      parseFloat(
+        card.dataset.discount
+      ) || 0;
+
+      updateOperationalFlow();
+
+    }
+  );
+
+});
 
 
 /* =========================================
@@ -73,15 +120,21 @@ function updateOperationalFlow() {
         squareFootageInput?.value
       ) || 0,
 
-    visits:
+    visitsPerMonth:
       parseInt(
         visitsInput?.value
       ) || 0,
 
-    complexity:
+    duration:
+      parseFloat(
+        durationInput?.value
+      ) || 0,
+
+    complexityLevel:
       complexityInput?.value || 'Low',
 
-    discount: 0
+    discount:
+      selectedDiscount
 
   });
 
@@ -92,7 +145,7 @@ function updateOperationalFlow() {
 
   const pricingResults =
 
-    calculatePricing(
+    calculateMetrics(
       operationalState.pricing
     );
 
@@ -132,6 +185,11 @@ squareFootageInput?.addEventListener(
 );
 
 visitsInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+durationInput?.addEventListener(
   'input',
   updateOperationalFlow
 );
