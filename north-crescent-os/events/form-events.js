@@ -75,6 +75,33 @@ discountCards.forEach((card) => {
     'click',
     () => {
 
+      const cardDiscount =
+
+        parseFloat(
+          card.dataset.discount
+        ) || 0;
+
+      /* TOGGLE OFF */
+
+      if (
+        selectedDiscount ===
+        cardDiscount
+      ) {
+
+        selectedDiscount = 0;
+
+        card.classList.remove(
+          'active'
+        );
+
+        updateOperationalFlow();
+
+        return;
+
+      }
+
+      /* REMOVE ACTIVE */
+
       discountCards.forEach((item) => {
 
         item.classList.remove(
@@ -83,14 +110,14 @@ discountCards.forEach((card) => {
 
       });
 
+      /* ACTIVATE */
+
       card.classList.add(
         'active'
       );
 
       selectedDiscount =
-      parseFloat(
-        card.dataset.discount
-      ) || 0;
+        cardDiscount;
 
       updateOperationalFlow();
 
@@ -98,7 +125,6 @@ discountCards.forEach((card) => {
   );
 
 });
-
 
 /* =========================================
    UPDATE OPERATIONAL FLOW
