@@ -54,17 +54,18 @@ export function calculateMetrics(state) {
 
     baseRevenue *
     complexityMultiplier;
-  /* =========================================
+
+/* =========================================
    EXTENDED DURATION CHARGE
 ========================================= */
 
 let durationCharge = 0;
 
-if ((state.estimatedDuration || 0) > 4)
+if ((state.estimatedDuration || 0) > 4) {
 
-const extraHours =
+  const extraHours =
 
-  (state.estimatedDuration || 0)
+    (state.estimatedDuration || 0) - 4;
 
   durationCharge =
 
@@ -72,7 +73,6 @@ const extraHours =
     (0.25 * extraHours);
 
 }
-
   /* =========================================
      DISCOUNT
   ========================================= */
@@ -95,7 +95,7 @@ const monthlyRevenue =
      LABOR HOURS
   ========================================= */
 
-  const laborHours =
+const laborHours =
 
   state.estimatedDuration *
   state.visitsPerMonth;
