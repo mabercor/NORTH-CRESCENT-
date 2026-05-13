@@ -111,7 +111,7 @@ const operationalBase =
 
 const operationalCost =
 
-  operationalBase * 0.65;
+  operationalBase * 0.80;
 
   /* =========================================
      ESTIMATED PROFIT
