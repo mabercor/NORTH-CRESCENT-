@@ -280,3 +280,5 @@ if (clientAnnualValue) {
     `$${metrics.annualContractValue.toFixed(2)}`;
 
 }
+
+}
