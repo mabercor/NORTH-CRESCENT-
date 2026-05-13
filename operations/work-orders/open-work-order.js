@@ -697,10 +697,14 @@ if (serviceTypeSelect) {
 
 }
 
+const squareFootageListener =
+document.getElementById(
+  'squareFootage'
+);
 
-if (squareFootageInput) {
+if (squareFootageListener) {
 
-  squareFootageInput.addEventListener(
+  squareFootageListener.addEventListener(
     'input',
     calculateOperationalMetrics
   );
