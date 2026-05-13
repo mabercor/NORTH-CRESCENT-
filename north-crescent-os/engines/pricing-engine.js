@@ -207,7 +207,7 @@ const operationalCost =
 
 const laborCost =
 
-  laborHours * 20;
+  laborHours * 30;
 
 /* =========================================
    DISCOUNT IMPACT
