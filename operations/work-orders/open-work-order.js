@@ -1136,10 +1136,7 @@ document.getElementById(
   'serviceType'
 );
 
-const squareFootageInput =
-document.getElementById(
-  'squareFootage'
-);
+
 const frequencyInput =
 document.getElementById(
   'frequency'
