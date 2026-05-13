@@ -697,10 +697,6 @@ if (serviceTypeSelect) {
 
 }
 
-const squareFootageInput =
-document.getElementById(
-  'squareFootage'
-);
 
 if (squareFootageInput) {
 
