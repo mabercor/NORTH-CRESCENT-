@@ -273,5 +273,62 @@ export function renderMetrics(metrics) {
         .toLocaleString();
 
   }
+  /* =========================================
+   CLIENT OPERATIONAL INTELLIGENCE
+========================================= */
+
+document.getElementById(
+  "clientServiceValue"
+).textContent =
+
+  `$${metrics.monthlyRevenue.toFixed(2)}`;
+
+document.getElementById(
+  "clientOperationalCost"
+).textContent =
+
+  `$${metrics.operationalCost.toFixed(2)}`;
+
+document.getElementById(
+  "clientLaborCost"
+).textContent =
+
+  `$${metrics.laborCost.toFixed(2)}`;
+
+document.getElementById(
+  "clientDiscountImpact"
+).textContent =
+
+  `$${metrics.discountImpact.toFixed(2)}`;
+
+document.getElementById(
+  "clientEstimatedProfit"
+).textContent =
+
+  `$${metrics.estimatedProfit.toFixed(2)}`;
+
+document.getElementById(
+  "clientProfitability"
+).textContent =
+
+  `${metrics.margin}%`;
+
+document.getElementById(
+  "clientMarginHealth"
+).textContent =
+
+  metrics.marginHealth;
+
+document.getElementById(
+  "clientBreakEven"
+).textContent =
+
+  `$${metrics.breakEvenPoint.toFixed(2)}`;
+
+document.getElementById(
+  "clientAnnualValue"
+).textContent =
+
+  `$${metrics.annualContractValue.toFixed(2)}`; 
 
 }
