@@ -196,17 +196,86 @@ const monthlyRevenue =
       "High Frequency Operations";
 
   }
+  /* =========================================
+   LABOR COST
+========================================= */
+
+const laborCost =
+
+  laborHours * 20;
+
+/* =========================================
+   DISCOUNT IMPACT
+========================================= */
+
+const discountImpact =
+
+  discountAmount;
+
+/* =========================================
+   BREAK-EVEN POINT
+========================================= */
+
+const breakEvenPoint =
+
+  operationalCost;
+
+/* =========================================
+   ANNUAL CONTRACT VALUE
+========================================= */
+
+const annualContractValue =
+
+  monthlyRevenue * 12;
+
+/* =========================================
+   MARGIN HEALTH
+========================================= */
+
+let marginHealth = "Healthy";
+
+if (margin < 30) {
+
+  marginHealth = "Warning";
+
+}
+
+if (margin < 20) {
+
+  marginHealth = "Critical";
+
+}
+
+if (margin >= 45) {
+
+  marginHealth = "Premium";
+
+}
 
   return {
 
-    monthlyRevenue,
-    operationalCost,
-    estimatedProfit,
-    laborHours,
-    margin,
-    operationalRisk,
-    serviceFrequency
+  monthlyRevenue,
 
-  };
+  operationalCost,
 
-}
+  laborCost,
+
+  discountImpact,
+
+  estimatedProfit,
+
+  laborHours,
+
+  margin,
+
+  marginHealth,
+
+  breakEvenPoint,
+
+  annualContractValue,
+
+  operationalRisk,
+
+  serviceFrequency
+
+};
