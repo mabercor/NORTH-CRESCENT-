@@ -1697,4 +1697,35 @@ if (clientSearchInput) {
 
 }
 
+/* INITIAL LOAD */
 
+calculateOperationalMetrics();
+discountCards.forEach((card) => {
+
+  card.addEventListener(
+    'click',
+    () => {
+
+      discountCards.forEach((item) => {
+
+        item.classList.remove(
+          'active'
+        );
+
+      });
+
+      card.classList.add(
+        'active'
+      );
+
+      selectedDiscount =
+      parseFloat(
+        card.dataset.discount
+      ) || 0;
+
+      calculateOperationalMetrics();
+
+    }
+  );
+
+});
