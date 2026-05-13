@@ -1,251 +1,92 @@
-/* =========================================
-   NORTH CRESCENT
-   PRICING ENGINE
-========================================= */
+export function calculateMetrics(state) {
 
-import {
+  const serviceRates = {
 
-  SERVICE_RATES,
+    "Residential Cleaning": 0.12,
+    "Commercial Cleaning": 0.10,
+    "Deep Cleaning": 0.18,
+    "Move-In / Move-Out": 0.20,
+    "Airbnb Cleaning": 0.15,
+    "Janitorial Cleaning": 0.09,
+    "Post-Construction Cleaning": 0.25
 
-  COMPLEXITY_MULTIPLIERS,
+  };
 
-  PROFITABILITY_CONFIG,
+  const complexityMultipliers = {
 
-  OPERATIONAL_THRESHOLDS
+    Low: 1,
+    Moderate: 1.15,
+    High: 1.30,
+    Extreme: 1.50
 
-} from '../config/pricing-config.js';
-
-
-/* =========================================
-   CALCULATE PRICING
-========================================= */
-
-export function calculatePricing(data) {
-
-  /* =========================================
-     INPUT DATA
-  ========================================= */
-
-  const {
-
-    serviceType,
-
-    squareFootage,
-
-    visits,
-
-    complexity,
-
-    discount
-
-  } = data;
-
-
-  /* =========================================
-     SERVICE RATE
-  ========================================= */
+  };
 
   const serviceRate =
-
-    SERVICE_RATES[serviceType] || 0;
-
-
-  /* =========================================
-     COMPLEXITY MULTIPLIER
-  ========================================= */
+    serviceRates[state.serviceType] || 0;
 
   const complexityMultiplier =
+    complexityMultipliers[state.complexityLevel] || 1;
 
-    COMPLEXITY_MULTIPLIERS[complexity] || 1;
-
-
-  /* =========================================
-     BASE REVENUE
-  ========================================= */
+  /* BASE REVENUE */
 
   const baseRevenue =
 
     serviceRate *
-    squareFootage *
-    visits;
+    state.squareFootage *
+    state.visitsPerMonth;
 
-
-  /* =========================================
-     COMPLEXITY ADJUSTED REVENUE
-  ========================================= */
+  /* COMPLEXITY */
 
   const adjustedRevenue =
 
     baseRevenue *
     complexityMultiplier;
 
-
-  /* =========================================
-     DISCOUNT
-  ========================================= */
+  /* DISCOUNT */
 
   const discountAmount =
 
     adjustedRevenue *
-    (discount / 100);
+    (state.discount / 100);
 
-
-  /* =========================================
-     FINAL MONTHLY REVENUE
-  ========================================= */
+  /* FINAL MONTHLY REVENUE */
 
   const monthlyRevenue =
 
     adjustedRevenue -
     discountAmount;
 
-
-  /* =========================================
-     LABOR HOURS
-  ========================================= */
+  /* LABOR HOURS */
 
   const laborHours =
 
-    Math.round(
-      squareFootage / 500
-    ) * visits;
+    state.duration *
+    state.visitsPerMonth;
 
-
-  /* =========================================
-     ESTIMATED PROFIT
-  ========================================= */
+  /* ESTIMATED PROFIT */
 
   const estimatedProfit =
 
-    monthlyRevenue *
-    PROFITABILITY_CONFIG
-      .estimatedProfitMargin;
+    monthlyRevenue * 0.42;
 
-
-  /* =========================================
-     PROFITABILITY MARGIN
-  ========================================= */
+  /* PROFIT MARGIN */
 
   const margin =
 
     monthlyRevenue > 0
 
       ? Math.round(
-
-          (estimatedProfit /
-          monthlyRevenue) * 100
-
+          (estimatedProfit / monthlyRevenue) * 100
         )
 
       : 0;
 
-
-  /* =========================================
-     OPERATIONAL RISK
-  ========================================= */
-
-  let operationalRisk = 'Low';
-
-
-  if (
-    laborHours >=
-    OPERATIONAL_THRESHOLDS
-      .moderateLaborHours
-  ) {
-
-    operationalRisk = 'Moderate';
-
-  }
-
-  if (
-    laborHours >=
-    OPERATIONAL_THRESHOLDS
-      .highLaborHours
-  ) {
-
-    operationalRisk = 'High';
-
-  }
-
-  if (
-    laborHours >=
-    OPERATIONAL_THRESHOLDS
-      .extremeLaborHours
-  ) {
-
-    operationalRisk = 'Extreme';
-
-  }
-
-
-  /* =========================================
-     SERVICE FREQUENCY
-  ========================================= */
-
-  let serviceFrequency =
-    'Custom Schedule';
-
-
-  if (visits === 1) {
-
-    serviceFrequency =
-    'One-Time Service';
-
-  }
-
-  else if (visits <= 4) {
-
-    serviceFrequency =
-    'Weekly Service';
-
-  }
-
-  else if (visits <= 8) {
-
-    serviceFrequency =
-    'Bi-Weekly Recurring';
-
-  }
-
-  else if (visits <= 12) {
-
-    serviceFrequency =
-    'Recurring Maintenance';
-
-  }
-
-  else if (visits <= 20) {
-
-    serviceFrequency =
-    'High Frequency Operations';
-
-  }
-
-  else {
-
-    serviceFrequency =
-    'Enterprise Operational Structure';
-
-  }
-
-
-  /* =========================================
-     RETURN RESULTS
-  ========================================= */
-
   return {
 
     monthlyRevenue,
-
     estimatedProfit,
-
-    margin,
-
     laborHours,
-
-    operationalRisk,
-
-    serviceFrequency
+    margin
 
   };
 
