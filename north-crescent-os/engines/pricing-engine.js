@@ -54,6 +54,24 @@ export function calculateMetrics(state) {
 
     baseRevenue *
     complexityMultiplier;
+  /* =========================================
+   EXTENDED DURATION CHARGE
+========================================= */
+
+let durationCharge = 0;
+
+if (state.duration > 4) {
+
+  const extraHours =
+
+    state.duration - 4;
+
+  durationCharge =
+
+    adjustedRevenue *
+    (0.25 * extraHours);
+
+}
 
   /* =========================================
      DISCOUNT
