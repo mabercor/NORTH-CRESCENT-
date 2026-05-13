@@ -1,16 +1,22 @@
 export function calculateMetrics(state) {
 
-  const serviceRates = {
+ const serviceRates = {
 
-    "Residential Cleaning": 0.12,
-    "Commercial Cleaning": 0.10,
-    "Deep Cleaning": 0.18,
-    "Move-In / Move-Out": 0.20,
-    "Airbnb Cleaning": 0.15,
-    "Janitorial Cleaning": 0.09,
-    "Post-Construction Cleaning": 0.25
+  "Residential Cleaning": 0.15,
 
-  };
+  "Commercial Cleaning": 0.12,
+
+  "Deep Cleaning": 0.25,
+
+  "Move-In / Move-Out": 0.28,
+
+  "Airbnb Cleaning": 0.18,
+
+  "Janitorial Cleaning": 0.10,
+
+  "Post-Construction Cleaning": 0.35
+
+};
 
   const complexityMultipliers = {
 
