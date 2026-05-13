@@ -85,11 +85,11 @@ if (state.duration > 4) {
   /* =========================================
      FINAL MONTHLY REVENUE
   ========================================= */
+const monthlyRevenue =
 
-  const monthlyRevenue =
-
-    adjustedRevenue -
-    discountAmount;
+  adjustedRevenue +
+  durationCharge -
+  discountAmount;
 
   /* =========================================
      LABOR HOURS
