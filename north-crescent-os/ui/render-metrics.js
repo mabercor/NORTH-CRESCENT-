@@ -168,63 +168,115 @@ export function renderMetrics(metrics) {
 
   }
 
-
-  /* =========================================
+/* =========================================
    CLIENT OPERATIONAL INTELLIGENCE
 ========================================= */
 
+const clientServiceValue =
 document.getElementById(
   "clientServiceValue"
-).textContent =
+);
 
-  `$${metrics.monthlyRevenue.toFixed(2)}`;
-
-document.getElementById(
-  "clientOperationalCost"
-).textContent =
-
-  `$${metrics.operationalCost.toFixed(2)}`;
-
-document.getElementById(
-  "clientLaborCost"
-).textContent =
-
-  `$${metrics.laborCost.toFixed(2)}`;
-
-document.getElementById(
-  "clientDiscountImpact"
-).textContent =
-
-  `$${metrics.discountImpact.toFixed(2)}`;
-
+const clientEstimatedProfit =
 document.getElementById(
   "clientEstimatedProfit"
-).textContent =
+);
 
-  `$${metrics.estimatedProfit.toFixed(2)}`;
 
-document.getElementById(
-  "clientProfitability"
-).textContent =
+/* SERVICE VALUE */
 
-  `${metrics.margin}%`;
+if (clientServiceValue) {
 
-document.getElementById(
-  "clientMarginHealth"
-).textContent =
+  clientServiceValue.textContent =
 
-  metrics.marginHealth;
+    `$${metrics.monthlyRevenue.toFixed(2)}`;
 
-document.getElementById(
-  "clientBreakEven"
-).textContent =
+}
 
-  `$${metrics.breakEvenPoint.toFixed(2)}`;
 
-document.getElementById(
-  "clientAnnualValue"
-).textContent =
+/* OPERATIONAL COST */
 
-  `$${metrics.annualContractValue.toFixed(2)}`; 
+if (clientOperationalCost) {
+
+  clientOperationalCost.textContent =
+
+    `$${metrics.operationalCost.toFixed(2)}`;
+
+}
+
+
+/* LABOR COST */
+
+if (clientLaborCost) {
+
+  clientLaborCost.textContent =
+
+    `$${metrics.laborCost.toFixed(2)}`;
+
+}
+
+
+/* DISCOUNT IMPACT */
+
+if (clientDiscountImpact) {
+
+  clientDiscountImpact.textContent =
+
+    `$${metrics.discountImpact.toFixed(2)}`;
+
+}
+
+
+/* ESTIMATED PROFIT */
+
+if (clientEstimatedProfit) {
+
+  clientEstimatedProfit.textContent =
+
+    `$${metrics.estimatedProfit.toFixed(2)}`;
+
+}
+
+
+/* PROFITABILITY */
+
+if (clientProfitability) {
+
+  clientProfitability.textContent =
+
+    `${metrics.margin}%`;
+
+}
+
+
+/* MARGIN HEALTH */
+
+if (clientMarginHealth) {
+
+  clientMarginHealth.textContent =
+
+    metrics.marginHealth;
+
+}
+
+
+/* BREAK-EVEN */
+
+if (clientBreakEven) {
+
+  clientBreakEven.textContent =
+
+    `$${metrics.breakEvenPoint.toFixed(2)}`;
+
+}
+
+
+/* ANNUAL VALUE */
+
+if (clientAnnualValue) {
+
+  clientAnnualValue.textContent =
+
+    `$${metrics.annualContractValue.toFixed(2)}`;
 
 }
