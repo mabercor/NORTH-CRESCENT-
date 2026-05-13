@@ -104,9 +104,14 @@ const monthlyRevenue =
      ESTIMATED OPERATIONAL COST
   ========================================= */
 
-  const operationalCost =
+const operationalBase =
 
-    monthlyRevenue * 0.65;
+  adjustedRevenue +
+  durationCharge;
+
+const operationalCost =
+
+  operationalBase * 0.65;
 
   /* =========================================
      ESTIMATED PROFIT
