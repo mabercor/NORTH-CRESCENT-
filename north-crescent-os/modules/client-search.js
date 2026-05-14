@@ -70,7 +70,10 @@ const operationalSummaryInput =
 document.getElementById(
   'clientOperationalSummary'
 );
-
+const schedulingNotesInput =
+document.getElementById(
+  'schedulingNotes'
+);
 /* =========================================
    MAKE WEBHOOK
 ========================================= */
@@ -217,6 +220,12 @@ export async function searchOperationalClient() {
 
   operationalSummaryInput.value =
   clientData.operationalSummary;
+
+}
+     if (clientData.schedulingNotes) {
+
+  schedulingNotesInput.value =
+  clientData.schedulingNotes;
 
 }
 
