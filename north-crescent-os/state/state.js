@@ -88,15 +88,11 @@ service: {
      SCHEDULING DATA
   ========================================= */
 
-  scheduling: {
+ scheduling: {
 
-    preferredDays: '',
+  recurringVisits: []
 
-    preferredTime: '',
-
-    recurringStructure: ''
-
-  },
+},
 
 
   /* =========================================
