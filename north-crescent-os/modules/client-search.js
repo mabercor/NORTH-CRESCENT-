@@ -108,6 +108,14 @@ export async function searchOperationalClient() {
       })
 
     });
+     
+     if (!response.ok) {
+
+  throw new Error(
+    `HTTP ERROR: ${response.status}`
+  );
+
+}
 
     const clientData =
     await response.json();
