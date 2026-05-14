@@ -17,20 +17,29 @@ export const operationalState = {
 
   client: {
 
-    clientName: '',
+  clientName: '',
 
-    companyName: '',
+  companyName: '',
 
-    mainContact: '',
+  mainContact: '',
 
-    phoneNumber: '',
+  phoneNumber: '',
 
-    emailAddress: '',
+  emailAddress: '',
 
-    serviceAddress: ''
+  serviceAddress: ''
 
-  },
+},
 
+service: {
+
+  serviceType: '',
+
+  days: '',
+
+  timeSlot: ''
+
+},
 
   /* =========================================
      PRICING DATA
