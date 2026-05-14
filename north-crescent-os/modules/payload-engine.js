@@ -3,119 +3,83 @@
    PAYLOAD ENGINE
 ========================================= */
 
-
-/* =========================================
-   GENERATE OPERATIONAL PAYLOAD
-========================================= */
-
 export function generateOperationalPayload(state) {
 
   return {
 
-    /* =========================================
-       CLIENT
-    ========================================= */
-
     client: {
 
       clientName:
-      state.clientName || '',
+      state.client?.clientName || '',
 
       companyName:
-      state.companyName || '',
+      state.client?.companyName || '',
 
       mainContact:
-      state.mainContact || '',
+      state.client?.mainContact || '',
 
       phoneNumber:
-      state.phoneNumber || '',
+      state.client?.phoneNumber || '',
 
       emailAddress:
-      state.emailAddress || ''
+      state.client?.emailAddress || '',
+
+      serviceAddress:
+      state.client?.serviceAddress || ''
 
     },
 
-
-    /* =========================================
-       SERVICE
-    ========================================= */
 
     service: {
 
       serviceType:
-      state.serviceType || '',
+      state.service?.serviceType || '',
 
       squareFootage:
-      state.squareFootage || '',
+      state.service?.squareFootage || '',
 
       visitsPerMonth:
-      state.visitsPerMonth || '',
+      state.service?.visitsPerMonth || '',
 
       estimatedDuration:
-      state.estimatedDuration || '',
+      state.service?.estimatedDuration || '',
 
       complexityLevel:
-      state.complexityLevel || ''
+      state.service?.complexityLevel || ''
 
     },
 
-
-    /* =========================================
-       SCHEDULING
-    ========================================= */
 
     scheduling: {
 
       days:
-      state.days || '',
+      state.service?.days || '',
 
       timeSlot:
-      state.timeSlot || '',
+      state.service?.timeSlot || '',
 
       schedulingNotes:
-      state.schedulingNotes || ''
+      state.service?.schedulingNotes || ''
 
     },
 
 
-    /* =========================================
-       FINANCIALS
-    ========================================= */
-
-    financials: {
+    pricing: {
 
       monthlyRevenue:
-      state.monthlyRevenue || 0,
+      state.pricing?.monthlyRevenue || 0,
 
       estimatedProfit:
-      state.estimatedProfit || 0,
+      state.pricing?.estimatedProfit || 0,
 
       profitability:
-      state.profitability || 0,
+      state.pricing?.profitability || 0,
 
       operationalCost:
-      state.operationalCost || 0,
+      state.pricing?.operationalCost || 0,
 
       annualValue:
-      state.annualValue || 0
-
-    },
-
-
-    /* =========================================
-       OPERATIONAL
-    ========================================= */
-
-    operational: {
-
-      operationalSummary:
-      state.operationalSummary || '',
-
-      priorityLevel:
-      state.priorityLevel || '',
-
-      contractStructure:
-      state.contractStructure || ''
+      state.pricing?.annualValue || 0
 
     }
 
