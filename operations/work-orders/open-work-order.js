@@ -29,13 +29,18 @@ const workOrderForm =
 document.getElementById(
   'workOrderForm'
 );
+/* =========================================
+   MAKE ACTIVATION WEBHOOK
+========================================= */
 
+const activationWebhookURL =
+'https://YOUR-MAKE-WEBHOOK-URL';
 
 /* =========================================
    OPERATIONAL ACTIVATION
 ========================================= */
 
-function handleOperationalActivation(event) {
+async function handleOperationalActivation(event) {
 
   event.preventDefault();
 
@@ -48,7 +53,54 @@ function handleOperationalActivation(event) {
     'OPERATIONAL PAYLOAD:',
     payload
   );
+try {
 
+  const response =
+  await fetch(
+    activationWebhookURL,
+    {
+
+      method: 'POST',
+
+      headers: {
+        'Content-Type':
+        'application/json'
+      },
+
+      body: JSON.stringify(
+        payload
+      )
+
+    }
+  );
+
+  if (!response.ok) {
+
+    throw new Error(
+      `HTTP ERROR:
+      ${response.status}`
+    );
+
+  }
+
+  const result =
+  await response.json();
+
+  console.log(
+    'ACTIVATION SUCCESS:',
+    result
+  );
+
+}
+
+catch (error) {
+
+  console.error(
+    'ACTIVATION ERROR:',
+    error
+  );
+
+}
 }
 
 
