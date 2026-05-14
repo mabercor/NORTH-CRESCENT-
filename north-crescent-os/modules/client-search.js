@@ -62,7 +62,10 @@ const timeSlotInput =
 document.getElementById(
   'timeSlot'
 );
-
+const operationalSummaryInput =
+document.getElementById(
+  'clientOperationalSummary'
+);
 
 /* =========================================
    MAKE WEBHOOK
@@ -199,6 +202,12 @@ export async function searchOperationalClient() {
       clientData.timeSlot;
 
     }
+     if (clientData.operationalSummary) {
+
+  operationalSummaryInput.value =
+  clientData.operationalSummary;
+
+}
 
   }
 
