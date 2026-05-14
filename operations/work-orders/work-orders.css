@@ -1459,3 +1459,49 @@
   display: none;
 
 }
+
+/* =========================================
+DUAL LAYOUT
+========================================= */
+
+.operations-dual-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-top:24px;
+    align-items:start;
+}
+
+/* =========================================
+ANALYTICS PANEL
+========================================= */
+
+.service-insights-row{
+    margin-top:0;
+}
+
+.live-analytics-panel{
+    height:100%;
+    padding:24px;
+}
+
+/* =========================================
+SCHEDULE BUILDER
+========================================= */
+
+.schedule-builder{
+    margin-top:0;
+    padding:24px;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+    .operations-dual-layout{
+        grid-template-columns:1fr;
+    }
+
+}
