@@ -31,6 +31,20 @@ import {
 /* =========================================
    FORM ELEMENTS
 ========================================= */
+const clientNameInput =
+document.getElementById(
+  'clientName'
+);
+
+const daysInput =
+document.getElementById(
+  'days'
+);
+
+const timeSlotInput =
+document.getElementById(
+  'timeSlot'
+);
 
 const serviceTypeInput =
 document.getElementById(
@@ -135,6 +149,27 @@ function updateOperationalFlow() {
   /* =========================================
      UPDATE STATE
   ========================================= */
+   
+   /* =========================================
+   UPDATE CLIENT STATE
+========================================= */
+
+operationalState.client.clientName =
+  clientNameInput?.value || '';
+
+
+/* =========================================
+   UPDATE SERVICE STATE
+========================================= */
+
+operationalState.service.serviceType =
+  serviceTypeInput?.value || '';
+
+operationalState.service.days =
+  daysInput?.value || '';
+
+operationalState.service.timeSlot =
+  timeSlotInput?.value || '';
 
   updatePricingState({
 
