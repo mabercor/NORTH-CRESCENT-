@@ -940,8 +940,7 @@
 
   display: grid;
 
-  grid-template-columns: 2fr 1fr;
-
+ grid-template-columns: 1.5fr 1fr;
   gap: 35px;
 
   align-items: start;
@@ -1226,14 +1225,14 @@
 /* =========================================
    RECURRING SCHEDULE BUILDER
 ========================================= */
-
 .schedule-builder {
 
-  margin-top: -70px;
+  margin-top: 35px;
 
   padding: 32px;
 
   border-radius: 28px;
+
   border: 1px solid #dfe7f1;
 
   background: #ffffff;
