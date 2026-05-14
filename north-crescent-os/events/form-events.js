@@ -269,3 +269,143 @@ complexityInput?.addEventListener(
 ========================================= */
 
 updateOperationalFlow();
+/* =========================================
+   RECURRING SCHEDULE BUILDER
+========================================= */
+const scheduleRows =
+document.getElementById("scheduleRows");
+
+const addScheduleRowBtn =
+document.getElementById("addScheduleRow");
+
+/* =========================================
+   ADD NEW SCHEDULE ROW
+========================================= */
+
+addScheduleRowBtn.addEventListener(
+  "click",
+  () => {
+
+    const row =
+    document.createElement("div");
+
+    row.className =
+    "schedule-row";
+
+    row.innerHTML = `
+
+      <!-- DAY -->
+
+      <select class="schedule-day">
+
+        <option value="">
+          Select Day
+        </option>
+
+        <option value="Monday">
+          Monday
+        </option>
+
+        <option value="Tuesday">
+          Tuesday
+        </option>
+
+        <option value="Wednesday">
+          Wednesday
+        </option>
+
+        <option value="Thursday">
+          Thursday
+        </option>
+
+        <option value="Friday">
+          Friday
+        </option>
+
+        <option value="Saturday">
+          Saturday
+        </option>
+
+        <option value="Sunday">
+          Sunday
+        </option>
+
+      </select>
+
+      <!-- WINDOW -->
+
+      <select class="schedule-window">
+
+        <option value="">
+          Arrival Window
+        </option>
+
+        <option value="12AM-4AM">
+          12AM – 4AM
+        </option>
+
+        <option value="4AM-8AM">
+          4AM – 8AM
+        </option>
+
+        <option value="8AM-12PM">
+          8AM – 12PM
+        </option>
+
+        <option value="12PM-4PM">
+          12PM – 4PM
+        </option>
+
+        <option value="4PM-8PM">
+          4PM – 8PM
+        </option>
+
+        <option value="8PM-12AM">
+          8PM – 12AM
+        </option>
+
+      </select>
+
+      <!-- REMOVE -->
+
+      <button
+        type="button"
+        class="remove-schedule-row">
+
+        ✕
+
+      </button>
+
+    `;
+
+    scheduleRows.appendChild(row);
+
+  }
+);
+
+/* =========================================
+   REMOVE ROW
+========================================= */
+
+scheduleRows.addEventListener(
+  "click",
+  (event) => {
+
+    if (
+      event.target.classList.contains(
+        "remove-schedule-row"
+      )
+    ) {
+
+      const row =
+      event.target.closest(
+        ".schedule-row"
+      );
+
+      row.remove();
+
+    }
+
+  }
+);
+
