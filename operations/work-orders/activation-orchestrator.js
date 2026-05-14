@@ -1,6 +1,6 @@
 /* =========================================
    NORTH CRESCENT OS
-   OPEN WORK ORDER
+   ACTIVATION ORCHESTRATOR
 ========================================= */
 
 
@@ -12,13 +12,13 @@ import {
 
   generateOperationalPayload
 
-} from './modules/payload-engine.js';
+} from '../../north-crescent-os/modules/payload-engine.js';
 
 import {
 
   operationalState
 
-} from './state/state.js';
+} from '../../north-crescent-os/state/state.js';
 
 
 /* =========================================
@@ -29,12 +29,15 @@ const workOrderForm =
 document.getElementById(
   'workOrderForm'
 );
+
+
 /* =========================================
    MAKE ACTIVATION WEBHOOK
 ========================================= */
 
 const activationWebhookURL =
 'https://YOUR-MAKE-WEBHOOK-URL';
+
 
 /* =========================================
    OPERATIONAL ACTIVATION
@@ -53,54 +56,56 @@ async function handleOperationalActivation(event) {
     'OPERATIONAL PAYLOAD:',
     payload
   );
-try {
 
-  const response =
-  await fetch(
-    activationWebhookURL,
-    {
+  try {
 
-      method: 'POST',
+    const response =
+    await fetch(
+      activationWebhookURL,
+      {
 
-      headers: {
-        'Content-Type':
-        'application/json'
-      },
+        method: 'POST',
 
-      body: JSON.stringify(
-        payload
-      )
+        headers: {
+          'Content-Type':
+          'application/json'
+        },
+
+        body: JSON.stringify(
+          payload
+        )
+
+      }
+    );
+
+    if (!response.ok) {
+
+      throw new Error(
+        `HTTP ERROR:
+        ${response.status}`
+      );
 
     }
-  );
 
-  if (!response.ok) {
+    const result =
+    await response.json();
 
-    throw new Error(
-      `HTTP ERROR:
-      ${response.status}`
+    console.log(
+      'ACTIVATION SUCCESS:',
+      result
     );
 
   }
 
-  const result =
-  await response.json();
+  catch (error) {
 
-  console.log(
-    'ACTIVATION SUCCESS:',
-    result
-  );
+    console.error(
+      'ACTIVATION ERROR:',
+      error
+    );
 
-}
+  }
 
-catch (error) {
-
-  console.error(
-    'ACTIVATION ERROR:',
-    error
-  );
-
-}
 }
 
 
@@ -116,31 +121,32 @@ function initializeOpenWorkOrder() {
 
   if (workOrderForm) {
 
-  console.log(
-    'FORM DETECTED'
-  );
+    console.log(
+      'FORM DETECTED'
+    );
 
-  workOrderForm.addEventListener(
-    'submit',
-    (event) => {
+    workOrderForm.addEventListener(
+      'submit',
+      (event) => {
 
-      console.log(
-        'FORM SUBMIT WORKING'
-      );
+        console.log(
+          'FORM SUBMIT WORKING'
+        );
 
-      handleOperationalActivation(
-        event
-      );
+        handleOperationalActivation(
+          event
+        );
 
-    }
-  );
+      }
+    );
+
+  }
 
 }
 
-}   
+
 /* =========================================
    START SYSTEM
 ========================================= */
 
 initializeOpenWorkOrder();
-
