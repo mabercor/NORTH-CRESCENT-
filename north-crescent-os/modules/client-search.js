@@ -38,9 +38,9 @@ document.getElementById(
   'emailAddress'
 );
 
-const serviceTypeInput =
+const clientServiceTypeInput =
 document.getElementById(
-  'serviceType'
+  'clientServiceType'
 );
 
 const squareFootageInput =
@@ -159,10 +159,10 @@ export async function searchOperationalClient() {
 
     if (clientData.serviceType) {
 
-      serviceTypeInput.value =
-      clientData.serviceType;
+  clientServiceTypeInput.value =
+  clientData.serviceType;
 
-    }
+}
 
     if (clientData.squareFootage) {
 
