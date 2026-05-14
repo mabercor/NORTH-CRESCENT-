@@ -116,16 +116,26 @@ function initializeOpenWorkOrder() {
 
   if (workOrderForm) {
 
-    workOrderForm.addEventListener(
-      'submit',
-      handleOperationalActivation
-    );
+  console.log(
+    'FORM DETECTED'
+  );
 
-  }
+  workOrderForm.addEventListener(
+    'submit',
+    (event) => {
+
+      console.log(
+        'FORM SUBMIT WORKING'
+      );
+
+      handleOperationalActivation(
+        event
+      );
+
+    }
+  );
 
 }
-
-
 /* =========================================
    START SYSTEM
 ========================================= */
