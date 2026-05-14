@@ -12,13 +12,12 @@ import {
 
   generateOperationalPayload
 
-} from '../../north-crescent-os/modules/payload-engine.js';
-
+} from '/north-crescent-os/modules/payload-engine.js';
 import {
 
   operationalState
 
-} from '../../north-crescent-os/state/state.js';
+} from '/north-crescent-os/state/state.js';
 
 
 /* =========================================
