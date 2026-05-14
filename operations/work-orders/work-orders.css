@@ -1445,3 +1445,12 @@
   color: #547086;
 
 }
+/* =========================================
+   LEGACY SCHEDULING FIELDS
+========================================= */
+
+.legacy-schedule-field {
+
+  display: none;
+
+}
