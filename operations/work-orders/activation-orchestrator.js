@@ -35,7 +35,7 @@ document.getElementById(
 ========================================= */
 
 const activationWebhookURL =
-'https://YOUR-MAKE-WEBHOOK-URL';
+'https://hook.us2.make.com/XXXXXXXX';
 
 
 /* =========================================
