@@ -47,6 +47,10 @@ const squareFootageInput =
 document.getElementById(
   'squareFootage'
 );
+const visitsPerMonthInput =
+document.getElementById(
+  'visitsPerMonth'
+);
 
 const frequencyInput =
 document.getElementById(
@@ -181,6 +185,13 @@ export async function searchOperationalClient() {
       clientData.squareFootage;
 
     }
+     
+     if (clientData.visitsPerMonth) {
+
+  visitsPerMonthInput.value =
+  clientData.visitsPerMonth;
+
+}
 
     if (clientData.frequency) {
 
