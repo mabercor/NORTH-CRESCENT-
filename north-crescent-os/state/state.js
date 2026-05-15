@@ -20,25 +20,29 @@ export const operationalState = {
 
   clientName: '',
 
-  companyName: '',
+companyName: "",
+mainContact: "",
+phoneNumber: "",
+emailAddress: "",
+serviceAddress: "",
 
-  mainContact: '',
-
-  phoneNumber: '',
-
-  emailAddress: '',
-
-  serviceAddress: ''
+leadRecordId: "",
+clientId: "",
 
 },
 
 service: {
 
-  serviceType: '',
+service: {
 
-  days: '',
+  serviceType: "",
+  squareFootage: "",
+  visitsPerMonth: "",
 
-  timeSlot: ''
+  selectedPlan: "",
+  estimatedDuration: "",
+  complexityLevel: "",
+  recurringVisits: ""
 
 },
 
