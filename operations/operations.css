@@ -1263,3 +1263,31 @@ textarea:required:valid {
   border: 2px solid #22c55e;
 
 }
+/* =========================================
+   REQUIRED FIELD VALIDATION
+========================================= */
+
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+
+  border: 2px solid #ff4d4f;
+  background: #fff5f5;
+
+}
+
+input:required:valid,
+select:required:valid,
+textarea:required:valid {
+
+  border: 2px solid #22c55e;
+
+}
+
+input:required:invalid:focus,
+select:required:invalid:focus,
+textarea:required:invalid:focus {
+
+  box-shadow: 0 0 0 4px rgba(255, 77, 79, 0.15);
+
+}
