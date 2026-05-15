@@ -209,91 +209,260 @@ gtag('config', 'G-48W5J5N037');
         placeholder="Phone Number">
 
 
-            <!-- SERVICE -->
-            <div class="custom-select">
-              <select name="service" required>
-                <option value="">Select Service *</option>
-                <option>Residential Cleaning</option>
-                <option>Commercial Cleaning</option>
-                <option>Deep Cleaning</option>
-                <option>Move-In / Move-Out</option>
-                <option>Airbnb Cleaning</option>
-                <option>Janitorial Cleaning</option>
-                <option>Post-Construction Cleaning</option>
-              </select>
-            </div>
+         <!-- SERVICE -->
 
-            <!-- FREQUENCY -->
-            <div class="form-group">
-              <select name="frequency" id="frequencySelect" required>
-                <option value="">Cleaning Frequency *</option>
-                <option value="daily">Every Day</option>
-                <option value="2week">2 Times per Week</option>
-                <option value="4month">4 Times per Month</option>
-                <option value="2month">2 Times per Month</option>
-                <option value="custom">Custom</option>
-              </select>
-            </div>
+<div class="custom-select">
 
-            <!-- DAYS -->
-            <div id="daysContainer" class="form-group" style="display:none;">
-              <label style="font-size:13px;">Select Preferred Days *</label>
+  <select
+    name="serviceType"
+    required>
 
-              <div class="days-grid">
-  <label><input type="checkbox" name="days[]" value="Monday"><span>Mon</span></label>
-  <label><input type="checkbox" name="days[]" value="Tuesday"><span>Tue</span></label>
-  <label><input type="checkbox" name="days[]" value="Wednesday"><span>Wed</span></label>
-  <label><input type="checkbox" name="days[]" value="Thursday"><span>Thu</span></label>
-  <label><input type="checkbox" name="days[]" value="Friday"><span>Fri</span></label>
-  <label><input type="checkbox" name="days[]" value="Saturday"><span>Sat</span></label>
-  <label><input type="checkbox" name="days[]" value="Sunday"><span>Sun</span></label>
+    <option value="">
+      Select Service *
+    </option>
+
+    <option>
+      Residential Cleaning
+    </option>
+
+    <option>
+      Commercial Cleaning
+    </option>
+
+    <option>
+      Deep Cleaning
+    </option>
+
+    <option>
+      Move-In / Move-Out
+    </option>
+
+    <option>
+      Airbnb Cleaning
+    </option>
+
+    <option>
+      Janitorial Cleaning
+    </option>
+
+    <option>
+      Post-Construction Cleaning
+    </option>
+
+  </select>
+
 </div>
-            </div>
 
-            <!-- TIME -->
-            <div class="form-group">
-              <select name="time_slot" required>
-                <option value="">Preferred Time Slot *</option>
-                <option>12AM – 4AM</option>
-                <option>4AM – 8AM</option>
-                <option>8AM – 12PM</option>
-                <option>12PM – 4PM</option>
-                <option>4PM – 8PM</option>
-                <option>8PM – 12AM</option>
-              </select>
-            </div>
+<!-- FREQUENCY -->
 
-            <!-- NOTE -->
-            <p style="font-size:12px; color:#64748b;">
-              Schedule is subject to availability. We will confirm your service plan after review.
-            </p>
+<div class="form-group">
 
-            <!-- MESSAGE -->
-            <textarea name="message" placeholder="Describe your space..."></textarea>
+  <select
+    name="visitsPerMonth"
+    id="frequencySelect"
+    required>
 
-            <!-- BUTTON -->
-            <button type="submit" class="btn btn-primary">
-              Get My Free Quote
-            </button>
+    <option value="">
+      Cleaning Frequency *
+    </option>
 
-            <p style="font-size:12px; color:#64748b;">
-              🔒 Secure form • No spam • Fast response guaranteed
-            </p>
+    <option value="daily">
+      Every Day
+    </option>
 
-            <p style="font-size:11px; color:#64748b;">
-              By submitting this form, you agree to our 
-              <a href="/privacy.html">Privacy Policy</a> and 
-              <a href="/terms-and-conditions.pdf" target="_blank">Terms & Conditions</a>.
-            </p>
+    <option value="2week">
+      2 Times per Week
+    </option>
 
-          </form>
+    <option value="4month">
+      4 Times per Month
+    </option>
 
-        </div>
-      </div>
+    <option value="2month">
+      2 Times per Month
+    </option>
 
-    </div>
+    <option value="custom">
+      Custom
+    </option>
+
+  </select>
+
+</div>
+
+<!-- DAYS -->
+
+<div
+  id="daysContainer"
+  class="form-group"
+  style="display:none;">
+
+  <label style="font-size:13px;">
+    Select Preferred Days *
+  </label>
+
+  <div class="days-grid">
+
+    <label>
+      <input
+        type="checkbox"
+        name="recurringVisits[]"
+        value="Monday">
+      <span>Mon</span>
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="recurringVisits[]"
+        value="Tuesday">
+      <span>Tue</span>
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="recurringVisits[]"
+        value="Wednesday">
+      <span>Wed</span>
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="recurringVisits[]"
+        value="Thursday">
+      <span>Thu</span>
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="recurringVisits[]"
+        value="Friday">
+      <span>Fri</span>
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="recurringVisits[]"
+        value="Saturday">
+      <span>Sat</span>
+    </label>
+
+    <label>
+      <input
+        type="checkbox"
+        name="recurringVisits[]"
+        value="Sunday">
+      <span>Sun</span>
+    </label>
 
   </div>
+
+</div>
+
+<!-- TIME -->
+
+<div class="form-group">
+
+  <select
+    name="timeSlot"
+    required>
+
+    <option value="">
+      Preferred Time Slot *
+    </option>
+
+    <option>
+      12AM – 4AM
+    </option>
+
+    <option>
+      4AM – 8AM
+    </option>
+
+    <option>
+      8AM – 12PM
+    </option>
+
+    <option>
+      12PM – 4PM
+    </option>
+
+    <option>
+      4PM – 8PM
+    </option>
+
+    <option>
+      8PM – 12AM
+    </option>
+
+  </select>
+
+</div>
+
+<!-- NOTE -->
+
+<p style="font-size:12px; color:#64748b;">
+
+  Schedule is subject to availability.
+  We will confirm your service plan after review.
+
+</p>
+
+<!-- MESSAGE -->
+
+<textarea
+  name="operationalSummary"
+  placeholder="Describe your space...">
+</textarea>
+
+<!-- BUTTON -->
+
+<button
+  type="submit"
+  class="btn btn-primary">
+
+  Get My Free Quote
+
+</button>
+
+<p style="font-size:12px; color:#64748b;">
+
+  🔒 Secure form • No spam • Fast response guaranteed
+
+</p>
+
+<p style="font-size:11px; color:#64748b;">
+
+  By submitting this form, you agree to our
+
+  <a href="/privacy.html">
+    Privacy Policy
+  </a>
+
+  and
+
+  <a
+    href="/terms-and-conditions.pdf"
+    target="_blank">
+
+    Terms & Conditions
+
+  </a>
+
+</p>
+
+</form>
+
+</div>
+</div>
+
+</div>
+
+</div>
 </section>
 
 </main>
