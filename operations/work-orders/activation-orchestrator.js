@@ -112,7 +112,7 @@ async function handleOperationalActivation(event) {
    INITIALIZATION
 ========================================= */
 
-function initializeOpenWorkOrder() {
+export function initializeOpenWorkOrder() {
 
   console.log(
     'OPEN WORK ORDER READY'
