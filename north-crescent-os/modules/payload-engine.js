@@ -25,8 +25,14 @@ export function generateOperationalPayload(state) {
       state.client?.emailAddress || '',
 
       serviceAddress:
-      state.client?.serviceAddress || ''
+      state.client?.serviceAddress || '',
 
+leadRecordId:
+state.client?.leadRecordId || '',
+
+clientId:
+state.client?.clientId || ''
+       
     },
 
 
