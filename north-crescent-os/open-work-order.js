@@ -13,7 +13,8 @@ import './events/form-events.js';
 import {
   initializeClientSearch
 } from './modules/client-search.js';
-
+import
+'/operations/work-orders/activation-orchestrator.js';
 
 /* =========================================
    SYSTEM INITIALIZATION
