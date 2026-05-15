@@ -322,7 +322,8 @@ img {
 }
 
 .contact-box input,
-.contact-box textarea {
+.contact-box textarea,
+.contact-box select {
   width: 100%;
   padding: 15px 16px;
   margin-bottom: 16px;
@@ -332,9 +333,9 @@ img {
   background: #f9fbfd;
   transition: all 0.25s ease;
 }
-
 .contact-box input:focus,
-.contact-box textarea:focus {
+.contact-box textarea:focus,
+.contact-box select:focus {
   outline: none;
   border-color: var(--secondary);
   background: #ffffff;
