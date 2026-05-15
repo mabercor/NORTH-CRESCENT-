@@ -13,15 +13,19 @@ import './events/form-events.js';
 import {
   initializeClientSearch
 } from './modules/client-search.js';
-import
-'/operations/work-orders/activation-orchestrator.js';
+import {
+
+  initializeOpenWorkOrder
+
+} from '/operations/work-orders/activation-orchestrator.js';
 
 /* =========================================
    SYSTEM INITIALIZATION
 ========================================= */
 
 initializeClientSearch();
-
+initializeOpenWorkOrder();
 console.log(
   'North Crescent OS Active'
 );
+
