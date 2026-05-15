@@ -121,9 +121,14 @@ operations: {
 
   operationalSummary: '',
 
-  assignedTeam: ''
+  assignedTeam: '',
+
+  operationalStatus: '',
+
+  workOrderId: ''
 
 },
+
 
   /* =========================================
      OPERATIONAL FLAGS
