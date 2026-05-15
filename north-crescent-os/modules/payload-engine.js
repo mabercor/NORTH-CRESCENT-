@@ -126,7 +126,13 @@ operations: {
   state.operations?.operationalSummary || '',
 
   assignedTeam:
-  state.operations?.assignedTeam || ''
+  state.operations?.assignedTeam || '',
+
+operationalStatus:
+state.operations?.operationalStatus || '',
+
+workOrderId:
+state.operations?.workOrderId || ''
 
 }
 
