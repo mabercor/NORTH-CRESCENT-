@@ -103,14 +103,10 @@ service: {
 
 contract: {
 
-  contractStatus: '',
-
-  autoRenewal: '',
-
-  monthlyContractValue: '',
-
-  contractStartDate: ''
-
+contractStatus: "",
+autoRenewal: "",
+monthlyContractValue: "",
+contractStartDate: "",
 },
 
 /* =========================================
