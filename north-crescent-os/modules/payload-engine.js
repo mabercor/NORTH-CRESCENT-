@@ -51,7 +51,10 @@ state.client?.clientId || ''
       state.service?.estimatedDuration || '',
 
       complexityLevel:
-      state.service?.complexityLevel || ''
+      state.service?.complexityLevel || '',
+
+selectedPlan:
+state.service?.selectedPlan || ''
 
     },
 
