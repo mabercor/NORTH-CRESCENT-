@@ -70,6 +70,11 @@ const complexityInput =
 document.getElementById(
   'complexityLevel'
 );
+
+const selectedPlanInput =
+document.getElementById(
+  'selectedPlan'
+);
 /* =========================================
    CLIENT INPUTS
 ========================================= */
@@ -266,6 +271,10 @@ operationalState.service.estimatedDuration =
 
 operationalState.service.complexityLevel =
   complexityInput?.value || 'Low';
+
+   operationalState.service.selectedPlan =
+  selectedPlanInput?.value || '';
+   
    /* =========================================
    RECURRING SCHEDULE ENGINE
 ========================================= */
@@ -470,6 +479,12 @@ complexityInput?.addEventListener(
   'change',
   updateOperationalFlow
 );
+
+selectedPlanInput?.addEventListener(
+  'change',
+  updateOperationalFlow
+);
+
 /* =========================================
    CLIENT EVENT LISTENERS
 ========================================= */
