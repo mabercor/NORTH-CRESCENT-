@@ -406,6 +406,14 @@ p {
 nav {
   justify-content: center;
 }
+/* =========================================
+   CONTACT FORM ALIGNMENT FIX
+========================================= */
+
+.contact-form,
+.contact-form * {
+  text-align: left;
+}
 
 /* ===== 🔥 INTERACTIVITY UPGRADE (SAFE PATCH) ===== */
 
