@@ -262,6 +262,58 @@ operationalState.service.estimatedDuration =
 
 operationalState.service.complexityLevel =
   complexityInput?.value || 'Low';
+   /* =========================================
+   RECURRING SCHEDULE ENGINE
+========================================= */
+
+const recurringVisits = [];
+
+const scheduleRowsList =
+document.querySelectorAll(
+  '.schedule-row'
+);
+
+scheduleRowsList.forEach((row) => {
+
+  const daySelect =
+  row.querySelector(
+    '.schedule-day'
+  );
+
+  const windowSelect =
+  row.querySelector(
+    '.schedule-window'
+  );
+
+  const selectedDay =
+  daySelect?.value || '';
+
+  const selectedWindow =
+  windowSelect?.value || '';
+
+  if (
+    selectedDay &&
+    selectedWindow
+  ) {
+
+    recurringVisits.push({
+
+      day: selectedDay,
+
+      window: selectedWindow
+
+    });
+
+  }
+
+});
+
+/* =========================================
+   UPDATE SCHEDULING STATE
+========================================= */
+
+operationalState.scheduling.recurringVisits =
+  recurringVisits;
   /* =========================================
    UPDATE CLIENT MEMORY
 ========================================= */
