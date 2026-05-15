@@ -393,7 +393,87 @@ complexityInput?.addEventListener(
   'change',
   updateOperationalFlow
 );
+/* =========================================
+   CLIENT EVENT LISTENERS
+========================================= */
 
+clientNameInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+companyNameInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+phoneNumberInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+emailAddressInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+serviceAddressInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+/* =========================================
+   CONTRACT EVENT LISTENERS
+========================================= */
+
+contractStatusInput?.addEventListener(
+  'change',
+  updateOperationalFlow
+);
+
+autoRenewalInput?.addEventListener(
+  'change',
+  updateOperationalFlow
+);
+
+monthlyContractValueInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+contractStartDateInput?.addEventListener(
+  'change',
+  updateOperationalFlow
+);
+
+/* =========================================
+   OPERATIONS EVENT LISTENERS
+========================================= */
+
+supervisorAssignedInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+accessInstructionsInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+sensitiveAreasInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+operationalSummaryInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+assignedTeamInput?.addEventListener(
+  'change',
+  updateOperationalFlow
+);
 
 /* =========================================
    INITIAL LOAD
