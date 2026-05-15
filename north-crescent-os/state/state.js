@@ -33,8 +33,6 @@ clientId: "",
 
 service: {
 
-service: {
-
   serviceType: "",
   squareFootage: "",
   visitsPerMonth: "",
