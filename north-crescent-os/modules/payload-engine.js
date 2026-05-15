@@ -52,17 +52,13 @@ export function generateOperationalPayload(state) {
 
     scheduling: {
 
-      days:
-      state.service?.days || '',
+  recurringVisits:
+  state.scheduling?.recurringVisits || [],
 
-      timeSlot:
-      state.service?.timeSlot || '',
+  schedulingNotes:
+  state.service?.schedulingNotes || ''
 
-      schedulingNotes:
-      state.service?.schedulingNotes || ''
-
-    },
-
+},
 
    pricing: {
 
