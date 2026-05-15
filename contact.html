@@ -485,72 +485,155 @@ gtag('config', 'G-48W5J5N037');
 
   </div>
 </div>
-
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
   function closeModal() {
-    const modal = document.getElementById("successModal");
+
+    const modal =
+    document.getElementById(
+      "successModal"
+    );
+
     if (modal) {
-      modal.style.display = "none";
+
+      modal.style.display =
+      "none";
+
     }
+
   }
 
-  window.closeModal = closeModal;
+  window.closeModal =
+  closeModal;
 
-  const form = document.getElementById("contactForm");
+  const form =
+  document.getElementById(
+    "contactForm"
+  );
+
   if (!form) return;
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
+  form.addEventListener(
+    "submit",
+    function(e) {
 
-  const formData = new FormData(form);
+      e.preventDefault();
 
-// capturar días
-const selectedDays = Array.from(
-  document.querySelectorAll('input[name="days[]"]:checked')
-).map(cb => cb.value);
+      const formData =
+      new FormData(form);
 
-// eliminar array original
-formData.delete("days[]");
+      /* =========================================
+         RECURRING VISITS
+      ========================================= */
 
-// agregar limpio
-formData.append("days", selectedDays.join(", "));
+      const recurringVisits =
+      Array.from(
 
-fetch(form.action, {
-  method: "POST",
-  body: formData
-})
-    .then(response => {
+        document.querySelectorAll(
+          'input[name="recurringVisits[]"]:checked'
+        )
 
-      if (response.ok) {
+      ).map(cb => cb.value);
 
-        // 🔥 CAPTURA DATOS
-        const name = form.querySelector('input[name="name"]')?.value || "";
-        const service = form.querySelector('select[name="service"]')?.value || "";
-       const frequency = form.querySelector('select[name="frequency"]').value;
-        const description = form.querySelector('textarea[name="message"]')?.value || "";
+      /* REMOVE ORIGINAL */
 
-const days = Array.from(document.querySelectorAll('input[name="days[]"]:checked'))
-  .map(cb => cb.value)
-  .join(", ");
+      formData.delete(
+        "recurringVisits[]"
+      );
 
-let message = `Hi, my name is ${name}.\n\n`;
+      /* APPEND CLEAN */
 
-if (service) {
-  message += `I just submitted a request for ${service}.\n`;
-}
+      formData.append(
+        "recurringVisits",
+        recurringVisits.join(", ")
+      );
 
-if (frequency) {
-  message += `Preferred frequency: ${frequency}.\n`;
-}
+      fetch(form.action, {
 
-if (days) {
-  message += `Preferred days: ${days}.\n`;
-}
-if (description) {
-  message += `Project details: ${description}\n`;
-}
+        method: "POST",
+
+        body: formData
+
+      })
+
+      .then(response => {
+
+        if (response.ok) {
+
+          /* =========================================
+             CAPTURE FORM DATA
+          ========================================= */
+
+          const clientName =
+          form.querySelector(
+            'input[name="clientName"]'
+          )?.value || "";
+
+          const serviceType =
+          form.querySelector(
+            'select[name="serviceType"]'
+          )?.value || "";
+
+          const visitsPerMonth =
+          form.querySelector(
+            'select[name="visitsPerMonth"]'
+          )?.value || "";
+
+          const operationalSummary =
+          form.querySelector(
+            'textarea[name="operationalSummary"]'
+          )?.value || "";
+
+          const selectedVisits =
+          Array.from(
+
+            document.querySelectorAll(
+              'input[name="recurringVisits[]"]:checked'
+            )
+
+          )
+
+          .map(cb => cb.value)
+
+          .join(", ");
+
+          /* =========================================
+             WHATSAPP MESSAGE
+          ========================================= */
+
+          let message =
+          `Hi, my name is ${clientName}.\n\n`;
+
+          if (serviceType) {
+
+            message +=
+            `I just submitted a request for ${serviceType}.\n`;
+
+          }
+
+          if (visitsPerMonth) {
+
+            message +=
+            `Preferred frequency: ${visitsPerMonth}.\n`;
+
+          }
+
+          if (selectedVisits) {
+
+            message +=
+            `Preferred days: ${selectedVisits}.\n`;
+
+          }
+
+          if (operationalSummary) {
+
+            message +=
+            `Project details: ${operationalSummary}\n`;
+
+          }
+
 
         message += `\nBefore we finalize your quote, I will send photos or a short video.\n\nView our services: https://www.northcrescentcleaning.com`;
 
