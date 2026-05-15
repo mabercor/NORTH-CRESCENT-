@@ -1243,3 +1243,23 @@ border-bottom:
   color: #475569 !important;
 
 }
+/* =========================================
+   REQUIRED FIELD VALIDATION
+========================================= */
+
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+
+  border: 2px solid #ff4d4f;
+  background: #fff5f5;
+
+}
+
+input:required:valid,
+select:required:valid,
+textarea:required:valid {
+
+  border: 2px solid #22c55e;
+
+}
