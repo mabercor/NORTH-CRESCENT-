@@ -70,7 +70,82 @@ const complexityInput =
 document.getElementById(
   'complexityLevel'
 );
+/* =========================================
+   CLIENT INPUTS
+========================================= */
 
+const companyNameInput =
+document.getElementById(
+  'companyName'
+);
+
+const phoneNumberInput =
+document.getElementById(
+  'phoneNumber'
+);
+
+const emailAddressInput =
+document.getElementById(
+  'emailAddress'
+);
+
+const serviceAddressInput =
+document.getElementById(
+  'serviceAddress'
+);
+
+/* =========================================
+   CONTRACT INPUTS
+========================================= */
+
+const contractStatusInput =
+document.getElementById(
+  'contractStatus'
+);
+
+const autoRenewalInput =
+document.getElementById(
+  'autoRenewal'
+);
+
+const monthlyContractValueInput =
+document.getElementById(
+  'monthlyContractValue'
+);
+
+const contractStartDateInput =
+document.getElementById(
+  'contractStartDate'
+);
+
+/* =========================================
+   OPERATIONS INPUTS
+========================================= */
+
+const supervisorAssignedInput =
+document.getElementById(
+  'supervisorAssigned'
+);
+
+const accessInstructionsInput =
+document.getElementById(
+  'accessInstructions'
+);
+
+const sensitiveAreasInput =
+document.getElementById(
+  'sensitiveAreas'
+);
+
+const operationalSummaryInput =
+document.getElementById(
+  'clientOperationalSummary'
+);
+
+const assignedTeamInput =
+document.getElementById(
+  'assignedTeam'
+);
 
 /* =========================================
    DISCOUNT ENGINE
