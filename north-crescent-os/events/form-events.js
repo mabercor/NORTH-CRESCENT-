@@ -245,6 +245,62 @@ operationalState.service.days =
 
 operationalState.service.timeSlot =
   timeSlotInput?.value || '';
+  /* =========================================
+   UPDATE CLIENT MEMORY
+========================================= */
+
+operationalState.client.companyName =
+  companyNameInput?.value || '';
+
+operationalState.client.phoneNumber =
+  phoneNumberInput?.value || '';
+
+operationalState.client.emailAddress =
+  emailAddressInput?.value || '';
+
+operationalState.client.serviceAddress =
+  serviceAddressInput?.value || '';
+
+/* =========================================
+   UPDATE CONTRACT STATE
+========================================= */
+
+operationalState.contract =
+  operationalState.contract || {};
+
+operationalState.contract.contractStatus =
+  contractStatusInput?.value || '';
+
+operationalState.contract.autoRenewal =
+  autoRenewalInput?.value || '';
+
+operationalState.contract.monthlyContractValue =
+  monthlyContractValueInput?.value || '';
+
+operationalState.contract.contractStartDate =
+  contractStartDateInput?.value || '';
+
+/* =========================================
+   UPDATE OPERATIONS STATE
+========================================= */
+
+operationalState.operations =
+  operationalState.operations || {};
+
+operationalState.operations.supervisorAssigned =
+  supervisorAssignedInput?.value || '';
+
+operationalState.operations.accessInstructions =
+  accessInstructionsInput?.value || '';
+
+operationalState.operations.sensitiveAreas =
+  sensitiveAreasInput?.value || '';
+
+operationalState.operations.operationalSummary =
+  operationalSummaryInput?.value || '';
+
+operationalState.operations.assignedTeam =
+  assignedTeamInput?.value || ''; 
 
   updatePricingState({
 
