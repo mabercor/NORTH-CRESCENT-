@@ -93,7 +93,39 @@ service: {
   recurringVisits: []
 
 },
+/* =========================================
+   CONTRACT DATA
+========================================= */
 
+contract: {
+
+  contractStatus: '',
+
+  autoRenewal: '',
+
+  monthlyContractValue: '',
+
+  contractStartDate: ''
+
+},
+
+/* =========================================
+   OPERATIONS DATA
+========================================= */
+
+operations: {
+
+  supervisorAssigned: '',
+
+  accessInstructions: '',
+
+  sensitiveAreas: '',
+
+  operationalSummary: '',
+
+  assignedTeam: ''
+
+},
 
   /* =========================================
      OPERATIONAL FLAGS
