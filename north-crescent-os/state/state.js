@@ -39,8 +39,7 @@ service: {
 
   selectedPlan: "",
   estimatedDuration: "",
-  complexityLevel: "",
-  recurringVisits: ""
+  complexityLevel: ""
 
 },
 
