@@ -28,7 +28,10 @@ const workOrderForm =
 document.getElementById(
   'workOrderForm'
 );
-
+const submitButton =
+document.querySelector(
+  '.crm-btn.primary'
+);
 
 /* =========================================
    MAKE ACTIVATION WEBHOOK
@@ -45,6 +48,14 @@ const activationWebhookURL =
 async function handleOperationalActivation(event) {
 
   event.preventDefault();
+   /* =========================================
+   LOADING STATE
+========================================= */
+
+submitButton.disabled = true;
+
+submitButton.innerHTML =
+'⏳ Activating Operational Infrastructure...';
 
   const payload =
   generateOperationalPayload(
@@ -93,6 +104,13 @@ async function handleOperationalActivation(event) {
       'ACTIVATION SUCCESS:',
       result
     );
+     
+     /* =========================================
+   SUCCESS STATE
+========================================= */
+
+submitButton.innerHTML =
+'✅ Operational Contract Activated';
 
   }
 
@@ -102,7 +120,15 @@ async function handleOperationalActivation(event) {
       'ACTIVATION ERROR:',
       error
     );
+/* =========================================
+   ERROR STATE
+========================================= */
 
+submitButton.disabled = false;
+
+submitButton.innerHTML =
+'❌ Activation Failed — Try Again';
+     
   }
 
 }
