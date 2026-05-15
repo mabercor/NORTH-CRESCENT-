@@ -410,11 +410,21 @@ nav {
    CONTACT FORM ALIGNMENT FIX
 ========================================= */
 
-.contact-form,
-.contact-form * {
+/* =========================================
+   CONTACT FORM ALIGNMENT FIX
+========================================= */
+
+.contact-form {
   text-align: left;
 }
 
+.contact-form input,
+.contact-form textarea,
+.contact-form label,
+.contact-form small,
+.contact-form p {
+  text-align: left;
+}
 /* ===== 🔥 INTERACTIVITY UPGRADE (SAFE PATCH) ===== */
 
 /* Cards más dinámicas */
