@@ -370,34 +370,33 @@ operationalState.operations.operationalSummary =
 
 operationalState.operations.assignedTeam =
   assignedTeamInput?.value || ''; 
-
-  updatePricingState({
-     operationalState.pricing.discount =
+   
+operationalState.pricing.discount =
   selectedDiscount;
 
-    serviceType:
-      serviceTypeInput?.value || '',
+updatePricingState({
 
-    squareFootage:
-      parseFloat(
-        squareFootageInput?.value
-      ) || 0,
+  serviceType:
+    serviceTypeInput?.value || '',
 
-    visitsPerMonth:
-      parseInt(
-        visitsInput?.value
-      ) || 0,
+  squareFootage:
+    parseFloat(
+      squareFootageInput?.value
+    ) || 0,
 
-    estimatedDuration:
+  visitsPerMonth:
+    parseInt(
+      visitsInput?.value
+    ) || 0,
 
-  parseFloat(
+  estimatedDuration:
+    parseFloat(
+      durationInput?.value
+    ) || 0,
 
-    durationInput?.value
+  complexityLevel:
+    complexityInput?.value || 'Low',
 
-  ) || 0,
-
-    complexityLevel:
-      complexityInput?.value || 'Low',
 
     discount:
       selectedDiscount
