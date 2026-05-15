@@ -93,6 +93,10 @@ const serviceAddressInput =
 document.getElementById(
   'serviceAddress'
 );
+const leadRecordIdInput =
+document.getElementById(
+  'leadRecordId'
+);
 
 /* =========================================
    CONTRACT INPUTS
@@ -329,6 +333,9 @@ operationalState.client.emailAddress =
 
 operationalState.client.serviceAddress =
   serviceAddressInput?.value || '';
+   
+   operationalState.client.leadRecordId =
+  leadRecordIdInput?.value || '';
 
 /* =========================================
    UPDATE CONTRACT STATE
@@ -488,6 +495,11 @@ emailAddressInput?.addEventListener(
 );
 
 serviceAddressInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+
+leadRecordIdInput?.addEventListener(
   'input',
   updateOperationalFlow
 );
