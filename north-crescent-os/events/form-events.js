@@ -245,6 +245,23 @@ operationalState.service.days =
 
 operationalState.service.timeSlot =
   timeSlotInput?.value || '';
+   operationalState.service.squareFootage =
+  parseFloat(
+    squareFootageInput?.value
+  ) || 0;
+
+operationalState.service.visitsPerMonth =
+  parseInt(
+    visitsInput?.value
+  ) || 0;
+
+operationalState.service.estimatedDuration =
+  parseFloat(
+    durationInput?.value
+  ) || 0;
+
+operationalState.service.complexityLevel =
+  complexityInput?.value || 'Low';
   /* =========================================
    UPDATE CLIENT MEMORY
 ========================================= */
@@ -303,6 +320,8 @@ operationalState.operations.assignedTeam =
   assignedTeamInput?.value || ''; 
 
   updatePricingState({
+     operationalState.pricing.discount =
+  selectedDiscount;
 
     serviceType:
       serviceTypeInput?.value || '',
