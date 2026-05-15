@@ -64,24 +64,66 @@ export function generateOperationalPayload(state) {
     },
 
 
-    pricing: {
+   pricing: {
 
-      monthlyRevenue:
-      state.pricing?.monthlyRevenue || 0,
+  discount:
+  state.pricing?.discount || 0
 
-      estimatedProfit:
-      state.pricing?.estimatedProfit || 0,
+},
 
-      profitability:
-      state.pricing?.profitability || 0,
+analytics: {
 
-      operationalCost:
-      state.pricing?.operationalCost || 0,
+  monthlyRevenue:
+  state.analytics?.monthlyRevenue || 0,
 
-      annualValue:
-      state.pricing?.annualValue || 0
+  estimatedProfit:
+  state.analytics?.estimatedProfit || 0,
 
-    }
+  profitability:
+  state.analytics?.margin || 0,
+
+  operationalCost:
+  state.analytics?.operationalCost || 0,
+
+  annualValue:
+  state.analytics?.annualValue || 0
+
+},
+
+contract: {
+
+  contractStatus:
+  state.contract?.contractStatus || '',
+
+  autoRenewal:
+  state.contract?.autoRenewal || '',
+
+  monthlyContractValue:
+  state.contract?.monthlyContractValue || '',
+
+  contractStartDate:
+  state.contract?.contractStartDate || ''
+
+},
+
+operations: {
+
+  supervisorAssigned:
+  state.operations?.supervisorAssigned || '',
+
+  accessInstructions:
+  state.operations?.accessInstructions || '',
+
+  sensitiveAreas:
+  state.operations?.sensitiveAreas || '',
+
+  operationalSummary:
+  state.operations?.operationalSummary || '',
+
+  assignedTeam:
+  state.operations?.assignedTeam || ''
+
+}
 
   };
 
