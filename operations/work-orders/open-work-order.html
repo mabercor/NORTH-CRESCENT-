@@ -1048,8 +1048,7 @@
 
 </div>
 
-    
-      <!-- ========================================= -->
+         <!-- ========================================= -->
       <!-- CONTRACT ENGINE -->
       <!-- ========================================= -->
 
@@ -1068,8 +1067,13 @@
             </label>
 
            <select
-  id="contractStructure"
-  name="contractStructure">
+              id="contractStructure"
+              name="contractStructure"
+              required>
+
+              <option value="">
+                Select Contract Structure
+              </option>
 
               <option>One-Time</option>
               <option>Recurring</option>
@@ -1086,7 +1090,14 @@
               Contract Status
             </label>
 
-            <select>
+            <select
+              id="contractStatus"
+              name="contractStatus"
+              required>
+
+              <option value="">
+                Select Contract Status
+              </option>
 
               <option>Pending</option>
               <option>Active</option>
@@ -1098,22 +1109,45 @@
           </div>
 
           <div class="form-group">
-            <label>Contract Start Date</label>
-            <input type="date">
+
+            <label>
+              Contract Start Date
+            </label>
+
+            <input
+              type="date"
+              id="contractStartDate"
+              name="contractStartDate"
+              required>
+
           </div>
 
           <div class="form-group">
-           <label>Contract End Date</label>
 
-<input
-  type="date"
-  id="contractEndDate"
-  name="contractEndDate">
+           <label>
+             Contract End Date
+           </label>
+
+           <input
+              type="date"
+              id="contractEndDate"
+              name="contractEndDate">
+
           </div>
 
           <div class="form-group">
-            <label>Monthly Contract Value</label>
-            <input type="text" placeholder="$ Monthly revenue">
+
+            <label>
+              Monthly Contract Value
+            </label>
+
+            <input
+              type="text"
+              id="monthlyContractValue"
+              name="monthlyContractValue"
+              placeholder="$ Monthly revenue"
+              required>
+
           </div>
 
           <div class="form-group">
@@ -1122,7 +1156,14 @@
               Auto Renewal Enabled
             </label>
 
-            <select>
+            <select
+              id="autoRenewal"
+              name="autoRenewal"
+              required>
+
+              <option value="">
+                Select Option
+              </option>
 
               <option>Yes</option>
               <option>No</option>
@@ -1135,7 +1176,7 @@
 
       </div>
 
-           <!-- ========================================= -->
+      <!-- ========================================= -->
       <!-- INTERNAL NOTES -->
       <!-- ========================================= -->
 
@@ -1148,6 +1189,8 @@
         <div class="form-group">
 
           <textarea
+            id="internalOperationalNotes"
+            name="internalOperationalNotes"
             rows="8"
             placeholder="Operational observations, client expectations, escalation instructions, recurring issues, historical notes, staffing concerns, profitability observations, or internal intelligence..."></textarea>
 
@@ -1173,44 +1216,99 @@
               Assigned Team
             </label>
 
-            <select>
-<option>Morning</option>
-<option>Afternoon</option>
-<option>Night</option>
+            <select
+              id="assignedTeam"
+              name="assignedTeam"
+              required>
+
+              <option value="">
+                Select Team
+              </option>
+
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Night</option>
 
             </select>
 
           </div>
 
           <div class="form-group">
-            <label>Supervisor Assigned</label>
-            <input type="text" placeholder="Supervisor name">
+
+            <label>
+              Supervisor Assigned
+            </label>
+
+            <input
+              type="text"
+              id="supervisorAssigned"
+              name="supervisorAssigned"
+              placeholder="Supervisor name"
+              required>
+
           </div>
 
           <div class="form-group">
-            <label>Access Instructions</label>
-            <input type="text" placeholder="Building access details">
+
+            <label>
+              Access Instructions
+            </label>
+
+            <input
+              type="text"
+              id="accessInstructions"
+              name="accessInstructions"
+              placeholder="Building access details"
+              required>
+
           </div>
 
           <div class="form-group">
-            <label>Alarm Instructions</label>
-            <input type="text" placeholder="Alarm or security instructions">
+
+            <label>
+              Alarm Instructions
+            </label>
+
+            <input
+              type="text"
+              id="alarmInstructions"
+              name="alarmInstructions"
+              placeholder="Alarm or security instructions">
+
           </div>
 
           <div class="form-group">
-            <label>Parking Notes</label>
-            <input type="text" placeholder="Parking information">
+
+            <label>
+              Parking Notes
+            </label>
+
+            <input
+              type="text"
+              id="parkingNotes"
+              name="parkingNotes"
+              placeholder="Parking information">
+
           </div>
 
           <div class="form-group">
-            <label>Sensitive Areas</label>
-            <input type="text" placeholder="Areas requiring extra attention">
+
+            <label>
+              Sensitive Areas
+            </label>
+
+            <input
+              type="text"
+              id="sensitiveAreas"
+              name="sensitiveAreas"
+              placeholder="Areas requiring extra attention"
+              required>
+
           </div>
 
         </div>
 
       </div>
-    
      
        <!-- ========================================= -->
 <!-- OPERATIONAL STATUS PIPELINE -->
