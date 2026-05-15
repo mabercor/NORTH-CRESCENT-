@@ -144,8 +144,3 @@ function initializeOpenWorkOrder() {
 }
 
 
-/* =========================================
-   START SYSTEM
-========================================= */
-
-initializeOpenWorkOrder();
