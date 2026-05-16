@@ -46,14 +46,14 @@ fetch(
 .then(data => {
 
   console.log(
-  JSON.stringify(data, null, 2)
-);
+    JSON.stringify(data, null, 2)
+  );
 
-const clientName =
-data.clientName || "Client";
+  const clientName =
+  data.clientName || "Client";
 
   document.getElementById(
-    "clientName"
+    "clientNameWelcome"
   ).innerText =
   "Welcome " + clientName;
 
