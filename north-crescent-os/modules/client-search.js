@@ -241,7 +241,29 @@ if (client.schedulingNotes) {
   client.schedulingNotes;
 
 }
+/* =========================================
+   LIFECYCLE ID MEMORY
+========================================= */
 
+const leadRecordInput =
+document.getElementById(
+  'leadRecordId'
+);
+
+if (
+  leadRecordInput &&
+  client.leadRecordId
+) {
+
+  leadRecordInput.value =
+  client.leadRecordId;
+
+  console.log(
+    'LEAD RECORD ID RESTORED:',
+    client.leadRecordId
+  );
+
+}
 console.log(
   'FORM HYDRATION COMPLETE'
 );
