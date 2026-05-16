@@ -61,7 +61,26 @@ submitButton.innerHTML =
   generateOperationalPayload(
     operationalState
   );
+/* =========================================
+   ORCHESTRATION CONTEXT
+========================================= */
 
+payload.orchestration = {
+
+  source: 'open-operation',
+
+  conversionFlow: true,
+
+  hasLeadRecord:
+
+    !!payload.client
+      ?.leadRecordId,
+
+  timestamp:
+
+    new Date().toISOString()
+
+};
   console.log(
     'OPERATIONAL PAYLOAD:',
     payload
