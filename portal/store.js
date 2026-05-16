@@ -418,3 +418,136 @@ I would like to continue with the recommendation review process.`;
   }
 
 });
+
+/* =========================================
+   ADVISOR BUTTON
+========================================= */
+
+if (advisorButton) {
+
+  advisorButton.addEventListener(
+    "click",
+    (e) => {
+
+      e.preventDefault();
+
+      const leadRecordId =
+      params.get("leadRecordId");
+
+      const selectedMethod =
+      document.querySelector(
+        'input[name="contactMethod"]:checked'
+      )?.value || "sms";
+
+      const callback =
+      document.getElementById(
+        "callbackTime"
+      ).value;
+
+      const selectedPlanText =
+      document.getElementById(
+        "selectedPlan"
+      )?.innerText;
+
+      fetch(
+        "https://hook.us2.make.com/w3j4di3f3cfnwi1dfpcbhmw07thsvfrc",
+        {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify({
+
+            leadRecordId,
+            selectedMethod,
+            callback,
+            selectedPlan: selectedPlanText
+
+          })
+
+        }
+
+      );
+
+      // STEP 3
+      stepAdvisor.classList.add(
+        "ncs-store-step-active"
+      );
+
+      const clientName =
+      document.getElementById(
+        "clientNameWelcome"
+      ).innerText.replace(
+        "Welcome ",
+        ""
+      );
+
+      const method =
+      document.querySelector(
+        'input[name="contactMethod"]:checked'
+      )?.value || "sms";
+
+      const callbackTime =
+      document.getElementById(
+        "callbackTime"
+      ).value;
+
+      const message =
+`North Crescent Facility Solutions
+
+Your structured recommendation has been prepared.
+
+Client:
+${clientName}
+
+Selected Plan:
+${currentPlan}
+
+Service Frequency:
+${currentFrequency}
+
+Estimated Investment:
+${currentPrice}
+
+Preferred Callback Window:
+${callbackTime}
+
+Assigned Advisor:
+${advisor || "North Crescent B2B Team"}
+
+I would like to continue with the recommendation review process.`;
+
+      // SMS
+      if (method === "sms") {
+
+        window.location.href =
+`sms:+14288880542?body=${encodeURIComponent(message)}`;
+
+      }
+
+      // WHATSAPP
+      if (method === "whatsapp") {
+
+        const url =
+`https://wa.me/14288880542?text=${encodeURIComponent(message)}`;
+
+        window.open(url, "_blank");
+
+      }
+
+      // PHONE CALL
+      if (method === "call") {
+
+        window.location.href =
+        "tel:+14288880542";
+
+      }
+
+    }
+
+  );
+
+}
