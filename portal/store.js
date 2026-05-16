@@ -32,17 +32,31 @@ params.get("leadRecordId");
 
 fetch(
   "https://hook.us2.make.com/9icq4nevaaot2s9eamw36at8zaud6anl?leadRecordId=" +
- leadRecordId
+  leadRecordId
 )
 
 .then(response => response.json())
 
 .then(data => {
-  
-document.getElementById(
-  "clientNameWelcome"
-).innerText =
-"Welcome " + clientName;
+
+  console.log("MAKE RESPONSE:", data);
+
+  const clientName =
+  data.clientName || "Client";
+
+  document.getElementById(
+    "clientNameWelcome"
+  ).innerText =
+  "Welcome " + clientName;
+
+})
+
+.catch(error => {
+
+  console.error(
+    "Portal Error:",
+    error
+  );
 
 });
 
