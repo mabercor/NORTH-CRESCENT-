@@ -102,6 +102,10 @@ const leadRecordIdInput =
 document.getElementById(
   'leadRecordId'
 );
+const operationalStatusInput =
+document.getElementById(
+  'operationalStatus'
+);
 
 /* =========================================
    CONTRACT INPUTS
@@ -390,6 +394,9 @@ operationalState.operations.sensitiveAreas =
 
 operationalState.operations.operationalSummary =
   operationalSummaryInput?.value || '';
+   
+   operationalState.operations.operationalStatus =
+  operationalStatusInput?.value || '';
 
 operationalState.operations.assignedTeam =
   assignedTeamInput?.value || ''; 
@@ -522,6 +529,10 @@ serviceAddressInput?.addEventListener(
 );
 
 leadRecordIdInput?.addEventListener(
+  'input',
+  updateOperationalFlow
+);
+operationalStatusInput?.addEventListener(
   'input',
   updateOperationalFlow
 );
