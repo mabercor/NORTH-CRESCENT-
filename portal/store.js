@@ -40,7 +40,7 @@ fetch(
 .then(data => {
   
 document.getElementById(
-  "clientWelcome"
+  "clientNameWelcome"
 ).innerText =
 "Welcome " + clientName;
 
@@ -50,7 +50,7 @@ const advisor =
 params.get("advisor");
 
 const welcome =
-document.getElementById("clientWelcome");
+document.getElementById("clientNameWelcome");
 
 const advisorAssigned =
 document.getElementById("advisorAssigned");
@@ -324,7 +324,7 @@ fetch("https://hook.us2.make.com/w3j4di3f3cfnwi1dfpcbhmw07thsvfrc", {
 
 const clientName =
 document.getElementById(
-  "clientWelcome"
+  "clientNameWelcome"
 ).innerText.replace(
   "Welcome ",
   ""
