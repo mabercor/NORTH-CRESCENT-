@@ -134,6 +134,17 @@ export async function searchOperationalClient() {
       'LIVE CLIENT DATA:',
       clientData
     );
+    const client = clientData.records?.[0];
+
+console.log("CLIENT RECORD:", client);
+
+if (!client) {
+
+  console.error("CLIENT NOT FOUND");
+
+  return;
+
+}
 
 
     /* =========================================
