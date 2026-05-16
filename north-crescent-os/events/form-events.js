@@ -461,7 +461,7 @@ updatePricingState({
   renderMetrics(
     operationalState.analytics
   );
-
+updateOperationalPipeline();
 }
 
 
@@ -599,6 +599,46 @@ assignedTeamInput?.addEventListener(
 ========================================= */
 
 updateOperationalFlow();
+/* =========================================
+   PIPELINE UI SYNCHRONIZATION
+========================================= */
+
+function updateOperationalPipeline() {
+
+  const pipelineSteps =
+
+    document.querySelectorAll(
+      '.pipeline-step'
+    );
+
+  const currentStatus =
+
+    operationalState.operations
+      ?.operationalStatus || 'Lead';
+
+  pipelineSteps.forEach((step) => {
+
+    step.classList.remove(
+      'active'
+    );
+
+    const stepLabel =
+
+      step.textContent.trim();
+
+    if (
+      stepLabel === currentStatus
+    ) {
+
+      step.classList.add(
+        'active'
+      );
+
+    }
+
+  });
+
+}
 /* =========================================
    RECURRING SCHEDULE BUILDER
 ========================================= */
