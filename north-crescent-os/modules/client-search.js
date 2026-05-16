@@ -257,6 +257,20 @@ if (
 
   leadRecordInput.value =
   client.leadRecordId;
+   if (!window.operationalState) {
+
+  window.operationalState = {};
+
+}
+
+if (!window.operationalState.client) {
+
+  window.operationalState.client = {};
+
+}
+
+window.operationalState.client.leadRecordId =
+  client.leadRecordId;
 
   console.log(
     'LEAD RECORD ID RESTORED:',
