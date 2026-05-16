@@ -305,10 +305,7 @@ advisorButton.addEventListener(
 (e) => {
 
   e.preventDefault();
-});
-
-}
-  
+ 
    const leadRecordId =
 params.get("leadRecordId");
 
