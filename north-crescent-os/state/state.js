@@ -53,11 +53,11 @@ service: {
 
     squareFootage: 0,
 
-    visits: 1,
+   visitsPerMonth: 1,
 
     estimatedDuration: 1,
 
-    complexity: 'Low',
+    complexityLevel: 'Low',
 
     discount: 0
 
@@ -91,9 +91,7 @@ service: {
 
  scheduling: {
 
-  recurringVisits: []
-
-},
+ },
 /* =========================================
    CONTRACT DATA
 ========================================= */
