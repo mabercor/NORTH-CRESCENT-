@@ -53,7 +53,7 @@ const clientName =
 data.clientName || "Client";
 
   document.getElementById(
-    "clientNameWelcome"
+    "clientName"
   ).innerText =
   "Welcome " + clientName;
 
