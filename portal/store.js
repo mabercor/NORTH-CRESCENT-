@@ -42,7 +42,7 @@ fetch(
 document.getElementById(
   "clientWelcome"
 ).innerText =
-"Welcome " + data.name;
+"Welcome " + clientName;
 
 });
 
@@ -361,7 +361,7 @@ Preferred Callback Window:
 ${callbackTime}
 
 Assigned Advisor:
-${advisor || "North Crescent Team"}
+${advisor || "North Crescent B2B Team"}
 
 I would like to continue with the recommendation review process.`;
 
