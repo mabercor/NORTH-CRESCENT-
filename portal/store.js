@@ -27,12 +27,12 @@ document.getElementById("advisorButton");
 const params =
 new URLSearchParams(window.location.search);
 
-const recordId =
-params.get("recordId");
+const leadRecordId =
+params.get("leadRecordId");
 
 fetch(
-  "https://hook.us2.make.com/9icq4nevaaot2s9eamw36at8zaud6anl?recordId=" +
-  recordId
+  "https://hook.us2.make.com/9icq4nevaaot2s9eamw36at8zaud6anl?leadRecordId=" +
+ leadRecordId
 )
 
 .then(response => response.json())
@@ -283,8 +283,8 @@ advisorButton.addEventListener(
 (e) => {
 
   e.preventDefault();
-   const recordId =
-params.get("recordId");
+   const leadRecordId =
+params.get("leadRecordId");
 
 const selectedMethod =
 document.querySelector(
@@ -308,7 +308,7 @@ fetch("https://hook.us2.make.com/w3j4di3f3cfnwi1dfpcbhmw07thsvfrc", {
 
   body: JSON.stringify({
 
-    recordId,
+    leadRecordId,
     selectedMethod,
     callback,
     selectedPlan: selectedPlanText
