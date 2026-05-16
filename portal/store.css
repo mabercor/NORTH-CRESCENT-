@@ -80,11 +80,11 @@ body {
 
   color: #4A9B8C;
 
-  padding: 10px 18px;
+  padding: 14px 20px;
 
   border-radius: 999px;
 
-  font-size: 12px;
+  font-size: 16px;
 
   font-weight: 700;
 
@@ -96,13 +96,13 @@ body {
 
 .ncs-store-client {
 
-  font-size: 28px;
+  font-size: 30px;
 
   font-weight: 800;
 
   color: #1E3A5F;
 
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 
 }
 
