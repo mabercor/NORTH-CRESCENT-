@@ -395,6 +395,10 @@ operationalState.operations.sensitiveAreas =
 operationalState.operations.operationalSummary =
   operationalSummaryInput?.value || '';
    
+console.log(
+  operationalState.operations.operationalSummary
+);
+   
    operationalState.operations.operationalStatus =
   operationalStatusInput?.value || '';
 
