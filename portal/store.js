@@ -49,8 +49,8 @@ fetch(
   JSON.stringify(data, null, 2)
 );
 
-  const clientName =
-data.fields?.clientName || "Client";
+const clientName =
+data.clientName || "Client";
 
   document.getElementById(
     "clientNameWelcome"
