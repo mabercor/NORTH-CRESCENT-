@@ -106,6 +106,10 @@ document.getElementById(
 /* =========================================
    CONTRACT INPUTS
 ========================================= */
+const crmClientStatusInput =
+document.getElementById(
+  'crmClientStatus'
+);
 
 const contractStatusInput =
 document.getElementById(
@@ -352,7 +356,10 @@ operationalState.client.serviceAddress =
 
 operationalState.contract =
   operationalState.contract || {};
-
+   
+operationalState.client.crmClientStatus =
+  crmClientStatusInput?.value || '';
+   
 operationalState.contract.contractStatus =
   contractStatusInput?.value || '';
 
@@ -522,6 +529,10 @@ leadRecordIdInput?.addEventListener(
 /* =========================================
    CONTRACT EVENT LISTENERS
 ========================================= */
+crmClientStatusInput?.addEventListener(
+  'change',
+  updateOperationalFlow
+);
 
 contractStatusInput?.addEventListener(
   'change',
