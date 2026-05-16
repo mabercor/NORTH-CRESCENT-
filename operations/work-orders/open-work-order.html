@@ -141,6 +141,25 @@
    <form
   class="workorder-form"
   id="workOrderForm">
+     <!-- ========================================= -->
+<!-- OPERATIONAL MEMORY FIELDS -->
+<!-- ========================================= -->
+
+<input
+  type="hidden"
+  id="leadRecordId"
+  name="leadRecordId">
+
+<input
+  type="hidden"
+  id="clientId"
+  name="clientId">
+
+<input
+  type="hidden"
+  id="operationalStatus"
+  name="operationalStatus"
+  value="Lead">
 
       <!-- ========================================= -->
       <!-- CLIENT SEARCH -->
@@ -173,15 +192,47 @@
               CRM Client Status
             </label>
 
-            <select>
+           <select
+  id="crmClientStatus"
+  name="crmClientStatus">
 
-              <option>Lead</option>
-              <option>Quoted</option>
-              <option>Approved</option>
-              <option>Recurring Active</option>
-              <option>VIP Client</option>
+  <option value="">
+    Select CRM Status
+  </option>
 
-            </select>
+  <option>
+    Lead
+  </option>
+
+  <option>
+    Qualified
+  </option>
+
+  <option>
+    Proposal Sent
+  </option>
+
+  <option>
+    Negotiation
+  </option>
+
+  <option>
+    Approved
+  </option>
+
+  <option>
+    Converted
+  </option>
+
+  <option>
+    Recurring Active
+  </option>
+
+  <option>
+    VIP Client
+  </option>
+
+</select>
 
           </div>
           </div>
