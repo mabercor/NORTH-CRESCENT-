@@ -118,6 +118,32 @@ payload.orchestration = {
 
     const result =
     await response.json();
+     
+     /* =========================================
+   RESPONSE PERSISTENCE
+========================================= */
+
+if (result.clientId) {
+
+  operationalState.client.clientId =
+
+    result.clientId;
+
+}
+
+if (result.operationalStatus) {
+
+  operationalState.operations
+    .operationalStatus =
+
+      result.operationalStatus;
+
+}
+
+console.log(
+  'UPDATED OPERATIONAL STATE:',
+  operationalState
+);
 
     console.log(
       'ACTIVATION SUCCESS:',
