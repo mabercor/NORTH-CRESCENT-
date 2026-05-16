@@ -42,7 +42,7 @@ fetch(
   console.log("MAKE RESPONSE:", data);
 
   const clientName =
-  data.clientName || "Client";
+data.fields?.clientName || "Client";
 
   document.getElementById(
     "clientNameWelcome"
