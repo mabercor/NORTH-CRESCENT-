@@ -29,7 +29,13 @@ new URLSearchParams(window.location.search);
 
 const leadRecordId =
 params.get("leadRecordId");
+if (!leadRecordId) {
 
+  console.error(
+    "Missing leadRecordId"
+  );
+
+}
 fetch(
   "https://hook.us2.make.com/9icq4nevaaot2s9eamw36at8zaud6anl?leadRecordId=" +
   leadRecordId
@@ -292,11 +298,17 @@ if (urlPlan) {
    ADVISOR BUTTON
 ========================================= */
 
+if (advisorButton) {
+
 advisorButton.addEventListener(
 "click",
 (e) => {
 
   e.preventDefault();
+});
+
+}
+  
    const leadRecordId =
 params.get("leadRecordId");
 
