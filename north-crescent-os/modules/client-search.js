@@ -147,98 +147,104 @@ if (!client) {
 }
 
 
-    /* =========================================
-       CLIENT MEMORY AUTOFILL
-    ========================================= */
+/* =========================================
+   CLIENT MEMORY AUTOFILL
+========================================= */
 
-    if (clientData.clientName) {
+if (client.clientName) {
 
-      clientNameInput.value =
-      clientData.clientName;
+  clientNameInput.value =
+  client.clientName;
 
-    }
+}
 
-    if (clientData.companyName) {
+if (client.companyName) {
 
-      companyInput.value =
-      clientData.companyName;
+  companyInput.value =
+  client.companyName;
 
-    }
+}
 
-    if (clientData.mainContact) {
+if (client.mainContact) {
 
-      mainContactInput.value =
-      clientData.mainContact;
+  mainContactInput.value =
+  client.mainContact;
 
-    }
+}
 
-    if (clientData.phoneNumber) {
+if (client.phoneNumber) {
 
-      phoneInput.value =
-      clientData.phoneNumber;
+  phoneInput.value =
+  client.phoneNumber;
 
-    }
+}
 
-    if (clientData.emailAddress) {
+if (client.emailAddress) {
 
-      emailInput.value =
-      clientData.emailAddress;
+  emailInput.value =
+  client.emailAddress;
 
-    }
+}
 
-    if (clientData.serviceType) {
+if (client.serviceType) {
 
   clientServiceTypeInput.value =
-  clientData.serviceType;
+  client.serviceType;
 
 }
 
-    if (clientData.squareFootage) {
+if (client.squareFootage) {
 
-      squareFootageInput.value =
-      clientData.squareFootage;
+  squareFootageInput.value =
+  client.squareFootage;
 
-    }
-     
-     if (clientData.visitsPerMonth) {
+}
+
+if (client.visitsPerMonth) {
 
   visitsPerMonthInput.value =
-  clientData.visitsPerMonth;
+  client.visitsPerMonth;
 
 }
 
-    if (clientData.frequency) {
+if (client.frequency) {
 
-      frequencyInput.value =
-      clientData.frequency;
+  frequencyInput.value =
+  client.frequency;
 
-    }
+}
 
-    if (clientData.days) {
+if (client.days) {
 
-      daysInput.value =
-      clientData.days;
+  daysInput.value =
+  client.days;
 
-    }
+}
 
-    if (clientData.timeSlot) {
+if (client.timeSlot) {
 
-      timeSlotInput.value =
-      clientData.timeSlot;
+  timeSlotInput.value =
+  client.timeSlot;
 
-    }
-     if (clientData.operationalSummary) {
+}
+
+if (client.operationalSummary) {
 
   operationalSummaryInput.value =
-  clientData.operationalSummary;
+  client.operationalSummary;
 
 }
-     if (clientData.schedulingNotes) {
+
+if (client.schedulingNotes) {
 
   schedulingNotesInput.value =
-  clientData.schedulingNotes;
+  client.schedulingNotes;
 
 }
+
+console.log(
+  'FORM HYDRATION COMPLETE'
+);
 
   }
 
