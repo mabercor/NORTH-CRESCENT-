@@ -156,7 +156,7 @@ document.getElementById(
 
 const operationalSummaryInput =
 document.getElementById(
-  'clientOperationalSummary'
+  'operationalSummary'
 );
 
 const assignedTeamInput =
