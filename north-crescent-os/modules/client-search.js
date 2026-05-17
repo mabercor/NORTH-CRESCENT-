@@ -140,6 +140,15 @@ export async function searchOperationalClient() {
       'LIVE CLIENT DATA:',
       clientData
     );
+     console.log(
+  JSON.stringify(
+    clientData,
+    null,
+    2
+  )
+);
+
+     
     const client = clientData.records?.[0];
 
 console.log("CLIENT RECORD:", client);
