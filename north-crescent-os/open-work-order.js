@@ -132,49 +132,6 @@ if (workOrderForm) {
 
 }
 
-      const submitter =
-      event.submitter;
-
-      /* =========================================
-         ACTIVE CONTRACT
-      ========================================= */
-
-      if (
-        submitter?.id ===
-        'activateOperationalContractBtn'
-      ) {
-
-        operationalStatusInput.value =
-        'Active';
-
-        console.log(
-          'OPERATIONAL STATUS: Active'
-        );
-
-      }
-
-      /* =========================================
-         PENDING ACTIVATION
-      ========================================= */
-
-      if (
-        submitter?.id ===
-        'savePendingActivationBtn'
-      ) {
-
-        operationalStatusInput.value =
-        'Pending';
-
-        console.log(
-          'OPERATIONAL STATUS: Pending'
-        );
-
-      }
-
-    }
-  );
-
-}
 /* =========================================
    REMOVE ERROR STATE ON INPUT
 ========================================= */
