@@ -48,7 +48,7 @@ document.getElementById(
 );
 /* =========================================
    FORM SUBMIT STATUS CONTROL
-========================================= */
+======================================
 
 const workOrderForm =
 document.getElementById(
@@ -60,7 +60,7 @@ if (workOrderForm) {
   workOrderForm
   .addEventListener(
     'submit',
-    (event) => {
+    (event) => {            === */
 
       /* =========================================
          REQUIRED FIELD VALIDATION
