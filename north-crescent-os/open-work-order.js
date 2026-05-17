@@ -115,7 +115,6 @@ document.getElementById(
     }
   );
 
-}
 
 /* =========================================
    REMOVE ERROR STATE ON INPUT
