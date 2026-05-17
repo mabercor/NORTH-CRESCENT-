@@ -129,3 +129,37 @@ if (invalidField) {
   );
 
 }
+/* =========================================
+   REMOVE ERROR STATE ON INPUT
+========================================= */
+
+const requiredFields =
+document.querySelectorAll(
+  '[required]'
+);
+
+requiredFields.forEach((field) => {
+
+  field.addEventListener(
+    'input',
+    () => {
+
+      field.classList.remove(
+        'field-error'
+      );
+
+    }
+  );
+
+  field.addEventListener(
+    'change',
+    () => {
+
+      field.classList.remove(
+        'field-error'
+      );
+
+    }
+  );
+
+});
