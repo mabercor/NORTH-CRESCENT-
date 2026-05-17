@@ -29,27 +29,39 @@ console.log(
   'North Crescent OS Active'
 );
 /* =========================================
-   PENDING ACTIVATION BUTTON
+   OPERATIONAL STATUS BUTTONS
 ========================================= */
+
+const activateOperationalContractBtn =
+document.getElementById(
+  'activateOperationalContractBtn'
+);
 
 const savePendingActivationBtn =
 document.getElementById(
   'savePendingActivationBtn'
 );
 
-if (savePendingActivationBtn) {
+const operationalStatusInput =
+document.getElementById(
+  'operationalStatus'
+);
+/* =========================================
+   ACTIVE CONTRACT BUTTON
+========================================= */
 
-  savePendingActivationBtn
+if (activateOperationalContractBtn) {
+
+  activateOperationalContractBtn
   .addEventListener(
     'click',
     () => {
 
-      console.log(
-        'PENDING ACTIVATION SAVED'
-      );
+      operationalStatusInput.value =
+      'Active';
 
-      alert(
-        'Pending Activation Saved'
+      console.log(
+        'OPERATIONAL STATUS: Active'
       );
 
     }
