@@ -74,6 +74,12 @@ const schedulingNotesInput =
 document.getElementById(
   'schedulingNotes'
 );
+
+/* =========================================
+   HYDRATION CONTROL
+========================================= */
+
+let isHydrating = false;
 /* =========================================
    MAKE WEBHOOK
 ========================================= */
@@ -137,6 +143,7 @@ export async function searchOperationalClient() {
     const client = clientData.records?.[0];
 
 console.log("CLIENT RECORD:", client);
+     isHydrating = true;
 
 if (!client) {
 
@@ -290,7 +297,7 @@ window.operationalState.client.leadRecordId =
 console.log(
   'FORM HYDRATION COMPLETE'
 );
-
+isHydrating = false;
   }
 
   catch (error) {
@@ -319,7 +326,13 @@ export function initializeClientSearch() {
 
     clientSearchInput.addEventListener(
       'input',
-      searchOperationalClient
+      () => {
+
+        if (isHydrating) return;
+
+        searchOperationalClient();
+
+      }
     );
 
   }
