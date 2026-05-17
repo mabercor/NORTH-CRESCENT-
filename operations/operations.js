@@ -13,8 +13,9 @@ if (
    
 
 /* ========= LOGIN SYSTEM ========= */
+   /* TEMP DISABLED LOGIN OVERLAY */
 
-document.body.innerHTML = `
+/*document.body.innerHTML = `
 
 <div class="login-overlay">
 
@@ -62,7 +63,7 @@ document.body.innerHTML = `
 
 </div>
 
-`;
+`;*/
 
 
 /* ========= LOGIN VALIDATION ========= */
