@@ -186,7 +186,10 @@ if (client.emailAddress) {
 
 }
 
-if (client.serviceType) {
+if (
+  client.serviceType &&
+  clientServiceTypeInput
+) {
 
   clientServiceTypeInput.value =
   client.serviceType;
@@ -207,7 +210,10 @@ if (client.visitsPerMonth) {
 
 }
 
-if (client.frequency) {
+if (
+  client.frequency &&
+  frequencyInput
+) {
 
   frequencyInput.value =
   client.frequency;
@@ -235,7 +241,10 @@ if (client.operationalSummary) {
 
 }
 
-if (client.schedulingNotes) {
+if (
+  client.schedulingNotes &&
+  schedulingNotesInput
+) {
 
   schedulingNotesInput.value =
   client.schedulingNotes;
