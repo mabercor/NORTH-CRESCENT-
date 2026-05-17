@@ -68,3 +68,25 @@ if (activateOperationalContractBtn) {
   );
 
 }
+/* =========================================
+   PENDING ACTIVATION BUTTON
+========================================= */
+
+if (savePendingActivationBtn) {
+
+  savePendingActivationBtn
+  .addEventListener(
+    'click',
+    () => {
+
+      operationalStatusInput.value =
+      'Pending';
+
+      console.log(
+        'OPERATIONAL STATUS: Pending'
+      );
+
+    }
+  );
+
+}
