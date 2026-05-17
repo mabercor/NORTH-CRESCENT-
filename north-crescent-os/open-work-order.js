@@ -59,6 +59,32 @@ document.getElementById(
   .addEventListener(
     'submit',
     (event) => {
+       
+       /* =========================================
+   REQUIRED FIELD VALIDATION
+========================================= */
+
+const invalidField =
+
+workOrderForm.querySelector(
+  ':invalid'
+);
+
+if (invalidField) {
+
+  invalidField.classList.add(
+    'field-error'
+  );
+
+  invalidField.scrollIntoView({
+
+    behavior: 'smooth',
+
+    block: 'center'
+
+  });
+
+}
 
       const submitter =
       event.submitter;
