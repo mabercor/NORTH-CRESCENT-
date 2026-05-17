@@ -52,37 +52,83 @@ document.getElementById(
 
 const workOrderForm =
 document.getElementById(
-  '
-   if (workOrderForm) {
+  'workOrderForm'
+);
+
+if (workOrderForm) {
 
   workOrderForm
   .addEventListener(
     'submit',
     (event) => {
-       
-       /* =========================================
-   REQUIRED FIELD VALIDATION
-========================================= */
 
-const invalidField =
+      /* =========================================
+         REQUIRED FIELD VALIDATION
+      ========================================= */
 
-workOrderForm.querySelector(
-  ':invalid'
-);
+      const invalidField =
 
-if (invalidField) {
+      workOrderForm.querySelector(
+        ':invalid'
+      );
 
-  invalidField.classList.add(
-    'field-error'
+      if (invalidField) {
+
+        invalidField.classList.add(
+          'field-error'
+        );
+
+        invalidField.scrollIntoView({
+
+          behavior: 'smooth',
+
+          block: 'center'
+
+        });
+
+      }
+
+      const submitter =
+      event.submitter;
+
+      /* =========================================
+         ACTIVE CONTRACT
+      ========================================= */
+
+      if (
+        submitter?.id ===
+        'activateOperationalContractBtn'
+      ) {
+
+        operationalStatusInput.value =
+        'Active';
+
+        console.log(
+          'OPERATIONAL STATUS: Active'
+        );
+
+      }
+
+      /* =========================================
+         PENDING ACTIVATION
+      ========================================= */
+
+      if (
+        submitter?.id ===
+        'savePendingActivationBtn'
+      ) {
+
+        operationalStatusInput.value =
+        'Pending';
+
+        console.log(
+          'OPERATIONAL STATUS: Pending'
+        );
+
+      }
+
+    }
   );
-
-  invalidField.scrollIntoView({
-
-    behavior: 'smooth',
-
-    block: 'center'
-
-  });
 
 }
 
