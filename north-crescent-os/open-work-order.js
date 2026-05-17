@@ -28,4 +28,31 @@ initializeOpenWorkOrder();
 console.log(
   'North Crescent OS Active'
 );
+/* =========================================
+   PENDING ACTIVATION BUTTON
+========================================= */
 
+const savePendingActivationBtn =
+document.getElementById(
+  'savePendingActivationBtn'
+);
+
+if (savePendingActivationBtn) {
+
+  savePendingActivationBtn
+  .addEventListener(
+    'click',
+    () => {
+
+      console.log(
+        'PENDING ACTIVATION SAVED'
+      );
+
+      alert(
+        'Pending Activation Saved'
+      );
+
+    }
+  );
+
+}
