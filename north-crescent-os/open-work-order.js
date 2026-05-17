@@ -46,21 +46,6 @@ const operationalStatusInput =
 document.getElementById(
   'operationalStatus'
 );
-/* =========================================
-   FORM SUBMIT STATUS CONTROL
-======================================
-
-const workOrderForm =
-document.getElementById(
-  'workOrderForm'
-);
-
-if (workOrderForm) {
-
-  workOrderForm
-  .addEventListener(
-    'submit',
-    (event) => {            === */
 
       /* =========================================
          REQUIRED FIELD VALIDATION
