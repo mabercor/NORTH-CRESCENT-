@@ -73,7 +73,8 @@ const allowedPassword = "NC-OPS-2026";
 
 const loginButton =
 document.getElementById('loginButton');
-
+   
+if (!loginButton) return;
 loginButton.addEventListener('click', () => {
 
   const username =
