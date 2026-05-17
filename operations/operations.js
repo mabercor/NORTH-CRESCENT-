@@ -73,36 +73,40 @@ const allowedPassword = "NC-OPS-2026";
 
 const loginButton =
 document.getElementById('loginButton');
-   
-if (!loginButton) return;
-loginButton.addEventListener('click', () => {
 
-  const username =
-  document.getElementById('username').value;
+if (loginButton) {
 
-  const password =
-  document.getElementById('password').value;
+  loginButton.addEventListener(
+    'click',
+    () => {
 
-  if (
-    username === allowedUsername &&
-    password === allowedPassword
-  ) {
+      const username =
+      document.getElementById('username').value;
 
-  localStorage.setItem(
-  'nc_access',
-  'granted'
-);
+      const password =
+      document.getElementById('password').value;
 
-location.reload();
+      if (
+        username === allowedUsername &&
+        password === allowedPassword
+      ) {
 
-  } else {
+        localStorage.setItem(
+          'nc_access',
+          'granted'
+        );
 
-    document
-      .getElementById('loginError')
-      .style.display = 'block';
+        location.reload();
 
-  }
+      } else {
 
-});
+        document
+          .getElementById('loginError')
+          .style.display = 'block';
 
-   }
+      }
+
+    }
+  );
+
+}
