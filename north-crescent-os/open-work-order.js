@@ -46,7 +46,53 @@ const operationalStatusInput =
 document.getElementById(
   'operationalStatus'
 );
+/* =========================================
+   OPERATIONAL STATUS BUTTONS
+========================================= */
 
+if (
+  activateOperationalContractBtn &&
+  operationalStatusInput
+) {
+
+  activateOperationalContractBtn
+  .addEventListener(
+    'click',
+    () => {
+
+      operationalStatusInput.value =
+      'Active';
+
+      console.log(
+        'OPERATIONAL STATUS: Active'
+      );
+
+    }
+  );
+
+}
+
+if (
+  savePendingActivationBtn &&
+  operationalStatusInput
+) {
+
+  savePendingActivationBtn
+  .addEventListener(
+    'click',
+    () => {
+
+      operationalStatusInput.value =
+      'Pending';
+
+      console.log(
+        'OPERATIONAL STATUS: Pending'
+      );
+
+    }
+  );
+
+}
 /* =========================================
    REMOVE ERROR STATE ON INPUT
 ========================================= */
