@@ -107,6 +107,21 @@ if (
       console.log(
         'OPERATIONAL STATUS: Pending'
       );
+       if (operationalWorkflowStatus) {
+
+  operationalWorkflowStatus.innerText =
+  '🔵 Pending Operational Workflow Selected';
+
+  operationalWorkflowStatus.style.background =
+  'rgba(30, 58, 95, 0.10)';
+
+  operationalWorkflowStatus.style.border =
+  '1px solid rgba(30, 58, 95, 0.22)';
+
+  operationalWorkflowStatus.style.color =
+  '#1E3A5F';
+
+}
 
     }
   );
