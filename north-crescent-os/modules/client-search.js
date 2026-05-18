@@ -163,6 +163,12 @@ export async function searchOperationalClient() {
 
 console.log("CLIENT RECORD:", client);
      isHydrating = true;
+     
+     if (clientSearchMessage) {
+
+  clientSearchMessage.innerText = '';
+
+}
 
 if (!client) {
 
