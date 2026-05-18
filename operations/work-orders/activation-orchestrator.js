@@ -156,9 +156,61 @@ console.log(
 
 submitButton.innerHTML =
 '✅ Operational Contract Activated';
+     /* =========================================
+   FORM RESET
+========================================= */
+
+setTimeout(() => {
+
+  workOrderForm.reset();
+
+  /* RESET OPERATIONAL STATUS */
+
+  const operationalStatusInput =
+  document.getElementById(
+    'operationalStatus'
+  );
+
+  if (operationalStatusInput) {
+
+    operationalStatusInput.value =
+    'Lead';
 
   }
 
+  /* RESET WORKFLOW VISUAL */
+
+  const operationalWorkflowStatus =
+  document.getElementById(
+    'operationalWorkflowStatus'
+  );
+
+  if (operationalWorkflowStatus) {
+
+    operationalWorkflowStatus.innerText =
+    'No operational workflow selected';
+
+    operationalWorkflowStatus.style.background =
+    'rgba(30, 58, 95, 0.08)';
+
+    operationalWorkflowStatus.style.border =
+    '1px solid rgba(30, 58, 95, 0.15)';
+
+    operationalWorkflowStatus.style.color =
+    '#1E3A5F';
+
+  }
+
+  /* RESET BUTTON */
+
+  submitButton.disabled = false;
+
+  submitButton.innerHTML =
+  '🚀 Activate Operational Contract';
+
+}, 2500);
+
+ 
   catch (error) {
 
     console.error(
