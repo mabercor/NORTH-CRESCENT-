@@ -248,7 +248,8 @@ if (activationSuccessMessage) {
   '🚀 Activate Operational Contract';
 
 }, 2500);
-
+     
+}
  
   catch (error) {
 
