@@ -320,7 +320,6 @@ isHydrating = false;
 
 }
 
-
 /* =========================================
    CLIENT SEARCH INITIALIZATION
 ========================================= */
@@ -331,13 +330,11 @@ export function initializeClientSearch() {
     'SEARCH ENGINE READY'
   );
 
-  if (clientSearchInput) {
+  if (searchClientBtn) {
 
-    clientSearchInput.addEventListener(
-      'input',
+    searchClientBtn.addEventListener(
+      'click',
       () => {
-
-        if (isHydrating) return;
 
         searchOperationalClient();
 
