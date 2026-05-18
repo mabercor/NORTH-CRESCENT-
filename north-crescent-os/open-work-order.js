@@ -70,7 +70,9 @@ if (
 
       operationalStatusInput.value =
       'Active';
-
+       
+       workOrderForm.requestSubmit();
+       
       console.log(
         'OPERATIONAL STATUS: Active'
       );
