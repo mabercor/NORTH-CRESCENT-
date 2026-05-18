@@ -46,6 +46,10 @@ const operationalStatusInput =
 document.getElementById(
   'operationalStatus'
 );
+const operationalWorkflowStatus =
+document.getElementById(
+  'operationalWorkflowStatus'
+);
 /* =========================================
    OPERATIONAL STATUS BUTTONS
 ========================================= */
