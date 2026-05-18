@@ -70,6 +70,21 @@ if (
       console.log(
         'OPERATIONAL STATUS: Active'
       );
+       if (operationalWorkflowStatus) {
+
+  operationalWorkflowStatus.innerText =
+  '🟢 Active Operational Workflow Selected';
+
+  operationalWorkflowStatus.style.background =
+  'rgba(74, 155, 140, 0.12)';
+
+  operationalWorkflowStatus.style.border =
+  '1px solid rgba(74, 155, 140, 0.28)';
+
+  operationalWorkflowStatus.style.color =
+  '#4A9B8C';
+
+}
 
     }
   );
