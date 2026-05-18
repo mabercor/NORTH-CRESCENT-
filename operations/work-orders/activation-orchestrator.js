@@ -227,7 +227,20 @@ Object.keys(
 
   }
 
-  /* RESET BUTTON */
+  /* HIDE SUCCESS MESSAGE */
+
+const activationSuccessMessage =
+document.getElementById(
+  'activationSuccessMessage'
+);
+
+if (activationSuccessMessage) {
+
+  activationSuccessMessage.style.display =
+  'none';
+
+}
+   /* RESET BUTTON */
 
   submitButton.disabled = false;
 
