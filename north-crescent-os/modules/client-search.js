@@ -47,6 +47,10 @@ const emailInput =
 document.getElementById(
   'emailAddress'
 );
+const crmClientStatusInput =
+document.getElementById(
+  'crmClientStatus'
+);
 
 const clientServiceTypeInput =
 document.getElementById(
@@ -228,6 +232,15 @@ if (client.emailAddress) {
 
   emailInput.value =
   client.emailAddress;
+
+}
+     if (
+  client.crmClientStatus &&
+  crmClientStatusInput
+) {
+
+  crmClientStatusInput.value =
+  client.crmClientStatus;
 
 }
 
