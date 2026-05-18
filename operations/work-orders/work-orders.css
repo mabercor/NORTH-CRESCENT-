@@ -1582,3 +1582,28 @@ RESPONSIVE
   transform: translateY(-2px);
 
 }
+/* =========================================
+   CLIENT SEARCH MESSAGE
+========================================= */
+
+.search-message {
+
+  margin-top: 12px;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #1E3A5F;
+
+  background: rgba(74, 155, 140, 0.12);
+
+  border: 1px solid rgba(74, 155, 140, 0.25);
+
+  display: none;
+
+}
