@@ -156,6 +156,23 @@ console.log(
 
 submitButton.innerHTML =
 '✅ Operational Contract Activated';
+     
+     /* SUCCESS MESSAGE */
+
+const activationSuccessMessage =
+document.getElementById(
+  'activationSuccessMessage'
+);
+
+if (activationSuccessMessage) {
+
+  activationSuccessMessage.innerText =
+  '✅ Operational Activation Successfully Created';
+
+  activationSuccessMessage.style.display =
+  'block';
+
+}
      /* =========================================
    FORM RESET
 ========================================= */
