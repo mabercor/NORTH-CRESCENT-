@@ -13,6 +13,16 @@ document.getElementById(
   'clientSearchInput'
 );
 
+const searchClientBtn =
+document.getElementById(
+  'searchClientBtn'
+);
+
+const clientSearchMessage =
+document.getElementById(
+  'clientSearchMessage'
+);
+
 const clientNameInput =
 document.getElementById(
   'clientName'
