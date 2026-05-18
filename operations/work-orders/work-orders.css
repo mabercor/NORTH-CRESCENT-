@@ -1634,3 +1634,28 @@ RESPONSIVE
   transition: all 0.25s ease;
 
 }
+/* =========================================
+   ACTIVATION SUCCESS MESSAGE
+========================================= */
+
+.activation-success-message {
+
+  margin-bottom: 18px;
+
+  padding: 18px 22px;
+
+  border-radius: 14px;
+
+  background: rgba(74, 155, 140, 0.12);
+
+  border: 1px solid rgba(74, 155, 140, 0.28);
+
+  color: #4A9B8C;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  display: none;
+
+}
