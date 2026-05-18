@@ -163,6 +163,15 @@ submitButton.innerHTML =
 setTimeout(() => {
 
   workOrderForm.reset();
+   /* RESET OPERATIONAL STATE */
+
+Object.keys(
+  operationalState
+).forEach((section) => {
+
+  operationalState[section] = {};
+
+});
 
   /* RESET OPERATIONAL STATUS */
 
