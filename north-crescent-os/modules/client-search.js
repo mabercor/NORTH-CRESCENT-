@@ -166,7 +166,16 @@ console.log("CLIENT RECORD:", client);
 
 if (!client) {
 
-  console.error("CLIENT NOT FOUND");
+  console.error(
+    "CLIENT NOT FOUND"
+  );
+
+  if (clientSearchMessage) {
+
+    clientSearchMessage.innerText =
+    'No client found. Try a different search criteria.';
+
+  }
 
   return;
 
