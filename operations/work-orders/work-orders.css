@@ -1541,3 +1541,44 @@ RESPONSIVE
   0 0 0 4px rgba(220, 38, 38, 0.08);
 
 }
+/* =========================================
+   SEARCH CLIENT BUTTON
+========================================= */
+
+#searchClientBtn {
+
+  margin-top: 12px;
+
+  width: auto;
+
+  min-width: 220px;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  background: #1E3A5F;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+}
+
+/* HOVER */
+
+#searchClientBtn:hover {
+
+  background: #4A9B8C;
+
+  transform: translateY(-2px);
+
+}
