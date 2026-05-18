@@ -109,6 +109,7 @@ if (
 
       operationalStatusInput.value =
       'Pending';
+       workOrderForm.requestSubmit();
 
       console.log(
         'OPERATIONAL STATUS: Pending'
