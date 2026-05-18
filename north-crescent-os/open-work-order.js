@@ -50,6 +50,10 @@ const operationalWorkflowStatus =
 document.getElementById(
   'operationalWorkflowStatus'
 );
+const workOrderForm =
+document.getElementById(
+  'workOrderForm'
+);
 /* =========================================
    OPERATIONAL STATUS BUTTONS
 ========================================= */
