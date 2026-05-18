@@ -84,6 +84,10 @@ const schedulingNotesInput =
 document.getElementById(
   'schedulingNotes'
 );
+const serviceAddressInput =
+document.getElementById(
+  'serviceAddress'
+);
 
 /* =========================================
    HYDRATION CONTROL
@@ -272,6 +276,15 @@ if (client.timeSlot) {
 
   timeSlotInput.value =
   client.timeSlot;
+
+}
+     if (
+  client.serviceAddress &&
+  serviceAddressInput
+) {
+
+  serviceAddressInput.value =
+  client.serviceAddress;
 
 }
 
