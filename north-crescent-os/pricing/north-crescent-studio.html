@@ -834,54 +834,6 @@ behavior: 'smooth'
     }
 
  
-<script>
-
-const password =
-  "northcrescent2026";
-
-const userPassword =
-  prompt(
-    "North Crescent Internal Access\n\nEnter Password:"
-  );
-
-if (userPassword !== password) {
-
-  document.body.innerHTML = `
-
-    <div style="
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      font-family:Arial,sans-serif;
-      background:#f4f7f9;
-      color:#1E3A5F;
-      text-align:center;
-      padding:40px;
-    ">
-
-      <h1 style="
-        font-size:42px;
-        margin-bottom:20px;
-      ">
-        Access Denied
-      </h1>
-
-      <p style="
-        max-width:500px;
-        line-height:1.8;
-        color:#64748b;
-      ">
-        This operational system is restricted to authorized North Crescent personnel only.
-      </p>
-
-    </div>
-
-  `;
-
-}
-
 </script>
 
  </body>
