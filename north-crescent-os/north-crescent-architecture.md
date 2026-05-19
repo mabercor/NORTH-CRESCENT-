@@ -2055,4 +2055,594 @@ carefully,
 modularly,
 
 and without operational instability.
+NORTH CRESCENT OS
+OFFICIAL DOMAIN ARCHITECTURE
+MASTER ECOSYSTEM STRUCTURE
+MAY 2026
+1. PURPOSE OF THIS DOCUMENT
 
+This document defines:
+
+THE OFFICIAL DOMAIN ARCHITECTURE OF NORTH CRESCENT OS
+
+The objective is to establish:
+
+operational boundaries
+system responsibilities
+domain ownership
+workflow relationships
+scalability structure
+infrastructure hierarchy
+long-term platform organization
+
+This document exists to prevent:
+
+architectural chaos
+duplicated logic
+fragmented systems
+uncontrolled scaling
+monolithic infrastructure
+overlapping workflows
+operational instability
+2. WHAT NORTH CRESCENT OS REALLY IS
+
+North Crescent OS is NOT:
+
+a CRM
+a dashboard
+a quotation tool
+a website
+a sales app
+a scheduling app
+a management panel
+
+North Crescent OS IS:
+
+AN OPERATIONAL INFRASTRUCTURE ECOSYSTEM
+
+Designed to:
+
+operate the business through systems
+centralize operational execution
+synchronize operational infrastructure
+coordinate recurring workflows
+manage operational memory
+automate infrastructure deployment
+support scalable operational growth
+unify sales and operations
+support future AI operational intelligence
+3. OFFICIAL SYSTEM PHILOSOPHY
+STRUCTURED THINKING.
+VISIBLE RESULTS.
+ABSOLUTE DISCIPLINE.
+4. OFFICIAL ECOSYSTEM STRUCTURE
+north-crescent-os/
+
+├── sales/
+├── crm/
+├── activation/
+├── operations/
+├── scheduling/
+├── analytics/
+├── automation/
+├── ai/
+└── admin/
+
+These are NOT pages.
+
+These are:
+
+OPERATIONAL DOMAINS
+
+Each domain is:
+
+modular
+scalable
+replaceable
+independently expandable
+operationally connected
+5. DOMAIN CLASSIFICATION
+
+North Crescent OS domains are divided into:
+
+CORE DOMAINS
+
+Directly operate the business.
+
+sales/
+crm/
+activation/
+operations/
+scheduling/
+SUPPORT DOMAINS
+
+Support and optimize the ecosystem.
+
+analytics/
+automation/
+ai/
+admin/
+6. OFFICIAL DOMAIN DEFINITIONS
+sales/
+BUSINESS ACQUISITION INFRASTRUCTURE
+Purpose
+
+Responsible for:
+
+lead acquisition
+qualification
+pricing presentation
+package visualization
+proposal systems
+sales workflows
+negotiation
+client conversion
+recurring sales infrastructure
+Responsibilities
+Lead Infrastructure
+
+Handles:
+
+website leads
+Facebook leads
+Instagram leads
+referrals
+internal sales entries
+future API lead sources
+Qualification Systems
+
+Responsible for:
+
+operational feasibility
+profitability awareness
+service complexity evaluation
+recurring potential
+operational sustainability
+lead scoring
+Package Visualization
+
+Responsible for:
+
+service package rendering
+recurring package comparison
+premium presentation
+service explanation
+visual pricing structures
+Proposal Infrastructure
+
+Responsible for:
+
+proposal generation
+contract previews
+recurring structures
+pricing summaries
+service breakdowns
+Pipeline Infrastructure
+
+Responsible for:
+
+Lead
+↓
+Qualified
+↓
+Estimate Created
+↓
+Proposal Sent
+↓
+Negotiation
+↓
+Approved
+↓
+Activation Pending
+↓
+Converted
+Important Principle
+
+sales/ is NOT:
+
+a quote form
+a dashboard
+a CRM clone
+
+sales/ IS:
+
+SALES INFRASTRUCTURE SOFTWARE
+crm/
+RELATIONSHIP MEMORY SYSTEM
+Purpose
+
+Responsible for:
+
+client records
+communication memory
+operational history
+relationship tracking
+recurring history
+contract visibility
+lifecycle memory
+Responsibilities
+Client Records
+
+Stores:
+
+contact data
+business data
+address data
+service history
+Relationship Infrastructure
+
+Tracks:
+
+communications
+sales interactions
+operational notes
+recurring relationship history
+Client Lifecycle
+
+Tracks:
+
+lead
+qualified
+active
+recurring
+inactive
+Important Principle
+
+crm/ is:
+
+THE MEMORY OF THE BUSINESS
+
+NOT the operational brain.
+
+activation/
+INFRASTRUCTURE DEPLOYMENT SYSTEM
+Purpose
+
+Responsible for:
+
+operational activation
+payload deployment
+infrastructure creation
+workflow orchestration
+deployment synchronization
+Responsibilities
+Payload Infrastructure
+
+Responsible for:
+
+payload generation
+normalization
+deployment structures
+infrastructure serialization
+Deployment Infrastructure
+
+Responsible for:
+
+Make orchestration
+Airtable deployment
+workflow activation
+infrastructure creation
+Work Order Initialization
+
+Responsible for:
+
+operational deployment
+contract activation
+scheduling activation
+infrastructure creation
+Important Principle
+
+activation/ is:
+
+THE DEPLOYMENT BRIDGE BETWEEN SALES AND OPERATIONS
+operations/
+EXECUTION ENVIRONMENT
+Purpose
+
+Responsible for:
+
+operational execution
+active operations
+field systems
+operational workflows
+supervisors
+deployment execution
+Responsibilities
+Operational Workflows
+
+Handles:
+
+active work orders
+operational execution
+completion systems
+operational status
+Operational Intelligence
+
+Tracks:
+
+operational notes
+field intelligence
+sensitive areas
+operational alerts
+Supervisor Infrastructure
+
+Handles:
+
+assignments
+operational coordination
+team management
+field synchronization
+Important Principle
+
+operations/ is:
+
+THE LIVE EXECUTION ENVIRONMENT
+scheduling/
+RECURRING COORDINATION SYSTEM
+Purpose
+
+Responsible for:
+
+recurring scheduling
+staffing coordination
+route logic
+visit generation
+calendar systems
+operational timing
+Responsibilities
+Scheduling Infrastructure
+
+Handles:
+
+recurring visits
+time slots
+assignment coordination
+operational timing
+Staffing Coordination
+
+Handles:
+
+team assignment
+scheduling balance
+operational capacity
+future staffing systems
+Future Expansion
+
+Future systems:
+
+route optimization
+AI scheduling
+conflict resolution
+calendar synchronization
+Important Principle
+
+scheduling/ is:
+
+THE TEMPORAL COORDINATION LAYER
+analytics/
+BUSINESS INTELLIGENCE LAYER
+Purpose
+
+Responsible for:
+
+operational metrics
+profitability visibility
+business insights
+forecasting support
+operational performance visibility
+Important Principle
+
+analytics/ supports decisions.
+
+It does NOT operate the business.
+
+automation/
+INFRASTRUCTURE AUTOMATION LAYER
+Purpose
+
+Responsible for:
+
+Make systems
+workflow automations
+triggers
+deployment chains
+notifications
+recurring automations
+Important Principle
+
+automation/ executes infrastructure logic.
+
+It is NOT the operational brain.
+
+ai/
+OPERATIONAL INTELLIGENCE LAYER
+Future Purpose
+
+Responsible for:
+
+forecasting
+recommendations
+operational summaries
+staffing intelligence
+profitability prediction
+AI operational analysis
+scheduling recommendations
+Important Principle
+
+ai/ augments operational intelligence.
+
+It does NOT replace operational control.
+
+admin/
+PLATFORM CONTROL LAYER
+Purpose
+
+Responsible for:
+
+permissions
+roles
+configurations
+integrations
+environment settings
+platform administration
+Important Principle
+
+admin/ controls the ecosystem.
+
+It does NOT contain operational workflows.
+
+7. SHARED PLATFORM INFRASTRUCTURE
+
+All domains will eventually share:
+
+core/
+shared/
+services/
+state/
+core/
+
+Responsible for:
+
+routing
+auth
+permissions
+sessions
+integrations
+centralized infrastructure
+shared/
+
+Responsible for:
+
+layouts
+cards
+panels
+tables
+UI systems
+navigation
+operational components
+services/
+
+Responsible for:
+
+Airtable services
+Make services
+API infrastructure
+deployment services
+integration layers
+state/
+
+Responsible for:
+
+CENTRALIZED OPERATIONAL STATE
+8. OFFICIAL STATE STRUCTURE DIRECTION
+
+Future state architecture:
+
+operationalState = {
+
+  sales: {},
+  crm: {},
+  activation: {},
+  operations: {},
+  scheduling: {},
+  analytics: {},
+  automation: {},
+  ai: {},
+  admin: {}
+
+}
+IMPORTANT PRINCIPLE
+
+All domains must synchronize through:
+
+operationalState
+
+NEVER:
+
+isolated DOM logic
+duplicated calculations
+duplicated workflows
+fragmented memory
+9. OFFICIAL ECOSYSTEM FLOW
+BUSINESS FLOW
+Lead
+↓
+Sales Qualification
+↓
+Proposal
+↓
+Approval
+↓
+Activation
+↓
+Scheduling
+↓
+Operations
+↓
+Recurring Infrastructure
+↓
+Operational History
+↓
+Analytics
+↓
+Optimization
+10. MOST IMPORTANT ARCHITECTURAL PRINCIPLE
+
+North Crescent OS must evolve through:
+
+SMALL MODULAR REPLACEABLE SYSTEMS
+
+NEVER through:
+
+monolithic infrastructure
+giant files
+duplicated logic
+fragmented workflows
+uncontrolled scaling
+isolated applications
+11. OFFICIAL LONG-TERM POSITIONING
+
+North Crescent OS is evolving into:
+
+AN OPERATIONAL INFRASTRUCTURE ECOSYSTEM
+
+capable of supporting:
+
+sales infrastructure
+operational infrastructure
+recurring systems
+workflow automation
+scheduling intelligence
+operational AI
+profitability systems
+enterprise operational coordination
+
+WITHOUT rebuilding the foundation.
+
+12. FINAL OFFICIAL PRINCIPLE
+
+Every future development decision must protect:
+
+modularity
+scalability
+operational clarity
+state integrity
+workflow synchronization
+deployment consistency
+infrastructure discipline
+
+because North Crescent OS is no longer:
+
+a project
+a dashboard
+a CRM prototype
+
+North Crescent OS is becoming:
+
+OPERATIONAL INFRASTRUCTURE SOFTWARE
+
+under the philosophy:
+
+STRUCTURED THINKING.
+VISIBLE RESULTS.
+ABSOLUTE DISCIPLINE.
