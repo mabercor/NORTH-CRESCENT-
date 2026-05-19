@@ -570,8 +570,8 @@ transition: 0.4s;
   <input
     type="number"
     id="hourlyRate"
-    value="60"
-    min="55">
+    value="65"
+    min="60">
 
 </div>
 
@@ -767,8 +767,8 @@ transition: 0.4s;
       const hours = parseFloat(document.getElementById('hours').value);
     const hourlyRate =
 Math.max(
-  55,
-  parseFloat(document.getElementById('hourlyRate').value) || 60
+  60,
+  parseFloat(document.getElementById('hourlyRate').value) || 65
 );
       
       const complexity = parseFloat(document.getElementById('complexity').value);
