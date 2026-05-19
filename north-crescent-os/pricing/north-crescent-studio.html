@@ -586,9 +586,16 @@ transition: 0.4s;
         </div>
 
         <div class="ncs-field">
-          <label>Recommended Markup (%)</label>
-          <input type="number" id="markup" value="25">
-        </div>
+
+  <label>Recommended Markup (%)</label>
+
+  <input
+    type="number"
+    id="markup"
+    value="25"
+    min="10">
+
+</div>
 
       </div>
       <div class="ncs-live-panel">
@@ -772,7 +779,11 @@ Math.max(
 );
       
       const complexity = parseFloat(document.getElementById('complexity').value);
-      const markup = parseFloat(document.getElementById('markup').value);
+      const markup =
+Math.max(
+  10,
+  parseFloat(document.getElementById('markup').value) || 25
+);
 
       const totalHours = frequency * hours;
 
