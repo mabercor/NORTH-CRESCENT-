@@ -564,9 +564,16 @@ transition: 0.4s;
 </div>
 
         <div class="ncs-field">
-          <label>Operational Hourly Rate ($)</label>
-          <input type="number" id="hourlyRate" value="45">
-        </div>
+
+  <label>Operational Hourly Rate ($)</label>
+
+  <input
+    type="number"
+    id="hourlyRate"
+    value="60"
+    min="55">
+
+</div>
 
         <div class="ncs-field">
           <label>Operational Complexity</label>
@@ -758,7 +765,12 @@ transition: 0.4s;
       const sqft = parseFloat(document.getElementById('sqft').value) || 0;
       const frequency = parseFloat(document.getElementById('frequency').value);
       const hours = parseFloat(document.getElementById('hours').value);
-      const hourlyRate = parseFloat(document.getElementById('hourlyRate').value);
+    const hourlyRate =
+Math.max(
+  55,
+  parseFloat(document.getElementById('hourlyRate').value) || 60
+);
+      
       const complexity = parseFloat(document.getElementById('complexity').value);
       const markup = parseFloat(document.getElementById('markup').value);
 
