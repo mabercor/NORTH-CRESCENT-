@@ -94,15 +94,40 @@ body {
 
 }
 
-.ncs-store-client {
+.ncs-store-clientName {
 
-  font-size: 30px;
+  font-size: 64px;
 
-  font-weight: 800;
+  font-weight: 900;
+
+  line-height: 1;
 
   color: #1E3A5F;
 
+  margin-top: 10px;
+
   margin-bottom: 18px;
+
+  letter-spacing: -2px;
+
+  text-transform: capitalize;
+
+}
+.ncs-store-clientName::after {
+
+  content: "";
+
+  display: block;
+
+  width: 120px;
+
+  height: 4px;
+
+  margin: 18px auto 0;
+
+  border-radius: 999px;
+
+  background: #4A9B8C;
 
 }
 
@@ -860,6 +885,94 @@ align-items: center;
     grid-template-columns: 1fr;
 
     gap: 30px;
+
+  }
+
+}
+@media (max-width: 768px) {
+
+  .ncs-store-clientName {
+
+    font-size: 42px;
+
+  }
+
+}
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .ncs-store {
+
+    padding: 60px 16px;
+
+  }
+
+  .ncs-store-header {
+
+    padding: 35px 24px;
+
+    border-radius: 24px;
+
+  }
+
+  .ncs-store-title {
+
+    font-size: 36px;
+
+    line-height: 1.15;
+
+  }
+
+  .ncs-store-clientName {
+
+    font-size: 42px;
+
+    line-height: 1.05;
+
+  }
+
+  .ncs-store-promo-title {
+
+    font-size: 28px;
+
+  }
+
+  .ncs-store-card {
+
+    padding: 30px 24px;
+
+  }
+
+  .ncs-store-card-title {
+
+    font-size: 28px;
+
+  }
+
+  .ncs-store-price {
+
+    font-size: 34px;
+
+  }
+
+  .ncs-store-summary {
+
+    padding: 28px 22px;
+
+  }
+
+  .ncs-store-advisor {
+
+    padding: 40px 24px;
+
+  }
+
+  .ncs-store-advisor-title {
+
+    font-size: 32px;
 
   }
 
