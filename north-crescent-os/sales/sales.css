@@ -925,19 +925,24 @@ body {
 
   font-family: 'Poppins', sans-serif;
 
- background:
-  radial-gradient(circle at top left,
-  rgba(74,155,140,0.12),
-  transparent 28%),
+background:
 
-  radial-gradient(circle at bottom right,
-  rgba(30,58,95,0.28),
-  transparent 30%),
+  radial-gradient(
+    circle at top left,
+    rgba(74,155,140,0.10),
+    transparent 26%
+  ),
+
+  radial-gradient(
+    circle at bottom right,
+    rgba(30,58,95,0.06),
+    transparent 30%
+  ),
 
   linear-gradient(
     180deg,
-    #07111F 0%,
-    #091321 100%
+    #F4F7FA 0%,
+    #EEF3F8 100%
   );
 
   color: var(--text-primary);
