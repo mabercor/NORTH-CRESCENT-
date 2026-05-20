@@ -1,6 +1,3 @@
-# `north-crescent-os/sales/index.html`
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -2123,23 +2120,5 @@ section {
   }
 
 }
-```
 
-# SIGUIENTE PASO
-
-Ahora seguimos con:
-
-```txt
-sales.js
-```
-
-para:
-
-* collapsible sections
-* package selection states
-* premium interactions
-* smooth experience flow
-* recommendation synchronization
-* client memory behavior
-* future Make integration preparation
 
