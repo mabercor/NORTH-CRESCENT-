@@ -879,14 +879,14 @@
   --text-secondary: #A7B4C7;
   --text-muted: #6E7C90;
 
-  --border-soft: rgba(255,255,255,0.08);
+  --border-soft: rgba(30,58,95,0.08);
   --border-accent: rgba(74,155,140,0.25);
 
-  --glass-bg: rgba(255,255,255,0.04);
-  --glass-hover: rgba(255,255,255,0.06);
+  --glass-bg: rgba(255,255,255,0.78);
+  --glass-hover: rgba(255,255,255,0.92);
 
   --shadow-premium:
-    0 20px 80px rgba(0,0,0,0.45);
+  0 20px 60px rgba(30,58,95,0.08);
 
   --shadow-soft:
     0 8px 24px rgba(0,0,0,0.18);
