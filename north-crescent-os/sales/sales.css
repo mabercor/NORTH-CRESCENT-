@@ -1,898 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0" />
-
-  <title>
-    North Crescent | Private Client Experience
-  </title>
-
-  <!-- GOOGLE FONTS -->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- SALES CSS -->
-
-  <link
-    rel="stylesheet"
-    href="./sales.css">
-
-  <!-- FAVICON -->
-
-  <link
-    rel="icon"
-    type="image/png"
-    href="/images/north-crescent-icon.png">
-
-</head>
-
-<body>
-
-  <!-- ========================================= -->
-  <!-- PREMIUM BACKGROUND LAYERS -->
-  <!-- ========================================= -->
-
-  <div class="ambient-gradient ambient-gradient-1"></div>
-  <div class="ambient-gradient ambient-gradient-2"></div>
-  <div class="ambient-gradient ambient-gradient-3"></div>
-
-
-  <!-- ========================================= -->
-  <!-- NAVIGATION -->
-  <!-- ========================================= -->
-
-  <nav class="sales-nav">
-
-    <div class="sales-nav-left">
-
-      <div class="sales-brand-dot"></div>
-
-      <div>
-
-        <h2>
-          North Crescent
-        </h2>
-
-        <p>
-          Private Client Experience
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <div class="sales-nav-right">
-
-      <a
-        href="../index.html"
-        class="sales-nav-link">
-
-        Return To OS
-
-      </a>
-
-    </div>
-
-  </nav>
-
-
-  <!-- ========================================= -->
-  <!-- HERO EXPERIENCE -->
-  <!-- ========================================= -->
-
-  <section class="sales-hero">
-
-    <div class="sales-hero-content">
-
-      <p class="hero-label">
-        STRUCTURED OPERATIONAL ENVIRONMENTS
-      </p>
-
-      <h1>
-        Premium maintenance programs designed for consistency, presentation, and long-term operational control.
-      </h1>
-
-      <p class="hero-description">
-        North Crescent Facility Solutions provides structured recurring service environments designed to maintain operational consistency, visual presentation, and environmental stability for residential and commercial properties.
-      </p>
-
-      <div class="hero-actions">
-
-        <a
-          href="#packages"
-          class="hero-primary-btn">
-
-          Explore Service Programs
-
-        </a>
-
-        <a
-          href="#clientMemoryLayer"
-          class="hero-secondary-btn">
-
-          Returning Client Access
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-visual-panel">
-
-      <div class="hero-visual-card glass-card">
-
-        <div class="hero-visual-header">
-
-          <div class="hero-status-dot"></div>
-
-          Operational Infrastructure Active
-
-        </div>
-
-
-        <div class="hero-visual-metrics">
-
-          <div class="visual-metric-card">
-
-            <span>
-              Environment Stability
-            </span>
-
-            <strong>
-              Premium
-            </strong>
-
-          </div>
-
-
-          <div class="visual-metric-card">
-
-            <span>
-              Operational Consistency
-            </span>
-
-            <strong>
-              Structured
-            </strong>
-
-          </div>
-
-
-          <div class="visual-metric-card">
-
-            <span>
-              Client Support
-            </span>
-
-            <strong>
-              Priority
-            </strong>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- CLIENT MEMORY LAYER -->
-  <!-- ========================================= -->
-
-  <section
-    id="clientMemoryLayer"
-    class="client-memory-layer">
-
-    <div class="client-memory-card glass-card">
-
-      <div class="client-memory-header">
-
-        <div>
-
-          <p class="memory-label">
-            RETURNING CLIENT ACCESS
-          </p>
-
-          <h2>
-            Restore Your Operational Environment
-          </h2>
-
-          <p>
-            Returning clients may restore previous operational preferences, recurring maintenance structures, and existing recommendations.
-          </p>
-
-        </div>
-
-
-        <button
-          id="toggleClientMemory"
-          class="memory-toggle-btn">
-
-          Restore Environment
-
-        </button>
-
-      </div>
-
-
-      <div
-        id="clientMemoryContent"
-        class="client-memory-content collapsed">
-
-        <div class="memory-search-grid">
-
-          <div class="memory-input-group">
-
-            <label>
-              Search Existing Client
-            </label>
-
-            <input
-              type="text"
-              id="clientSearchInput"
-              placeholder="Client name, company, property or CRM ID">
-
-          </div>
-
-
-          <div class="memory-input-group">
-
-            <label>
-              CRM Status
-            </label>
-
-            <select id="crmClientStatus">
-
-              <option>
-                Select Status
-              </option>
-
-              <option>
-                Lead
-              </option>
-
-              <option>
-                Proposal Sent
-              </option>
-
-              <option>
-                Negotiation
-              </option>
-
-              <option>
-                Active
-              </option>
-
-              <option>
-                Recurring Active
-              </option>
-
-            </select>
-
-          </div>
-
-        </div>
-
-
-        <button
-          id="searchClientBtn"
-          class="memory-search-btn">
-
-          Restore Client Environment
-
-        </button>
-
-
-        <div
-          id="clientSearchMessage"
-          class="memory-search-message">
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- PACKAGE EXPERIENCE -->
-  <!-- ========================================= -->
-
-  <section
-    id="packages"
-    class="packages-section">
-
-    <div class="packages-header">
-
-      <p class="packages-label">
-        CURATED OPERATIONAL PROGRAMS
-      </p>
-
-      <h2>
-        Structured service recommendations tailored to your environment.
-      </h2>
-
-      <p>
-        Each operational program is designed to maintain long-term consistency, presentation standards, and recurring environmental stability.
-      </p>
-
-    </div>
-
-
-    <!-- PACKAGE GRID -->
-
-    <div
-      id="packagesGrid"
-      class="packages-grid">
-
-
-      <!-- PACKAGE 1 -->
-
-      <article class="package-card glass-card">
-
-        <div class="package-badge">
-          Essential
-        </div>
-
-        <h3>
-          Essential Maintenance Program
-        </h3>
-
-        <p class="package-frequency">
-          2 Visits / Month
-        </p>
-
-        <p class="package-description">
-          Ideal for maintaining initial environmental control and recurring cleanliness consistency.
-        </p>
-
-        <div class="package-price-block">
-
-          <p class="package-old-price">
-            $450
-          </p>
-
-          <div class="package-price">
-            $396
-            <span>/ month</span>
-          </div>
-
-          <div class="package-save">
-            SAVE 12%
-          </div>
-
-        </div>
-
-
-        <ul class="package-benefits">
-
-          <li>
-            Structured recurring maintenance
-          </li>
-
-          <li>
-            Environment consistency tracking
-          </li>
-
-          <li>
-            Standard operational support
-          </li>
-
-        </ul>
-
-
-        <button class="package-btn">
-          View Recommendation
-        </button>
-
-      </article>
-
-
-      <!-- PACKAGE 2 -->
-
-      <article class="package-card featured glass-card">
-
-        <div class="featured-tag">
-          MOST RECOMMENDED
-        </div>
-
-        <div class="package-badge recommended">
-          Structured Coverage
-        </div>
-
-        <h3>
-          Operational Consistency Program
-        </h3>
-
-        <p class="package-frequency">
-          4 Visits / Month
-        </p>
-
-        <p class="package-description">
-          Balanced operational structure designed for recurring environmental presentation and maintenance stability.
-        </p>
-
-        <div class="package-price-block">
-
-          <p class="package-old-price">
-            $950
-          </p>
-
-          <div class="package-price">
-            $765
-            <span>/ month</span>
-          </div>
-
-          <div class="package-save">
-            SAVE 19%
-          </div>
-
-        </div>
-
-
-        <ul class="package-benefits">
-
-          <li>
-            Priority operational scheduling
-          </li>
-
-          <li>
-            Advanced consistency maintenance
-          </li>
-
-          <li>
-            Recurring environment stabilization
-          </li>
-
-        </ul>
-
-
-        <button class="package-btn featured-btn">
-          Select Recommendation
-        </button>
-
-      </article>
-
-
-      <!-- PACKAGE 3 -->
-
-      <article class="package-card glass-card">
-
-        <div class="package-badge premium">
-          Full Coverage
-        </div>
-
-        <h3>
-          Executive Environment Program
-        </h3>
-
-        <p class="package-frequency">
-          8 Visits / Month
-        </p>
-
-        <p class="package-description">
-          Comprehensive operational support designed for demanding, high-traffic, or executive environments.
-        </p>
-
-        <div class="package-price-block">
-
-          <p class="package-old-price">
-            $1450
-          </p>
-
-          <div class="package-price">
-            $1100
-            <span>/ month</span>
-          </div>
-
-          <div class="package-save">
-            SAVE 24%
-          </div>
-
-        </div>
-
-
-        <ul class="package-benefits">
-
-          <li>
-            High-frequency operational support
-          </li>
-
-          <li>
-            Premium environment presentation
-          </li>
-
-          <li>
-            Executive-level maintenance consistency
-          </li>
-
-        </ul>
-
-
-        <button class="package-btn">
-          View Recommendation
-        </button>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- RECOMMENDATION SUMMARY -->
-  <!-- ========================================= -->
-
-  <section class="recommendation-summary-section">
-
-    <div class="summary-card glass-card">
-
-      <p class="summary-label">
-        SELECTED OPERATIONAL PROGRAM
-      </p>
-
-      <h2 id="selectedPlan">
-        No Recommendation Selected
-      </h2>
-
-      <p id="selectedFrequency">
-        Select a structured operational program to continue.
-      </p>
-
-
-      <div
-        id="selectedPrice"
-        class="summary-price">
-
-        --
-
-      </div>
-
-
-      <div class="summary-grid">
-
-        <div class="summary-box">
-
-          <h3>
-            Included Benefits
-          </h3>
-
-          <ul id="selectedBenefits">
-
-            <li>
-              Structured operational maintenance
-            </li>
-
-            <li>
-              Consistency-focused environment support
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="summary-box">
-
-          <h3>
-            Environment Advantages
-          </h3>
-
-          <ul>
-
-            <li>
-              Long-term operational consistency
-            </li>
-
-            <li>
-              Professional environment presentation
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- ADVISOR EXPERIENCE -->
-  <!-- ========================================= -->
-
-  <section class="advisor-section">
-
-    <div class="advisor-card glass-card">
-
-      <p class="advisor-label">
-        PERSONALIZED CONSULTATION
-      </p>
-
-      <h2>
-        Speak With A North Crescent Advisor
-      </h2>
-
-      <p>
-        Our operational advisors can help structure the ideal recurring maintenance environment based on traffic, presentation requirements, operational flow, and long-term consistency goals.
-      </p>
-
-
-      <div class="advisor-options-grid">
-
-        <div class="advisor-option-box">
-
-          <label>
-            Preferred Contact Method
-          </label>
-
-          <div class="contact-options">
-
-            <button class="contact-option active">
-              Text Message
-            </button>
-
-            <button class="contact-option">
-              Phone Call
-            </button>
-
-            <button class="contact-option">
-              WhatsApp
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <div class="advisor-option-box">
-
-          <label>
-            Preferred Callback Window
-          </label>
-
-          <select>
-
-            <option>
-              8:00 AM – 10:00 AM
-            </option>
-
-            <option>
-              10:00 AM – 12:00 PM
-            </option>
-
-            <option>
-              12:00 PM – 2:00 PM
-            </option>
-
-            <option>
-              2:00 PM – 4:00 PM
-            </option>
-
-          </select>
-
-        </div>
-
-      </div>
-
-
-      <button class="advisor-btn">
-        Continue With Advisor
-      </button>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- ADVANCED PERSONALIZATION -->
-  <!-- ========================================= -->
-
-  <section class="advanced-section">
-
-    <div class="advanced-card glass-card">
-
-      <div class="advanced-header">
-
-        <div>
-
-          <p class="advanced-label">
-            ADVANCED PERSONALIZATION
-          </p>
-
-          <h2>
-            Additional Operational Preferences
-          </h2>
-
-          <p>
-            Customize scheduling preferences, recurring structure, and operational access details.
-          </p>
-
-        </div>
-
-
-        <button
-          id="toggleAdvancedSection"
-          class="advanced-toggle-btn">
-
-          Customize Preferences
-
-        </button>
-
-      </div>
-
-
-      <div
-        id="advancedContent"
-        class="advanced-content collapsed">
-
-        <div class="advanced-grid">
-
-          <div class="advanced-group">
-
-            <label>
-              Service Type
-            </label>
-
-            <select id="serviceType">
-
-              <option>
-                Residential Cleaning
-              </option>
-
-              <option>
-                Commercial Cleaning
-              </option>
-
-              <option>
-                Deep Cleaning
-              </option>
-
-              <option>
-                Airbnb Cleaning
-              </option>
-
-            </select>
-
-          </div>
-
-
-          <div class="advanced-group">
-
-            <label>
-              Property Size
-            </label>
-
-            <input
-              type="text"
-              id="squareFootage"
-              placeholder="Square footage">
-
-          </div>
-
-
-          <div class="advanced-group">
-
-            <label>
-              Visits Per Month
-            </label>
-
-            <input
-              type="number"
-              id="visitsPerMonth"
-              placeholder="Example: 4">
-
-          </div>
-
-
-          <div class="advanced-group">
-
-            <label>
-              Complexity Level
-            </label>
-
-            <select id="complexityLevel">
-
-              <option>
-                Low
-              </option>
-
-              <option>
-                Moderate
-              </option>
-
-              <option>
-                High
-              </option>
-
-              <option>
-                Extreme
-              </option>
-
-            </select>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- SALES JS -->
-  <!-- ========================================= -->
-
-  <script
-    type="module"
-    src="./sales.js">
-  </script>
-
-</body>
-
-</html>
-```
-
-# `north-crescent-os/sales/sales.css`
-
-```css
 /* =========================================
    NORTH CRESCENT SALES PORTAL
-   PRIVATE CLIENT EXPERIENCE
+   LIGHT EXECUTIVE EXPERIENCE
+========================================= */
+
+
+/* =========================================
+   ROOT SYSTEM
 ========================================= */
 
 :root {
 
-  --bg-primary: #07111F;
-  --bg-secondary: #0B1728;
-  --bg-card: rgba(17, 28, 46, 0.72);
+  --bg-primary: #F4F7FA;
+  --bg-secondary: #EEF3F8;
+  --bg-soft: #E9EFF5;
+
+  --surface-primary: rgba(255,255,255,0.78);
+  --surface-secondary: rgba(255,255,255,0.92);
 
   --accent-primary: #1E3A5F;
   --accent-secondary: #4A9B8C;
 
-  --text-primary: #F4F7FA;
-  --text-secondary: #A7B4C7;
-  --text-muted: #6E7C90;
+  --text-primary: #102033;
+  --text-secondary: #4D617B;
+  --text-muted: #7A8DA5;
 
-  --border-soft: rgba(30,58,95,0.08);
-  --border-accent: rgba(74,155,140,0.25);
+  --border-soft:
+  rgba(30,58,95,0.08);
 
-  --glass-bg: rgba(255,255,255,0.78);
-  --glass-hover: rgba(255,255,255,0.92);
+  --border-accent:
+  rgba(74,155,140,0.18);
 
   --shadow-premium:
   0 20px 60px rgba(30,58,95,0.08);
 
   --shadow-soft:
-    0 8px 24px rgba(0,0,0,0.18);
+  0 10px 30px rgba(30,58,95,0.05);
 
-  --radius-xl: 34px;
-  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-lg: 26px;
   --radius-md: 18px;
 
   --transition-slow: 0.55s ease;
@@ -923,33 +68,35 @@ html {
 
 body {
 
-  font-family: 'Poppins', sans-serif;
+  font-family:
+  'Poppins',
+  sans-serif;
 
-background:
+  background:
 
-  radial-gradient(
-    circle at top left,
-    rgba(74,155,140,0.10),
-    transparent 26%
-  ),
+    radial-gradient(
+      circle at top left,
+      rgba(74,155,140,0.12),
+      transparent 24%
+    ),
 
-  radial-gradient(
-    circle at bottom right,
-    rgba(30,58,95,0.06),
-    transparent 30%
-  ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(30,58,95,0.05),
+      transparent 28%
+    ),
 
-  linear-gradient(
-    180deg,
-    #F4F7FA 0%,
-    #EEF3F8 100%
-  );
+    linear-gradient(
+      180deg,
+      #F4F7FA 0%,
+      #EEF3F8 100%
+    );
 
   color: var(--text-primary);
 
-  overflow-x: hidden;
-
   min-height: 100vh;
+
+  overflow-x: hidden;
 
   position: relative;
 
@@ -957,67 +104,7 @@ background:
 
 
 /* =========================================
-   AMBIENT GRADIENTS
-========================================= */
-
-.ambient-gradient {
-
-  position: fixed;
-
-  border-radius: 50%;
-
-  filter: blur(100px);
-
-  opacity: 0.35;
-
-  pointer-events: none;
-
-  z-index: 0;
-
-}
-
-
-.ambient-gradient-1 {
-
-  width: 500px;
-  height: 500px;
-
-  background: rgba(74,155,140,0.20);
-
-  top: -180px;
-  left: -120px;
-
-}
-
-
-.ambient-gradient-2 {
-
-  width: 420px;
-  height: 420px;
-
-  background: rgba(30,58,95,0.25);
-
-  right: -120px;
-  top: 180px;
-
-}
-
-
-.ambient-gradient-3 {
-
-  width: 320px;
-  height: 320px;
-
-  background: rgba(74,155,140,0.10);
-
-  bottom: 60px;
-  left: 35%;
-
-}
-
-
-/* =========================================
-   GLOBAL SECTIONS
+   GLOBAL SECTION
 ========================================= */
 
 section {
@@ -1034,18 +121,85 @@ section {
 
 
 /* =========================================
-   GLASS CARD
+   AMBIENT GRADIENTS
+========================================= */
+
+.ambient-gradient {
+
+  position: fixed;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  opacity: 0.35;
+
+  z-index: 0;
+
+}
+
+
+.ambient-gradient-1 {
+
+  width: 520px;
+  height: 520px;
+
+  background:
+  rgba(74,155,140,0.14);
+
+  top: -180px;
+  left: -120px;
+
+}
+
+
+.ambient-gradient-2 {
+
+  width: 420px;
+  height: 420px;
+
+  background:
+  rgba(30,58,95,0.08);
+
+  top: 180px;
+  right: -120px;
+
+}
+
+
+.ambient-gradient-3 {
+
+  width: 320px;
+  height: 320px;
+
+  background:
+  rgba(74,155,140,0.08);
+
+  bottom: 60px;
+  left: 35%;
+
+}
+
+
+/* =========================================
+   GLASS SYSTEM
 ========================================= */
 
 .glass-card {
 
-  background: var(--glass-bg);
+  background:
+  var(--surface-primary);
 
-  backdrop-filter: blur(18px);
+  backdrop-filter:
+  blur(18px);
 
-  border: 1px solid var(--border-soft);
+  border:
+  1px solid var(--border-soft);
 
-  box-shadow: var(--shadow-premium);
+  box-shadow:
+  var(--shadow-premium);
 
 }
 
@@ -1058,27 +212,33 @@ section {
 
   width: min(1380px, 92%);
 
-  margin: 32px auto 0;
+  margin: 34px auto 0;
 
   display: flex;
 
-  align-items: center;
-
   justify-content: space-between;
 
-  padding: 20px 30px;
+  align-items: center;
 
-  border-radius: 24px;
+  padding: 22px 30px;
 
-  background: rgba(255,255,255,0.03);
+  border-radius: 26px;
 
-  backdrop-filter: blur(16px);
+  background:
+  rgba(255,255,255,0.72);
 
-  border: 1px solid rgba(255,255,255,0.06);
+  border:
+  1px solid rgba(30,58,95,0.06);
+
+  backdrop-filter:
+  blur(16px);
+
+  box-shadow:
+  var(--shadow-soft);
 
   position: relative;
 
-  z-index: 10;
+  z-index: 20;
 
 }
 
@@ -1101,10 +261,12 @@ section {
 
   border-radius: 50%;
 
-  background: var(--accent-secondary);
+  background:
+  var(--accent-secondary);
 
   box-shadow:
-    0 0 18px rgba(74,155,140,0.9);
+  0 0 20px
+  rgba(74,155,140,0.45);
 
 }
 
@@ -1112,14 +274,19 @@ section {
 .sales-nav-left h2 {
 
   font-size: 18px;
+
   font-weight: 700;
+
+  color:
+  var(--text-primary);
 
 }
 
 
 .sales-nav-left p {
 
-  color: var(--text-secondary);
+  color:
+  var(--text-secondary);
 
   font-size: 13px;
 
@@ -1130,24 +297,32 @@ section {
 
   text-decoration: none;
 
-  color: var(--text-primary);
+  padding: 14px 18px;
 
-  padding: 12px 18px;
+  border-radius: 16px;
 
-  border-radius: 14px;
+  background:
+  rgba(255,255,255,0.85);
 
-  background: rgba(255,255,255,0.04);
+  border:
+  1px solid rgba(30,58,95,0.05);
 
-  transition: var(--transition-fast);
+  color:
+  var(--text-primary);
+
+  transition:
+  var(--transition-fast);
 
 }
 
 
 .sales-nav-link:hover {
 
-  background: rgba(255,255,255,0.08);
+  transform:
+  translateY(-2px);
 
-  transform: translateY(-2px);
+  background:
+  white;
 
 }
 
@@ -1160,13 +335,43 @@ section {
 
   display: grid;
 
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns:
+  1.3fr 0.7fr;
 
   align-items: center;
 
-  gap: 80px;
+  gap: 120px;
 
-  padding: 120px 0 100px;
+  padding:
+  120px 0 100px;
+
+  position: relative;
+
+}
+
+
+.sales-hero::before {
+
+  content: '';
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(74,155,140,0.10),
+    transparent 70%
+  );
+
+  top: -180px;
+  left: -220px;
+
+  filter: blur(90px);
+
+  z-index: -1;
 
 }
 
@@ -1184,7 +389,8 @@ section {
 
   text-transform: uppercase;
 
-  color: var(--accent-secondary);
+  color:
+  var(--accent-secondary);
 
   margin-bottom: 22px;
 
@@ -1195,13 +401,17 @@ section {
 
 .sales-hero h1 {
 
-  font-size: clamp(3.2rem, 6vw, 5.8rem);
+  font-size:
+  clamp(3.4rem, 6vw, 6rem);
 
-  line-height: 1.08;
+  line-height: 1.02;
 
   font-weight: 800;
 
-  max-width: 780px;
+  max-width: 900px;
+
+  color:
+  var(--text-primary);
 
 }
 
@@ -1210,13 +420,14 @@ section {
 
   margin-top: 34px;
 
-  color: var(--text-secondary);
-
-  line-height: 1.9;
+  color:
+  var(--text-secondary);
 
   font-size: 17px;
 
-  max-width: 760px;
+  line-height: 1.9;
+
+  max-width: 720px;
 
 }
 
@@ -1234,6 +445,10 @@ section {
 }
 
 
+/* =========================================
+   BUTTONS
+========================================= */
+
 .hero-primary-btn,
 .hero-secondary-btn,
 .package-btn,
@@ -1242,27 +457,31 @@ section {
 .memory-toggle-btn,
 .advanced-toggle-btn {
 
-  text-decoration: none;
-
   border: none;
 
   cursor: pointer;
 
-  transition: var(--transition-fast);
-
   font-family: inherit;
+
+  transition:
+  var(--transition-fast);
+
+  text-decoration: none;
 
 }
 
 
-.hero-primary-btn {
+.hero-primary-btn,
+.memory-search-btn,
+.advisor-btn,
+.featured-btn {
 
   background:
-    linear-gradient(
-      135deg,
-      #1E3A5F,
-      #4A9B8C
-    );
+  linear-gradient(
+    135deg,
+    #1E3A5F,
+    #4A9B8C
+  );
 
   color: white;
 
@@ -1273,18 +492,24 @@ section {
   font-weight: 600;
 
   box-shadow:
-    0 12px 40px rgba(74,155,140,0.22);
+  0 14px 40px
+  rgba(74,155,140,0.18);
 
 }
 
 
-.hero-secondary-btn {
+.hero-secondary-btn,
+.memory-toggle-btn,
+.advanced-toggle-btn {
 
-  background: rgba(255,255,255,0.04);
+  background:
+  rgba(255,255,255,0.82);
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border:
+  1px solid rgba(30,58,95,0.08);
 
-  color: white;
+  color:
+  var(--text-primary);
 
   padding: 18px 28px;
 
@@ -1301,7 +526,8 @@ section {
 .memory-toggle-btn:hover,
 .advanced-toggle-btn:hover {
 
-  transform: translateY(-3px);
+  transform:
+  translateY(-3px);
 
 }
 
@@ -1310,22 +536,12 @@ section {
    HERO VISUAL
 ========================================= */
 
-.hero-visual-panel {
-
-  display: flex;
-
-  justify-content: center;
-
-}
-
-
 .hero-visual-card {
-
-  width: 100%;
 
   padding: 34px;
 
-  border-radius: var(--radius-xl);
+  border-radius:
+  var(--radius-xl);
 
   position: relative;
 
@@ -1343,11 +559,11 @@ section {
   inset: 0;
 
   background:
-    linear-gradient(
-      135deg,
-      rgba(74,155,140,0.12),
-      transparent 60%
-    );
+  linear-gradient(
+    135deg,
+    rgba(74,155,140,0.10),
+    transparent 60%
+  );
 
 }
 
@@ -1360,7 +576,8 @@ section {
 
   gap: 12px;
 
-  color: var(--text-secondary);
+  color:
+  var(--text-secondary);
 
   margin-bottom: 34px;
 
@@ -1374,10 +591,12 @@ section {
 
   border-radius: 50%;
 
-  background: var(--accent-secondary);
+  background:
+  var(--accent-secondary);
 
   box-shadow:
-    0 0 18px rgba(74,155,140,0.8);
+  0 0 18px
+  rgba(74,155,140,0.6);
 
 }
 
@@ -1386,16 +605,18 @@ section {
 
   display: grid;
 
-  gap: 20px;
+  gap: 18px;
 
 }
 
 
 .visual-metric-card {
 
-  background: rgba(255,255,255,0.03);
+  background:
+  rgba(255,255,255,0.75);
 
-  border: 1px solid rgba(255,255,255,0.06);
+  border:
+  1px solid rgba(30,58,95,0.06);
 
   border-radius: 22px;
 
@@ -1408,9 +629,10 @@ section {
 
   display: block;
 
-  color: var(--text-muted);
-
   margin-bottom: 10px;
+
+  color:
+  var(--text-muted);
 
 }
 
@@ -1419,54 +641,53 @@ section {
 
   font-size: 28px;
 
+  color:
+  var(--text-primary);
+
 }
 
 
 /* =========================================
-   CLIENT MEMORY
+   SHARED CARDS
 ========================================= */
-
-.client-memory-layer {
-
-  margin-top: 30px;
-
-}
-
 
 .client-memory-card,
 .summary-card,
 .advisor-card,
 .advanced-card {
 
-  border-radius: var(--radius-xl);
+  border-radius:
+  var(--radius-xl);
 
   padding: 44px;
 
 }
 
 
-.client-memory-header,
-.advanced-header {
+.client-memory-layer,
+.packages-section,
+.recommendation-summary-section,
+.advisor-section,
+.advanced-section {
 
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 30px;
-
-  align-items: center;
+  padding-top: 60px;
 
 }
 
 
+/* =========================================
+   SECTION TITLES
+========================================= */
+
 .client-memory-header h2,
-.advanced-header h2,
 .packages-header h2,
-.advisor-card h2 {
+.advisor-card h2,
+.advanced-header h2 {
 
-  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-size:
+  clamp(2rem,4vw,3.5rem);
 
-  line-height: 1.15;
+  line-height: 1.1;
 
   margin-bottom: 18px;
 
@@ -1478,75 +699,17 @@ section {
 .advisor-card p,
 .advanced-header p {
 
-  color: var(--text-secondary);
+  color:
+  var(--text-secondary);
 
   line-height: 1.9;
 
 }
 
 
-.memory-toggle-btn,
-.advanced-toggle-btn {
-
-  padding: 18px 24px;
-
-  border-radius: 18px;
-
-  background: rgba(255,255,255,0.05);
-
-  color: white;
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  min-width: 240px;
-
-}
-
-
-.client-memory-content,
-.advanced-content {
-
-  overflow: hidden;
-
-  transition: var(--transition-slow);
-
-}
-
-
-.collapsed {
-
-  max-height: 0;
-
-  opacity: 0;
-
-  margin-top: 0;
-
-}
-
-
-.client-memory-content:not(.collapsed),
-.advanced-content:not(.collapsed) {
-
-  max-height: 1200px;
-
-  opacity: 1;
-
-  margin-top: 40px;
-
-}
-
-
-.memory-search-grid,
-.advanced-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-  gap: 22px;
-
-}
-
+/* =========================================
+   INPUTS
+========================================= */
 
 .memory-input-group,
 .advanced-group {
@@ -1560,13 +723,15 @@ section {
 }
 
 
-.memory-input-group label,
-.advanced-group label,
-.advisor-option-box label {
+.memory-search-grid,
+.advanced-grid {
 
-  font-size: 13px;
+  display: grid;
 
-  color: var(--text-secondary);
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap: 22px;
 
 }
 
@@ -1577,42 +742,22 @@ section {
 .advanced-group select,
 .advisor-option-box select {
 
-  background: rgba(255,255,255,0.03);
+  background:
+  rgba(255,255,255,0.88);
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border:
+  1px solid rgba(30,58,95,0.08);
 
   border-radius: 16px;
 
-  padding: 18px 18px;
-
-  color: white;
+  padding: 18px;
 
   font-family: inherit;
 
+  color:
+  var(--text-primary);
+
   outline: none;
-
-}
-
-
-.memory-search-btn,
-.advisor-btn {
-
-  margin-top: 28px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #1E3A5F,
-      #4A9B8C
-    );
-
-  color: white;
-
-  padding: 18px 24px;
-
-  border-radius: 18px;
-
-  font-weight: 600;
 
 }
 
@@ -1621,18 +766,11 @@ section {
    PACKAGES
 ========================================= */
 
-.packages-section {
-
-  padding: 140px 0 80px;
-
-}
-
-
 .packages-header {
 
   text-align: center;
 
-  max-width: 900px;
+  max-width: 920px;
 
   margin: 0 auto 70px;
 
@@ -1643,11 +781,10 @@ section {
 
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
 
-  gap: 32px;
-
-  align-items: stretch;
+  gap: 34px;
 
 }
 
@@ -1658,9 +795,10 @@ section {
 
   border-radius: 34px;
 
-  position: relative;
+  transition:
+  var(--transition-fast);
 
-  transition: var(--transition-fast);
+  position: relative;
 
   overflow: hidden;
 
@@ -1669,25 +807,29 @@ section {
 
 .package-card:hover {
 
-  transform: translateY(-10px);
+  transform:
+  translateY(-10px);
 
-  background: var(--glass-hover);
+  background:
+  white;
 
 }
 
 
 .package-card.featured {
 
-  border: 1px solid rgba(74,155,140,0.35);
+  border:
+  1px solid rgba(74,155,140,0.25);
 
-  transform: scale(1.04);
+  transform:
+  scale(1.03);
 
   background:
-    linear-gradient(
-      180deg,
-      rgba(74,155,140,0.08),
-      rgba(255,255,255,0.03)
-    );
+  linear-gradient(
+    180deg,
+    rgba(74,155,140,0.08),
+    rgba(255,255,255,0.95)
+  );
 
 }
 
@@ -1699,21 +841,21 @@ section {
   top: 18px;
   right: 18px;
 
-  background: rgba(74,155,140,0.14);
-
-  border: 1px solid rgba(74,155,140,0.30);
-
-  color: var(--accent-secondary);
-
   padding: 8px 14px;
 
   border-radius: 999px;
 
+  background:
+  rgba(74,155,140,0.12);
+
+  color:
+  var(--accent-secondary);
+
   font-size: 11px;
 
-  letter-spacing: 1px;
-
   font-weight: 700;
+
+  letter-spacing: 1px;
 
 }
 
@@ -1728,19 +870,13 @@ section {
 
   border-radius: 999px;
 
-  background: rgba(255,255,255,0.05);
+  background:
+  rgba(74,155,140,0.08);
 
-  color: var(--text-secondary);
+  color:
+  var(--accent-secondary);
 
   font-size: 12px;
-
-}
-
-
-.package-badge.recommended,
-.package-badge.premium {
-
-  color: var(--accent-secondary);
 
 }
 
@@ -1758,18 +894,20 @@ section {
 
 .package-frequency {
 
-  color: var(--accent-secondary);
-
-  margin-bottom: 22px;
+  color:
+  var(--accent-secondary);
 
   font-weight: 600;
+
+  margin-bottom: 22px;
 
 }
 
 
 .package-description {
 
-  color: var(--text-secondary);
+  color:
+  var(--text-secondary);
 
   line-height: 1.9;
 
@@ -1780,7 +918,8 @@ section {
 
 .package-old-price {
 
-  color: var(--text-muted);
+  color:
+  var(--text-muted);
 
   text-decoration: line-through;
 
@@ -1804,7 +943,8 @@ section {
 
   font-size: 16px;
 
-  color: var(--text-secondary);
+  color:
+  var(--text-secondary);
 
 }
 
@@ -1813,7 +953,8 @@ section {
 
   margin-top: 16px;
 
-  color: var(--accent-secondary);
+  color:
+  var(--accent-secondary);
 
   font-size: 14px;
 
@@ -1837,13 +978,14 @@ section {
 
 .package-benefits li {
 
-  color: var(--text-secondary);
-
   position: relative;
 
-  padding-left: 26px;
+  padding-left: 24px;
 
-  line-height: 1.7;
+  color:
+  var(--text-secondary);
+
+  line-height: 1.8;
 
 }
 
@@ -1856,7 +998,8 @@ section {
 
   left: 0;
 
-  color: var(--accent-secondary);
+  color:
+  var(--accent-secondary);
 
 }
 
@@ -1869,23 +1012,16 @@ section {
 
   border-radius: 18px;
 
-  background: rgba(255,255,255,0.05);
+  background:
+  rgba(255,255,255,0.88);
 
-  color: white;
+  border:
+  1px solid rgba(30,58,95,0.08);
+
+  color:
+  var(--text-primary);
 
   font-weight: 600;
-
-}
-
-
-.featured-btn {
-
-  background:
-    linear-gradient(
-      135deg,
-      #1E3A5F,
-      #4A9B8C
-    );
 
 }
 
@@ -1893,13 +1029,6 @@ section {
 /* =========================================
    SUMMARY
 ========================================= */
-
-.recommendation-summary-section {
-
-  padding: 80px 0;
-
-}
-
 
 .summary-price {
 
@@ -1916,82 +1045,47 @@ section {
 
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns:
+  repeat(auto-fit,minmax(300px,1fr));
 
   gap: 24px;
 
 }
 
 
-.summary-box {
+.summary-box,
+.advisor-option-box {
 
-  background: rgba(255,255,255,0.03);
+  background:
+  rgba(255,255,255,0.75);
 
-  border: 1px solid rgba(255,255,255,0.05);
+  border:
+  1px solid rgba(30,58,95,0.06);
 
   border-radius: 24px;
 
   padding: 28px;
-
-}
-
-
-.summary-box h3 {
-
-  margin-bottom: 18px;
 
 }
 
 
 .summary-box ul {
 
+  padding-left: 18px;
+
+  color:
+  var(--text-secondary);
+
   display: grid;
 
   gap: 14px;
-
-  color: var(--text-secondary);
-
-  padding-left: 18px;
 
 }
 
 
 /* =========================================
-   ADVISOR
+   CONTACT OPTIONS
 ========================================= */
-
-.advisor-section {
-
-  padding: 40px 0 80px;
-
-}
-
-
-.advisor-options-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
-  gap: 24px;
-
-  margin-top: 44px;
-
-}
-
-
-.advisor-option-box {
-
-  background: rgba(255,255,255,0.03);
-
-  border-radius: 24px;
-
-  border: 1px solid rgba(255,255,255,0.06);
-
-  padding: 28px;
-
-}
-
 
 .contact-options {
 
@@ -2008,11 +1102,14 @@ section {
 
 .contact-option {
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border:
+  1px solid rgba(30,58,95,0.08);
 
-  background: rgba(255,255,255,0.04);
+  background:
+  rgba(255,255,255,0.88);
 
-  color: white;
+  color:
+  var(--text-primary);
 
   padding: 14px 18px;
 
@@ -2026,31 +1123,13 @@ section {
 .contact-option.active {
 
   background:
-    linear-gradient(
-      135deg,
-      #1E3A5F,
-      #4A9B8C
-    );
+  linear-gradient(
+    135deg,
+    #1E3A5F,
+    #4A9B8C
+  );
 
-}
-
-
-.advisor-btn {
-
-  width: 100%;
-
-  margin-top: 36px;
-
-}
-
-
-/* =========================================
-   ADVANCED SECTION
-========================================= */
-
-.advanced-section {
-
-  padding: 0 0 140px;
+  color: white;
 
 }
 
@@ -2065,14 +1144,7 @@ section {
 
     grid-template-columns: 1fr;
 
-    gap: 60px;
-
-  }
-
-
-  .package-card.featured {
-
-    transform: none;
+    gap: 70px;
 
   }
 
@@ -2125,5 +1197,3 @@ section {
   }
 
 }
-
-
