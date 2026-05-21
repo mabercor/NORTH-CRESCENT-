@@ -1269,7 +1269,96 @@ margin-left: auto;
 
 }
 
+/* =========================================
+   TRUST STRIP
+========================================= */
 
+.trust-strip-section {
+
+  padding: 0 0 45px;
+
+}
+
+
+.trust-strip {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+
+  padding: 28px;
+
+  border-radius: 28px;
+
+}
+
+
+.trust-item {
+
+  position: relative;
+
+}
+
+
+.trust-item:not(:last-child)::after {
+
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  right: -12px;
+
+  width: 1px;
+  height: 100%;
+
+  background: rgba(15,23,42,0.08);
+
+}
+
+
+.trust-item h3 {
+
+  font-size: 18px;
+
+  margin-bottom: 10px;
+
+}
+
+
+.trust-item p {
+
+  color: var(--text-secondary);
+
+  line-height: 1.7;
+
+  font-size: 14px;
+
+}
+
+
+@media (max-width: 900px) {
+
+  .trust-strip {
+
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .trust-strip {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
 /* =========================================
    RESPONSIVE
 ========================================= */
