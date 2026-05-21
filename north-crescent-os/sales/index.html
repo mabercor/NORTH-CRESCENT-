@@ -1,863 +1,1143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0" />
-
-  <title>
-    North Crescent | Private Client Experience
-  </title>
-
-  <!-- GOOGLE FONTS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Crescent | Private Client Experience</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <style>
 
-  <!-- SALES CSS -->
+    :root {
+      --navy: #1E3A5F;
+      --teal: #4A9B8C;
+      --bg: #EEF3F7;
+      --card: rgba(255,255,255,0.82);
+      --text: #152437;
+      --text-soft: #5F6F82;
+      --border: rgba(15,23,42,0.08);
+      --shadow:
+        0 30px 80px rgba(15,23,42,0.08);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --transition: 0.3s ease;
+    }
 
-  <link
-    rel="stylesheet"
-    href="./sales.css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- FAVICON -->
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(74,155,140,0.10), transparent 26%),
+        radial-gradient(circle at bottom right, rgba(30,58,95,0.08), transparent 30%),
+        linear-gradient(180deg, #F7FAFD 0%, #EEF3F7 100%);
+      color: var(--text);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
 
-  <link
-    rel="icon"
-    type="image/png"
-    href="/images/north-crescent-icon.png">
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
 
+    .glass {
+      background: var(--card);
+      backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: var(--shadow);
+    }
+
+    section {
+      padding: 48px 0;
+    }
+
+    /* NAV */
+
+    .nav {
+      margin-top: 24px;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 28px;
+      border-radius: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 18px rgba(74,155,140,0.45);
+    }
+
+    .brand h2 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .brand p {
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .nav-btn {
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--border);
+      padding: 14px 18px;
+      border-radius: 16px;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 60px;
+      min-height: 88vh;
+    }
+
+    .label {
+      color: var(--teal);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(4rem, 5vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      max-width: 760px;
+    }
+
+    .hero-description {
+      margin-top: 28px;
+      color: var(--text-soft);
+      line-height: 1.9;
+      max-width: 620px;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 18px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .toggle-btn,
+    .program-btn,
+    .advisor-btn {
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+      border-radius: 18px;
+      font-weight: 600;
+    }
+
+    .primary-btn,
+    .advisor-btn,
+    .program-btn.featured {
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      color: white;
+      padding: 18px 28px;
+      box-shadow: 0 20px 40px rgba(74,155,140,0.18);
+    }
+
+    .secondary-btn,
+    .toggle-btn,
+    .program-btn {
+      background: rgba(255,255,255,0.85);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 16px 22px;
+    }
+
+    .hero-panel {
+      padding: 34px;
+      border-radius: 38px;
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      color: var(--text-soft);
+    }
+
+    .panel-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .metric-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .metric-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(248,251,253,0.92);
+      border: 1px solid var(--border);
+    }
+
+    .metric-card span {
+      display: block;
+      color: var(--text-soft);
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .metric-card strong {
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    /* TRUST */
+
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      padding: 28px;
+      border-radius: 30px;
+    }
+
+    .trust-item {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(248,251,253,0.92);
+      border: 1px solid var(--border);
+    }
+
+    .trust-item h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .trust-item p {
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    /* MODULES */
+
+    .module-card,
+    .summary-card,
+    .advisor-card,
+    .cta-card {
+      padding: 36px;
+      border-radius: 34px;
+    }
+
+    .module-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .module-header h2,
+    .section-header h2,
+    .summary-card h2,
+    .advisor-card h2,
+    .cta-card h2 {
+      font-size: clamp(2rem, 3vw, 3.2rem);
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+
+    .module-header p,
+    .section-header p,
+    .summary-card p,
+    .advisor-card p,
+    .cta-card p {
+      color: var(--text-soft);
+      line-height: 1.9;
+    }
+
+    .collapsible-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: 0.45s ease;
+    }
+
+    .collapsible-content.active {
+      max-height: 1200px;
+      opacity: 1;
+      margin-top: 34px;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .input-group label {
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    .input-group input,
+    .input-group select {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      padding: 18px;
+      border-radius: 16px;
+      font-family: inherit;
+      outline: none;
+    }
+
+    /* PROGRAMS */
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .program-card {
+      padding: 34px;
+      border-radius: 34px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .program-card:hover,
+    .module-card:hover,
+    .summary-card:hover,
+    .advisor-card:hover,
+    .hero-panel:hover,
+    .trust-strip:hover,
+    .cta-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .program-card.featured {
+      border: 1px solid rgba(74,155,140,0.24);
+      background: linear-gradient(180deg, rgba(74,155,140,0.08), rgba(255,255,255,0.82));
+    }
+
+    .popular-tag {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: rgba(74,155,140,0.12);
+      color: var(--teal);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .program-badge {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(74,155,140,0.08);
+      color: var(--teal);
+      font-size: 12px;
+      margin-bottom: 26px;
+      font-weight: 600;
+    }
+
+    .program-card h3 {
+      font-size: 34px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .frequency {
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .program-description {
+      color: var(--text-soft);
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #7F8A98;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 58px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .price span {
+      font-size: 16px;
+      color: var(--text-soft);
+    }
+
+    .save {
+      margin-top: 14px;
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .benefits {
+      list-style: none;
+      margin: 34px 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    .benefits li {
+      position: relative;
+      padding-left: 22px;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    .benefits li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+    }
+
+    .program-btn {
+      width: 100%;
+      padding: 18px;
+    }
+
+    /* SUMMARY */
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .summary-box {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(248,251,253,0.92);
+      border: 1px solid var(--border);
+    }
+
+    .summary-box h3 {
+      margin-bottom: 16px;
+    }
+
+    .summary-box ul {
+      display: grid;
+      gap: 12px;
+      color: var(--text-soft);
+      padding-left: 18px;
+    }
+
+    /* ADVISOR */
+
+    .advisor-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 34px;
+    }
+
+    .advisor-option {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(248,251,253,0.92);
+      border: 1px solid var(--border);
+    }
+
+    .advisor-option label {
+      display: block;
+      margin-bottom: 16px;
+      color: var(--text-soft);
+      font-size: 13px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .contact-buttons button {
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.88);
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .contact-buttons button.active {
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      color: white;
+    }
+
+    .advisor-btn {
+      width: 100%;
+      margin-top: 28px;
+    }
+
+    /* CTA */
+
+    .cta-card {
+      text-align: center;
+      background: linear-gradient(135deg, var(--navy), #315684);
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      right: -60px;
+      top: -100px;
+    }
+
+    .cta-card p {
+      color: rgba(255,255,255,0.84);
+      max-width: 720px;
+      margin: 18px auto 0;
+    }
+
+    .cta-actions {
+      margin-top: 36px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .cta-actions .secondary-btn {
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 40px 0 70px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      color: var(--text-soft);
+      font-size: 14px;
+    }
+
+    @media (max-width: 1100px) {
+
+      .hero,
+      .program-grid,
+      .summary-grid,
+      .advisor-options,
+      .trust-strip {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+
+      .hero h1 {
+        font-size: 3.4rem;
+      }
+
+      .module-header,
+      .nav-inner,
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .price {
+        font-size: 46px;
+      }
+
+    }
+
+  </style>
 </head>
-
 <body>
 
-  <!-- ========================================= -->
-  <!-- PREMIUM BACKGROUND LAYERS -->
-  <!-- ========================================= -->
+  <nav class="nav">
+    <div class="container nav-inner glass">
 
-  <div class="ambient-gradient ambient-gradient-1"></div>
-  <div class="ambient-gradient ambient-gradient-2"></div>
-  <div class="ambient-gradient ambient-gradient-3"></div>
+      <div class="brand">
+        <div class="brand-dot"></div>
 
-
-  <!-- ========================================= -->
-  <!-- NAVIGATION -->
-  <!-- ========================================= -->
-
-  <nav class="sales-nav">
-
-    <div class="sales-nav-left">
-
-      <div class="sales-brand-dot"></div>
-
-      <div>
-
-        <h2>
-          North Crescent
-        </h2>
-
-        <p>
-          Private Client Experience
-        </p>
-
+        <div>
+          <h2>North Crescent</h2>
+          <p>Private Client Experience</p>
+        </div>
       </div>
 
-    </div>
-
-
-    <div class="sales-nav-right">
-
-      <a
-        href="../index.html"
-        class="sales-nav-link">
-
-        Return To OS
-
-      </a>
+      <a href="#" class="nav-btn">Return To OS</a>
 
     </div>
-
   </nav>
 
+  <main>
 
-  <!-- ========================================= -->
-  <!-- HERO EXPERIENCE -->
-  <!-- ========================================= -->
+    <!-- HERO -->
 
-  <section class="sales-hero">
-
-    <div class="sales-hero-content">
-
-      <p class="hero-label">
-        STRUCTURED OPERATIONAL ENVIRONMENTS
-      </p>
-
-      <h1>
-        Premium maintenance programs designed for consistency, presentation, and long-term operational control.
-      </h1>
-
-      <p class="hero-description">
-        North Crescent Facility Solutions provides structured recurring service environments designed to maintain operational consistency, visual presentation, and environmental stability for residential and commercial properties.
-      </p>
-
-      <div class="hero-actions">
-
-        <a
-          href="#packages"
-          class="hero-primary-btn">
-
-          Explore Service Programs
-
-        </a>
-
-        <a
-          href="#clientMemoryLayer"
-          class="hero-secondary-btn">
-
-          Returning Client Access
-
-        </a>
-
-      </div>
-
-    </div>
-
-  <!-- ========================================= -->
-  <!-- CLIENT MEMORY LAYER -->
-  <!-- ========================================= -->
-
-  <section
-    id="clientMemoryLayer"
-    class="client-memory-layer">
-
-    <div class="client-memory-card glass-card">
-
-      <div class="client-memory-header">
+    <section>
+      <div class="container hero">
 
         <div>
 
-          <p class="memory-label">
-            RETURNING CLIENT ACCESS
+          <p class="label">
+            STRUCTURED OPERATIONAL ENVIRONMENTS
           </p>
 
+          <h1>
+            Premium maintenance programs designed for consistency and long-term operational control.
+          </h1>
+
+          <p class="hero-description">
+            North Crescent Facility Solutions provides structured recurring service environments designed to maintain presentation, environmental stability, and operational consistency for residential and commercial properties.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-btn">Explore Service Programs</button>
+            <button class="secondary-btn">Returning Client Access</button>
+          </div>
+
+        </div>
+
+        <div class="hero-panel glass">
+
+          <div class="panel-header">
+            <div class="panel-dot"></div>
+            <span>Operational Environment Metrics</span>
+          </div>
+
+          <div class="metric-grid">
+
+            <div class="metric-card">
+              <span>Reliability</span>
+              <strong>Structured recurring operational consistency.</strong>
+            </div>
+
+            <div class="metric-card">
+              <span>Stability</span>
+              <strong>Controlled environments designed for long-term presentation.</strong>
+            </div>
+
+            <div class="metric-card">
+              <span>Performance</span>
+              <strong>Operational systems focused on measurable consistency.</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRUST -->
+
+    <section>
+      <div class="container trust-strip glass">
+
+        <div class="trust-item">
+          <h3>Reliability</h3>
+          <p>Structured recurring operational consistency.</p>
+        </div>
+
+        <div class="trust-item">
+          <h3>Stability</h3>
+          <p>Controlled environments designed for long-term presentation.</p>
+        </div>
+
+        <div class="trust-item">
+          <h3>Performance</h3>
+          <p>Operational systems focused on measurable consistency.</p>
+        </div>
+
+        <div class="trust-item">
+          <h3>Partnership</h3>
+          <p>Long-term service relationships built around discipline.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RETURNING CLIENT ACCESS -->
+
+    <section>
+      <div class="container">
+
+        <div class="module-card glass">
+
+          <div class="module-header">
+
+            <div>
+              <p class="label">RETURNING CLIENT ACCESS</p>
+
+              <h2>
+                Restore Existing Operational Environment
+              </h2>
+
+              <p>
+                Returning clients may restore previous operational preferences, recurring structures, and environmental recommendations.
+              </p>
+            </div>
+
+            <button class="toggle-btn" data-toggle="client-access-content">
+              Restore Environment
+            </button>
+
+          </div>
+
+          <div class="collapsible-content" id="client-access-content">
+
+            <div class="input-grid">
+
+              <div class="input-group">
+                <label>Client Search</label>
+                <input type="text" placeholder="Client name, CRM ID or property">
+              </div>
+
+              <div class="input-group">
+                <label>CRM Status</label>
+                <select>
+                  <option>Active Client</option>
+                  <option>Recurring Active</option>
+                  <option>Proposal Sent</option>
+                </select>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+
+    <section>
+      <div class="container">
+
+        <div class="section-header">
+
+          <p class="label">CURATED OPERATIONAL PROGRAMS</p>
+
           <h2>
-            Restore Your Operational Environment
+            Structured service recommendations tailored to your environment.
           </h2>
 
           <p>
-            Returning clients may restore previous operational preferences, recurring maintenance structures, and existing recommendations.
+            Each operational program is designed to maintain long-term consistency, environmental presentation, and recurring operational stability.
           </p>
 
         </div>
 
+        <div class="program-grid">
 
-        <button
-          id="toggleClientMemory"
-          class="memory-toggle-btn">
+          <article class="program-card glass">
 
-          Restore Environment
+            <div class="program-badge">Essential</div>
 
-        </button>
+            <h3>Essential Maintenance Program</h3>
 
-      </div>
+            <p class="frequency">2 Visits / Month</p>
 
+            <p class="program-description">
+              Ideal for maintaining initial environmental control and recurring cleanliness consistency.
+            </p>
 
-      <div
-        id="clientMemoryContent"
-        class="client-memory-content collapsed">
+            <p class="old-price">$450</p>
 
-        <div class="memory-search-grid">
+            <div class="price">
+              $396 <span>/ month</span>
+            </div>
 
-          <div class="memory-input-group">
+            <div class="save">SAVE 12%</div>
 
-            <label>
-              Search Existing Client
-            </label>
+            <ul class="benefits">
+              <li>Structured recurring maintenance</li>
+              <li>Environment consistency tracking</li>
+              <li>Operational support structure</li>
+            </ul>
 
-            <input
-              type="text"
-              id="clientSearchInput"
-              placeholder="Client name, company, property or CRM ID">
+            <button class="program-btn">View Recommendation</button>
 
-          </div>
+          </article>
 
+          <article class="program-card featured glass">
 
-          <div class="memory-input-group">
+            <div class="popular-tag">MOST POPULAR</div>
 
-            <label>
-              CRM Status
-            </label>
+            <div class="program-badge">Operational Consistency</div>
 
-            <select id="crmClientStatus">
+            <h3>Operational Consistency Program</h3>
 
-              <option>
-                Select Status
-              </option>
+            <p class="frequency">4 Visits / Month</p>
 
-              <option>
-                Lead
-              </option>
+            <p class="program-description">
+              Balanced operational structure designed for recurring presentation and maintenance stability.
+            </p>
 
-              <option>
-                Proposal Sent
-              </option>
+            <p class="old-price">$950</p>
 
-              <option>
-                Negotiation
-              </option>
+            <div class="price">
+              $765 <span>/ month</span>
+            </div>
 
-              <option>
-                Active
-              </option>
+            <div class="save">SAVE 19%</div>
 
-              <option>
-                Recurring Active
-              </option>
+            <ul class="benefits">
+              <li>Priority operational scheduling</li>
+              <li>Advanced consistency maintenance</li>
+              <li>Recurring environment stabilization</li>
+            </ul>
 
-            </select>
+            <button class="program-btn featured">Select Recommendation</button>
 
-          </div>
+          </article>
 
-        </div>
+          <article class="program-card glass">
 
+            <div class="program-badge">Executive</div>
 
-        <button
-          id="searchClientBtn"
-          class="memory-search-btn">
+            <h3>Executive Environment Program</h3>
 
-          Restore Client Environment
+            <p class="frequency">8 Visits / Month</p>
 
-        </button>
+            <p class="program-description">
+              Comprehensive operational support designed for demanding, high-traffic environments.
+            </p>
 
+            <p class="old-price">$1450</p>
 
-        <div
-          id="clientSearchMessage"
-          class="memory-search-message">
-        </div>
+            <div class="price">
+              $1100 <span>/ month</span>
+            </div>
 
-      </div>
+            <div class="save">SAVE 24%</div>
 
-    </div>
+            <ul class="benefits">
+              <li>High-frequency operational support</li>
+              <li>Premium environment presentation</li>
+              <li>Executive-level consistency</li>
+            </ul>
 
-    
-   <!-- ========================================= -->
-<!-- TRUST STRIP -->
-<!-- ========================================= -->
+            <button class="program-btn">View Recommendation</button>
 
-<section class="trust-strip-section">
-
-  <div class="trust-strip glass-card">
-
-    <div class="trust-item">
-
-      <h3>
-        Reliability
-      </h3>
-
-      <p>
-        Structured recurring operational consistency.
-      </p>
-
-    </div>
-
-
-    <div class="trust-item">
-
-      <h3>
-        Stability
-      </h3>
-
-      <p>
-        Controlled environments designed for long-term presentation.
-      </p>
-
-    </div>
-
-
-    <div class="trust-item">
-
-      <h3>
-        Performance
-      </h3>
-
-      <p>
-        Operational systems focused on measurable consistency.
-      </p>
-
-    </div>
-
-
-    <div class="trust-item">
-
-      <h3>
-        Partnership
-      </h3>
-
-      <p>
-        Long-term service relationships built around discipline.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-  
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- PACKAGE EXPERIENCE -->
-  <!-- ========================================= -->
-
-  <section
-    id="packages"
-    class="packages-section">
-
-    <div class="packages-header">
-
-      <p class="packages-label">
-        CURATED OPERATIONAL PROGRAMS
-      </p>
-
-      <h2>
-        Structured service recommendations tailored to your environment.
-      </h2>
-
-      <p>
-        Each operational program is designed to maintain long-term consistency, presentation standards, and recurring environmental stability.
-      </p>
-
-    </div>
-
-
-    <!-- PACKAGE GRID -->
-
-    <div
-      id="packagesGrid"
-      class="packages-grid">
-
-
-      <!-- PACKAGE 1 -->
-
-      <article class="package-card glass-card">
-
-        <div class="package-badge">
-          Essential
-        </div>
-
-        <h3>
-          Essential Maintenance Program
-        </h3>
-
-        <p class="package-frequency">
-          2 Visits / Month
-        </p>
-
-        <p class="package-description">
-          Ideal for maintaining initial environmental control and recurring cleanliness consistency.
-        </p>
-
-        <div class="package-price-block">
-
-          <p class="package-old-price">
-            $450
-          </p>
-
-          <div class="package-price">
-            $396
-            <span>/ month</span>
-          </div>
-
-          <div class="package-save">
-            SAVE 12%
-          </div>
-
-        </div>
-
-
-        <ul class="package-benefits">
-
-          <li>
-            Structured recurring maintenance
-          </li>
-
-          <li>
-            Environment consistency tracking
-          </li>
-
-          <li>
-            Standard operational support
-          </li>
-
-        </ul>
-
-
-        <button class="package-btn">
-          View Recommendation
-        </button>
-
-      </article>
-
-
-      <!-- PACKAGE 2 -->
-
-      <article class="package-card featured glass-card">
-
-        <div class="featured-tag">
-          MOST RECOMMENDED
-        </div>
-
-        <div class="package-badge recommended">
-          Structured Coverage
-        </div>
-
-        <h3>
-          Operational Consistency Program
-        </h3>
-
-        <p class="package-frequency">
-          4 Visits / Month
-        </p>
-
-        <p class="package-description">
-          Balanced operational structure designed for recurring environmental presentation and maintenance stability.
-        </p>
-
-        <div class="package-price-block">
-
-          <p class="package-old-price">
-            $950
-          </p>
-
-          <div class="package-price">
-            $765
-            <span>/ month</span>
-          </div>
-
-          <div class="package-save">
-            SAVE 19%
-          </div>
-
-        </div>
-
-
-        <ul class="package-benefits">
-
-          <li>
-            Priority operational scheduling
-          </li>
-
-          <li>
-            Advanced consistency maintenance
-          </li>
-
-          <li>
-            Recurring environment stabilization
-          </li>
-
-        </ul>
-
-
-        <button class="package-btn featured-btn">
-          Select Recommendation
-        </button>
-
-      </article>
-
-
-      <!-- PACKAGE 3 -->
-
-      <article class="package-card glass-card">
-
-        <div class="package-badge premium">
-          Full Coverage
-        </div>
-
-        <h3>
-          Executive Environment Program
-        </h3>
-
-        <p class="package-frequency">
-          8 Visits / Month
-        </p>
-
-        <p class="package-description">
-          Comprehensive operational support designed for demanding, high-traffic, or executive environments.
-        </p>
-
-        <div class="package-price-block">
-
-          <p class="package-old-price">
-            $1450
-          </p>
-
-          <div class="package-price">
-            $1100
-            <span>/ month</span>
-          </div>
-
-          <div class="package-save">
-            SAVE 24%
-          </div>
-
-        </div>
-
-
-        <ul class="package-benefits">
-
-          <li>
-            High-frequency operational support
-          </li>
-
-          <li>
-            Premium environment presentation
-          </li>
-
-          <li>
-            Executive-level maintenance consistency
-          </li>
-
-        </ul>
-
-
-        <button class="package-btn">
-          View Recommendation
-        </button>
-
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- RECOMMENDATION SUMMARY -->
-  <!-- ========================================= -->
-<div class="summary-advisor-grid">
-  
-  <section class="recommendation-summary-section">
-
-    <div class="summary-card glass-card">
-
-      <p class="summary-label">
-        SELECTED OPERATIONAL PROGRAM
-      </p>
-
-      <h2 id="selectedPlan">
-        No Recommendation Selected
-      </h2>
-
-      <p id="selectedFrequency">
-        Select a structured operational program to continue.
-      </p>
-
-
-      <div
-        id="selectedPrice"
-        class="summary-price">
-
-        --
-
-      </div>
-
-
-      <div class="summary-grid">
-
-        <div class="summary-box">
-
-          <h3>
-            Included Benefits
-          </h3>
-
-          <ul id="selectedBenefits">
-
-            <li>
-              Structured operational maintenance
-            </li>
-
-            <li>
-              Consistency-focused environment support
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <div class="summary-box">
-
-          <h3>
-            Environment Advantages
-          </h3>
-
-          <ul>
-
-            <li>
-              Long-term operational consistency
-            </li>
-
-            <li>
-              Professional environment presentation
-            </li>
-
-          </ul>
+          </article>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
+    <!-- SUMMARY -->
 
-  </section>
-  </div>
+    <section>
+      <div class="container">
 
+        <div class="summary-card glass">
 
-  <!-- ========================================= -->
-  <!-- ADVISOR EXPERIENCE -->
-  <!-- ========================================= -->
-
-  <section class="advisor-section">
-
-    <div class="advisor-card glass-card">
-
-      <p class="advisor-label">
-        PERSONALIZED CONSULTATION
-      </p>
-
-      <h2>
-        Speak With A North Crescent Advisor
-      </h2>
-
-      <p>
-        Our operational advisors can help structure the ideal recurring maintenance environment based on traffic, presentation requirements, operational flow, and long-term consistency goals.
-      </p>
-
-
-      <div class="advisor-options-grid">
-
-        <div class="advisor-option-box">
-
-          <label>
-            Preferred Contact Method
-          </label>
-
-          <div class="contact-options">
-
-            <button class="contact-option active">
-              Text Message
-            </button>
-
-            <button class="contact-option">
-              Phone Call
-            </button>
-
-            <button class="contact-option">
-              WhatsApp
-            </button>
-
-          </div>
-
-        </div>
-
-
-        <div class="advisor-option-box">
-
-          <label>
-            Preferred Callback Window
-          </label>
-
-          <select>
-
-            <option>
-              8:00 AM – 10:00 AM
-            </option>
-
-            <option>
-              10:00 AM – 12:00 PM
-            </option>
-
-            <option>
-              12:00 PM – 2:00 PM
-            </option>
-
-            <option>
-              2:00 PM – 4:00 PM
-            </option>
-
-          </select>
-
-        </div>
-
-      </div>
-
-
-      <button class="advisor-btn">
-        Continue With Advisor
-      </button>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================= -->
-  <!-- ADVANCED PERSONALIZATION -->
-  <!-- ========================================= -->
-
-  <section class="advanced-section">
-
-    <div class="advanced-card glass-card">
-
-      <div class="advanced-header">
-
-        <div>
-
-          <p class="advanced-label">
-            ADVANCED PERSONALIZATION
-          </p>
+          <p class="label">SELECTED OPERATIONAL PROGRAM</p>
 
           <h2>
-            Additional Operational Preferences
+            Operational Consistency Program
           </h2>
 
           <p>
-            Customize scheduling preferences, recurring structure, and operational access details.
+            Structured recurring operational support designed for environmental consistency and presentation stability.
           </p>
 
+          <div class="price" style="margin-top: 28px;">
+            $765 <span>/ month</span>
+          </div>
+
+          <div class="summary-grid">
+
+            <div class="summary-box">
+              <h3>Included Benefits</h3>
+
+              <ul>
+                <li>Priority operational scheduling</li>
+                <li>Advanced consistency maintenance</li>
+                <li>Recurring environment stabilization</li>
+              </ul>
+            </div>
+
+            <div class="summary-box">
+              <h3>Environment Advantages</h3>
+
+              <ul>
+                <li>Long-term operational consistency</li>
+                <li>Professional environment presentation</li>
+                <li>Stabilized maintenance structure</li>
+              </ul>
+            </div>
+
+          </div>
+
         </div>
-
-
-        <button
-          id="toggleAdvancedSection"
-          class="advanced-toggle-btn">
-
-          Customize Preferences
-
-        </button>
 
       </div>
+    </section>
 
+    <!-- ADVISOR -->
 
-      <div
-        id="advancedContent"
-        class="advanced-content collapsed">
+    <section>
+      <div class="container">
 
-        <div class="advanced-grid">
+        <div class="advisor-card glass">
 
-          <div class="advanced-group">
+          <p class="label">PERSONALIZED CONSULTATION</p>
 
-            <label>
-              Service Type
-            </label>
+          <h2>
+            Speak With A North Crescent Advisor
+          </h2>
 
-            <select id="serviceType">
+          <p>
+            Our operational advisors can help structure the ideal recurring maintenance environment based on operational flow, presentation standards, and long-term stability goals.
+          </p>
 
-              <option>
-                Residential Cleaning
-              </option>
+          <div class="advisor-options">
 
-              <option>
-                Commercial Cleaning
-              </option>
+            <div class="advisor-option">
 
-              <option>
-                Deep Cleaning
-              </option>
+              <label>Preferred Contact Method</label>
 
-              <option>
-                Airbnb Cleaning
-              </option>
+              <div class="contact-buttons">
+                <button class="active">Text Message</button>
+                <button>Phone Call</button>
+                <button>WhatsApp</button>
+              </div>
 
-            </select>
+            </div>
 
-          </div>
+            <div class="advisor-option">
 
+              <label>Preferred Callback Window</label>
 
-          <div class="advanced-group">
+              <select style="width:100%; padding:18px; border-radius:16px; border:1px solid var(--border); background:white; font-family:inherit;">
+                <option>8:00 AM – 10:00 AM</option>
+                <option>10:00 AM – 12:00 PM</option>
+                <option>12:00 PM – 2:00 PM</option>
+              </select>
 
-            <label>
-              Property Size
-            </label>
-
-            <input
-              type="text"
-              id="squareFootage"
-              placeholder="Square footage">
+            </div>
 
           </div>
 
+          <button class="advisor-btn">
+            Continue With Advisor
+          </button>
 
-          <div class="advanced-group">
+        </div>
 
-            <label>
-              Visits Per Month
-            </label>
+      </div>
+    </section>
 
-            <input
-              type="number"
-              id="visitsPerMonth"
-              placeholder="Example: 4">
+    <!-- ADVANCED -->
+
+    <section>
+      <div class="container">
+
+        <div class="module-card glass">
+
+          <div class="module-header">
+
+            <div>
+              <p class="label">ADVANCED PERSONALIZATION</p>
+
+              <h2>
+                Additional Operational Preferences
+              </h2>
+
+              <p>
+                Customize scheduling preferences, recurring structures, and operational access details.
+              </p>
+            </div>
+
+            <button class="toggle-btn" data-toggle="advanced-content">
+              Customize Preferences
+            </button>
 
           </div>
 
+          <div class="collapsible-content" id="advanced-content">
 
-          <div class="advanced-group">
+            <div class="input-grid">
 
-            <label>
-              Complexity Level
-            </label>
+              <div class="input-group">
+                <label>Service Type</label>
+                <select>
+                  <option>Commercial Cleaning</option>
+                  <option>Residential Cleaning</option>
+                  <option>Deep Cleaning</option>
+                </select>
+              </div>
 
-            <select id="complexityLevel">
+              <div class="input-group">
+                <label>Property Size</label>
+                <input type="text" placeholder="Square footage">
+              </div>
 
-              <option>
-                Low
-              </option>
+              <div class="input-group">
+                <label>Visits Per Month</label>
+                <input type="number" placeholder="4">
+              </div>
 
-              <option>
-                Moderate
-              </option>
+              <div class="input-group">
+                <label>Complexity Level</label>
+                <select>
+                  <option>Low</option>
+                  <option>Moderate</option>
+                  <option>High</option>
+                  <option>Extreme</option>
+                </select>
+              </div>
 
-              <option>
-                High
-              </option>
-
-              <option>
-                Extreme
-              </option>
-
-            </select>
+            </div>
 
           </div>
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section>
+      <div class="container">
+
+        <div class="cta-card glass">
+
+          <p class="label" style="color:#7FE0CF;">STRUCTURED OPERATIONAL ENVIRONMENTS</p>
+
+          <h2>
+            Ready To Structure Your Environment?
+          </h2>
+
+          <p>
+            North Crescent Facility Solutions delivers recurring operational environments designed for consistency, presentation, and measurable maintenance stability.
+          </p>
+
+          <div class="cta-actions">
+            <button class="primary-btn">Schedule Consultation</button>
+            <button class="secondary-btn">WhatsApp Advisor</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+
+      <div>
+        © North Crescent Facility Solutions Inc.
+      </div>
+
+      <div>
+        Moncton, New Brunswick
       </div>
 
     </div>
+  </footer>
 
-  </section>
+  <script>
 
+    const toggleButtons = document.querySelectorAll('[data-toggle]');
 
-  <!-- ========================================= -->
-  <!-- SALES JS -->
-  <!-- ========================================= -->
+    toggleButtons.forEach(button => {
 
-  <script
-    type="module"
-    src="./sales.js">
+      button.addEventListener('click', () => {
+
+        const targetId = button.getAttribute('data-toggle');
+
+        const target = document.getElementById(targetId);
+
+        target.classList.toggle('active');
+
+      });
+
+    });
+
   </script>
 
 </body>
-
 </html>
-
