@@ -363,36 +363,87 @@ body::before {
 .toggle-btn,
 .program-btn {
 
-  background: #EAF2F7;
+  position: relative;
 
-  color: #1E3A5F;
+  overflow: hidden;
 
-  border: 1px solid rgba(30,58,95,0.10);
+  background:
+    linear-gradient(
+      135deg,
+      #1E3A5F 0%,
+      #29507E 45%,
+      #4A9B8C 100%
+    );
 
-  padding: 16px 24px;
+  color: #FFFFFF;
 
-  border-radius: 16px;
+  border: none;
 
-  font-weight: 600;
+  padding: 16px 28px;
+
+  border-radius: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  box-shadow:
+    0 14px 35px rgba(30,58,95,0.22),
+    0 8px 18px rgba(74,155,140,0.16);
 
   transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    filter 0.28s ease;
 
 }
 .secondary-btn:hover,
 .toggle-btn:hover,
 .program-btn:hover {
 
-  background: #DCEBF3;
+  transform: translateY(-4px);
 
-  border-color: rgba(74,155,140,0.24);
+  filter: brightness(1.06);
 
-  transform: translateY(-2px);
+  box-shadow:
+    0 22px 45px rgba(30,58,95,0.28),
+    0 10px 22px rgba(74,155,140,0.22);
 
 }
+.secondary-btn::before,
+.toggle-btn::before,
+.program-btn::before {
 
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+
+  left: -130%;
+
+  width: 120%;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.16),
+      transparent
+    );
+
+  transition: 0.7s ease;
+
+}
+.secondary-btn:hover::before,
+.toggle-btn:hover::before,
+.program-btn:hover::before {
+
+  left: 120%;
+
+}
     .hero-panel {
 
   padding: 32px;
@@ -578,13 +629,22 @@ body::before {
 
     /* MODULES */
 
-    .module-card,
-    .summary-card,
-    .advisor-card,
-    .cta-card {
-      padding: 36px;
-      border-radius: 34px;
-    }
+.module-card,
+.summary-card,
+.advisor-card,
+.cta-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 44px;
+
+  border-radius: 36px;
+
+  backdrop-filter: blur(12px);
+
+}
 
 .advisor-card {
 
@@ -1045,6 +1105,44 @@ body::before {
       overflow: hidden;
       position: relative;
     }
+
+.cta-card h1,
+.cta-card h2,
+.cta-card h3,
+.cta-card h4,
+.cta-card h5,
+.cta-card h6 {
+
+  color: #FFFFFF;
+
+}
+.cta-card .secondary-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.18),
+      rgba(255,255,255,0.10)
+    );
+
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.16);
+
+  backdrop-filter: blur(8px);
+
+}
+
+.cta-card .secondary-btn:hover {
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.24),
+      rgba(255,255,255,0.14)
+    );
+
+}
 
     .cta-card::before {
       content: '';
