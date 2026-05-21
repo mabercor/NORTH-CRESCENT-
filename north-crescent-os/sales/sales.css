@@ -847,7 +847,7 @@ margin-left: auto;
 
 .packages-section {
 
-    padding: 70px 0 40px;
+  padding: 40px 0;
 
 }
 
@@ -867,9 +867,9 @@ margin-left: auto;
 
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 32px;
+  gap: 26px;
 
   align-items: stretch;
 
@@ -878,7 +878,7 @@ margin-left: auto;
 
 .package-card {
 
-  padding: 30px;
+  padding: 34px;
 
   border-radius: 34px;
 
@@ -887,6 +887,14 @@ margin-left: auto;
   transition: var(--transition-fast);
 
   overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  min-height: 100%;
 
 }
 
@@ -909,14 +917,15 @@ margin-left: auto;
 
   border: 1px solid rgba(74,155,140,0.25);
 
-  transform: scale(1.04);
-
   background:
     linear-gradient(
       180deg,
-      rgba(74,155,140,0.06),
-      rgba(255,255,255,0.72)
+      rgba(74,155,140,0.08),
+      rgba(255,255,255,0.78)
     );
+
+  box-shadow:
+    0 30px 70px rgba(74,155,140,0.12);
 
 }
 
@@ -1129,7 +1138,7 @@ margin-left: auto;
 
 .recommendation-summary-section {
 
-  padding: 35px 0;
+  padding: 20px 0 40px;
 
 }
 
@@ -1195,7 +1204,7 @@ margin-left: auto;
 
 .advisor-section {
 
-  padding: 30px 0 55px;
+  padding: 20px 0 40px;
 
 }
 
@@ -1285,10 +1294,9 @@ margin-left: auto;
 
 .advanced-section {
 
-  padding: 0 0 50px;
+  padding: 20px 0 60px;
 
 }
-
 /* =========================================
    TRUST STRIP
 ========================================= */
