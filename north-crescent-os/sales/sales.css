@@ -196,15 +196,17 @@ body {
 
 section {
 
-  width: min(1180px, 84%);
+  width: min(1180px, 88%);
+
   margin: 0 auto;
+
+  padding: 40px 0;
 
   position: relative;
 
   z-index: 2;
 
 }
-
 
 /* =========================================
    GLASS CARD
