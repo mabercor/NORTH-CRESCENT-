@@ -466,15 +466,17 @@ section {
 
 .hero-secondary-btn {
 
-  background: rgba(255,255,255,0.72);
+  background: rgba(255,255,255,0.82);
 
-  border: 1px solid rgba(15,23,42,0.08);
+  border: 1px solid rgba(15,23,42,0.06);
 
   color: var(--text-primary);
 
-  padding: 18px 28px;
+  padding: 15px 22px;
 
-  border-radius: 18px;
+  border-radius: 16px;
+
+  font-weight: 500;
 
 }
 
@@ -684,7 +686,7 @@ margin-left: auto;
 .memory-toggle-btn,
 .advanced-toggle-btn {
 
-  padding: 18px 24px;
+  padding: 15px 20px;
 
   border-radius: 18px;
 
@@ -1082,7 +1084,7 @@ margin-left: auto;
 
   width: 100%;
 
-  padding: 18px;
+  padding: 15px;
 
   border-radius: 18px;
 
