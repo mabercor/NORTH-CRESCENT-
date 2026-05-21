@@ -624,10 +624,19 @@ margin-left: auto;
 /* =========================================
    CLIENT MEMORY
 ========================================= */
-
 .client-memory-layer {
 
-  margin-top: 30px;
+  display: grid;
+
+  grid-template-columns: 1fr 0.95fr;
+
+  gap: 30px;
+
+  align-items: stretch;
+
+  padding-top: 20px;
+
+  padding-bottom: 50px;
 
 }
 
@@ -1284,68 +1293,21 @@ margin-left: auto;
    TRUST STRIP
 ========================================= */
 
-.trust-strip-section {
-
-  padding: 0 0 45px;
-
-}
-
-
-.trust-strip {
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 24px;
-
-  padding: 28px;
-
-  border-radius: 28px;
-
-}
-
-
 .trust-item {
 
-  position: relative;
+  background: rgba(248,251,253,0.92);
 
-}
+  border: 1px solid rgba(15,23,42,0.05);
 
+  border-radius: 24px;
 
-.trust-item:not(:last-child)::after {
+  padding: 24px;
 
-  content: '';
+  display: flex;
 
-  position: absolute;
+  flex-direction: column;
 
-  top: 0;
-  right: -12px;
-
-  width: 1px;
-  height: 100%;
-
-  background: rgba(15,23,42,0.08);
-
-}
-
-
-.trust-item h3 {
-
-  font-size: 18px;
-
-  margin-bottom: 10px;
-
-}
-
-
-.trust-item p {
-
-  color: var(--text-secondary);
-
-  line-height: 1.7;
-
-  font-size: 14px;
+  justify-content: center;
 
 }
 
