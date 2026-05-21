@@ -1,1511 +1,529 @@
-/* =========================================
-   NORTH CRESCENT SALES PORTAL
-   PRIVATE CLIENT EXPERIENCE
-   LIGHT PREMIUM CORPORATE VERSION
-========================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>North Crescent | Private Client Experience</title>
 
-:root {
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  /* =========================================
-     CORE BACKGROUNDS
-  ========================================= */
+  <link rel="stylesheet" href="sales.css" />
+</head>
+<body>
 
-  --bg-primary: #F4F7FA;
-  --bg-secondary: #FFFFFF;
-  --bg-card: rgba(255,255,255,0.82);
+  <nav class="nav">
+    <div class="container nav-inner glass">
 
-  /* =========================================
-     BRAND COLORS
-  ========================================= */
+      <div class="brand">
+        <div class="brand-dot"></div>
 
-  --accent-primary: #1E3A5F;
-  --accent-secondary: #4A9B8C;
+        <div>
+          <h2>North Crescent</h2>
+          <p>Private Client Experience</p>
+        </div>
+      </div>
 
-  /* =========================================
-     TEXT SYSTEM
-  ========================================= */
+      <a href="#" class="nav-btn">Return To OS</a>
 
-  --text-primary: #122033;
-  --text-secondary: #526172;
-  --text-muted: #7D8A99;
+    </div>
+  </nav>
 
-  /* =========================================
-     BORDERS
-  ========================================= */
+  <main>
 
-  --border-soft: rgba(15,23,42,0.08);
-  --border-accent: rgba(74,155,140,0.18);
+    <!-- HERO -->
 
-  /* =========================================
-     GLASS SYSTEM
-  ========================================= */
+    <section>
+      <div class="container hero">
 
-  --glass-bg: rgba(255,255,255,0.78);
-  --glass-hover: rgba(255,255,255,0.92);
+        <div>
 
-  /* =========================================
-     SHADOWS
-  ========================================= */
+          <p class="label">
+            STRUCTURED OPERATIONAL ENVIRONMENTS
+          </p>
 
-  --shadow-premium:
-    0 25px 60px rgba(15,23,42,0.08);
+          <h1>
+            Premium maintenance programs designed for consistency and long-term operational control.
+          </h1>
 
-  --shadow-soft:
-    0 10px 30px rgba(15,23,42,0.06);
+          <p class="hero-description">
+            North Crescent Facility Solutions provides structured recurring service environments designed to maintain presentation, environmental stability, and operational consistency for residential and commercial properties.
+          </p>
 
-  /* =========================================
-     RADII
-  ========================================= */
+          <div class="hero-actions">
+            <button class="primary-btn">Explore Service Programs</button>
+            <button class="secondary-btn">Returning Client Access</button>
+          </div>
 
-  --radius-xl: 34px;
-  --radius-lg: 24px;
-  --radius-md: 18px;
+        </div>
 
-  /* =========================================
-     TRANSITIONS
-  ========================================= */
+        <div class="hero-panel glass">
 
-  --transition-slow: 0.55s ease;
-  --transition-fast: 0.28s ease;
+          <div class="panel-header">
+            <div class="panel-dot"></div>
+            <span>Operational Environment Metrics</span>
+          </div>
 
-}
+          <div class="metric-grid">
 
+            <div class="metric-card">
+              <span>Reliability</span>
+              <strong>Structured recurring operational consistency.</strong>
+            </div>
 
-/* =========================================
-   GLOBAL RESET
-========================================= */
+            <div class="metric-card">
+              <span>Stability</span>
+              <strong>Controlled environments designed for long-term presentation.</strong>
+            </div>
 
-* {
+            <div class="metric-card">
+              <span>Performance</span>
+              <strong>Operational systems focused on measurable consistency.</strong>
+            </div>
 
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+          </div>
 
-}
+        </div>
 
+      </div>
+    </section>
 
-html {
+    <!-- TRUST -->
 
-  scroll-behavior: smooth;
+    <section>
+      <div class="container trust-strip glass">
 
-}
+        <div class="trust-item">
+          <h3>Reliability</h3>
+          <p>Structured recurring operational consistency.</p>
+        </div>
 
+        <div class="trust-item">
+          <h3>Stability</h3>
+          <p>Controlled environments designed for long-term presentation.</p>
+        </div>
 
-/* =========================================
-   BODY
-========================================= */
+        <div class="trust-item">
+          <h3>Performance</h3>
+          <p>Operational systems focused on measurable consistency.</p>
+        </div>
 
-body {
+        <div class="trust-item">
+          <h3>Partnership</h3>
+          <p>Long-term service relationships built around discipline.</p>
+        </div>
 
-  font-family: 'Poppins', sans-serif;
+      </div>
+    </section>
 
-  background:
+    <!-- RETURNING CLIENT ACCESS -->
 
-    radial-gradient(
-      circle at top left,
-      rgba(74,155,140,0.10),
-      transparent 26%
-    ),
+    <section>
+      <div class="container">
 
-    radial-gradient(
-      circle at bottom right,
-      rgba(30,58,95,0.08),
-      transparent 30%
-    ),
+        <div class="module-card glass">
 
-    linear-gradient(
-      180deg,
-      #F8FBFD 0%,
-      #EEF3F8 100%
-    );
+          <div class="module-header">
 
-  color: var(--text-primary);
+            <div>
+              <p class="label">RETURNING CLIENT ACCESS</p>
 
-  overflow-x: hidden;
+              <h2>
+                Restore Existing Operational Environment
+              </h2>
 
-  min-height: 100vh;
+              <p>
+                Returning clients may restore previous operational preferences, recurring structures, and environmental recommendations.
+              </p>
+            </div>
 
-  position: relative;
+            <button class="toggle-btn" data-toggle="client-access-content">
+              Restore Environment
+            </button>
 
-}
+          </div>
 
+          <div class="collapsible-content" id="client-access-content">
 
-/* =========================================
-   AMBIENT GRADIENTS
-========================================= */
+            <div class="input-grid">
 
-.ambient-gradient {
+              <div class="input-group">
+                <label>Client Search</label>
+                <input type="text" placeholder="Client name, CRM ID or property">
+              </div>
 
-  position: fixed;
+              <div class="input-group">
+                <label>CRM Status</label>
+                <select>
+                  <option>Active Client</option>
+                  <option>Recurring Active</option>
+                  <option>Proposal Sent</option>
+                </select>
+              </div>
 
-  border-radius: 50%;
+            </div>
 
-  filter: blur(100px);
+          </div>
 
-  opacity: 0.35;
+        </div>
 
-  pointer-events: none;
+      </div>
+    </section>
 
-  z-index: 0;
+    <!-- PROGRAMS -->
 
-}
+    <section>
+      <div class="container">
 
+        <div class="section-header">
 
-.ambient-gradient-1 {
+          <p class="label">CURATED OPERATIONAL PROGRAMS</p>
 
-  width: 500px;
-  height: 500px;
+          <h2>
+            Structured service recommendations tailored to your environment.
+          </h2>
 
-  background: rgba(74,155,140,0.14);
+          <p>
+            Each operational program is designed to maintain long-term consistency, environmental presentation, and recurring operational stability.
+          </p>
 
-  top: -180px;
-  left: -120px;
+        </div>
 
-}
+        <div class="program-grid">
 
+          <article class="program-card glass">
 
-.ambient-gradient-2 {
+            <div class="program-badge">Essential</div>
 
-  width: 420px;
-  height: 420px;
+            <h3>Essential Maintenance Program</h3>
 
-  background: rgba(30,58,95,0.10);
+            <p class="frequency">2 Visits / Month</p>
 
-  right: -120px;
-  top: 180px;
+            <p class="program-description">
+              Ideal for maintaining initial environmental control and recurring cleanliness consistency.
+            </p>
 
-}
+            <p class="old-price">$450</p>
 
+            <div class="price">
+              $396 <span>/ month</span>
+            </div>
 
-.ambient-gradient-3 {
+            <div class="save">SAVE 12%</div>
 
-  width: 320px;
-  height: 320px;
+            <ul class="benefits">
+              <li>Structured recurring maintenance</li>
+              <li>Environment consistency tracking</li>
+              <li>Operational support structure</li>
+            </ul>
 
-  background: rgba(74,155,140,0.08);
+            <button class="program-btn">View Recommendation</button>
 
-  bottom: 60px;
-  left: 35%;
+          </article>
 
-}
+          <article class="program-card featured glass">
 
+            <div class="popular-tag">MOST POPULAR</div>
 
-/* =========================================
-   GLOBAL SECTIONS
-========================================= */
+            <div class="program-badge">Operational Consistency</div>
 
-section {
+            <h3>Operational Consistency Program</h3>
 
-  width: min(1180px, 88%);
+            <p class="frequency">4 Visits / Month</p>
 
-  margin: 0 auto;
+            <p class="program-description">
+              Balanced operational structure designed for recurring presentation and maintenance stability.
+            </p>
 
-  padding: 40px 0;
+            <p class="old-price">$950</p>
 
-  position: relative;
+            <div class="price">
+              $765 <span>/ month</span>
+            </div>
 
-  z-index: 2;
+            <div class="save">SAVE 19%</div>
 
-}
+            <ul class="benefits">
+              <li>Priority operational scheduling</li>
+              <li>Advanced consistency maintenance</li>
+              <li>Recurring environment stabilization</li>
+            </ul>
 
-/* =========================================
-   GLASS CARD
-========================================= */
+            <button class="program-btn featured">Select Recommendation</button>
 
-.glass-card {
+          </article>
 
-  background: var(--glass-bg);
+          <article class="program-card glass">
 
-  backdrop-filter: blur(20px);
+            <div class="program-badge">Executive</div>
 
-  -webkit-backdrop-filter: blur(20px);
+            <h3>Executive Environment Program</h3>
 
-  border: 1px solid rgba(255,255,255,0.9);
+            <p class="frequency">8 Visits / Month</p>
 
-  box-shadow: var(--shadow-premium);
+            <p class="program-description">
+              Comprehensive operational support designed for demanding, high-traffic environments.
+            </p>
 
-}
+            <p class="old-price">$1450</p>
 
+            <div class="price">
+              $1100 <span>/ month</span>
+            </div>
 
-/* =========================================
-   NAVIGATION
-========================================= */
+            <div class="save">SAVE 24%</div>
 
-.sales-nav {
+            <ul class="benefits">
+              <li>High-frequency operational support</li>
+              <li>Premium environment presentation</li>
+              <li>Executive-level consistency</li>
+            </ul>
 
-  width: min(1180px, 84%);
+            <button class="program-btn">View Recommendation</button>
 
-  margin: 32px auto 0;
+          </article>
 
-  display: flex;
+        </div>
 
-  align-items: center;
+      </div>
+    </section>
 
-  justify-content: space-between;
+    <!-- SUMMARY -->
 
-  padding: 20px 30px;
+    <section>
+      <div class="container">
 
-  border-radius: 24px;
+        <div class="summary-card glass">
 
-  background: rgba(255,255,255,0.75);
+          <p class="label">SELECTED OPERATIONAL PROGRAM</p>
 
-  backdrop-filter: blur(18px);
+          <h2>
+            Operational Consistency Program
+          </h2>
 
-  border: 1px solid rgba(255,255,255,0.95);
+          <p>
+            Structured recurring operational support designed for environmental consistency and presentation stability.
+          </p>
 
-  box-shadow:
-    0 12px 40px rgba(15,23,42,0.05);
+          <div class="price" style="margin-top: 28px;">
+            $765 <span>/ month</span>
+          </div>
 
-  position: relative;
+          <div class="summary-grid">
 
-  z-index: 10;
+            <div class="summary-box">
+              <h3>Included Benefits</h3>
 
-}
+              <ul>
+                <li>Priority operational scheduling</li>
+                <li>Advanced consistency maintenance</li>
+                <li>Recurring environment stabilization</li>
+              </ul>
+            </div>
 
+            <div class="summary-box">
+              <h3>Environment Advantages</h3>
 
-.sales-nav-left {
+              <ul>
+                <li>Long-term operational consistency</li>
+                <li>Professional environment presentation</li>
+                <li>Stabilized maintenance structure</li>
+              </ul>
+            </div>
 
-  display: flex;
+          </div>
 
-  align-items: center;
+        </div>
 
-  gap: 16px;
+      </div>
+    </section>
 
-}
+    <!-- ADVISOR -->
 
+    <section>
+      <div class="container">
 
-.sales-brand-dot {
+        <div class="advisor-card glass">
 
-  width: 16px;
-  height: 16px;
+          <p class="label">PERSONALIZED CONSULTATION</p>
 
-  border-radius: 50%;
+          <h2>
+            Speak With A North Crescent Advisor
+          </h2>
 
-  background: var(--accent-secondary);
+          <p>
+            Our operational advisors can help structure the ideal recurring maintenance environment based on operational flow, presentation standards, and long-term stability goals.
+          </p>
 
-  box-shadow:
-    0 0 18px rgba(74,155,140,0.5);
+          <div class="advisor-options">
 
-}
+            <div class="advisor-option">
 
+              <label>Preferred Contact Method</label>
 
-.sales-nav-left h2 {
+              <div class="contact-buttons">
+                <button class="active">Text Message</button>
+                <button>Phone Call</button>
+                <button>WhatsApp</button>
+              </div>
 
-  font-size: 18px;
-  font-weight: 700;
+            </div>
 
-}
+            <div class="advisor-option">
 
+              <label>Preferred Callback Window</label>
 
-.sales-nav-left p {
+              <select style="width:100%; padding:18px; border-radius:16px; border:1px solid var(--border); background:white; font-family:inherit;">
+                <option>8:00 AM – 10:00 AM</option>
+                <option>10:00 AM – 12:00 PM</option>
+                <option>12:00 PM – 2:00 PM</option>
+              </select>
 
-  color: var(--text-secondary);
+            </div>
 
-  font-size: 13px;
+          </div>
 
-}
+          <button class="advisor-btn">
+            Continue With Advisor
+          </button>
 
+        </div>
 
-.sales-nav-link {
+      </div>
+    </section>
 
-  text-decoration: none;
+    <!-- ADVANCED -->
 
-  color: var(--text-primary);
+    <section>
+      <div class="container">
 
-  padding: 12px 18px;
+        <div class="module-card glass">
 
-  border-radius: 14px;
+          <div class="module-header">
 
-  background: rgba(255,255,255,0.72);
+            <div>
+              <p class="label">ADVANCED PERSONALIZATION</p>
 
-  transition: var(--transition-fast);
+              <h2>
+                Additional Operational Preferences
+              </h2>
 
-  border: 1px solid rgba(15,23,42,0.06);
+              <p>
+                Customize scheduling preferences, recurring structures, and operational access details.
+              </p>
+            </div>
 
-}
+            <button class="toggle-btn" data-toggle="advanced-content">
+              Customize Preferences
+            </button>
 
+          </div>
 
-.sales-nav-link:hover {
+          <div class="collapsible-content" id="advanced-content">
 
-  background: white;
+            <div class="input-grid">
 
-  transform: translateY(-2px);
+              <div class="input-group">
+                <label>Service Type</label>
+                <select>
+                  <option>Commercial Cleaning</option>
+                  <option>Residential Cleaning</option>
+                  <option>Deep Cleaning</option>
+                </select>
+              </div>
 
-}
+              <div class="input-group">
+                <label>Property Size</label>
+                <input type="text" placeholder="Square footage">
+              </div>
 
+              <div class="input-group">
+                <label>Visits Per Month</label>
+                <input type="number" placeholder="4">
+              </div>
 
-/* =========================================
-   HERO
-========================================= */
+              <div class="input-group">
+                <label>Complexity Level</label>
+                <select>
+                  <option>Low</option>
+                  <option>Moderate</option>
+                  <option>High</option>
+                  <option>Extreme</option>
+                </select>
+              </div>
 
-.sales-hero {
+            </div>
 
-  display: grid;
+          </div>
 
-  grid-template-columns: 1.08fr 0.92fr;
+        </div>
 
-  align-items: center;
+      </div>
+    </section>
 
-  gap: 100px;
+    <!-- CTA -->
 
-  min-height: 88vh;
+    <section>
+      <div class="container">
 
-  padding-top: 40px;
+        <div class="cta-card glass">
 
-  padding-bottom: 30px;
+          <p class="label" style="color:#7FE0CF;">STRUCTURED OPERATIONAL ENVIRONMENTS</p>
 
-}
-.sales-hero-content {
+          <h2>
+            Ready To Structure Your Environment?
+          </h2>
 
-max-width: 760px;
-}
+          <p>
+            North Crescent Facility Solutions delivers recurring operational environments designed for consistency, presentation, and measurable maintenance stability.
+          </p>
 
-.hero-label,
-.packages-label,
-.memory-label,
-.summary-label,
-.advisor-label,
-.advanced-label {
+          <div class="cta-actions">
+            <button class="primary-btn">Schedule Consultation</button>
+            <button class="secondary-btn">WhatsApp Advisor</button>
+          </div>
 
-  font-size: 12px;
+        </div>
 
-  letter-spacing: 3px;
+      </div>
+    </section>
 
-  text-transform: uppercase;
+  </main>
 
-  color: var(--accent-secondary);
+  <footer>
+    <div class="container footer-inner">
 
-  margin-bottom: 22px;
+      <div>
+        © North Crescent Facility Solutions Inc.
+      </div>
 
-  font-weight: 700;
+      <div>
+        Moncton, New Brunswick
+      </div>
 
-}
+    </div>
+  </footer>
 
+  <script>
 
-.sales-hero h1 {
+    const toggleButtons = document.querySelectorAll('[data-toggle]');
 
-  font-size: clamp(4rem, 5.2vw, 6.4rem);
+    toggleButtons.forEach(button => {
 
-  line-height: 0.96;
+      button.addEventListener('click', () => {
 
-  letter-spacing: -4px;
+        const targetId = button.getAttribute('data-toggle');
 
-  font-weight: 800;
+        const target = document.getElementById(targetId);
 
-  max-width: 760px;
+        target.classList.toggle('active');
 
-}
+      });
 
+    });
 
-.hero-description {
+  </script>
 
-  margin-top: 34px;
-
-  color: var(--text-secondary);
-
-  line-height: 1.9;
-
-  font-size: 18px;
-
-  max-width: 620px;
-
-}
-
-
-.hero-actions {
-
-  display: flex;
-
-  gap: 18px;
-
-  margin-top: 46px;
-
-  flex-wrap: wrap;
-
-}
-
-
-.hero-primary-btn,
-.hero-secondary-btn,
-.package-btn,
-.advisor-btn,
-.memory-search-btn,
-.memory-toggle-btn,
-.advanced-toggle-btn {
-
-  text-decoration: none;
-
-  border: none;
-
-  cursor: pointer;
-
-  transition: var(--transition-fast);
-
-  font-family: inherit;
-
-}
-
-
-.hero-primary-btn {
-
-  background:
-    linear-gradient(
-      135deg,
-      #1E3A5F,
-      #4A9B8C
-    );
-
-  color: white;
-
-  padding: 18px 28px;
-
-  border-radius: 18px;
-
-  font-weight: 600;
-
-  box-shadow:
-    0 12px 40px rgba(74,155,140,0.18);
-
-}
-
-
-.hero-secondary-btn {
-
-  background: rgba(255,255,255,0.82);
-
-  border: 1px solid rgba(15,23,42,0.06);
-
-  color: var(--text-primary);
-
-  padding: 15px 22px;
-
-  border-radius: 16px;
-
-  font-weight: 500;
-
-}
-
-
-.hero-primary-btn:hover,
-.hero-secondary-btn:hover,
-.package-btn:hover,
-.advisor-btn:hover,
-.memory-search-btn:hover,
-.memory-toggle-btn:hover,
-.advanced-toggle-btn:hover {
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 10px 24px rgba(15,23,42,0.08);
-
-}
-
-
-/* =========================================
-   HERO VISUAL
-========================================= */
-
-.hero-visual-panel {
-
-  display: flex;
-
-  justify-content: center;
-
-}
-
-
-.hero-visual-card {
-
-  width: 100%;
-
-  max-width: 620px;
-
-  padding: 38px;
-
-  border-radius: 38px;
-
-  position: relative;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.96),
-      rgba(255,255,255,0.84)
-    );
-
-  border: 1px solid rgba(255,255,255,0.95);
-
-  box-shadow:
-    0 40px 100px rgba(15,23,42,0.12);
-
-}
-
-
-.hero-visual-card::before {
-
-  content: '';
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(74,155,140,0.08),
-      transparent 60%
-    );
-
-}
-
-
-.hero-visual-header {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 12px;
-
-  color: var(--text-secondary);
-
-  margin-bottom: 34px;
-
-}
-
-
-.hero-status-dot {
-
-  width: 10px;
-  height: 10px;
-
-  border-radius: 50%;
-
-  background: var(--accent-secondary);
-
-  box-shadow:
-    0 0 18px rgba(74,155,140,0.4);
-
-}
-
-
-.hero-visual-metrics {
-
-  display: grid;
-
-  gap: 20px;
-
-}
-
-
-.visual-metric-card {
-
-  background: rgba(255,255,255,0.72);
-
-  border: 1px solid rgba(15,23,42,0.06);
-
-  border-radius: 22px;
-
-  padding: 22px;
-
-  box-shadow:
-    0 10px 30px rgba(15,23,42,0.04);
-
-}
-
-
-.visual-metric-card span {
-
-  display: block;
-
-  color: var(--text-muted);
-
-  margin-bottom: 10px;
-
-}
-
-
-.visual-metric-card strong {
-
-  font-size: 22px;
-
-}
-
-
-/* =========================================
-   CLIENT MEMORY
-========================================= */
-.client-memory-layer {
-
-  display: grid;
-
-  grid-template-columns: 1fr 0.95fr;
-
-  gap: 30px;
-
-  align-items: stretch;
-
-  padding-top: 20px;
-
-  padding-bottom: 50px;
-
-}
-
-
-.client-memory-card,
-.summary-card,
-.advisor-card,
-.advanced-card {
-
-  border-radius: var(--radius-xl);
-
-  padding: 34px;
-
-}
-
-
-.client-memory-header,
-.advanced-header {
-
-  display: flex;
-
-  justify-content: space-between;
-
-  gap: 30px;
-
-  align-items: center;
-
-}
-
-
-.client-memory-header h2,
-.advanced-header h2,
-.packages-header h2,
-.advisor-card h2 {
-
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-
-  line-height: 1.15;
-
-  margin-bottom: 18px;
-
-}
-
-
-.client-memory-header p,
-.packages-header p,
-.advisor-card p,
-.advanced-header p {
-
-  color: var(--text-secondary);
-
-  line-height: 1.9;
-
-}
-
-
-.memory-toggle-btn,
-.advanced-toggle-btn {
-
-  padding: 15px 20px;
-
-  border-radius: 18px;
-
-  background: rgba(255,255,255,0.72);
-
-  color: var(--text-primary);
-
-  border: 1px solid rgba(15,23,42,0.08);
-
-  min-width: 240px;
-
-}
-
-
-.client-memory-content,
-.advanced-content {
-
-  overflow: hidden;
-
-  transition: var(--transition-slow);
-
-}
-
-
-.collapsed {
-
-  max-height: 0;
-
-  opacity: 0;
-
-  margin-top: 0;
-
-}
-
-
-.client-memory-content:not(.collapsed),
-.advanced-content:not(.collapsed) {
-
-  max-height: 1200px;
-
-  opacity: 1;
-
-  margin-top: 40px;
-
-}
-
-
-.memory-search-grid,
-.advanced-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
-  gap: 22px;
-
-}
-
-
-.memory-input-group,
-.advanced-group {
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 12px;
-
-}
-
-
-.memory-input-group label,
-.advanced-group label,
-.advisor-option-box label {
-
-  font-size: 13px;
-
-  color: var(--text-secondary);
-
-}
-
-
-.memory-input-group input,
-.memory-input-group select,
-.advanced-group input,
-.advanced-group select,
-.advisor-option-box select {
-
-  background: rgba(255,255,255,0.92);
-
-  border: 1px solid rgba(15,23,42,0.08);
-
-  border-radius: 16px;
-
-  padding: 18px 18px;
-
-  color: var(--text-primary);
-
-  font-family: inherit;
-
-  outline: none;
-
-  transition: var(--transition-fast);
-
-}
-
-
-.memory-input-group input:focus,
-.memory-input-group select:focus,
-.advanced-group input:focus,
-.advanced-group select:focus,
-.advisor-option-box select:focus {
-
-  border-color: rgba(74,155,140,0.45);
-
-  box-shadow:
-    0 0 0 4px rgba(74,155,140,0.10);
-
-}
-
-
-.memory-search-btn,
-.advisor-btn {
-
-  margin-top: 28px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #1E3A5F,
-      #4A9B8C
-    );
-
-  color: white;
-
-  padding: 18px 24px;
-
-  border-radius: 18px;
-
-  font-weight: 600;
-
-}
-
-
-/* =========================================
-   PACKAGES
-========================================= */
-
-.packages-section {
-
-  padding: 40px 0;
-
-}
-
-
-.packages-header {
-
-  text-align: center;
-
-  max-width: 900px;
-
-  margin: 0 auto 70px;
-
-}
-
-
-.packages-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 26px;
-
-  align-items: stretch;
-
-}
-
-
-.package-card {
-
-  padding: 34px;
-
-  border-radius: 34px;
-
-  position: relative;
-
-  transition: var(--transition-fast);
-
-  overflow: hidden;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: space-between;
-
-  min-height: 100%;
-
-}
-
-
-.package-card:hover {
-
-  transform: translateY(-4px);
-
-  background: rgba(255,255,255,0.98);
-
-  border-color: rgba(74,155,140,0.16);
-
-  box-shadow:
-    0 24px 50px rgba(15,23,42,0.10);
-
-}
-
-
-.package-card.featured {
-
-  border: 1px solid rgba(74,155,140,0.25);
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(74,155,140,0.08),
-      rgba(255,255,255,0.78)
-    );
-
-  box-shadow:
-    0 30px 70px rgba(74,155,140,0.12);
-
-}
-
-
-.featured-tag {
-
-  position: absolute;
-
-  top: 18px;
-  right: 18px;
-
-  background: rgba(74,155,140,0.10);
-
-  border: 1px solid rgba(74,155,140,0.18);
-
-  color: var(--accent-secondary);
-
-  padding: 8px 14px;
-
-  border-radius: 999px;
-
-  font-size: 11px;
-
-  letter-spacing: 1px;
-
-  font-weight: 700;
-
-}
-
-
-.package-badge {
-
-  display: inline-flex;
-
-  margin-bottom: 26px;
-
-  padding: 8px 16px;
-
-  border-radius: 999px;
-
-  background: rgba(255,255,255,0.72);
-
-  color: var(--text-secondary);
-
-  font-size: 12px;
-
-}
-
-
-.package-badge.recommended,
-.package-badge.premium {
-
-  color: var(--accent-secondary);
-
-}
-
-
-.package-card h3 {
-
-  font-size: 34px;
-
-  line-height: 1.2;
-
-  margin-bottom: 18px;
-
-}
-
-
-.package-frequency {
-
-  color: var(--accent-secondary);
-
-  margin-bottom: 22px;
-
-  font-weight: 600;
-
-}
-
-
-.package-description {
-
-  color: var(--text-secondary);
-
-  line-height: 1.9;
-
-  margin-bottom: 34px;
-
-}
-
-
-.package-old-price {
-
-  color: var(--text-muted);
-
-  text-decoration: line-through;
-
-  margin-bottom: 10px;
-
-}
-
-
-.package-price {
-
-  font-size: 58px;
-
-  font-weight: 800;
-
-  line-height: 1;
-
-}
-
-
-.package-price span {
-
-  font-size: 16px;
-
-  color: var(--text-secondary);
-
-}
-
-
-.package-save {
-
-  margin-top: 16px;
-
-  color: var(--accent-secondary);
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-}
-
-
-.package-benefits {
-
-  list-style: none;
-
-  display: grid;
-
-  gap: 16px;
-
-  margin: 36px 0;
-
-}
-
-
-.package-benefits li {
-
-  color: var(--text-secondary);
-
-  position: relative;
-
-  padding-left: 26px;
-
-  line-height: 1.7;
-
-}
-
-
-.package-benefits li::before {
-
-  content: '•';
-
-  position: absolute;
-
-  left: 0;
-
-  color: var(--accent-secondary);
-
-}
-
-
-.package-btn {
-
-  width: 100%;
-
-  padding: 18px;
-
-  border-radius: 18px;
-
-  background: rgba(255,255,255,0.88);
-
-  color: var(--text-primary);
-
-  font-weight: 600;
-
-  border: 1px solid rgba(15,23,42,0.05);
-
-  transition: var(--transition-fast);
-
-}
-
-
-.featured-btn {
-
-  background:
-    linear-gradient(
-      135deg,
-      #1E3A5F,
-      #4A9B8C
-    );
-
-  color: white;
-
-}
-
-
-/* =========================================
-   SUMMARY
-========================================= */
-.summary-advisor-grid {
-
-  width: min(1180px, 88%);
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 30px;
-
-  align-items: start;
-
-}
-
-.recommendation-summary-section {
-
-  padding: 20px 0 40px;
-
-}
-
-
-.summary-price {
-
-  font-size: 74px;
-
-  font-weight: 800;
-
-  margin: 24px 0 40px;
-
-}
-
-
-.summary-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  gap: 24px;
-
-}
-
-
-.summary-box {
-
-  background: rgba(255,255,255,0.76);
-
-  border: 1px solid rgba(15,23,42,0.05);
-
-  border-radius: 24px;
-
-  padding: 22px;
-
-}
-
-
-.summary-box h3 {
-
-  margin-bottom: 18px;
-
-}
-
-
-.summary-box ul {
-
-  display: grid;
-
-  gap: 14px;
-
-  color: var(--text-secondary);
-
-  padding-left: 18px;
-
-}
-
-
-/* =========================================
-   ADVISOR
-========================================= */
-
-.advisor-section {
-
-  padding: 20px 0 40px;
-
-}
-
-
-.advisor-options-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
-  gap: 24px;
-
-  margin-top: 44px;
-
-}
-
-
-.advisor-option-box {
-
-  background: rgba(255,255,255,0.76);
-
-  border-radius: 24px;
-
-  border: 1px solid rgba(15,23,42,0.05);
-
-  padding: 22px;
-
-}
-
-
-.contact-options {
-
-  display: flex;
-
-  gap: 12px;
-
-  flex-wrap: wrap;
-
-  margin-top: 18px;
-
-}
-
-
-.contact-option {
-
-  border: 1px solid rgba(15,23,42,0.08);
-
-  background: rgba(255,255,255,0.72);
-
-  color: var(--text-primary);
-
-  padding: 14px 18px;
-
-  border-radius: 14px;
-
-  cursor: pointer;
-
-}
-
-
-.contact-option.active {
-
-  background:
-    linear-gradient(
-      135deg,
-      #1E3A5F,
-      #4A9B8C
-    );
-
-  color: white;
-
-}
-
-
-.advisor-btn {
-
-  width: 100%;
-
-  margin-top: 36px;
-
-}
-
-
-/* =========================================
-   ADVANCED SECTION
-========================================= */
-
-.advanced-section {
-
-  padding: 20px 0 60px;
-
-}
-/* =========================================
-   TRUST STRIP
-========================================= */
-.trust-strip {
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 18px;
-
-  padding: 34px;
-
-  border-radius: 34px;
-
-  height: 100%;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.96),
-      rgba(255,255,255,0.82)
-    );
-
-  border: 1px solid rgba(255,255,255,0.9);
-
-  box-shadow:
-    0 25px 60px rgba(15,23,42,0.08);
-
-}
-
-
-.trust-item {
-
-  background: rgba(248,251,253,0.92);
-
-  border: 1px solid rgba(15,23,42,0.05);
-
-  border-radius: 24px;
-
-  padding: 24px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-}
-
-
-@media (max-width: 900px) {
-
-  .trust-strip {
-
-    grid-template-columns: 1fr 1fr;
-
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .trust-strip {
-
-    grid-template-columns: 1fr;
-
-  }
-
-}
-
-.package-card,
-.summary-card,
-.advisor-card,
-.client-memory-card,
-.advanced-card,
-.hero-visual-card,
-.trust-strip {
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
-
-}
-
-
-.package-card:hover,
-.summary-card:hover,
-.advisor-card:hover,
-.client-memory-card:hover,
-.advanced-card:hover,
-.hero-visual-card:hover,
-.trust-strip:hover {
-
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 30px 70px rgba(15,23,42,0.12);
-
-}
-/* =========================================
-   RESPONSIVE
-========================================= */
-
-@media (max-width: 1100px) {
-
-  .sales-hero {
-
-    grid-template-columns: 1fr;
-
-    gap: 60px;
-
-  }
-
-
-  .package-card.featured {
-
-    transform: none;
-
-  }
-
-}
-
-
-@media (max-width: 768px) {
-
-  .sales-nav,
-  .client-memory-header,
-  .advanced-header {
-
-    flex-direction: column;
-
-    align-items: flex-start;
-
-  }
-
-
-  .sales-hero {
-
-    padding-top: 90px;
-
-  }
-
-
-  .sales-hero h1 {
-
-    font-size: 3rem;
-
-  }
-
-
-  .package-price,
-  .summary-price {
-
-    font-size: 48px;
-
-  }
-
-
-  .client-memory-card,
-  .summary-card,
-  .advisor-card,
-  .advanced-card,
-  .package-card {
-
-    padding: 30px;
-
-  }
-
-}
-body {
-
-  font-size: 15px;
-
-  -webkit-font-smoothing: antialiased;
-
-  text-rendering: optimizeLegibility;
-
-}
+</body>
+</html>
