@@ -1135,6 +1135,21 @@ margin-left: auto;
 /* =========================================
    SUMMARY
 ========================================= */
+.summary-advisor-grid {
+
+  width: min(1180px, 88%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+
+  align-items: start;
+
+}
 
 .recommendation-summary-section {
 
