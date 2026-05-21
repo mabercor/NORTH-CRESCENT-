@@ -397,6 +397,45 @@
       border-radius: 34px;
     }
 
+.advisor-card {
+
+  background:
+    linear-gradient(
+      135deg,
+      #FFFFFF 0%,
+      rgba(74,155,140,0.05) 100%
+    );
+
+  border: 1px solid rgba(74,155,140,0.14);
+
+  box-shadow:
+    0 20px 50px rgba(15,23,42,0.06);
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+.advisor-card::before {
+
+  content: '';
+
+  position: absolute;
+
+  width: 260px;
+
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(74,155,140,0.06);
+
+  top: -120px;
+
+  right: -100px;
+
+}
+
 .summary-card {
 
   padding: 46px;
@@ -737,11 +776,19 @@
     }
 
     .advisor-option {
-      padding: 24px;
-      border-radius: 24px;
-      background: rgba(248,251,253,0.92);
-      border: 1px solid var(--border);
-    }
+
+  padding: 26px;
+
+  border-radius: 22px;
+
+  background: #FFFFFF;
+
+  border: 1px solid rgba(15,23,42,0.08);
+
+  box-shadow:
+    0 8px 24px rgba(15,23,42,0.04);
+
+}
 
     .advisor-option label {
       display: block;
@@ -757,13 +804,38 @@
     }
 
     .contact-buttons button {
-      padding: 12px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.88);
-      font-family: inherit;
-      cursor: pointer;
-    }
+
+  padding: 13px 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(15,23,42,0.08);
+
+  background: #F4F8FB;
+
+  color: #1E3A5F;
+
+  font-family: inherit;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+}
+.contact-buttons button:hover {
+
+  transform: translateY(-2px);
+
+  background: #E7F2F0;
+
+  border-color: rgba(74,155,140,0.22);
+
+}
 
     .contact-buttons button.active {
       background: linear-gradient(135deg, var(--navy), var(--teal));
