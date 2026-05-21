@@ -633,7 +633,7 @@ margin-left: auto;
 
   border-radius: var(--radius-xl);
 
-  padding: 44px;
+  padding: 34px;
 
 }
 
@@ -832,7 +832,7 @@ margin-left: auto;
 
 .packages-section {
 
-    padding: 90px 0 50px;
+    padding: 70px 0 40px;
 
 }
 
@@ -863,7 +863,7 @@ margin-left: auto;
 
 .package-card {
 
-  padding: 42px;
+  padding: 30px;
 
   border-radius: 34px;
 
@@ -1109,7 +1109,7 @@ margin-left: auto;
 
 .recommendation-summary-section {
 
-  padding: 50px 0;
+  padding: 35px 0;
 
 }
 
@@ -1144,7 +1144,7 @@ margin-left: auto;
 
   border-radius: 24px;
 
-  padding: 28px;
+  padding: 22px;
 
 }
 
@@ -1175,7 +1175,7 @@ margin-left: auto;
 
 .advisor-section {
 
-  padding: 40px 0 80px;
+  padding: 30px 0 55px;
 
 }
 
@@ -1201,7 +1201,7 @@ margin-left: auto;
 
   border: 1px solid rgba(15,23,42,0.05);
 
-  padding: 28px;
+  padding: 22px;
 
 }
 
@@ -1265,7 +1265,7 @@ margin-left: auto;
 
 .advanced-section {
 
-  padding: 0 0 80px;
+  padding: 0 0 50px;
 
 }
 
