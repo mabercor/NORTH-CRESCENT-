@@ -121,7 +121,7 @@ body::before {
 }
 .glass:hover {
 
-  transform: translateY(-3px);
+  transform: translateY(-6px);
 
   border-color: rgba(74,155,140,0.18);
 
@@ -350,15 +350,7 @@ body::before {
 
 }
 
-    .primary-btn,
-    .advisor-btn,
-    .program-btn.featured {
-      background: linear-gradient(135deg, var(--navy), var(--teal));
-      color: white;
-      padding: 18px 28px;
-      box-shadow: 0 20px 40px rgba(74,155,140,0.18);
-    }
-
+   
     .secondary-btn,
 .toggle-btn,
 .program-btn {
@@ -964,11 +956,14 @@ body::before {
       color: var(--teal);
     }
 
-    .program-btn {
-      width: 100%;
-      padding: 18px;
-    }
+.program-btn {
 
+  width: 100%;
+
+  min-height: 62px;
+
+}
+    
     /* SUMMARY */
 
     .summary-grid {
@@ -1169,12 +1164,7 @@ body::before {
       flex-wrap: wrap;
     }
 
-    .cta-actions .secondary-btn {
-      background: rgba(255,255,255,0.16);
-      border: 1px solid rgba(255,255,255,0.14);
-      color: white;
-    }
-
+   
     /* FOOTER */
 
     footer {
