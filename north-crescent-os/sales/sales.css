@@ -758,10 +758,14 @@ body::before {
     }
 
     .collapsible-content.active {
-      max-height: 1200px;
-      opacity: 1;
-      margin-top: 34px;
-    }
+
+  max-height: 5000px;
+
+  opacity: 1;
+
+  margin-top: 34px;
+
+}
 
     .input-grid {
       display: grid;
