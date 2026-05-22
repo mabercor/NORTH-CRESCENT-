@@ -89,29 +89,11 @@ const packageData = {
 ========================================= */
 
 
-/* CLIENT MEMORY */
+/* COLLAPSIBLE MODULES */
 
-const toggleClientMemory =
-document.getElementById(
-  'toggleClientMemory'
-);
-
-const clientMemoryContent =
-document.getElementById(
-  'clientMemoryContent'
-);
-
-
-/* ADVANCED PERSONALIZATION */
-
-const toggleAdvancedSection =
-document.getElementById(
-  'toggleAdvancedSection'
-);
-
-const advancedContent =
-document.getElementById(
-  'advancedContent'
+const toggleButtons =
+document.querySelectorAll(
+  '[data-toggle]'
 );
 
 
@@ -119,12 +101,12 @@ document.getElementById(
 
 const packageCards =
 document.querySelectorAll(
-  '.package-card'
+  '.program-card'
 );
 
 const packageButtons =
 document.querySelectorAll(
-  '.package-btn'
+  '.program-btn'
 );
 
 
@@ -155,59 +137,42 @@ document.getElementById(
 
 const contactOptions =
 document.querySelectorAll(
-  '.contact-option'
+  '.contact-buttons button'
 );
 
 
 /* =========================================
-   COLLAPSIBLE SECTIONS
+   COLLAPSIBLE MODULES
 ========================================= */
 
+toggleButtons.forEach(
+  (button) => {
 
-/* CLIENT MEMORY */
+    button.addEventListener(
+      'click',
+      () => {
 
-if (
-  toggleClientMemory &&
-  clientMemoryContent
-) {
+        const targetId =
+        button.getAttribute(
+          'data-toggle'
+        );
 
-  toggleClientMemory
-  .addEventListener(
-    'click',
-    () => {
+        const target =
+        document.getElementById(
+          targetId
+        );
 
-      clientMemoryContent
-      .classList.toggle(
-        'collapsed'
-      );
+        if (!target) return;
 
-    }
-  );
+        target.classList.toggle(
+          'active'
+        );
 
-}
+      }
+    );
 
-
-/* ADVANCED PERSONALIZATION */
-
-if (
-  toggleAdvancedSection &&
-  advancedContent
-) {
-
-  toggleAdvancedSection
-  .addEventListener(
-    'click',
-    () => {
-
-      advancedContent
-      .classList.toggle(
-        'collapsed'
-      );
-
-    }
-  );
-
-}
+  }
+);
 
 
 /* =========================================
@@ -239,9 +204,13 @@ packageButtons.forEach(
         const currentCard =
         packageCards[index];
 
-        currentCard.classList.add(
-          'active-package'
-        );
+        if (currentCard) {
+
+          currentCard.classList.add(
+            'active-package'
+          );
+
+        }
 
 
         /* DETERMINE PACKAGE */
@@ -396,8 +365,16 @@ packageCards.forEach(
       'mouseenter',
       () => {
 
-        card.style.transform =
-        'translateY(-10px)';
+        if (
+          !card.classList.contains(
+            'active-package'
+          )
+        ) {
+
+          card.style.transform =
+          'translateY(-10px)';
+
+        }
 
       }
     );
