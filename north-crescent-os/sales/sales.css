@@ -750,12 +750,15 @@ body::before {
 
 }
 
-    .collapsible-content {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: 0.45s ease;
-    }
+    .collapsible-content.active {
+
+  max-height: 5000px;
+
+  opacity: 1;
+
+  margin-top: 34px;
+
+}
 
     .collapsible-content.active {
 
