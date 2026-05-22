@@ -739,14 +739,16 @@ body::before {
       margin-bottom: 14px;
     }
 
-    .module-header p,
-    .section-header p,
-    .summary-card p,
-    .advisor-card p,
-    .cta-card p {
-      color: var(--text-soft);
-      line-height: 1.9;
-    }
+   .module-header p,
+.section-header p,
+.summary-card p,
+.advisor-card p {
+
+  color: var(--text-soft);
+
+  line-height: 1.9;
+
+}
 
     .collapsible-content {
       max-height: 0;
@@ -1094,12 +1096,29 @@ body::before {
     /* CTA */
 
     .cta-card {
-      text-align: center;
-      background: linear-gradient(135deg, var(--navy), #315684);
-      color: white;
-      overflow: hidden;
-      position: relative;
-    }
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #173250 0%,
+      #244B74 45%,
+      #4A9B8C 100%
+    );
+
+  color: white;
+
+  overflow: hidden;
+
+  position: relative;
+
+  border: 1px solid rgba(74,155,140,0.24);
+
+  box-shadow:
+    0 30px 70px rgba(30,58,95,0.24);
+
+}
 
 .cta-card h1,
 .cta-card h2,
@@ -1116,26 +1135,27 @@ body::before {
   background:
     linear-gradient(
       135deg,
-      rgba(255,255,255,0.18),
-      rgba(255,255,255,0.10)
+      #4A9B8C 0%,
+      #5CB8A7 100%
     );
 
-  color: white;
+  color: #FFFFFF;
 
-  border: 1px solid rgba(255,255,255,0.16);
+  border: none;
 
-  backdrop-filter: blur(8px);
+  box-shadow:
+    0 16px 34px rgba(74,155,140,0.28);
 
 }
 
 .cta-card .secondary-btn:hover {
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,0.24),
-      rgba(255,255,255,0.14)
-    );
+  transform: translateY(-4px);
+
+  filter: brightness(1.06);
+
+  box-shadow:
+    0 24px 48px rgba(74,155,140,0.34);
 
 }
 
@@ -1151,10 +1171,18 @@ body::before {
     }
 
     .cta-card p {
-      color: rgba(255,255,255,0.84);
-      max-width: 720px;
-      margin: 18px auto 0;
-    }
+
+  color: rgba(255,255,255,0.92);
+
+  max-width: 720px;
+
+  margin: 18px auto 0;
+
+  line-height: 1.9;
+
+  font-size: 18px;
+
+}
 
     .cta-actions {
       margin-top: 36px;
