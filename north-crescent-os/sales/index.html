@@ -501,454 +501,330 @@
 <!-- ========================================= -->
 <!-- CONTRACT ENGINE -->
 <!-- ========================================= -->
-<div class="module-card glass">
-
-  <div class="module-header">
-
-    <div>
-
-      <p class="label">
-        ADVANCED PERSONALIZATION
-      </p>
-
-      <h2>
-        Additional Operational Preferences
-      </h2>
-
-      <p>
-        Customize scheduling preferences, recurring structures, and operational access details.
-      </p>
-
-    </div>
-
-    <button
-      class="toggle-btn"
-      id="toggleAdvancedSection"
-      data-toggle="advanced-content">
-
-      Customize Preferences
-
-    </button>
-
-  </div>
-
-  <div
-    class="collapsible-content"
-    id="advanced-content">
-
-    <div class="input-grid">
-
-      <div class="input-group">
-
-        <label>
-          Service Type
-        </label>
-
-        <select>
-
-          <option>
-            Commercial Cleaning
-          </option>
-
-          <option>
-            Residential Cleaning
-          </option>
-
-          <option>
-            Deep Cleaning
-          </option>
-
-        </select>
-
-      </div>
-
-      <div class="input-group">
-
-        <label>
-          Property Size
-        </label>
-
-        <input
-          type="text"
-          placeholder="Square footage">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>
-          Visits Per Month
-        </label>
-
-        <input
-          type="number"
-          placeholder="4">
-
-      </div>
-
-      <div class="input-group">
-
-        <label>
-          Complexity Level
-        </label>
-
-        <select>
-
-          <option>
-            Low
-          </option>
-
-          <option>
-            Moderate
-          </option>
-
-          <option>
-            High
-          </option>
-
-          <option>
-            Extreme
-          </option>
-
-        </select>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-      </div>
-    </section>
-<!-- ========================================= -->
-<!-- CONTRACT ENGINE -->
-<!-- ========================================= -->
 
 <section>
   <div class="container">
 
     <div class="module-card glass">
 
-  <div class="module-header">
+      <div class="module-header">
 
-    <div>
+        <div>
 
-      <p class="label">
-        OPERATIONAL ACTIVATION
-      </p>
+          <p class="label">
+            OPERATIONAL ACTIVATION
+          </p>
 
-      <h2>
-        Contract & Operational Control
-      </h2>
+          <h2>
+            Contract & Operational Control
+          </h2>
 
-      <p>
-        Configure contract structure, operational deployment, scheduling logic, and environment activation controls.
-      </p>
-
-    </div>
-
-    <button
-      class="toggle-btn"
-      id="toggleContractEngine"
-      data-toggle="contract-engine-content">
-
-      Expand Configuration
-
-    </button>
-
-  </div>
-
-  <div
-    class="collapsible-content"
-    id="contract-engine-content">
-
-    <div class="form-section">
-
-        <h3>
-          Contract Engine
-        </h3>
-
-        <div class="form-grid">
-
-          <div class="form-group">
-
-            <label>
-              Contract Structure
-            </label>
-
-            <select
-              id="contractStructure"
-              name="contractStructure"
-              required>
-
-              <option value="">
-                Select Contract Structure
-              </option>
-
-              <option>One-Time</option>
-              <option>Recurring</option>
-              <option>Fixed-Term</option>
-              <option>Indefinite / Auto Renewal</option>
-
-            </select>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Contract Status
-            </label>
-
-            <select
-              id="contractStatus"
-              name="contractStatus"
-              required>
-
-              <option value="">
-                Select Contract Status
-              </option>
-
-              <option>Pending</option>
-              <option>Active</option>
-              <option>Cancelled</option>
-              <option>Negotiation</option>
-              <option>Proposal Sent</option>
-              <option>Recurring Active</option>
-
-            </select>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Contract Start Date
-            </label>
-
-            <input
-              type="date"
-              id="contractStartDate"
-              name="contractStartDate"
-              required>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Contract End Date
-            </label>
-
-            <input
-              type="date"
-              id="contractEndDate"
-              name="contractEndDate">
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Monthly Contract Value
-            </label>
-
-            <input
-              type="text"
-              id="monthlyContractValue"
-              name="monthlyContractValue"
-              placeholder="$ Monthly revenue"
-              required>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Auto Renewal Enabled
-            </label>
-
-            <select
-              id="autoRenewal"
-              name="autoRenewal"
-              required>
-
-              <option value="">
-                Select Option
-              </option>
-
-            <option>Yes</option>
-<option>No</option>
-
-</select>
-
-          </div>
+          <p>
+            Configure contract structure, operational deployment, scheduling logic, and environment activation controls.
+          </p>
 
         </div>
 
-      </div>
-
-      <!-- ========================================= -->
-      <!-- OPERATIONAL CONTROL -->
-      <!-- ========================================= -->
-
-      <div class="form-section">
-
-        <h3>
-          Operational Control Center
-        </h3>
-
-        <div class="form-grid">
-
-          <div class="form-group">
-
-            <label>
-              Assigned Team
-            </label>
-
-            <select
-              id="assignedTeam"
-              name="assignedTeam"
-              required>
-
-              <option value="">
-                Select Team
-              </option>
-
-              <option>Morning</option>
-              <option>Afternoon</option>
-              <option>Night</option>
-
-            </select>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Supervisor Assigned
-            </label>
-
-            <input
-              type="text"
-              id="supervisorAssigned"
-              name="supervisorAssigned"
-              placeholder="Supervisor name"
-              required>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Access Instructions
-            </label>
-
-            <input
-              type="text"
-              id="accessInstructions"
-              name="accessInstructions"
-              placeholder="Building access details"
-              required>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Alarm Instructions
-            </label>
-
-            <input
-              type="text"
-              id="alarmInstructions"
-              name="alarmInstructions"
-              placeholder="Alarm or security instructions">
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Parking Notes
-            </label>
-
-            <input
-              type="text"
-              id="parkingNotes"
-              name="parkingNotes"
-              placeholder="Parking information">
-
-          </div>
-
-          <div class="form-group">
-
-            <label>
-              Sensitive Areas
-            </label>
-
-            <input
-              type="text"
-              id="sensitiveAreas"
-              name="sensitiveAreas"
-              placeholder="Areas requiring extra attention"
-              required>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- ========================================= -->
-      <!-- ACTION CENTER -->
-      <!-- ========================================= -->
-
-      <div
-        id="operationalWorkflowStatus"
-        class="workflow-status">
-
-        No operational workflow selected
-
-      </div>
-
-      <div
-        id="activationSuccessMessage"
-        class="activation-success-message">
-
-      </div>
-
-      <div class="form-actions">
-
         <button
-          type="button"
-          class="crm-btn primary"
-          id="activateOperationalContractBtn">
+          class="toggle-btn"
+          id="toggleContractEngine"
+          data-toggle="contract-engine-content">
 
-          🚀 Activate Operational Contract
-
-        </button>
-
-        <button
-          type="button"
-          class="crm-btn dark"
-          id="savePendingActivationBtn">
-
-          📄 Save Pending Activation
+          Expand Configuration
 
         </button>
 
       </div>
 
-       </div>
+      <div
+        class="collapsible-content"
+        id="contract-engine-content">
+
+        <!-- CONTRACT ENGINE -->
+
+        <div class="form-section">
+
+          <h3>
+            Contract Engine
+          </h3>
+
+          <div class="form-grid">
+
+            <div class="form-group">
+
+              <label>
+                Contract Structure
+              </label>
+
+              <select
+                id="contractStructure"
+                name="contractStructure"
+                required>
+
+                <option value="">
+                  Select Contract Structure
+                </option>
+
+                <option>One-Time</option>
+                <option>Recurring</option>
+                <option>Fixed-Term</option>
+                <option>Indefinite / Auto Renewal</option>
+
+              </select>
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Contract Status
+              </label>
+
+              <select
+                id="contractStatus"
+                name="contractStatus"
+                required>
+
+                <option value="">
+                  Select Contract Status
+                </option>
+
+                <option>Pending</option>
+                <option>Active</option>
+                <option>Cancelled</option>
+                <option>Negotiation</option>
+                <option>Proposal Sent</option>
+                <option>Recurring Active</option>
+
+              </select>
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Contract Start Date
+              </label>
+
+              <input
+                type="date"
+                id="contractStartDate"
+                name="contractStartDate"
+                required>
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Contract End Date
+              </label>
+
+              <input
+                type="date"
+                id="contractEndDate"
+                name="contractEndDate">
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Monthly Contract Value
+              </label>
+
+              <input
+                type="text"
+                id="monthlyContractValue"
+                name="monthlyContractValue"
+                placeholder="$ Monthly revenue"
+                required>
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Auto Renewal Enabled
+              </label>
+
+              <select
+                id="autoRenewal"
+                name="autoRenewal"
+                required>
+
+                <option value="">
+                  Select Option
+                </option>
+
+                <option>Yes</option>
+                <option>No</option>
+
+              </select>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- OPERATIONAL CONTROL -->
+        <!-- ========================================= -->
+
+        <div class="form-section">
+
+          <h3>
+            Operational Control Center
+          </h3>
+
+          <div class="form-grid">
+
+            <div class="form-group">
+
+              <label>
+                Assigned Team
+              </label>
+
+              <select
+                id="assignedTeam"
+                name="assignedTeam"
+                required>
+
+                <option value="">
+                  Select Team
+                </option>
+
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Night</option>
+
+              </select>
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Supervisor Assigned
+              </label>
+
+              <input
+                type="text"
+                id="supervisorAssigned"
+                name="supervisorAssigned"
+                placeholder="Supervisor name"
+                required>
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Access Instructions
+              </label>
+
+              <input
+                type="text"
+                id="accessInstructions"
+                name="accessInstructions"
+                placeholder="Building access details"
+                required>
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Alarm Instructions
+              </label>
+
+              <input
+                type="text"
+                id="alarmInstructions"
+                name="alarmInstructions"
+                placeholder="Alarm or security instructions">
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Parking Notes
+              </label>
+
+              <input
+                type="text"
+                id="parkingNotes"
+                name="parkingNotes"
+                placeholder="Parking information">
+
+            </div>
+
+            <div class="form-group">
+
+              <label>
+                Sensitive Areas
+              </label>
+
+              <input
+                type="text"
+                id="sensitiveAreas"
+                name="sensitiveAreas"
+                placeholder="Areas requiring extra attention"
+                required>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ACTION CENTER -->
+
+        <div
+          id="operationalWorkflowStatus"
+          class="workflow-status">
+
+          No operational workflow selected
+
+        </div>
+
+        <div
+          id="activationSuccessMessage"
+          class="activation-success-message">
+
+        </div>
+
+        <div class="form-actions">
+
+          <button
+            type="button"
+            class="crm-btn primary"
+            id="activateOperationalContractBtn">
+
+            🚀 Activate Operational Contract
+
+          </button>
+
+          <button
+            type="button"
+            class="crm-btn dark"
+            id="savePendingActivationBtn">
+
+            📄 Save Pending Activation
+
+          </button>
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
 </section>
-
+    
     <!-- CTA -->
 
     <section>
