@@ -138,14 +138,18 @@
               </p>
             </div>
 
-            <button class="toggle-btn" data-toggle="client-access-content">
+            <button
+  class="toggle-btn"
+  id="toggleClientAccess"
+  data-toggle="client-access-content">
               Restore Environment
             </button>
 
           </div>
 
-          <div class="collapsible-content" id="client-access-content">
-
+         <div
+  class="collapsible-content"
+  id="client-access-content">
             <div class="input-grid">
 
               <div class="input-group">
@@ -361,13 +365,18 @@
               </p>
             </div>
 
-            <button class="toggle-btn" data-toggle="advanced-content">
+           <button
+  class="toggle-btn"
+  id="toggleAdvancedSection"
+  data-toggle="advanced-content">
               Customize Preferences
             </button>
 
           </div>
 
-          <div class="collapsible-content" id="advanced-content">
+          <div
+  class="collapsible-content"
+  id="advanced-content">
 
             <div class="input-grid">
 
@@ -418,7 +427,40 @@
 
     <div class="module-card glass">
 
-      <div class="form-section">
+  <div class="module-header">
+
+    <div>
+
+      <p class="label">
+        OPERATIONAL ACTIVATION
+      </p>
+
+      <h2>
+        Contract & Operational Control
+      </h2>
+
+      <p>
+        Configure contract structure, operational deployment, scheduling logic, and environment activation controls.
+      </p>
+
+    </div>
+
+    <button
+      class="toggle-btn"
+      id="toggleContractEngine"
+      data-toggle="contract-engine-content">
+
+      Expand Configuration
+
+    </button>
+
+  </div>
+
+  <div
+    class="collapsible-content"
+    id="contract-engine-content">
+
+    <div class="form-section">
 
         <h3>
           Contract Engine
@@ -535,14 +577,11 @@
 
               <option>Yes</option>
               <option>No</option>
+              
+            </div>
+    </div>
 
-            </select>
-
-          </div>
-
-        </div>
-
-      </div>
+</section>
 
       <!-- ========================================= -->
       <!-- OPERATIONAL CONTROL -->
@@ -695,6 +734,8 @@
         </button>
 
       </div>
+
+       </div>
 
     </div>
 
