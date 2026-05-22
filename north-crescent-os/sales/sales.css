@@ -1239,8 +1239,272 @@ body::before {
 
     }
 
-  </style>
-</head>
-<body>
+ /* ===================================================== */
+/* CONTRACT ENGINE */
+/* ===================================================== */
 
+.form-section {
+
+  margin-top: 38px;
+
+  padding: 34px;
+
+  border-radius: 28px;
+
+  background: #FFFFFF;
+
+  border: 1px solid rgba(15,23,42,0.08);
+
+  box-shadow:
+    0 10px 30px rgba(15,23,42,0.04);
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.form-section::before {
+
+  content: '';
+
+  position: absolute;
+
+  top: -60px;
+
+  right: -60px;
+
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: rgba(74,155,140,0.06);
+
+}
+
+.form-section h3 {
+
+  font-size: 34px;
+
+  margin-bottom: 30px;
+
+  color: #1E3A5F;
+
+  letter-spacing: -1px;
+
+  position: relative;
+
+}
+
+.form-section h3::after {
+
+  content: '';
+
+  display: block;
+
+  width: 46px;
+
+  height: 3px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #1E3A5F,
+    #4A9B8C
+  );
+
+  margin-top: 12px;
+
+}
+
+.form-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+
+}
+
+.form-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+}
+
+.form-group label {
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #5F6F82;
+
+  letter-spacing: 0.3px;
+
+}
+
+.form-group input,
+.form-group select {
+
+  width: 100%;
+
+  min-height: 58px;
+
+  padding: 16px 18px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(15,23,42,0.10);
+
+  background: #F8FBFD;
+
+  color: #1E3A5F;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+}
+
+.form-group input:focus,
+.form-group select:focus {
+
+  border-color: rgba(74,155,140,0.45);
+
+  background: #FFFFFF;
+
+  box-shadow:
+    0 0 0 4px rgba(74,155,140,0.08);
+
+}
+
+.workflow-status {
+
+  margin-top: 34px;
+
+  padding: 18px 22px;
+
+  border-radius: 16px;
+
+  background: #F4F8FB;
+
+  border: 1px solid rgba(15,23,42,0.10);
+
+  color: #5F6F82;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+.activation-success-message {
+
+  margin-top: 18px;
+
+}
+
+.form-actions {
+
+  display: flex;
+
+  gap: 16px;
+
+  margin-top: 26px;
+
+  flex-wrap: wrap;
+
+}
+
+.crm-btn {
+
+  min-height: 56px;
+
+  padding: 16px 26px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+
+}
+
+.crm-btn:hover {
+
+  transform: translateY(-3px);
+
+}
+
+.crm-btn.primary {
+
+  color: #FFFFFF;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1E3A5F 0%,
+      #29507E 45%,
+      #4A9B8C 100%
+    );
+
+  box-shadow:
+    0 16px 36px rgba(30,58,95,0.24);
+
+}
+
+.crm-btn.dark {
+
+  background: #1E293B;
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 14px 30px rgba(15,23,42,0.18);
+
+}
+
+.crm-btn.primary:hover,
+.crm-btn.dark:hover {
+
+  filter: brightness(1.05);
+
+}
+
+@media (max-width: 900px) {
+
+  .form-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
   
