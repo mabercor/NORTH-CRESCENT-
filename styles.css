@@ -2271,3 +2271,191 @@ section,
   font-size:14px;
   margin-top:4px;
 }
+
+
+/* ======================================== */
+/* NORTH CRESCENT PREMIUM FAQ SECTION */
+/* ======================================== */
+
+.faq-section{
+  position:relative;
+  padding:100px 0;
+  background:
+    linear-gradient(
+      180deg,
+      #f8fafc 0%,
+      #eef3f8 100%
+    );
+  overflow:hidden;
+}
+
+/* subtle background structure */
+
+.faq-section::before{
+  content:"";
+  position:absolute;
+  top:-120px;
+  right:-120px;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  background:rgba(74,155,140,0.06);
+  filter:blur(10px);
+}
+
+.faq-section::after{
+  content:"";
+  position:absolute;
+  bottom:-140px;
+  left:-120px;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background:rgba(30,58,95,0.06);
+  filter:blur(10px);
+}
+
+/* ======================================== */
+/* SECTION TITLE */
+/* ======================================== */
+
+.faq-section .section-title{
+  text-align:center;
+  font-size:42px;
+  line-height:1.2;
+  font-weight:700;
+  color:#1E3A5F;
+  margin-bottom:18px;
+  letter-spacing:-1px;
+}
+
+.faq-section .divider{
+  margin:0 auto 60px auto;
+}
+
+/* ======================================== */
+/* FAQ GRID */
+/* ======================================== */
+
+.faq-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:30px;
+  position:relative;
+  z-index:2;
+}
+
+/* ======================================== */
+/* FAQ CARD */
+/* ======================================== */
+
+.faq-card{
+  position:relative;
+  background:rgba(255,255,255,0.82);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.5);
+  border-radius:28px;
+  padding:34px;
+  overflow:hidden;
+
+  box-shadow:
+    0 10px 30px rgba(15,23,42,0.05),
+    0 20px 60px rgba(15,23,42,0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* premium top accent */
+
+.faq-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #1E3A5F 0%,
+      #4A9B8C 100%
+    );
+}
+
+/* hover */
+
+.faq-card:hover{
+  transform:translateY(-10px);
+
+  border-color:rgba(74,155,140,0.35);
+
+  box-shadow:
+    0 25px 60px rgba(15,23,42,0.10),
+    0 35px 80px rgba(15,23,42,0.12);
+}
+
+/* ======================================== */
+/* QUESTION */
+/* ======================================== */
+
+.faq-card h3{
+  font-size:22px;
+  line-height:1.45;
+  font-weight:700;
+  color:#1E3A5F;
+  margin-bottom:18px;
+  letter-spacing:-0.3px;
+}
+
+/* ======================================== */
+/* ANSWER */
+/* ======================================== */
+
+.faq-card p{
+  font-size:15.5px;
+  line-height:1.9;
+  color:#475569;
+  margin:0;
+}
+
+/* ======================================== */
+/* subtle professional glow */
+/* ======================================== */
+
+.faq-card:hover h3{
+  color:#16324f;
+}
+
+/* ======================================== */
+/* MOBILE */
+/* ======================================== */
+
+@media (max-width:768px){
+
+  .faq-section{
+    padding:70px 0;
+  }
+
+  .faq-grid{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .faq-card{
+    padding:28px;
+    border-radius:24px;
+  }
+
+  .faq-card h3{
+    font-size:20px;
+  }
+
+  .faq-section .section-title{
+    font-size:32px;
+  }
+
+}
