@@ -2398,6 +2398,58 @@ section,
     0 35px 80px rgba(15,23,42,0.12);
 }
 
+
+/* ======================================== */
+/* FAQ ICON */
+/* ======================================== */
+
+.faq-card::after{
+  content:"?";
+  position:absolute;
+  top:24px;
+  right:24px;
+
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  font-size:18px;
+  font-weight:700;
+
+  color:#4A9B8C;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(74,155,140,0.12) 0%,
+      rgba(74,155,140,0.04) 100%
+    );
+
+  border:1px solid rgba(74,155,140,0.15);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+/* hover interaction */
+
+.faq-card:hover::after{
+
+  transform:scale(1.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(74,155,140,0.18) 0%,
+      rgba(74,155,140,0.08) 100%
+    );
+}
 /* ======================================== */
 /* QUESTION */
 /* ======================================== */
