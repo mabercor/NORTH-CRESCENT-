@@ -377,7 +377,10 @@ gtag('config', 'G-48W5J5N037');
             </p>
 
             <!-- MESSAGE -->
-            <textarea name="message" placeholder="Décrivez votre espace..."></textarea>
+            <textarea
+  name="operationalSummary"
+  placeholder="Décrivez votre espace...">
+</textarea>
       
 <!-- HONEYPOT ANTI-SPAM -->
 <div style="position:absolute; left:-9999px; opacity:0; pointer-events:none;">
@@ -393,6 +396,14 @@ gtag('config', 'G-48W5J5N037');
             <button type="submit" class="btn btn-primary">
               Obtenir ma soumission gratuite
             </button>
+
+      <!-- CLOUDFLARE TURNSTILE -->
+
+<div
+  class="cf-turnstile"
+  data-sitekey="0x4AAAAAADXdGgzFK8q7PqhD"
+  style="margin-top:20px;">
+</div>
 
             <p style="font-size:12px; color:#64748b;">
               🔒 Formulaire sécurisé • Aucun spam • Réponse rapide garantie
@@ -1016,5 +1027,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer>
+</script>
+  
 </body>
 </html>
