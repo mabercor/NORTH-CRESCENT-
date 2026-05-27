@@ -378,7 +378,17 @@ gtag('config', 'G-48W5J5N037');
 
             <!-- MESSAGE -->
             <textarea name="message" placeholder="Décrivez votre espace..."></textarea>
+      
+<!-- HONEYPOT ANTI-SPAM -->
+<div style="position:absolute; left:-9999px; opacity:0; pointer-events:none;">
 
+  <input
+    type="text"
+    name="website"
+    tabindex="-1"
+    autocomplete="off">
+
+</div>
             <!-- BUTTON -->
             <button type="submit" class="btn btn-primary">
               Obtenir ma soumission gratuite
@@ -454,7 +464,12 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   if (!form) return;
+  
+// =========================================
+// HUMAN TIMER
+// =========================================
 
+const formLoadedAt = Date.now();
   form.addEventListener(
     "submit",
     function(e) {
@@ -463,6 +478,188 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const formData =
       new FormData(form);
+      
+      // =========================================
+// SUBMIT LOCK
+// =========================================
+
+const submitButton =
+form.querySelector(
+  'button[type="submit"]'
+);
+
+if (
+  submitButton.dataset.submitting === "true"
+) {
+
+  console.warn("Duplicate submit blocked.");
+
+  return;
+
+}
+
+submitButton.dataset.submitting = "true";
+
+submitButton.disabled = true;
+
+submitButton.innerText =
+"Envoi...";
+      // =========================================
+// HONEYPOT ANTI-BOT
+// =========================================
+
+const website = form.querySelector(
+  'input[name="website"]'
+)?.value;
+
+if (website) {
+
+  console.warn("Bot blocked.");
+
+  return;
+
+}
+      // =========================================
+// HUMAN TIME VALIDATION
+// =========================================
+
+const secondsSpent =
+(Date.now() - formLoadedAt) / 1000;
+
+if (secondsSpent < 5) {
+
+  console.warn("Fast submit blocked.");
+
+  return;
+
+}
+      // =========================================
+// BASIC SPAM VALIDATION
+// =========================================
+
+const clientName =
+form.querySelector(
+  'input[name="clientName"]'
+)?.value || "";
+
+const emailAddress =
+form.querySelector(
+  'input[name="emailAddress"]'
+)?.value || "";
+
+const messageField =
+form.querySelector(
+  'textarea[name="message"]'
+)?.value || "";
+
+// =========================================
+// HUMAN NAME VALIDATION
+// =========================================
+
+const cleanName =
+clientName.trim().toLowerCase();
+
+if (cleanName.length < 2) {
+
+  console.warn("Invalid name blocked.");
+
+  return;
+
+}
+
+const validNamePattern =
+/^[a-zA-ZÀ-ÿ\s'-]+$/;
+
+if (!validNamePattern.test(clientName)) {
+
+  console.warn("Suspicious name blocked.");
+
+  return;
+
+}
+
+const vowels =
+cleanName.match(/[aeiouyàâäéèêëîïôöùûü]/g);
+
+if (!vowels || vowels.length < 1) {
+
+  console.warn("No vowels detected.");
+
+  return;
+
+}
+
+if (/(.)\1{3,}/.test(cleanName)) {
+
+  console.warn("Repeated characters blocked.");
+
+  return;
+
+}
+
+const suspiciousPatterns = [
+  "asdf",
+  "qwer",
+  "zxcv",
+  "test",
+  "admin",
+  "seo"
+];
+
+const containsSuspicious =
+suspiciousPatterns.some(pattern =>
+  cleanName.includes(pattern)
+);
+
+if (containsSuspicious) {
+
+  console.warn("Spam-like name blocked.");
+
+  return;
+
+}
+
+// BLOCK VERY SHORT MESSAGES
+
+if (
+  messageField &&
+  messageField.trim().length < 10
+) {
+
+  console.warn("Short message blocked.");
+
+  return;
+
+}
+
+// BLOCK LINKS
+
+const spamPatterns = [
+  "http",
+  "https",
+  ".com",
+  ".ru",
+  "seo",
+  "marketing",
+  "crypto",
+  "bitcoin"
+];
+
+const lowerMessage =
+messageField.toLowerCase();
+
+const containsSpam =
+spamPatterns.some(pattern =>
+  lowerMessage.includes(pattern)
+);
+
+if (containsSpam) {
+
+  console.warn("Spam content blocked.");
+
+  return;
+
+}
 
       /* =========================================
          RECURRING VISITS
@@ -513,13 +710,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const serviceType =
           form.querySelector(
-            'select[name="serviceType"]'
+            'select[name="service"]'
           )?.value || "";
 
           const visitsPerMonth =
           form.querySelector(
             'select[name="visitsPerMonth"]'
           )?.value || "";
+          // =========================================
+// HUMAN READABLE FREQUENCY
+// =========================================
+
+const frequencyLabels = {
+
+  "30": "Tous les jours",
+  "8": "2 fois par semaine",
+  "4": "4 fois par mois",
+  "2": "2 fois par mois",
+  "custom": "Personnalisé"
+
+};
+
+const frequencyText =
+frequencyLabels[visitsPerMonth] || visitsPerMonth;
 
           const operationalSummary =
           form.querySelector(
@@ -583,12 +796,28 @@ const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
 
 document.getElementById("waLink").href = waUrl;
 document.getElementById("successModal").style.display = "flex";
+          submitButton.innerText =
+"Soumission envoyée";
+
+submitButton.disabled = true;
 
       } else {
+          submitButton.dataset.submitting = "false";
+
+submitButton.disabled = false;
+
+submitButton.innerText =
+"Obtenir ma soumission gratuite";
         alert("Une erreur s'est produite.");
       }
     })
     .catch(() => {
+      submitButton.dataset.submitting = "false";
+
+submitButton.disabled = false;
+
+submitButton.innerText =
+"Obtenir ma soumission gratuite";
       alert("Erreur lors de l'envoi du formulaire.");
     });
   });
