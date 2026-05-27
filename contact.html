@@ -419,6 +419,16 @@ gtag('config', 'G-48W5J5N037');
   placeholder="Describe your space...">
 </textarea>
 
+      <!-- HONEYPOT ANTI-SPAM -->
+<div style="position:absolute; left:-9999px; opacity:0; pointer-events:none;">
+
+  <input
+    type="text"
+    name="website"
+    tabindex="-1"
+    autocomplete="off">
+
+</div>
 <!-- BUTTON -->
 
 <button
@@ -517,6 +527,11 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   if (!form) return;
+  // =========================================
+// HUMAN TIMER
+// =========================================
+
+const formLoadedAt = Date.now();
 
   form.addEventListener(
     "submit",
@@ -526,6 +541,131 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const formData =
       new FormData(form);
+      // =========================================
+// SUBMIT LOCK
+// =========================================
+
+const submitButton =
+form.querySelector(
+  'button[type="submit"]'
+);
+
+if (
+  submitButton.dataset.submitting === "true"
+) {
+
+  console.warn("Duplicate submit blocked.");
+
+  return;
+
+}
+
+submitButton.dataset.submitting = "true";
+
+submitButton.disabled = true;
+
+submitButton.innerText =
+"Sending...";
+      
+      // =========================================
+// HONEYPOT ANTI-BOT
+// =========================================
+
+const website = form.querySelector(
+  'input[name="website"]'
+)?.value;
+
+if (website) {
+
+  console.warn("Bot blocked.");
+
+  return;
+
+}
+      // =========================================
+// HUMAN TIME VALIDATION
+// =========================================
+
+const secondsSpent =
+(Date.now() - formLoadedAt) / 1000;
+
+if (secondsSpent < 5) {
+
+  console.warn("Fast submit blocked.");
+
+  return;
+
+}
+      // =========================================
+// BASIC SPAM VALIDATION
+// =========================================
+
+const clientName =
+form.querySelector(
+  'input[name="clientName"]'
+)?.value || "";
+
+const emailAddress =
+form.querySelector(
+  'input[name="emailAddress"]'
+)?.value || "";
+
+const operationalSummary =
+form.querySelector(
+  'textarea[name="operationalSummary"]'
+)?.value || "";
+
+// BLOCK EMPTY NAMES
+
+if (clientName.trim().length < 2) {
+
+  console.warn("Invalid name blocked.");
+
+  return;
+
+}
+
+// BLOCK VERY SHORT MESSAGES
+
+if (
+  operationalSummary &&
+  operationalSummary.trim().length < 10
+) {
+
+  console.warn("Short message blocked.");
+
+  return;
+
+}
+
+// BLOCK LINKS
+
+const spamPatterns = [
+  "http",
+  "https",
+  ".com",
+  ".ru",
+  "seo",
+  "marketing",
+  "crypto",
+  "bitcoin"
+];
+
+const lowerMessage =
+operationalSummary.toLowerCase();
+
+const containsSpam =
+spamPatterns.some(pattern =>
+  lowerMessage.includes(pattern)
+);
+
+if (containsSpam) {
+
+  console.warn("Spam content blocked.");
+
+  return;
+
+}
 
       /* =========================================
          RECURRING VISITS
@@ -647,12 +787,30 @@ const waUrl = "https://wa.me/14288880542?text=" + encodeURIComponent(message);
 
 document.getElementById("waLink").href = waUrl;
 document.getElementById("successModal").style.display = "flex";
+          submitButton.innerText =
+"Quote Request Sent";
+
+submitButton.disabled = true;
 
       } else {
+          submitButton.dataset.submitting = "false";
+
+submitButton.disabled = false;
+
+submitButton.innerText =
+"Get My Free Quote";
+          
         alert("Something went wrong.");
       }
     })
     .catch(() => {
+       submitButton.dataset.submitting = "false";
+
+  submitButton.disabled = false;
+
+  submitButton.innerText =
+  "Get My Free Quote";
+      
       alert("Error sending form.");
     });
   });
@@ -834,11 +992,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleDays() {
     if (
-      frequency.value === "2week" ||
-      frequency.value === "4month" ||
-      frequency.value === "2month" ||
-      frequency.value === "custom"
-    ) {
+  frequency.value === "8" ||
+  frequency.value === "4" ||
+  frequency.value === "2" ||
+  frequency.value === "custom"
+) {
       daysContainer.style.display = "block";
     } else {
       daysContainer.style.display = "none";
