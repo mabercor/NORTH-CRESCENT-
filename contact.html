@@ -615,11 +615,78 @@ form.querySelector(
   'textarea[name="operationalSummary"]'
 )?.value || "";
 
-// BLOCK EMPTY NAMES
+// =========================================
+// HUMAN NAME VALIDATION
+// =========================================
 
-if (clientName.trim().length < 2) {
+const cleanName =
+clientName.trim().toLowerCase();
+
+// MIN LENGTH
+
+if (cleanName.length < 2) {
 
   console.warn("Invalid name blocked.");
+
+  return;
+
+}
+
+// ONLY LETTERS + SPACES
+
+const validNamePattern =
+/^[a-zA-ZÀ-ÿ\s'-]+$/;
+
+if (!validNamePattern.test(clientName)) {
+
+  console.warn("Suspicious name blocked.");
+
+  return;
+
+}
+
+// REQUIRE AT LEAST 1 VOWEL
+
+const vowels =
+cleanName.match(/[aeiou]/g);
+
+if (!vowels || vowels.length < 1) {
+
+  console.warn("No vowels detected.");
+
+  return;
+
+}
+
+// BLOCK REPETITIVE CHARACTERS
+
+if (/(.)\1{3,}/.test(cleanName)) {
+
+  console.warn("Repeated characters blocked.");
+
+  return;
+
+}
+
+// BLOCK RANDOM KEYBOARD SPAM
+
+const suspiciousPatterns = [
+  "asdf",
+  "qwer",
+  "zxcv",
+  "test",
+  "admin",
+  "seo"
+];
+
+const containsSuspicious =
+suspiciousPatterns.some(pattern =>
+  cleanName.includes(pattern)
+);
+
+if (containsSuspicious) {
+
+  console.warn("Spam-like name blocked.");
 
   return;
 
