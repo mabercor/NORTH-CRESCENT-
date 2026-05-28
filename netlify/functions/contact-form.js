@@ -1,11 +1,4 @@
-const fetch =
-(...args) =>
-import('node-fetch')
-.then(({default: fetch}) => fetch(...args));
-
 exports.handler = async (event) => {
-
-  // SOLO POST
 
   if (event.httpMethod !== "POST") {
 
@@ -18,86 +11,105 @@ exports.handler = async (event) => {
 
   try {
 
-    // PARSE BODY
-
-    const data = JSON.parse(event.body);
+    const data =
+    JSON.parse(event.body);
 
     // TURNSTILE TOKEN
 
     const token =
     data["cf-turnstile-response"];
 
-    // VALIDAR TOKEN
+    // VALIDATE TURNSTILE
 
-    const verify =
+    const verifyResponse =
     await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
       {
+
         method: "POST",
 
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
+          "Content-Type":
+          "application/x-www-form-urlencoded"
         },
 
-        body: new URLSearchParams({
-
-          secret: process.env.TURNSTILE_SECRET_KEY,
-
-          response: token
-
-        })
+        body:
+        `secret=${process.env.TURNSTILE_SECRET_KEY}&response=${token}`
 
       }
     );
 
     const verifyData =
-    await verify.json();
+    await verifyResponse.json();
 
-    // BLOQUEAR SI FALLA
+    // BLOCK BOTS
 
     if (!verifyData.success) {
 
       return {
+
         statusCode: 403,
+
         body: JSON.stringify({
-          error: "Bot detection failed"
+
+          error:
+          "Turnstile validation failed"
+
         })
+
       };
 
     }
 
-    // ENVIAR A MAKE
+    // SEND TO MAKE
 
     const makeResponse =
     await fetch(
+
       process.env.MAKE_WEBHOOK_URL,
+
       {
+
         method: "POST",
 
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type":
+          "application/json"
         },
 
-        body: JSON.stringify(data)
+        body:
+        JSON.stringify(data)
+
       }
+
     );
 
-    // RESPUESTA
+    // SUCCESS
 
     return {
+
       statusCode: 200,
+
       body: JSON.stringify({
+
         success: true
+
       })
+
     };
 
   } catch (error) {
 
     return {
+
       statusCode: 500,
+
       body: JSON.stringify({
+
         error: error.message
+
       })
+
     };
 
   }
