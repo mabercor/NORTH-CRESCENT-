@@ -768,7 +768,15 @@ if (containsSpam) {
         recurringVisits.join(", ")
       );
 
-      fetch(form.action, {
+      const formObject =
+Object.fromEntries(formData);
+
+// TURNSTILE TOKEN
+
+formObject["cf-turnstile-response"] =
+formData.get("cf-turnstile-response");
+
+fetch(form.action, {
 
   method: "POST",
 
@@ -776,9 +784,7 @@ if (containsSpam) {
     "Content-Type": "application/json"
   },
 
-  body: JSON.stringify(
-    Object.fromEntries(formData)
-  )
+  body: JSON.stringify(formObject)
 
 })
 
