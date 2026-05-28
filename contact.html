@@ -587,6 +587,10 @@ if (website) {
 
   console.warn("Bot blocked.");
 
+  submitButton.dataset.submitting = "false";
+  submitButton.disabled = false;
+  submitButton.innerText = "Get My Free Quote";
+
   return;
 
 }
