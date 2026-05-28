@@ -209,7 +209,7 @@ gtag('config', 'G-48W5J5N037');
       
             <!-- SERVICE -->
             <div class="custom-select">
-              <select name="service" required>
+              <select name="serviceType" required>
                 <option value="">Sélectionnez un service *</option>
                 <option>Nettoyage résidentiel</option>
                 <option>Nettoyage commercial</option>
@@ -527,6 +527,13 @@ if (website) {
 
   console.warn("Bot blocked.");
 
+  submitButton.dataset.submitting = "false";
+
+  submitButton.disabled = false;
+
+  submitButton.innerText =
+  "Obtenir ma soumission gratuite";
+
   return;
 
 }
@@ -558,9 +565,9 @@ form.querySelector(
   'input[name="emailAddress"]'
 )?.value || "";
 
-const messageField =
+const operationalSummary =
 form.querySelector(
-  'textarea[name="message"]'
+  'textarea[name="operationalSummary"]'
 )?.value || "";
 
 // =========================================
@@ -633,8 +640,8 @@ if (containsSuspicious) {
 // BLOCK VERY SHORT MESSAGES
 
 if (
-  messageField &&
-  messageField.trim().length < 10
+  operationalSummary &&
+  operationalSummary.trim().length < 10
 ) {
 
   console.warn("Short message blocked.");
@@ -657,7 +664,7 @@ const spamPatterns = [
 ];
 
 const lowerMessage =
-messageField.toLowerCase();
+operationalSummary.toLowerCase();
 
 const containsSpam =
 spamPatterns.some(pattern =>
@@ -698,7 +705,15 @@ if (containsSpam) {
         recurringVisits.join(", ")
       );
 
-      fetch(form.action, {
+     const formObject =
+Object.fromEntries(formData);
+
+// TURNSTILE TOKEN
+
+formObject["cf-turnstile-response"] =
+formData.get("cf-turnstile-response");
+
+fetch("/.netlify/functions/contact-form", {
 
   method: "POST",
 
@@ -706,9 +721,7 @@ if (containsSpam) {
     "Content-Type": "application/json"
   },
 
-  body: JSON.stringify(
-    Object.fromEntries(formData)
-  )
+  body: JSON.stringify(formObject)
 
 })
 
@@ -727,7 +740,7 @@ if (containsSpam) {
 
           const serviceType =
           form.querySelector(
-            'select[name="service"]'
+           'select[name="serviceType"]'
           )?.value || "";
 
           const visitsPerMonth =
@@ -1015,11 +1028,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleDays() {
     if (
-      frequency.value === "2week" ||
-      frequency.value === "4month" ||
-      frequency.value === "2month" ||
-      frequency.value === "custom"
-    ) {
+  frequency.value === "8" ||
+  frequency.value === "4" ||
+  frequency.value === "2" ||
+  frequency.value === "custom"
+) {
       daysContainer.style.display = "block";
     } else {
       daysContainer.style.display = "none";
