@@ -776,7 +776,7 @@ Object.fromEntries(formData);
 formObject["cf-turnstile-response"] =
 formData.get("cf-turnstile-response");
 
-fetch(form.action, {
+fetch("https://northcrescentcleaning.com/.netlify/functions/contact-form", {
 
   method: "POST",
 
