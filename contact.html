@@ -179,10 +179,11 @@ gtag('config', 'G-48W5J5N037');
         <!-- CLIENT NAME -->
 
         <input
-          type="text"
-          name="clientName"
-          placeholder="Full Name *"
-          required>
+  type="text"
+  id="clientName"
+  name="clientName"
+  placeholder="Full Name *"
+  required>
 
         <!-- EMAIL ADDRESS -->
 
@@ -1098,6 +1099,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 🔥 importante para cuando se recarga
   toggleDays();
+
+});
+</script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const nameField =
+  document.getElementById("clientName");
+
+  if (!nameField) return;
+
+  nameField.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+  setTimeout(() => {
+
+    nameField.focus();
+
+  }, 600);
 
 });
 </script>
