@@ -183,7 +183,8 @@ gtag('config', 'G-48W5J5N037');
   id="clientName"
   name="clientName"
   placeholder="Full Name *"
-  required>
+  required
+  autofocus>
 
         <!-- EMAIL ADDRESS -->
 
@@ -1103,24 +1104,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
+    
+<script>
+window.addEventListener("load", function () {
 
   const nameField =
   document.getElementById("clientName");
 
   if (!nameField) return;
 
-  nameField.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
-
-  setTimeout(() => {
+  setTimeout(function () {
 
     nameField.focus();
 
-  }, 600);
+  }, 1000);
 
 });
 </script>
