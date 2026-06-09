@@ -773,11 +773,13 @@ body::before {
 }
 
 
-      .collapsible-content.active {
+ .collapsible-content.active {
 
   max-height: 5000px;
 
   opacity: 1;
+
+  visibility: visible;
 
   margin-top: 34px;
 
