@@ -3,18 +3,9 @@
    RECOMMENDATION ENGINE
 ========================================= */
 
-
-/* =========================================
-   PACKAGE RECOMMENDATION ENGINE
-========================================= */
-
 export function generateRecommendation(
   configuration
 ) {
-
-  /* =========================================
-     INPUTS
-  ========================================= */
 
   const {
 
@@ -28,21 +19,11 @@ export function generateRecommendation(
 
   } = configuration;
 
-
-  /* =========================================
-     NORMALIZATION
-  ========================================= */
-
   const sqft =
     Number(squareFootage) || 0;
 
   const visits =
     Number(visitsPerMonth) || 0;
-
-
-  /* =========================================
-     RECOMMENDATION VARIABLES
-  ========================================= */
 
   let recommendedPackage =
     'essential';
@@ -50,27 +31,17 @@ export function generateRecommendation(
   let environmentType =
     'Standard Environment';
 
-  let operationalPriority =
-    'Moderate';
-
-  let recurringStructure =
-    'Recurring Maintenance';
-
   let recommendationReason =
     '';
 
-  let packageMultiplier =
-    1;
-
-
   /* =========================================
-     ENVIRONMENT CLASSIFICATION
+     ENVIRONMENT SIZE
   ========================================= */
 
   if (sqft >= 5000) {
 
     environmentType =
-      'Large Operational Environment';
+      'Large Environment';
 
   }
 
@@ -81,46 +52,92 @@ export function generateRecommendation(
 
   }
 
-  if (sqft >= 25000) {
-
-    environmentType =
-      'High-Traffic Operational Facility';
-
-  }
-
-
   /* =========================================
-     VISIT FREQUENCY ANALYSIS
+     PACKAGE LOGIC
   ========================================= */
 
-  if (visits <= 2) {
+  if (
 
-    recurringStructure =
-      'Low Frequency Maintenance';
+    sqft < 5000 &&
+
+    visits <= 2 &&
+
+    complexityLevel === 'Low'
+
+  ) {
+
+    recommendedPackage =
+      'essential';
+
+    recommendationReason =
+      'Low frequency maintenance environment';
 
   }
 
-  else if (visits <= 4) {
+  else if (
 
-    recurringStructure =
-      'Structured Recurring Maintenance';
+    sqft < 12000 &&
 
-  }
+    visits <= 4
 
-  else if (visits <= 8) {
+  ) {
 
-    recurringStructure =
-      'Advanced Operational Coverage';
+    recommendedPackage =
+      'structured';
+
+    recommendationReason =
+      'Recurring operational environment';
 
   }
 
   else {
 
-    recurringStructure =
-      'High-Frequency Operational Program';
+    recommendedPackage =
+      'executive';
+
+    recommendationReason =
+      'High-demand operational environment';
 
   }
 
+  return {
 
-  /* =========================================
-     COMPLE
+    recommendedPackage,
+
+    environmentType,
+
+    recommendationReason,
+
+    essential: {
+
+      oldPrice: 450,
+
+      price: 396,
+
+      savings: 12
+
+    },
+
+    structured: {
+
+      oldPrice: 950,
+
+      price: 765,
+
+      savings: 19
+
+    },
+
+    executive: {
+
+      oldPrice: 1450,
+
+      price: 1100,
+
+      savings: 24
+
+    }
+
+  };
+
+}
