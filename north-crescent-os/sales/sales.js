@@ -474,3 +474,74 @@ console.log(
   'North Crescent Sales Portal Active'
 
 );
+/* =========================================
+   LIVE PACKAGE RECOMMENDATIONS
+========================================= */
+
+import {
+  renderPackages
+} from './render-packages.js';
+
+const serviceTypeInput =
+document.getElementById(
+  'serviceType'
+);
+
+const squareFootageInput =
+document.getElementById(
+  'squareFootage'
+);
+
+const visitsPerMonthInput =
+document.getElementById(
+  'visitsPerMonth'
+);
+
+const complexityLevelInput =
+document.getElementById(
+  'complexityLevel'
+);
+
+function refreshRecommendations() {
+
+  renderPackages({
+
+    serviceType:
+    serviceTypeInput?.value || '',
+
+    squareFootage:
+    squareFootageInput?.value || 0,
+
+    visitsPerMonth:
+    visitsPerMonthInput?.value || 1,
+
+    complexityLevel:
+    complexityLevelInput?.value || 'Low'
+
+  });
+
+}
+
+[
+  serviceTypeInput,
+  squareFootageInput,
+  visitsPerMonthInput,
+  complexityLevelInput
+
+].forEach((input) => {
+
+  if (!input) return;
+
+  input.addEventListener(
+    'input',
+    refreshRecommendations
+  );
+
+  input.addEventListener(
+    'change',
+    refreshRecommendations
+  );
+
+});
+
+refreshRecommendations();
