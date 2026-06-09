@@ -174,6 +174,20 @@
       class="client-search-results">
     </div>
 
+    <button
+  type="button"
+  id="searchClientBtn"
+  class="secondary-btn">
+
+  Restore Client
+
+</button>
+
+<div
+  id="clientSearchMessage"
+  class="memory-search-message">
+</div>
+
   </div>
 
   <div class="input-group">
@@ -503,7 +517,7 @@
               Service Type
             </label>
 
-            <select>
+            <select id="serviceType">
 
               <option>
                 Commercial Cleaning
@@ -528,8 +542,9 @@
             </label>
 
             <input
-              type="text"
-              placeholder="Square footage">
+  type="text"
+  id="squareFootage"
+  placeholder="Square footage">
 
           </div>
 
@@ -539,9 +554,10 @@
               Visits Per Month
             </label>
 
-            <input
-              type="number"
-              placeholder="4">
+           <input
+  type="number"
+  id="visitsPerMonth"
+  placeholder="4">
 
           </div>
 
@@ -551,7 +567,7 @@
               Complexity Level
             </label>
 
-            <select>
+            <select id="complexityLevel">
 
               <option>
                 Low
@@ -572,6 +588,30 @@
             </select>
 
           </div>
+          <div class="input-group">
+
+  <label>
+    Estimated Duration (Hours)
+  </label>
+
+  <input
+    type="number"
+    id="estimatedDuration"
+    placeholder="4">
+
+</div>
+          <div class="input-group">
+
+  <label>
+    Discount (%)
+  </label>
+
+  <input
+    type="number"
+    id="discount"
+    placeholder="0">
+
+</div>
 
         </div>
 
