@@ -71,12 +71,27 @@ const priorityMultiplier =
   /* =========================================
      COMPLEXITY ADJUSTMENT
   ========================================= */
+/* =========================================
+   PRIORITY PREMIUM
+========================================= */
 
-const adjustedRevenue =
+const priorityMultipliers = {
 
-  baseRevenue *
-  complexityMultiplier *
-  priorityMultiplier;
+  Low: 1.00,
+
+  Medium: 1.05,
+
+  High: 1.10,
+
+  Emergency: 1.20
+
+};
+
+const priorityMultiplier =
+
+  priorityMultipliers[
+    state.priorityLevel
+  ] || 1.10;
 
 /* =========================================
    EXTENDED DURATION CHARGE
