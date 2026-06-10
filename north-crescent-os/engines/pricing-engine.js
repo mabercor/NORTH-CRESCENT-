@@ -55,11 +55,10 @@ const priorityMultipliers = {
 
 };
 
-const priorityMultiplier =
+const priorityPremium =
 
-  priorityMultipliers[
-    state.priorityLevel
-  ] || 1.10;
+  adjustedRevenue *
+  (priorityMultiplier - 1);
 
   /* =========================================
      BASE REVENUE
@@ -78,8 +77,7 @@ const priorityMultiplier =
 const adjustedRevenue =
 
   baseRevenue *
-  complexityMultiplier *
-  priorityMultiplier;
+  complexityMultiplier;
 
 /* =========================================
    EXTENDED DURATION CHARGE
@@ -114,9 +112,9 @@ if ((state.estimatedDuration || 0) > 4) {
 const monthlyRevenue =
 
   adjustedRevenue +
+  priorityPremium +
   durationCharge -
   discountAmount;
-
   /* =========================================
      LABOR HOURS
   ========================================= */
