@@ -34,7 +34,29 @@ export function calculateMetrics(state) {
     serviceRates[state.serviceType] || 0;
 
   const complexityMultiplier =
-    complexityMultipliers[state.complexityLevel] || 1;
+
+    /* =========================================
+   PRIORITY PREMIUM
+========================================= */
+
+const priorityMultipliers = {
+
+  Low: 1.00,
+
+  Medium: 1.05,
+
+  High: 1.10,
+
+  Emergency: 1.20
+
+};
+
+const priorityMultiplier =
+
+  priorityMultipliers[
+    state.priorityLevel
+  ] || 1.10;
+  
 
   /* =========================================
      BASE REVENUE
@@ -50,10 +72,11 @@ export function calculateMetrics(state) {
      COMPLEXITY ADJUSTMENT
   ========================================= */
 
-  const adjustedRevenue =
+const adjustedRevenue =
 
-    baseRevenue *
-    complexityMultiplier;
+  baseRevenue *
+  complexityMultiplier *
+  priorityMultiplier;
 
 /* =========================================
    EXTENDED DURATION CHARGE
