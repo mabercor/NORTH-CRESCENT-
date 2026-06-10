@@ -5,7 +5,7 @@
 
 import {
 
-  operationalState,
+  operationalState, 
 
   updatePricingState,
 
@@ -70,6 +70,12 @@ const complexityInput =
 document.getElementById(
   'complexityLevel'
 );
+
+const priorityInput =
+document.getElementById(
+  'priorityLevel'
+);
+
 const discount25Card =
 document.getElementById(
   'discount25'
@@ -321,6 +327,9 @@ operationalState.service.estimatedDuration =
 operationalState.service.complexityLevel =
   complexityInput?.value || 'Low';
 
+   operationalState.service.priorityLevel =
+  priorityInput?.value || 'High';
+
    operationalState.service.selectedPlan =
   selectedPlanInput?.value || '';
    
@@ -472,7 +481,9 @@ updatePricingState({
   complexityLevel:
     complexityInput?.value || 'Low',
 
-
+priorityLevel:
+  priorityInput?.value || 'High',
+   
     discount:
       selectedDiscount
 
@@ -538,7 +549,10 @@ complexityInput?.addEventListener(
   'change',
   updateOperationalFlow
 );
-
+priorityInput?.addEventListener(
+  'change',
+  updateOperationalFlow
+);
 selectedPlanInput?.addEventListener(
   'change',
   updateOperationalFlow
