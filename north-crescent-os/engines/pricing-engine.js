@@ -75,17 +75,6 @@ const priorityMultiplier =
      COMPLEXITY ADJUSTMENT
   ========================================= */
   
-const priorityMultiplier =
-
-  priorityMultipliers[
-    state.priorityLevel
-  ] || 1.15;
-
-const baseRevenue =
-
-  serviceRate *
-  state.squareFootage *
-  state.visitsPerMonth;
 
 const adjustedRevenue =
 
@@ -96,8 +85,6 @@ const priorityPremium =
 
   adjustedRevenue *
   (priorityMultiplier - 1);
-
-let durationCharge = 0;
 
 /* =========================================
    EXTENDED DURATION CHARGE
