@@ -30,47 +30,15 @@ export function calculateMetrics(state) {
 
   };
 
-  const serviceRate =
-    serviceRates[state.serviceType] || 0;
 
-  const complexityMultiplier =
+const serviceRate =
+  serviceRates[state.serviceType] || 0;
 
-    /* =========================================
-   PRIORITY PREMIUM
-========================================= */
+const complexityMultiplier =
+  complexityMultipliers[
+    state.complexityLevel
+  ] || 1;
 
-const priorityMultipliers = {
-
-  Low: 1.00,
-
-  Medium: 1.05,
-
-  High: 1.10,
-
-  Emergency: 1.20
-
-};
-
-const priorityMultiplier =
-
-  priorityMultipliers[
-    state.priorityLevel
-  ] || 1.10;
-  
-
-  /* =========================================
-     BASE REVENUE
-  ========================================= */
-
-  const baseRevenue =
-
-    serviceRate *
-    state.squareFootage *
-    state.visitsPerMonth;
-
-  /* =========================================
-     COMPLEXITY ADJUSTMENT
-  ========================================= */
 /* =========================================
    PRIORITY PREMIUM
 ========================================= */
@@ -92,6 +60,26 @@ const priorityMultiplier =
   priorityMultipliers[
     state.priorityLevel
   ] || 1.10;
+
+  /* =========================================
+     BASE REVENUE
+  ========================================= */
+
+  const baseRevenue =
+
+    serviceRate *
+    state.squareFootage *
+    state.visitsPerMonth;
+
+  /* =========================================
+     COMPLEXITY ADJUSTMENT
+  ========================================= */
+  
+const adjustedRevenue =
+
+  baseRevenue *
+  complexityMultiplier *
+  priorityMultiplier;
 
 /* =========================================
    EXTENDED DURATION CHARGE
