@@ -18,6 +18,10 @@ export function renderMetrics(metrics) {
   document.getElementById(
     'liveRevenue'
   );
+   const liveDiscountValue =
+document.getElementById(
+  'liveDiscountValue'
+);
 
   const liveEstimatedProfit =
   document.getElementById(
@@ -99,6 +103,16 @@ export function renderMetrics(metrics) {
         .toLocaleString();
 
   }
+   if (liveDiscountValue) {
+
+  liveDiscountValue.innerText =
+
+    '$' +
+
+    metrics.discountImpact
+      .toLocaleString();
+
+}
 
 
   /* =========================================
