@@ -70,6 +70,10 @@ const complexityInput =
 document.getElementById(
   'complexityLevel'
 );
+const discount25Card =
+document.getElementById(
+  'discount25'
+);
 
 const selectedPlanInput =
 document.getElementById(
@@ -238,9 +242,46 @@ discountCards.forEach((card) => {
 
 function updateOperationalFlow() {
 
-  /* =========================================
-     UPDATE STATE
-  ========================================= */
+ /* =========================================
+   25% DISCOUNT PROTECTION
+========================================= */
+
+if (discount25Card) {
+
+  const currentComplexity =
+    complexityInput?.value || 'Low';
+
+  if (currentComplexity === 'Low') {
+
+    discount25Card.disabled = true;
+
+    discount25Card.classList.add(
+      'discount-disabled'
+    );
+
+    /* REMOVE IF ALREADY SELECTED */
+
+    if (selectedDiscount === 25) {
+
+      selectedDiscount = 0;
+
+      discount25Card.classList.remove(
+        'active'
+      );
+
+    }
+
+  } else {
+
+    discount25Card.disabled = false;
+
+    discount25Card.classList.remove(
+      'discount-disabled'
+    );
+
+  }
+
+}
    
    /* =========================================
    UPDATE CLIENT STATE
