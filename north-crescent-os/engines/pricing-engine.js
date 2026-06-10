@@ -45,20 +45,21 @@ const complexityMultiplier =
 
 const priorityMultipliers = {
 
-  Low: 1.00,
+  Low: 1.05,
 
-  Medium: 1.05,
+  Medium: 1.10,
 
-  High: 1.10,
+  High: 1.15,
 
   Emergency: 1.20
 
 };
 
-const priorityPremium =
+const priorityMultiplier =
 
-  adjustedRevenue *
-  (priorityMultiplier - 1);
+  priorityMultipliers[
+    state.priorityLevel
+  ] || 1.15;
 
   /* =========================================
      BASE REVENUE
@@ -74,10 +75,29 @@ const priorityPremium =
      COMPLEXITY ADJUSTMENT
   ========================================= */
   
+const priorityMultiplier =
+
+  priorityMultipliers[
+    state.priorityLevel
+  ] || 1.15;
+
+const baseRevenue =
+
+  serviceRate *
+  state.squareFootage *
+  state.visitsPerMonth;
+
 const adjustedRevenue =
 
   baseRevenue *
   complexityMultiplier;
+
+const priorityPremium =
+
+  adjustedRevenue *
+  (priorityMultiplier - 1);
+
+let durationCharge = 0;
 
 /* =========================================
    EXTENDED DURATION CHARGE
