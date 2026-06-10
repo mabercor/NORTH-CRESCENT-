@@ -39,7 +39,9 @@ service: {
 
   selectedPlan: "",
   estimatedDuration: "",
-  complexityLevel: ""
+  complexityLevel: "",
+
+  priorityLevel: "High"
 
 },
 
