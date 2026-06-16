@@ -2527,3 +2527,38 @@ section,
   color: var(--primary);
   border-bottom-color: var(--secondary);
 }
+/* =======================================
+   AIRBNB PAGE GRIDS
+======================================= */
+
+.airbnb-grid{
+    display:grid;
+    gap:30px;
+}
+
+.airbnb-grid-2{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.airbnb-grid-3{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.airbnb-grid-4{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.airbnb-grid-5{
+    grid-template-columns:repeat(5,1fr);
+}
+
+@media(max-width:768px){
+
+    .airbnb-grid-2,
+    .airbnb-grid-3,
+    .airbnb-grid-4,
+    .airbnb-grid-5{
+        grid-template-columns:1fr;
+    }
+
+}
