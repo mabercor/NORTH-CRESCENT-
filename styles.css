@@ -2616,3 +2616,14 @@ body[data-page="airbnb"] .badge{
     margin:0 auto 20px;
     display:inline-block;
 }
+.service-link{
+    display:inline-block;
+    margin-top:12px;
+    font-weight:600;
+    color:#4A9B8C;
+    transition:all .3s ease;
+}
+
+.card:hover .service-link{
+    transform:translateX(4px);
+}
