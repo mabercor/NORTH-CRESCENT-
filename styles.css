@@ -2597,3 +2597,21 @@ section,
     }
 
 }
+body[data-page="airbnb"] .hero{
+    padding:120px 0 100px;
+}
+
+body[data-page="airbnb"] .hero-text{
+    max-width:850px;
+    margin:0 auto;
+    text-align:center;
+}
+
+body[data-page="airbnb"] .btn-group{
+    justify-content:center;
+}
+
+body[data-page="airbnb"] .badge{
+    margin:0 auto 20px;
+    display:inline-block;
+}
