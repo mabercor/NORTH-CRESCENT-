@@ -66,6 +66,7 @@ gtag('config', 'G-48W5J5N037');
 <!-- FONTS & CSS -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBSeDdGK3ktrwQKwAdIcG-7t46MK_sJqA&libraries=places"></script>
 
 <!-- FAVICONS -->
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -130,21 +131,6 @@ gtag('config', 'G-48W5J5N037');
 </header>
 <main>
 
-<section class="hero">
-  <div class="container hero-content">
-
-    <div class="badge">Soumission gratuite</div>
-
-    <h1>Obtenez votre soumission de nettoyage à Moncton, Dieppe et Riverview</h1>
-
-    <p class="hero-sub">
-      ⚡ Réponse rapide • Service professionnel • Satisfaction garantie à 100 %
-    </p>
-
-    <div class="divider"></div>
-
-  </div>
-</section>
 
 <section>
   <div class="container">
@@ -177,11 +163,13 @@ gtag('config', 'G-48W5J5N037');
 
         <!-- CLIENT NAME -->
 
-        <input
-          type="text"
-          name="clientName"
-          placeholder="Nom complet *"
-          required>
+       <input
+  type="text"
+  id="clientName"
+  name="clientName"
+  placeholder="Nom complet *"
+  required
+  autofocus>
 
         <!-- EMAIL ADDRESS -->
 
@@ -199,6 +187,19 @@ gtag('config', 'G-48W5J5N037');
         type="tel"
         name="phoneNumber"
         placeholder="Numéro de téléphone">
+
+      <!-- SERVICE ADDRESS -->
+
+<input
+  type="text"
+  id="serviceAddress"
+  name="serviceAddress"
+  placeholder="Adresse du service *"
+  required>
+
+<input type="hidden" id="city" name="city">
+<input type="hidden" id="province" name="province">
+<input type="hidden" id="postalCode" name="postalCode">
 
       <!-- SQUARE FOOTAGE -->
 
@@ -799,7 +800,7 @@ frequencyLabels[visitsPerMonth] || visitsPerMonth;
           if (visitsPerMonth) {
 
             message +=
-            `Fréquence préférée : ${visitsPerMonth}.\n`;
+            `Fréquence préférée : ${frequencyText}.\n`;
 
           }
 
@@ -914,6 +915,22 @@ submitButton.innerText =
       </div>
 
     </div>
+
+  </div>
+</section>
+
+  <section class="hero">
+  <div class="container hero-content">
+
+    <div class="badge">Soumission gratuite</div>
+
+    <h1>Obtenez votre soumission de nettoyage à Moncton, Dieppe et Riverview</h1>
+
+    <p class="hero-sub">
+      ⚡ Réponse rapide • Service professionnel • Satisfaction garantie à 100 %
+    </p>
+
+    <div class="divider"></div>
 
   </div>
 </section>
@@ -1051,6 +1068,100 @@ document.addEventListener("DOMContentLoaded", function () {
   async
   defer>
 </script>
-  
+
+  <script>
+window.addEventListener("load", function () {
+
+  const nameField =
+  document.getElementById("clientName");
+
+  if (!nameField) return;
+
+  setTimeout(function () {
+
+    nameField.focus();
+
+  }, 1000);
+
+});
+</script>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const addressInput =
+  document.getElementById("serviceAddress");
+
+  if (!addressInput) return;
+
+  const autocomplete =
+  new google.maps.places.Autocomplete(
+    addressInput,
+    {
+      types: ["address"],
+      componentRestrictions: {
+        country: "ca"
+      }
+    }
+  );
+
+  autocomplete.addListener(
+    "place_changed",
+    function () {
+
+      const place =
+      autocomplete.getPlace();
+
+      let city = "";
+      let province = "";
+      let postalCode = "";
+
+      place.address_components.forEach(
+        component => {
+
+          const type =
+          component.types[0];
+
+          if (type === "locality") {
+            city = component.long_name;
+          }
+
+          if (
+            type ===
+            "administrative_area_level_1"
+          ) {
+            province =
+            component.short_name;
+          }
+
+          if (type === "postal_code") {
+            postalCode =
+            component.long_name;
+          }
+
+        }
+      );
+
+      document.getElementById("city").value =
+      city;
+
+      document.getElementById("province").value =
+      province;
+
+      document.getElementById("postalCode").value =
+      postalCode;
+
+      console.log({
+        city,
+        province,
+        postalCode
+      });
+
+    }
+  );
+
+});
+</script>
 </body>
 </html>
