@@ -203,7 +203,9 @@ gtag('config', 'G-48W5J5N037');
   name="serviceAddress"
   placeholder="Service Address *"
   required>
-
+<input type="hidden" id="city" name="city">
+<input type="hidden" id="province" name="province">
+<input type="hidden" id="postalCode" name="postalCode">
 
          <!-- SERVICE -->
 
@@ -1141,7 +1143,9 @@ window.addEventListener("load", function () {
 </script>
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
+
+
+      document.addEventListener("DOMContentLoaded", function () {
 
   const addressInput =
   document.getElementById("serviceAddress");
@@ -1156,6 +1160,61 @@ document.addEventListener("DOMContentLoaded", function () {
       componentRestrictions: {
         country: "ca"
       }
+    }
+  );
+
+  autocomplete.addListener(
+    "place_changed",
+    function () {
+
+      const place =
+      autocomplete.getPlace();
+
+      let city = "";
+      let province = "";
+      let postalCode = "";
+
+      place.address_components.forEach(
+        component => {
+
+          const type =
+          component.types[0];
+
+          if (type === "locality") {
+            city = component.long_name;
+          }
+
+          if (
+            type ===
+            "administrative_area_level_1"
+          ) {
+            province =
+            component.short_name;
+          }
+
+          if (type === "postal_code") {
+            postalCode =
+            component.long_name;
+          }
+
+        }
+      );
+
+      document.getElementById("city").value =
+      city;
+
+      document.getElementById("province").value =
+      province;
+
+      document.getElementById("postalCode").value =
+      postalCode;
+
+      console.log({
+        city,
+        province,
+        postalCode
+      });
+
     }
   );
 
