@@ -77,6 +77,44 @@
   <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/janitorial-cleaning-moncton.html"/>
   <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/janitorial-cleaning-moncton.html"/>
 </url>
+
+        <url>
+  <loc>https://northcrescentcleaning.com/airbnb-cleaning-moncton.html</loc>
+
+  <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+
+  <xhtml:link
+      rel="alternate"
+      hreflang="fr-ca"
+      href="https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html"/>
+
+  <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+</url>
+
+<url>
+  <loc>https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html</loc>
+
+  <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+
+  <xhtml:link
+      rel="alternate"
+      hreflang="fr-ca"
+      href="https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html"/>
+
+  <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+</url>
         
   <!-- LEGAL (NO HREFLANG NECESARIO) -->
   <url>
