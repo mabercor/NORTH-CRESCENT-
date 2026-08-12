@@ -2627,3 +2627,32 @@ body[data-page="airbnb"] .badge{
 .card:hover .service-link{
     transform:translateX(4px);
 }
+/* Related Services Cards */
+
+.service-card{
+    text-decoration:none;
+    color:#1E3A5F;
+    transition:all .3s ease;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:180px;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    color:#1E3A5F;
+}
+
+.service-card p{
+    margin:0;
+    color:#4B5563;
+    font-size:15px;
+    line-height:1.6;
+}
+
+.service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
