@@ -2937,3 +2937,8 @@ body[data-page="airbnb"] .badge{
   }
 
 }
+.services-overview-icon svg {
+  width: 30px;
+  height: 30px;
+  color: #FFFFFF;
+}
