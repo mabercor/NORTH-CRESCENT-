@@ -3126,3 +3126,17 @@ body[data-page="airbnb"] .badge{
   }
 
 }
+
+
+/* =========================================
+   DESKTOP NAVIGATION — PREMIUM SIZE
+========================================= */
+
+@media (min-width: 769px) {
+
+  nav a {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+}
