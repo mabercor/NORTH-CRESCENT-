@@ -2987,7 +2987,7 @@ body[data-page="airbnb"] .badge{
    ===================================================== */
 
 .hero-features {
-  font-size: 15px;
+  font-size: 20px;
   color: #1E3A5F;
   font-weight: 600;
   line-height: 1.8;
@@ -3081,4 +3081,48 @@ body[data-page="airbnb"] .badge{
   color: #4A9B8C;
   font-weight: 700;
   margin: 0 6px;
+}
+
+/* =====================================================
+   BRAND TITLE — PREMIUM SHINE EFFECT
+   ===================================================== */
+
+.brand-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #1E3A5F;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    110deg,
+    #1E3A5F 0%,
+    #1E3A5F 40%,
+    #4A9B8C 50%,
+    #1E3A5F 60%,
+    #1E3A5F 100%
+  );
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: brandShine 5s linear infinite;
+}
+
+.brand-title span {
+  display: block;
+  font-size: 0.75em;
+  letter-spacing: 2px;
+}
+
+@keyframes brandShine {
+
+  0% {
+    background-position: 150% center;
+  }
+
+  100% {
+    background-position: -150% center;
+  }
+
 }
