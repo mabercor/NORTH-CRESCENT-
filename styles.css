@@ -2942,3 +2942,41 @@ body[data-page="airbnb"] .badge{
   height: 30px;
   color: #FFFFFF;
 }
+
+/* =========================================
+   RELATED SERVICES - RESPONSIVE FIX
+========================================= */
+
+.related-services-grid {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.related-services-grid a {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+
+  .related-services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .related-services-grid a {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .related-services-grid strong,
+  .related-services-grid small {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+}
