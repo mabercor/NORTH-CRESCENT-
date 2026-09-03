@@ -3129,14 +3129,88 @@ body[data-page="airbnb"] .badge{
 
 
 /* =========================================
-   DESKTOP NAVIGATION — PREMIUM SIZE
+   🖥️ NORTH CRESCENT — DESKTOP MENU PREMIUM
 ========================================= */
 
 @media (min-width: 769px) {
 
+  /* MENÚ */
+  nav {
+    gap: 22px;
+  }
+
+  /* LETRAS DEL MENÚ */
   nav a {
-    font-size: 16px;
+    position: relative;
+    display: inline-block;
+
+    font-size: 18px;
     font-weight: 600;
+    color: var(--primary);
+
+    padding: 8px 2px;
+
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease,
+      text-shadow 0.3s ease;
+  }
+
+  /* LÍNEA ANIMADA */
+  nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: linear-gradient(
+      90deg,
+      var(--secondary),
+      var(--accent)
+    );
+
+    border-radius: 20px;
+
+    transform: translateX(-50%);
+
+    box-shadow:
+      0 0 0 rgba(46,196,182,0);
+
+    transition:
+      width 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  /* EFECTO AL PASAR EL MOUSE */
+  nav a:hover {
+    color: var(--secondary);
+
+    transform: translateY(-3px);
+
+    text-shadow:
+      0 4px 12px rgba(74,155,140,0.25);
+  }
+
+  /* LÍNEA APARECE */
+  nav a:hover::after {
+    width: 100%;
+
+    box-shadow:
+      0 0 8px rgba(46,196,182,0.45),
+      0 0 16px rgba(46,196,182,0.20);
+  }
+
+  /* PÁGINA ACTIVA */
+  nav a.active {
+    color: var(--secondary);
+  }
+
+  nav a.active::after {
+    width: 70%;
   }
 
 }
