@@ -2983,115 +2983,102 @@ body[data-page="airbnb"] .badge{
 
 
 /* =====================================================
-   HERO FEATURES — SERVICE DNA — ACTIVE LOOP
+   HERO FEATURES — ENERGY PULSE
    ===================================================== */
 
 .hero-features {
-  font-size: 18px;
+  font-size: 15px;
   color: #1E3A5F;
   font-weight: 600;
   line-height: 1.8;
-  perspective: 600px;
 }
 
 .feature-item {
   display: inline-block;
-  opacity: 0.35;
-  transform: translateY(12px) scale(0.92);
-
-  animation: serviceDNAActive 8s ease-in-out infinite;
+  position: relative;
+  animation: energyPulse 6s infinite;
 }
 
-/* TIMING */
+/* SECUENCIA */
+
 .feature-item:nth-of-type(1) {
   animation-delay: 0s;
 }
 
 .feature-item:nth-of-type(3) {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 .feature-item:nth-of-type(5) {
-  animation-delay: 4s;
+  animation-delay: 3s;
 }
 
 .feature-item:nth-of-type(7) {
-  animation-delay: 6s;
+  animation-delay: 4.5s;
 }
 
 
-/* SEPARATORS */
+/* EFECTO PRINCIPAL */
 
-.separator {
-  display: inline-block;
-  color: #4A9B8C;
-  font-weight: 700;
-  margin: 0 6px;
-
-  animation: separatorActive 8s ease-in-out infinite;
-}
-
-
-/* MAIN ANIMATION */
-
-@keyframes serviceDNAActive {
+@keyframes energyPulse {
 
   0% {
-    opacity: 0.3;
-    transform: translateY(12px) scale(0.92);
+    transform: scale(1);
+    text-shadow: none;
   }
 
-  5% {
-    opacity: 1;
-    transform: translateY(0) scale(1.08);
+  4% {
+    transform: scale(1.08);
+    text-shadow: 0 0 12px rgba(74, 155, 140, 0.45);
   }
 
-  10% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-
-  18% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-
-  25% {
-    opacity: 0.35;
-    transform: translateY(-10px) scale(0.94);
+  8% {
+    transform: scale(1);
+    text-shadow: none;
   }
 
   100% {
-    opacity: 0.3;
-    transform: translateY(12px) scale(0.92);
+    transform: scale(1);
+    text-shadow: none;
   }
 
 }
 
 
-/* SEPARATOR MOVEMENT */
+/* CHECK */
 
-@keyframes separatorActive {
+.feature-check {
+  color: #4A9B8C;
+  font-weight: 700;
+  display: inline-block;
+  animation: checkFlash 6s infinite;
+}
+
+@keyframes checkFlash {
 
   0% {
-    opacity: 0.3;
-    transform: scale(0.8);
-  }
-
-  10% {
-    opacity: 1;
-    transform: scale(1.25);
-  }
-
-  20% {
-    opacity: 1;
     transform: scale(1);
   }
 
-  30%,
-  100% {
-    opacity: 0.4;
-    transform: scale(0.9);
+  4% {
+    transform: scale(1.35);
   }
 
+  8% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* SEPARADORES */
+
+.separator {
+  color: #4A9B8C;
+  font-weight: 700;
+  margin: 0 6px;
 }
