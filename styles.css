@@ -3215,17 +3215,30 @@ body[data-page="airbnb"] .badge{
 
 }
 /* =====================================================
-   DESKTOP — BRAND TITLE SIZE
+   BRAND TITLE — RESPONSIVE SIZE
+===================================================== */
+
+.brand-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.brand-title span {
+  display: block;
+  font-size: 0.75em;
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   DESKTOP — LARGER BRAND
 ===================================================== */
 
 @media (min-width: 769px) {
 
   .brand-title {
-    font-size: 24px;
-  }
-
-  .brand-title span {
-    font-size: 0.75em;
+    font-size: 26px;
   }
 
 }
