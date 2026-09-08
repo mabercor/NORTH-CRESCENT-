@@ -1,122 +1,531 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+
+  <!-- ===================================================== -->
   <!-- HOME -->
+  <!-- ===================================================== -->
+
   <url>
     <loc>https://northcrescentcleaning.com/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://northcrescentcleaning.com/"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/"/>
   </url>
 
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/"/>
+  </url>
+
+
+
+  <!-- ===================================================== -->
   <!-- MAIN PAGES -->
+  <!-- ===================================================== -->
+
+  <!-- SERVICES -->
+
   <url>
     <loc>https://northcrescentcleaning.com/services.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/services.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/services.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/services.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/services.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/services.html"/>
   </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/services.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/services.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/services.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/services.html"/>
+  </url>
+
+
+  <!-- PROCESS -->
 
   <url>
     <loc>https://northcrescentcleaning.com/process.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/process.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/process.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/process.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/process.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/process.html"/>
   </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/process.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/process.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/process.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/process.html"/>
+  </url>
+
+
+  <!-- REVIEWS -->
 
   <url>
     <loc>https://northcrescentcleaning.com/reviews.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/reviews.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/reviews.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/reviews.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/reviews.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/reviews.html"/>
   </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/reviews.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/reviews.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/reviews.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/reviews.html"/>
+  </url>
+
+
+  <!-- WORK -->
 
   <url>
     <loc>https://northcrescentcleaning.com/work.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/work.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/work.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/work.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/work.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/work.html"/>
   </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/work.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/work.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/work.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/work.html"/>
+  </url>
+
+
+  <!-- GALLERY -->
 
   <url>
     <loc>https://northcrescentcleaning.com/gallery.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/gallery.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/gallery.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/gallery.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/gallery.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/gallery.html"/>
   </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/gallery.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/gallery.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/gallery.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/gallery.html"/>
+  </url>
+
+
+  <!-- CONTACT -->
 
   <url>
     <loc>https://northcrescentcleaning.com/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/contact.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/contact.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/contact.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/contact.html"/>
   </url>
 
-  <!-- SEO SERVICES -->
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/contact.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/contact.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/contact.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/contact.html"/>
+  </url>
+
+
+
+  <!-- ===================================================== -->
+  <!-- SEO SERVICE PAGES -->
+  <!-- ===================================================== -->
+
+  <!-- COMMERCIAL CLEANING -->
+
   <url>
     <loc>https://northcrescentcleaning.com/commercial-cleaning-moncton.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/commercial-cleaning-moncton.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/commercial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/commercial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/commercial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/commercial-cleaning-moncton.html"/>
   </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/commercial-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/commercial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/commercial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/commercial-cleaning-moncton.html"/>
+  </url>
+
+
+  <!-- RESIDENTIAL CLEANING -->
+
+  <url>
+    <loc>https://northcrescentcleaning.com/residential-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/residential-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/residential-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/residential-cleaning-moncton.html"/>
+  </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/residential-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/residential-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/residential-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/residential-cleaning-moncton.html"/>
+  </url>
+
+
+  <!-- OFFICE CLEANING -->
 
   <url>
     <loc>https://northcrescentcleaning.com/office-cleaning-moncton.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/office-cleaning-moncton.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/office-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/office-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/office-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/office-cleaning-moncton.html"/>
   </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/office-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/office-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/office-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/office-cleaning-moncton.html"/>
+  </url>
+
+
+  <!-- AIRBNB CLEANING -->
+
+  <url>
+    <loc>https://northcrescentcleaning.com/airbnb-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+  </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+  </url>
+
+
+  <!-- DEEP CLEANING -->
 
   <url>
     <loc>https://northcrescentcleaning.com/deep-cleaning-moncton.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/deep-cleaning-moncton.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/deep-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/deep-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/deep-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/deep-cleaning-moncton.html"/>
   </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/deep-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/deep-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/deep-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/deep-cleaning-moncton.html"/>
+  </url>
+
+
+  <!-- JANITORIAL -->
+
+  <url>
+    <loc>https://northcrescentcleaning.com/janitorial-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/janitorial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/janitorial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/janitorial-cleaning-moncton.html"/>
+  </url>
+
+
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/janitorial-cleaning-moncton.html</loc>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/janitorial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/janitorial-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/janitorial-cleaning-moncton.html"/>
+  </url>
+
+
+  <!-- POST-CONSTRUCTION -->
 
   <url>
     <loc>https://northcrescentcleaning.com/post-construction-cleaning-moncton.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/post-construction-cleaning-moncton.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/post-construction-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/post-construction-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/post-construction-cleaning-moncton.html"/>
+
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/post-construction-cleaning-moncton.html"/>
   </url>
 
-<url>
-  <loc>https://northcrescentcleaning.com/janitorial-cleaning-moncton.html</loc>
-  <xhtml:link rel="alternate" hreflang="en" href="https://northcrescentcleaning.com/janitorial-cleaning-moncton.html"/>
-  <xhtml:link rel="alternate" hreflang="fr" href="https://northcrescentcleaning.com/fr/janitorial-cleaning-moncton.html"/>
-</url>
 
-        <url>
-  <loc>https://northcrescentcleaning.com/airbnb-cleaning-moncton.html</loc>
+  <url>
+    <loc>https://northcrescentcleaning.com/fr/post-construction-cleaning-moncton.html</loc>
 
-  <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
+    <xhtml:link rel="alternate"
+                hreflang="en"
+                href="https://northcrescentcleaning.com/post-construction-cleaning-moncton.html"/>
 
-  <xhtml:link
-      rel="alternate"
-      hreflang="fr-ca"
-      href="https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html"/>
+    <xhtml:link rel="alternate"
+                hreflang="fr-CA"
+                href="https://northcrescentcleaning.com/fr/post-construction-cleaning-moncton.html"/>
 
-  <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
-</url>
+    <xhtml:link rel="alternate"
+                hreflang="x-default"
+                href="https://northcrescentcleaning.com/post-construction-cleaning-moncton.html"/>
+  </url>
 
-<url>
-  <loc>https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html</loc>
 
-  <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
 
-  <xhtml:link
-      rel="alternate"
-      hreflang="fr-ca"
-      href="https://northcrescentcleaning.com/fr/airbnb-cleaning-moncton.html"/>
+  <!-- ===================================================== -->
+  <!-- LEGAL PAGES -->
+  <!-- English only as requested -->
+  <!-- ===================================================== -->
 
-  <xhtml:link
-      rel="alternate"
-      hreflang="x-default"
-      href="https://northcrescentcleaning.com/airbnb-cleaning-moncton.html"/>
-</url>
-        
-  <!-- LEGAL (NO HREFLANG NECESARIO) -->
   <url>
     <loc>https://northcrescentcleaning.com/privacy.html</loc>
   </url>
@@ -124,5 +533,6 @@
   <url>
     <loc>https://northcrescentcleaning.com/terms.html</loc>
   </url>
+
 
 </urlset>
