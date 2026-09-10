@@ -3242,3 +3242,14 @@ body[data-page="airbnb"] .badge{
   }
 
 }
+/* =========================================
+   ⚡ PAGESPEED OPTIMIZATION
+   HERO IMAGE.
+   ========================================= */
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1060 / 707;
+}
+
