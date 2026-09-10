@@ -38,16 +38,24 @@
 <meta name="twitter:image" content="https://northcrescentcleaning.com/images/hero-company-cleaning.webp">
 
 <!-- Fonts & CSS -->
- 
 <link rel="preload"
       as="image"
       href="/images/hero-company-cleaning.webp"
+      imagesrcset="/images/hero-company-cleaning-768.webp 768w,
+                   /images/hero-company-cleaning.webp 1536w"
+      imagesizes="(max-width: 767px) 100vw, 1060px"
       fetchpriority="high">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+<link rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</noscript>
 
 <link rel="stylesheet" href="/styles.css">
 
