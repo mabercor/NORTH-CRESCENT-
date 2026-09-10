@@ -32,8 +32,8 @@ body {
   line-height: 1.6;
   font-size: 15px;
   padding-top: 80px;
+  font-size-adjust: 0.5;
 }
-
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3 {
   font-weight: 700;
@@ -3020,26 +3020,23 @@ body[data-page="airbnb"] .badge{
 
 /* EFECTO PRINCIPAL */
 
+
 @keyframes energyPulse {
 
   0% {
     transform: scale(1);
-    text-shadow: none;
   }
 
   4% {
     transform: scale(1.08);
-    text-shadow: 0 0 12px rgba(74, 155, 140, 0.45);
   }
 
   8% {
     transform: scale(1);
-    text-shadow: none;
   }
 
   100% {
     transform: scale(1);
-    text-shadow: none;
   }
 
 }
