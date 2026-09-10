@@ -31,13 +31,24 @@
 <meta property="og:image" content="https://northcrescentcleaning.com/images/hero-company-cleaning.jpg">
 
 <!-- Twitter -->
+ 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="North Crescent Facility Solutions Inc">
 <meta name="twitter:description" content="Professional commercial, office, janitorial, residential, Airbnb, deep cleaning, and post-construction cleaning services throughout Moncton, Dieppe, Riverview, Shediac, Salisbury, Memramcook, and Southeast New Brunswick.">
 <meta name="twitter:image" content="https://northcrescentcleaning.com/images/hero-company-cleaning.jpg">
 
 <!-- Fonts & CSS -->
+ 
+<link rel="preload"
+      as="image"
+      href="/images/hero-company-cleaning.jpg"
+      fetchpriority="high">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="/styles.css">
 
 <!-- FAVICON -->
@@ -401,7 +412,13 @@
     </div>
 
     <div class="hero-image">
-      <img src="/images/hero-company-cleaning.jpg" alt="Commercial cleaning team working in Moncton NB" loading="lazy">
+      <img src="/images/hero-company-cleaning.jpg"
+     alt="Commercial cleaning team working in Moncton NB"
+     width="1060"
+     height="707"
+     loading="eager"
+     fetchpriority="high"
+     decoding="async">
     </div>
 
   </div>
