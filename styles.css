@@ -658,7 +658,7 @@ nav {
   border-radius: 20px !important;
   box-shadow: 0 30px 60px rgba(0,0,0,0.2) !important;
   margin-top: 40px;
-  transform: scale(1.02);
+
   transition: all 0.3s ease;
 }
 
@@ -1448,7 +1448,7 @@ nav {
   border-radius: 20px !important;
   box-shadow: 0 30px 60px rgba(0,0,0,0.2) !important;
   margin-top: 40px;
-  transform: scale(1.02);
+
   transition: all 0.3s ease;
 }
 
